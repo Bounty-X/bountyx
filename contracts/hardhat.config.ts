@@ -1,5 +1,5 @@
-import "@matterlabs/hardhat-zksync-deploy";
-import "@matterlabs/hardhat-zksync-solc";
+// import "@matterlabs/hardhat-zksync-deploy";
+// import "@matterlabs/hardhat-zksync-solc";
 import "@nomiclabs/hardhat-ethers";
 import "@nomiclabs/hardhat-etherscan";
 import "@nomiclabs/hardhat-solhint";
@@ -94,7 +94,7 @@ function getChainConfig(chain: keyof typeof chainIds): NetworkUserConfig {
         },
         chainId: chainIds[chain],
         url: jsonRpcUrl,
-        zksync: ZK_EVM,
+        // zksync: ZK_EVM,
     };
 }
 
@@ -192,7 +192,7 @@ const config: HardhatUserConfig = {
             },
             allowUnlimitedContractSize: true,
             chainId: chainIds.hardhat,
-            zksync: ZK_EVM,
+            // zksync: ZK_EVM,
         },
         arbitrum: getChainConfig(`arbitrum`),
         "arbitrum-goerli": getChainConfig(`arbitrum-goerli`),
@@ -249,16 +249,16 @@ const config: HardhatUserConfig = {
         runOnCompile: false,
         disambiguatePaths: false,
     },
-    zksolc: {
-        version: `1.2.1`,
-        compilerSource: `binary`,
-        settings: {
-            experimental: {
-                dockerImage: `matterlabs/zksolc`,
-                tag: `v1.2.1`,
-            },
-        },
-    },
+    // zksolc: {
+    //     version: `1.2.1`,
+    //     compilerSource: `binary`,
+    //     settings: {
+    //         experimental: {
+    //             dockerImage: `matterlabs/zksolc`,
+    //             tag: `v1.2.1`,
+    //         },
+    //     },
+    // },
 };
 
 export default config;
