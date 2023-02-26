@@ -1,5 +1,5 @@
-# hyperhack
-mono repo for hyperhack project
+# bountyx
+mono repo for bountyx project
 
 ## Structure
 - contracts: blockchain stuff
