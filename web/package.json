@@ -9,16 +9,10 @@
     "start": "next start",
     "lint": "next lint --fix",
     "prettier": "prettier './src' --write",
-    "prepare": "husky install",
     "wagmi:init": "wagmi init",
     "wagmi:generate": "wagmi generate",
     "prebuild": "prisma generate ; wagmi generate",
     "predev": "prisma generate ; wagmi generate"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "./src": [
@@ -137,7 +131,6 @@
     "eslint-plugin-tailwindcss": "^3.5.0",
     "eslint-plugin-testing-library": "^5.5.1",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "husky": "^8.0.2",
     "jsonwebtoken": "^9.0.0",
     "lint-staged": "^13.1.0",
     "postcss": "^8.4.19",

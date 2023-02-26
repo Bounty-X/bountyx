@@ -76,7 +76,6 @@ specifiers:
   ethers: 5.7.2
   focus-trap-react: ^10.0.2
   framer-motion: ^8.4.3
-  husky: ^8.0.2
   iron-session: ^6.3.1
   jotai: ^1.13.0
   jsonwebtoken: ^9.0.0
@@ -217,7 +216,6 @@ devDependencies:
   eslint-plugin-tailwindcss: 3.8.3_tailwindcss@3.2.4
   eslint-plugin-testing-library: 5.10.0_lzzuuodtsqwxnvqeq4g4likcqa
   eslint-plugin-unused-imports: 2.0.0_eslint@8.30.0
-  husky: 8.0.3
   jsonwebtoken: 9.0.0
   lint-staged: 13.1.0
   postcss: 8.4.21
@@ -10198,12 +10196,6 @@ packages:
     dependencies:
       ms: 2.1.3
     dev: false
-
-  /husky/8.0.3:
-    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
-    engines: {node: '>=14'}
-    hasBin: true
-    dev: true
 
   /hyphenate-style-name/1.0.4:
     resolution: {integrity: sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ==}
