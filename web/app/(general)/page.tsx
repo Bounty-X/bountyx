@@ -21,13 +21,23 @@ import { FADE_DOWN_ANIMATION_VARIANTS } from '@/config/design'
 import { DEPLOY_URL, siteConfig } from '@/config/site'
 import { turboIntegrations } from '@/data/turbo-integrations'
 import erc20TokenSymbolToAddress from '@/lib/erc20TokenSymbolToAddress'
+import { HypercertCreateForm } from '@/components/hypercert/hypercert-create'
 
 export default function Home() {
+  const props = {
+    children: {
+      type: 'slot',
+      defaultValue: {
+        type: 'text',
+        value: 'Placeholder',
+      },
+    },
+  }
+
   return (
     <>
-      <div>
-        Hello World!!!
-      </div>
+      <HypercertCreateForm />
+      <>Hello World</>
     </>
   )
 }
