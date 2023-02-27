@@ -26,20 +26,13 @@ export function NavigationMenuGeneral() {
     <NavigationMenu className="self-center">
       <NavigationMenuList className="w-full">
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Integrations</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[600px] gap-3 p-4 md:grid-cols-2">
-              {Object.values(turboIntegrations).map((component) => (
-                <ListItem key={component.title} title={component.title} href={component.href} {...component}>
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
+          <LinkComponent href="https://github.com/turbo-eth/template-web3-app">
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>Issue A Bounty</NavigationMenuLink>
+          </LinkComponent>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <LinkComponent href="https://github.com/turbo-eth/template-web3-app" isExternal>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>Documentation</NavigationMenuLink>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>My Bounty Certificates</NavigationMenuLink>
           </LinkComponent>
         </NavigationMenuItem>
       </NavigationMenuList>
