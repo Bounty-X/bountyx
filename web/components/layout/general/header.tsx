@@ -62,12 +62,6 @@ export function Header(props: Props) {
           </BranchIsAuthenticated>
           <></>
         </BranchIsWalletConnected>
-        <LinkComponent className="flex items-center" href="/dashboard">
-          <button className="btn btn-pill bg-gradient-button">
-            <span className="px-2">Dashboard</span>
-          </button>
-        </LinkComponent>
-        <ThemeToggle />
       </div>
     </header>
   )

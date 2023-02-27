@@ -16,11 +16,6 @@ export default function Head() {
       <meta property="og:description" content={siteConfig.description} />
       <meta property="og:url" content={url?.toString()} />
       <meta property="og:image" content={ogUrl.toString()} />
-      <meta name="twitter:title" content={siteConfig.name} />
-      <meta name="twitter:description" content={siteConfig.description} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={url?.toString()} />
-      <meta name="twitter:image" content={ogUrl.toString()} />
     </>
   )
 }
