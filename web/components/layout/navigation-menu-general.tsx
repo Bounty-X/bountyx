@@ -26,12 +26,12 @@ export function NavigationMenuGeneral() {
     <NavigationMenu className="self-center">
       <NavigationMenuList className="w-full">
         <NavigationMenuItem>
-          <LinkComponent href="https://github.com/turbo-eth/template-web3-app">
+          <LinkComponent href="/issuebounty">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>Issue A Bounty</NavigationMenuLink>
           </LinkComponent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <LinkComponent href="https://github.com/turbo-eth/template-web3-app" isExternal>
+          <LinkComponent href="/certificates">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>My Bounty Certificates</NavigationMenuLink>
           </LinkComponent>
         </NavigationMenuItem>
