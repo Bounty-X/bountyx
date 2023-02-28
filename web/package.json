@@ -11,6 +11,7 @@
     "prettier": "prettier './src' --write",
     "wagmi:init": "wagmi init",
     "wagmi:generate": "wagmi generate",
+    "bountyxlib:build": "cd ../packages/bountyx-lib && yarn && yarn build && cd ../../web",
     "prebuild": "prisma generate ; wagmi generate",
     "predev": "prisma generate ; wagmi generate"
   },
