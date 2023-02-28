@@ -1,0 +1,25 @@
+{
+  "name": "@bountyx-org/bountyx-lib",
+  "version": "0.0.1",
+  "description": "Library for working with bountyx",
+  "repository": "",
+  "license": "",
+  "source": "src/index.ts",
+  "typedocMain": "src/index.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf ./lib && rm -rf ./src/types",
+    "build:esm": "tsc",
+    "build": "yarn clean && yarn types:json && yarn build:esm",
+    "types:json": "yarn run json2ts -i './src/resources/schema/' -o 'src/types' --cwd './src/resources/schema' --no-declareExternallyReferenced"
+  },
+  "type": "module",
+  "devDependencies": {
+    "json-schema-to-typescript": "^12.0.0"
+  },
+  "dependencies": {
+    "@hypercerts-org/hypercerts-sdk": "^0.0.28",
+    "nft.storage": "^7.0.3"
+  }
+}

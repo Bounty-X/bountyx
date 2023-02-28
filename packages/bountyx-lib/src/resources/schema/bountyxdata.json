@@ -1,0 +1,38 @@
+{
+  "$id": "schema/bountyxdata.json",
+  "title": "Bountyx metadata",
+  "description": "Extension data for hypercert. Represents information about won bounties",
+  "type": "object",
+  "properties": {
+    "bounties": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the bounty"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the bounty"
+          },
+          "issuer": {
+            "type": "string",
+            "description": "Bounty issuer"
+          },
+          "endorsement": {
+            "type": "string",
+            "description": "Message to be signed by the bounty issuer to prove hypercert authenticity"
+          },
+          "signature": {
+            "type": "string",
+            "description": "Signature of the bounty issuer endorsing the receiver"
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": ["bounties"]
+}
