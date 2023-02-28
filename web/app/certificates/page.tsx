@@ -22,27 +22,39 @@ import { DEPLOY_URL, siteConfig } from '@/config/site'
 import { turboIntegrations } from '@/data/turbo-integrations'
 import erc20TokenSymbolToAddress from '@/lib/erc20TokenSymbolToAddress'
 
+import { getBountyxMetadata, HypercertBountyxMetadata } from '../../../packages/bountyx-lib/lib/index'
+import { useEffect, useState } from 'react'
+
 export default function Home() {
+  const [metadata, setMetadata] = useState<HypercertBountyxMetadata>()
+
+  useEffect(() => {
+    const receiveBountyxHypercert = async () => {
+      const receivedData = await getBountyxMetadata('bafkreihqfy7tkimvuldlg33fncg5ubhkqadq33a2gd36z6sciw6f7pxbly')
+      console.log('Received bountyx data', receivedData)
+      setMetadata(receivedData)
+    }
+    receiveBountyxHypercert()
+  }, [])
+
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
-        <img src="https://i.imgur.com/wsM3fWd.jpeg" alt="Shoes" />
+        <img src={metadata.image} alt="Background" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">Hypercert Name</h2>
-        <p>Work</p>
-        <div className="badge badge-secondary">Metamask</div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.
-        </p>
-        <div className="card-actions justify-end">
-          <div className="badge badge-outline">avee.eth</div>
-          <div className="badge badge-outline">gold0x.eth</div>
-          <div className="badge badge-outline">cipherz.eth</div>
+        <h2 className="card-title">{metadata.name}</h2>
+        <p>{metadata.hypercert.work_scope.name}</p>
+        <div className="badge badge-secondary">{metadata.hypercert.work_scope.display_value}</div>
+        <p>{metadata.hypercert.impact_scope.name}</p>
+        <div className="badge badge-secondary">{metadata.hypercert.impact_scope.display_value}</div>
+        <p>{metadata.hypercert.rights.name}</p>
+        <div className="badge badge-secondary">{metadata.hypercert.rights.display_value}</div>
+        <div className="card-actions justify-center">
+          <p>{metadata.hypercert.contributors.name}</p>
+          <div className="badge badge-outline">{metadata.hypercert.contributors.display_value}</div>
         </div>
+        <p>{metadata.description}</p>
       </div>
     </div>
   )
