@@ -24,10 +24,26 @@ import erc20TokenSymbolToAddress from '@/lib/erc20TokenSymbolToAddress'
 
 export default function Home() {
   return (
-    <>
-      <div>
-        You are now on the certificates page!!
+    <div className="card w-96 bg-base-100 shadow-xl">
+      <figure>
+        <img src="https://i.imgur.com/wsM3fWd.jpeg" alt="Shoes" />
+      </figure>
+      <div className="card-body">
+        <h2 className="card-title">Hypercert Name</h2>
+        <p>Work</p>
+        <div className="badge badge-secondary">Metamask</div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.
+        </p>
+        <div className="card-actions justify-end">
+          <div className="badge badge-outline">avee.eth</div>
+          <div className="badge badge-outline">gold0x.eth</div>
+          <div className="badge badge-outline">cipherz.eth</div>
+        </div>
       </div>
-    </>
+    </div>
   )
 }
