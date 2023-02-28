@@ -22,11 +22,13 @@ import { DEPLOY_URL, siteConfig } from '@/config/site'
 import { turboIntegrations } from '@/data/turbo-integrations'
 import erc20TokenSymbolToAddress from '@/lib/erc20TokenSymbolToAddress'
 
-import { getBountyxMetadata, HypercertBountyxMetadata } from '../../../packages/bountyx-lib/lib/index'
 import { useEffect, useState } from 'react'
+import { HypercertMetadata } from '@/bountyxlib/types/metadata'
+import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
+import { getBountyxMetadata } from '@/bountyxlib/bountyx-storage'
 
 export default function Home() {
-  const [metadata, setMetadata] = useState<HypercertBountyxMetadata>()
+  const [metadata, setMetadata] = useState<HypercertMetadata & BountyxMetadata>()
 
   useEffect(() => {
     const receiveBountyxHypercert = async () => {
@@ -40,21 +42,21 @@ export default function Home() {
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
-        <img src={metadata.image} alt="Background" />
+        <img src={metadata?.image} alt="Background" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{metadata.name}</h2>
-        <p>{metadata.hypercert.work_scope.name}</p>
-        <div className="badge badge-secondary">{metadata.hypercert.work_scope.display_value}</div>
-        <p>{metadata.hypercert.impact_scope.name}</p>
-        <div className="badge badge-secondary">{metadata.hypercert.impact_scope.display_value}</div>
-        <p>{metadata.hypercert.rights.name}</p>
-        <div className="badge badge-secondary">{metadata.hypercert.rights.display_value}</div>
+        <h2 className="card-title">{metadata?.name}</h2>
+        <p>{metadata?.hypercert.work_scope.name}</p>
+        <div className="badge badge-secondary">{metadata?.hypercert.work_scope.display_value}</div>
+        <p>{metadata?.hypercert.impact_scope.name}</p>
+        <div className="badge badge-secondary">{metadata?.hypercert.impact_scope.display_value}</div>
+        <p>{metadata?.hypercert.rights.name}</p>
+        <div className="badge badge-secondary">{metadata?.hypercert.rights.display_value}</div>
         <div className="card-actions justify-center">
-          <p>{metadata.hypercert.contributors.name}</p>
-          <div className="badge badge-outline">{metadata.hypercert.contributors.display_value}</div>
+          <p>{metadata?.hypercert.contributors.name}</p>
+          <div className="badge badge-outline">{metadata?.hypercert.contributors.display_value}</div>
         </div>
-        <p>{metadata.description}</p>
+        <p>{metadata?.description}</p>
       </div>
     </div>
   )

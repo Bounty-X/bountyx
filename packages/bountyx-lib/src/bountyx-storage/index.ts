@@ -2,13 +2,14 @@ import {
   defaultNftStorageClient,
   getNftStorageGatewayUri,
 } from "@hypercerts-org/hypercerts-sdk/lib/operator/index.js";
-import { HypercertMetadata } from "@hypercerts-org/hypercerts-sdk";
+// import { HypercertMetadata } from "@hypercerts-org/hypercerts-sdk";
 import axios from "axios";
 // @ts-ignore
 import { NFTStorage, CIDString, Blob } from "nft.storage";
 import { BountyxMetadata } from "src/types/bountyxdata.js";
+import { HypercertMetadata } from "src/types/metadata.js";
 
-export type HypercertBountyxMetadata = HypercertMetadata & BountyxMetadata;
+export type HypercertMetadata & BountyxMetadata = HypercertMetadata & BountyxMetadata;
 /**
  * Stores NFT metadata into NFT.storage
  * @param data
@@ -16,7 +17,7 @@ export type HypercertBountyxMetadata = HypercertMetadata & BountyxMetadata;
  * @returns
  */
 export const storeBountyxMetadata = async (
-  data: HypercertBountyxMetadata,
+  data: HypercertMetadata & BountyxMetadata,
   targetClient?: NFTStorage
 ): Promise<CIDString> => {
   console.log("Storing bouuntyx & hypercert metadata: ", data);
@@ -33,10 +34,10 @@ export const storeBountyxMetadata = async (
  */
 export const getBountyxMetadata = async (
   cidOrIpfsUri: string
-): Promise<HypercertBountyxMetadata> => {
+): Promise<HypercertMetadata & BountyxMetadata> => {
   const nftStorageGatewayLink = getNftStorageGatewayUri(cidOrIpfsUri);
   console.log(`Getting metadata ${cidOrIpfsUri} at ${nftStorageGatewayLink}`);
   return axios
-    .get<HypercertBountyxMetadata>(nftStorageGatewayLink)
+    .get<HypercertMetadata & BountyxMetadata>(nftStorageGatewayLink)
     .then((result) => result.data);
 };
