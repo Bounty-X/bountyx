@@ -85,11 +85,13 @@ specifiers:
   ky: ^0.33.2
   ky-universal: ^0.11.0
   lint-staged: ^13.1.0
+  lokijs: ^1.5.12
   lucide-react: 0.105.0-alpha.4
   luxon: ^3.2.1
   next: 13.1.1
   next-themes: ^0.2.1
   nft.storage: ^7.0.3
+  pino-pretty: ^9.4.0
   postcss: ^8.4.19
   prettier: ^2.8.1
   prettier-plugin-tailwindcss: ^0.2.0
@@ -159,7 +161,7 @@ dependencies:
   '@vercel/og': 0.0.27
   '@wagmi/chains': 0.1.14
   '@wagmi/cli': 0.1.3_njyvlbtlydr3rmfaexqf6j62ru
-  '@wagmi/core': 0.9.3_hb5uegcjyqmbt6neodlymwczka
+  '@wagmi/core': 0.9.3_nlkyliifby33i5f7wlpsm5vqma
   axios: 1.3.1
   class-variance-authority: 0.4.0_typescript@4.9.4
   classnames: 2.3.2
@@ -171,11 +173,13 @@ dependencies:
   jotai: 1.13.1_5wvcx74lvxq2lfpc5x4ihgp2jm
   ky: 0.33.2
   ky-universal: 0.11.0_ky@0.33.2
+  lokijs: 1.5.12
   lucide-react: 0.105.0-alpha.4_react@18.2.0
   luxon: 3.2.1
   next: 13.1.1_4cc5zw5azim2bix77d63le72su
   next-themes: 0.2.1_q76c2b4vyoegvsbrcwkfvimnai
   nft.storage: 7.0.3_node-fetch@3.3.0
+  pino-pretty: 9.4.0
   query-string: 8.1.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -194,7 +198,7 @@ dependencies:
   tailwind-merge: 1.9.0
   tailwindcss: 3.2.4_aesdjsunmf4wiehhujt67my7tu
   usehooks-ts: 2.9.1_biqbaboplfbrettd7655fr4n2y
-  wagmi: 0.11.3_6kkabcqcqeonxfjy25epmzx3zu
+  wagmi: 0.11.3_guuqzqor2wa75joxndgtweoztq
 
 devDependencies:
   '@babel/core': 7.18.5
@@ -7080,7 +7084,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-remove-scroll: 2.5.4_kzbn2opkn2327fwg5yzwzya5o4
-      wagmi: 0.11.3_6kkabcqcqeonxfjy25epmzx3zu
+      wagmi: 0.11.3_guuqzqor2wa75joxndgtweoztq
     transitivePeerDependencies:
       - '@types/react'
     dev: false
@@ -7958,7 +7962,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-native: 0.71.0_fz72vpftmnaczycpteam7fadla
-      wagmi: 0.11.3_6kkabcqcqeonxfjy25epmzx3zu
+      wagmi: 0.11.3_guuqzqor2wa75joxndgtweoztq
     transitivePeerDependencies:
       - '@babel/core'
       - '@babel/preset-env'
@@ -7989,7 +7993,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-native: 0.71.0_fz72vpftmnaczycpteam7fadla
-      wagmi: 0.11.3_6kkabcqcqeonxfjy25epmzx3zu
+      wagmi: 0.11.3_guuqzqor2wa75joxndgtweoztq
     transitivePeerDependencies:
       - '@babel/core'
       - '@babel/preset-env'
@@ -8020,7 +8024,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-native: 0.71.0_fz72vpftmnaczycpteam7fadla
-      wagmi: 0.11.3_6kkabcqcqeonxfjy25epmzx3zu
+      wagmi: 0.11.3_guuqzqor2wa75joxndgtweoztq
     transitivePeerDependencies:
       - '@babel/core'
       - '@babel/preset-env'
@@ -8565,7 +8569,7 @@ packages:
     dependencies:
       '@ethersproject/address': 5.7.0
       '@wagmi/chains': 0.2.4_typescript@4.9.4
-      '@wagmi/core': 0.9.3_hb5uegcjyqmbt6neodlymwczka
+      '@wagmi/core': 0.9.3_nlkyliifby33i5f7wlpsm5vqma
       abitype: 0.3.0_4umapwpw55xijlh2mknjgcn4rq
       abort-controller: 3.0.0
       bundle-require: 3.1.2_esbuild@0.15.13
@@ -8587,11 +8591,11 @@ packages:
       picocolors: 1.0.0
       prettier: 2.8.3
       typescript: 4.9.4
-      wagmi: 0.11.3_6kkabcqcqeonxfjy25epmzx3zu
+      wagmi: 0.11.3_guuqzqor2wa75joxndgtweoztq
       zod: 3.20.2
     dev: false
 
-  /@wagmi/connectors/0.2.3_6dxugplyauurjwauqohut5uaui:
+  /@wagmi/connectors/0.2.3_u45q6zudbjt4l34dg3myderqha:
     resolution: {integrity: sha512-OSWK9HSzGC6SkdAT+xDULy14577WxSMj0XfrJZsPA105RPkIiAtKmfK5w7zaX9dQbHMCrpUir4v+0esmuQahqQ==}
     peerDependencies:
       '@wagmi/core': '>=0.9.x'
@@ -8605,9 +8609,9 @@ packages:
     dependencies:
       '@coinbase/wallet-sdk': 3.6.3_@babel+core@7.18.5
       '@ledgerhq/connect-kit-loader': 1.0.2
-      '@wagmi/core': 0.9.3_hb5uegcjyqmbt6neodlymwczka
+      '@wagmi/core': 0.9.3_nlkyliifby33i5f7wlpsm5vqma
       '@walletconnect/ethereum-provider': 1.8.0
-      '@walletconnect/universal-provider': 2.3.3_zpb5kzpnyozdjq4cwaojlul57u
+      '@walletconnect/universal-provider': 2.3.3_uhuadirev4mbxtu6lzqu26d7ui
       '@web3modal/standalone': 2.1.0_react@18.2.0
       abitype: 0.3.0_typescript@4.9.4
       ethers: 5.7.2
@@ -8629,7 +8633,7 @@ packages:
       - zod
     dev: false
 
-  /@wagmi/core/0.9.3_hb5uegcjyqmbt6neodlymwczka:
+  /@wagmi/core/0.9.3_nlkyliifby33i5f7wlpsm5vqma:
     resolution: {integrity: sha512-84lYAbgkrmvQUziE4PPqrPUxP4hYhQ0l/0+aIxp1N7aAaRSnX+SlEvIEw9jCWznLBkiBklKlwdBZ4z95ZufVHw==}
     peerDependencies:
       ethers: '>=5.5.1'
@@ -8639,7 +8643,7 @@ packages:
         optional: true
     dependencies:
       '@wagmi/chains': 0.2.5_typescript@4.9.4
-      '@wagmi/connectors': 0.2.3_6dxugplyauurjwauqohut5uaui
+      '@wagmi/connectors': 0.2.3_u45q6zudbjt4l34dg3myderqha
       abitype: 0.3.0_typescript@4.9.4
       ethers: 5.7.2
       eventemitter3: 4.0.7
@@ -8695,21 +8699,21 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@walletconnect/core/2.3.3_zpb5kzpnyozdjq4cwaojlul57u:
+  /@walletconnect/core/2.3.3_uhuadirev4mbxtu6lzqu26d7ui:
     resolution: {integrity: sha512-pkPG3f0Mb9WcWMeLtRS8+RSV9gpnAGrU0y291LNXjggDupg5H7I1hFtcj5HI0kmpk4suAS4RKqYAxPzy4MgFRQ==}
     dependencies:
       '@walletconnect/heartbeat': 1.2.0_zpb5kzpnyozdjq4cwaojlul57u
       '@walletconnect/jsonrpc-provider': 1.0.6
       '@walletconnect/jsonrpc-utils': 1.0.4
       '@walletconnect/jsonrpc-ws-connection': 1.0.6
-      '@walletconnect/keyvaluestorage': 1.0.2
+      '@walletconnect/keyvaluestorage': 1.0.2_lokijs@1.5.12
       '@walletconnect/logger': 2.0.1
       '@walletconnect/relay-api': 1.0.7
       '@walletconnect/relay-auth': 1.0.4
       '@walletconnect/safe-json': 1.0.1
       '@walletconnect/time': 1.0.2
-      '@walletconnect/types': 2.3.3_zpb5kzpnyozdjq4cwaojlul57u
-      '@walletconnect/utils': 2.3.3_zpb5kzpnyozdjq4cwaojlul57u
+      '@walletconnect/types': 2.3.3_uhuadirev4mbxtu6lzqu26d7ui
+      '@walletconnect/utils': 2.3.3_uhuadirev4mbxtu6lzqu26d7ui
       events: 3.3.0
       lodash.isequal: 4.5.0
       pino: 7.11.0
@@ -8846,7 +8850,7 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@walletconnect/keyvaluestorage/1.0.2:
+  /@walletconnect/keyvaluestorage/1.0.2_lokijs@1.5.12:
     resolution: {integrity: sha512-U/nNG+VLWoPFdwwKx0oliT4ziKQCEoQ27L5Hhw8YOFGA2Po9A9pULUYNWhDgHkrb0gYDNt//X7wABcEWWBd3FQ==}
     peerDependencies:
       '@react-native-async-storage/async-storage': 1.x
@@ -8857,6 +8861,7 @@ packages:
       lokijs:
         optional: true
     dependencies:
+      lokijs: 1.5.12
       safe-json-utils: 1.1.1
       tslib: 1.14.1
     dev: false
@@ -8921,18 +8926,18 @@ packages:
       tslib: 1.14.1
     dev: false
 
-  /@walletconnect/sign-client/2.3.3_zpb5kzpnyozdjq4cwaojlul57u:
+  /@walletconnect/sign-client/2.3.3_uhuadirev4mbxtu6lzqu26d7ui:
     resolution: {integrity: sha512-Q+KiqYYecf9prJoQWLIV7zJcEPa69XBzwrad4sQPcDD1BZMWa1f8OZUH3HmlmuCzopqEr4mgXU6v6yFHOasADw==}
     dependencies:
-      '@walletconnect/core': 2.3.3_zpb5kzpnyozdjq4cwaojlul57u
+      '@walletconnect/core': 2.3.3_uhuadirev4mbxtu6lzqu26d7ui
       '@walletconnect/events': 1.0.1
       '@walletconnect/heartbeat': 1.2.0_zpb5kzpnyozdjq4cwaojlul57u
       '@walletconnect/jsonrpc-provider': 1.0.6
       '@walletconnect/jsonrpc-utils': 1.0.4
       '@walletconnect/logger': 2.0.1
       '@walletconnect/time': 1.0.2
-      '@walletconnect/types': 2.3.3_zpb5kzpnyozdjq4cwaojlul57u
-      '@walletconnect/utils': 2.3.3_zpb5kzpnyozdjq4cwaojlul57u
+      '@walletconnect/types': 2.3.3_uhuadirev4mbxtu6lzqu26d7ui
+      '@walletconnect/utils': 2.3.3_uhuadirev4mbxtu6lzqu26d7ui
       events: 3.3.0
       pino: 7.11.0
     transitivePeerDependencies:
@@ -8981,13 +8986,13 @@ packages:
     resolution: {integrity: sha512-Cn+3I0V0vT9ghMuzh1KzZvCkiAxTq+1TR2eSqw5E5AVWfmCtECFkVZBP6uUJZ8YjwLqXheI+rnjqPy7sVM4Fyg==}
     dev: false
 
-  /@walletconnect/types/2.3.3_zpb5kzpnyozdjq4cwaojlul57u:
+  /@walletconnect/types/2.3.3_uhuadirev4mbxtu6lzqu26d7ui:
     resolution: {integrity: sha512-g2x27MloGElcRTwYM9Md/1E2RQ5ifYBCFZ/sfnpQrZPVxK3NzSMHJlcV6qrQm9ST82i+UrLEce9RkDgvjKk7+w==}
     dependencies:
       '@walletconnect/events': 1.0.1
       '@walletconnect/heartbeat': 1.2.0_zpb5kzpnyozdjq4cwaojlul57u
       '@walletconnect/jsonrpc-types': 1.0.2
-      '@walletconnect/keyvaluestorage': 1.0.2
+      '@walletconnect/keyvaluestorage': 1.0.2_lokijs@1.5.12
       '@walletconnect/logger': 2.0.1
       events: 3.3.0
     transitivePeerDependencies:
@@ -8999,7 +9004,7 @@ packages:
       - typescript
     dev: false
 
-  /@walletconnect/universal-provider/2.3.3_zpb5kzpnyozdjq4cwaojlul57u:
+  /@walletconnect/universal-provider/2.3.3_uhuadirev4mbxtu6lzqu26d7ui:
     resolution: {integrity: sha512-pibtlTUn7dg5Y5vs8tzSGaaDlq8eSXgHh7o9iMMpE4Fr06HyM36J0niGTOsKvMa+u5keCTwVhbB4MNnN08zVvg==}
     dependencies:
       '@walletconnect/jsonrpc-http-connection': 1.0.4
@@ -9007,9 +9012,9 @@ packages:
       '@walletconnect/jsonrpc-types': 1.0.2
       '@walletconnect/jsonrpc-utils': 1.0.4
       '@walletconnect/logger': 2.0.1
-      '@walletconnect/sign-client': 2.3.3_zpb5kzpnyozdjq4cwaojlul57u
-      '@walletconnect/types': 2.3.3_zpb5kzpnyozdjq4cwaojlul57u
-      '@walletconnect/utils': 2.3.3_zpb5kzpnyozdjq4cwaojlul57u
+      '@walletconnect/sign-client': 2.3.3_uhuadirev4mbxtu6lzqu26d7ui
+      '@walletconnect/types': 2.3.3_uhuadirev4mbxtu6lzqu26d7ui
+      '@walletconnect/utils': 2.3.3_uhuadirev4mbxtu6lzqu26d7ui
       eip1193-provider: 1.0.1
       events: 3.3.0
       pino: 7.11.0
@@ -9038,7 +9043,7 @@ packages:
       query-string: 6.13.5
     dev: false
 
-  /@walletconnect/utils/2.3.3_zpb5kzpnyozdjq4cwaojlul57u:
+  /@walletconnect/utils/2.3.3_uhuadirev4mbxtu6lzqu26d7ui:
     resolution: {integrity: sha512-wS9ptLlT30c7m7zme3/y3cNjKXztZeKIulqBD1K/VxSxWEA4mK9mmXEACdmahjiX4EHZWtdHvEIu2rLDhkrrvQ==}
     dependencies:
       '@stablelib/chacha20poly1305': 1.0.1
@@ -9050,7 +9055,7 @@ packages:
       '@walletconnect/relay-api': 1.0.7
       '@walletconnect/safe-json': 1.0.1
       '@walletconnect/time': 1.0.2
-      '@walletconnect/types': 2.3.3_zpb5kzpnyozdjq4cwaojlul57u
+      '@walletconnect/types': 2.3.3_uhuadirev4mbxtu6lzqu26d7ui
       '@walletconnect/window-getters': 1.0.1
       '@walletconnect/window-metadata': 1.0.1
       detect-browser: 5.3.0
@@ -10785,7 +10790,6 @@ packages:
 
   /colorette/2.0.19:
     resolution: {integrity: sha512-3tlv/dIP7FWvj3BsbHrGLJ6l/oKh1O3TcgBqMn+yyCagOxc23fyzDS6HypQbgxWbkpDnf52p1LuR4eWDQ/K9WQ==}
-    dev: true
 
   /combined-stream/1.0.8:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
@@ -11238,6 +11242,10 @@ packages:
       uint8arrays: 4.0.3
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /dateformat/4.6.3:
+    resolution: {integrity: sha512-2P0p0pFGzHS5EMnhdxQi7aJN+iMheud0UhG4dlE1DLAlvL8JHjJJTX/CSm4JXwV0Ka5nGk3zC5mcb5bUQUxxMA==}
     dev: false
 
   /dayjs/1.11.7:
@@ -12980,6 +12988,10 @@ packages:
     engines: {node: '> 0.1.90'}
     dev: false
 
+  /fast-copy/3.0.1:
+    resolution: {integrity: sha512-Knr7NOtK3HWRYGtHoJrjkaWepqT8thIVGAwt0p0aUs1zqkAzXZV4vo9fFNwyb5fcqK1GKYFYxldQdIDVKhUAfA==}
+    dev: false
+
   /fast-decode-uri-component/1.0.1:
     resolution: {integrity: sha512-WKgKWg5eUxvRZGwW8FvfbaH7AXSh2cL+3j5fMGzUMCxWBJ3dV3a7Wz8y2f/uQ0e3B6WmodD3oS54jTQ9HVTIIg==}
     dev: false
@@ -13495,6 +13507,17 @@ packages:
       once: 1.4.0
       path-is-absolute: 1.0.1
 
+  /glob/8.1.0:
+    resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 5.0.1
+      once: 1.4.0
+    dev: false
+
   /global-dirs/0.1.1:
     resolution: {integrity: sha512-NknMLn7F2J7aflwFOlGdNIuCDpN3VGoSoB+aap3KABFWbHVn1TCgFC+np23J8W2BiZbjfEw3BFBycSMv1AFblg==}
     engines: {node: '>=4'}
@@ -13745,6 +13768,13 @@ packages:
     dependencies:
       capital-case: 1.0.4
       tslib: 2.5.0
+    dev: false
+
+  /help-me/4.2.0:
+    resolution: {integrity: sha512-TAOnTB8Tz5Dw8penUuzHVrKNKlCIbwwbHnXraNJxPwf8LRtE2HlM84RYuezMFcwOJmoYOCWVDyJ8TQGxn9PgxA==}
+    dependencies:
+      glob: 8.1.0
+      readable-stream: 3.6.0
     dev: false
 
   /hermes-estree/0.8.0:
@@ -15909,6 +15939,11 @@ packages:
       react: 18.2.0
     dev: false
 
+  /joycon/3.1.1:
+    resolution: {integrity: sha512-34wB/Y7MW7bzjKRjUKTa46I2Z7eV62Rkhva+KkopW7Qvv/OSWBqvkSY7vusOPrNuZcUG3tApvdVgNB8POj3SPw==}
+    engines: {node: '>=10'}
+    dev: false
+
   /js-sdsl/4.3.0:
     resolution: {integrity: sha512-mifzlm2+5nZ+lEcLJMoBK0/IH/bDg8XnJfd/Wq6IP+xoCjLZsTOnV2QpxlVbX9bMnkl5PdEjNtBJ9Cj1NjifhQ==}
     dev: true
@@ -16577,6 +16612,10 @@ packages:
   /loglevel/1.8.1:
     resolution: {integrity: sha512-tCRIJM51SHjAayKwC+QAg8hT8vg6z7GSgLJKGvzuPb1Wc+hLzqtuVLxp6/HzSPOozuK+8ErAhy7U/sVzw8Dgfg==}
     engines: {node: '>= 0.6.0'}
+    dev: false
+
+  /lokijs/1.5.12:
+    resolution: {integrity: sha512-Q5ALD6JiS6xAUWCwX3taQmgwxyveCtIIuL08+ml0nHwT3k0S/GIFJN+Hd38b1qYIMaE5X++iqsqWVksz7SYW+Q==}
     dev: false
 
   /long/4.0.0:
@@ -18187,6 +18226,10 @@ packages:
     resolution: {integrity: sha512-dqaz3u44QbRXQooZLTUKU41ZrzYrcvLISVgbrzbyCMxpmSLJvZ3ZamIJIZ29P6OhZIkNIQKosdeM6t1LYbA9hg==}
     dev: false
 
+  /on-exit-leak-free/2.1.0:
+    resolution: {integrity: sha512-VuCaZZAjReZ3vUwgOB8LxAosIurDiAW0s13rI1YwmaP++jvcxP77AWoQvenZebpCA2m8WC1/EosPYPMjnRAp/w==}
+    dev: false
+
   /on-finished/2.3.0:
     resolution: {integrity: sha512-ikqdkGAAyf/X/gPhXGvfgAytDZtDbr+bkNUJ0N9h5MI/dmdgCs3l6hoHrcUv41sRKew3jIwrp4qQDXiK99Utww==}
     engines: {node: '>= 0.8'}
@@ -18627,6 +18670,33 @@ packages:
     dependencies:
       duplexify: 4.1.2
       split2: 4.1.0
+    dev: false
+
+  /pino-abstract-transport/1.0.0:
+    resolution: {integrity: sha512-c7vo5OpW4wIS42hUVcT5REsL8ZljsUfBjqV/e2sFxmFEFZiq1XLUp5EYLtuDH6PEHq9W1egWqRbnLUP5FuZmOA==}
+    dependencies:
+      readable-stream: 4.3.0
+      split2: 4.1.0
+    dev: false
+
+  /pino-pretty/9.4.0:
+    resolution: {integrity: sha512-NIudkNLxnl7MGj1XkvsqVyRgo6meFP82ECXF2PlOI+9ghmbGuBUUqKJ7IZPIxpJw4vhhSva0IuiDSAuGh6TV9g==}
+    hasBin: true
+    dependencies:
+      colorette: 2.0.19
+      dateformat: 4.6.3
+      fast-copy: 3.0.1
+      fast-safe-stringify: 2.1.1
+      help-me: 4.2.0
+      joycon: 3.1.1
+      minimist: 1.2.7
+      on-exit-leak-free: 2.1.0
+      pino-abstract-transport: 1.0.0
+      pump: 3.0.0
+      readable-stream: 4.3.0
+      secure-json-parse: 2.7.0
+      sonic-boom: 3.2.1
+      strip-json-comments: 3.1.1
     dev: false
 
   /pino-std-serializers/4.0.0:
@@ -20071,6 +20141,10 @@ packages:
       node-gyp-build: 4.6.0
     dev: false
 
+  /secure-json-parse/2.7.0:
+    resolution: {integrity: sha512-6aU+Rwsezw7VR8/nyvKTx8QpWH9FrcYiXXlqC4z5d5XQBDRqtbfsRjnwGyqbi3gddNtWHuEk9OANUotL26qKUw==}
+    dev: false
+
   /semver/5.7.1:
     resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
     hasBin: true
@@ -20364,6 +20438,12 @@ packages:
 
   /sonic-boom/2.8.0:
     resolution: {integrity: sha512-kuonw1YOYYNOve5iHdSahXPOK49GqwA+LZhI6Wz/l0rP57iKyXXIHaRagOBHAPmGwJC6od2Z9zgvZ5loSgMlVg==}
+    dependencies:
+      atomic-sleep: 1.0.0
+    dev: false
+
+  /sonic-boom/3.2.1:
+    resolution: {integrity: sha512-iITeTHxy3B9FGu8aVdiDXUVAcHMF9Ss0cCsAOo2HfCrmVGT3/DT5oYaeu0M/YKZDlKTvChEyPq0zI9Hf33EX6A==}
     dependencies:
       atomic-sleep: 1.0.0
     dev: false
@@ -21733,7 +21813,7 @@ packages:
       - supports-color
     dev: false
 
-  /wagmi/0.11.3_6kkabcqcqeonxfjy25epmzx3zu:
+  /wagmi/0.11.3_guuqzqor2wa75joxndgtweoztq:
     resolution: {integrity: sha512-hdoV4evIMLSg1FiL0kULidw/QOBiZMBA5usVej40UnHeIXb4/XM35sO+0W+VZ4P7SxZQdXv2wxMLRgzYzn7Bcg==}
     peerDependencies:
       ethers: '>=5.5.1'
@@ -21746,7 +21826,7 @@ packages:
       '@tanstack/query-sync-storage-persister': 4.24.4
       '@tanstack/react-query': 4.24.4_mm6ssz5t7nsja4qwwvdafuklbu
       '@tanstack/react-query-persist-client': 4.24.4_pbzrecrhgj7fe7hddoo6lp43hu
-      '@wagmi/core': 0.9.3_hb5uegcjyqmbt6neodlymwczka
+      '@wagmi/core': 0.9.3_nlkyliifby33i5f7wlpsm5vqma
       abitype: 0.3.0_typescript@4.9.4
       ethers: 5.7.2
       react: 18.2.0

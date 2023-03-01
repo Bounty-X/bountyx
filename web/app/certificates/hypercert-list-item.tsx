@@ -1,8 +1,8 @@
 import { HyperCert } from '@/types'
 
-const contributors = (contrib) => {
-  const list = []
-  contrib.forEach((item) => {
+const contributors = (contrib: any) => {
+  const list: any = []
+  contrib.forEach((item: any) => {
     list.push(
       <tr>
         <td>
@@ -19,9 +19,7 @@ const contributors = (contrib) => {
           </div>
         </td>
         <td>
-          <div className="radial-progress" style={{ '--value': item.percentage, '--size': '4rem' }}>
-            {item.percentage} %
-          </div>
+          <div className="text-xl font-bold">{item.percentage} %</div>
         </td>
       </tr>
     )
@@ -36,27 +34,10 @@ export const HyperCertListItem = ({ hyperCertInfo }: { hyperCertInfo: HyperCert 
         <img src={hyperCertInfo.general.renderedImage} />
       </figure>
       <div className="card-body">
-        {/* <h2 className="card-title">{hyperCertInfo.general.name}</h2>
-        <p>Work</p>
-        <div className="badge badge-secondary">{hyperCertInfo.work.scope}</div>
-        <p>{hyperCertInfo.general.description}</p>
-        <div className="card-actions justify-end">{contributors(hyperCertInfo.work.contributors)}</div> */}
-
-        {/* <div className="grid grid-cols-2 gap-2">
-          <div>
-            <div className="text-xl font-bold">OWNERSHIP</div>
-          </div>
-          <div>
-            <div className="text-xl font-bold">BOUNTY</div>
-          </div>
-        </div> */}
         <div className="flex w-full h-full">
           <div className="grid flex-grow card bg-base-300 rounded-box">
             <div>
               <div className="text-xl font-bold">OWNERSHIP</div>
-              {/* <table className=" table table-auto">
-                <tbody>{contributors(hyperCertInfo.work.contributors)}</tbody>
-              </table> */}
               <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                   <tbody>{contributors(hyperCertInfo.work.contributors)}</tbody>

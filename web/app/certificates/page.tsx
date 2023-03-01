@@ -27,7 +27,7 @@ import { hypercerts } from '../../data/hypercerts'
 import { HyperCertListItem } from './hypercert-list-item'
 
 const certs = () => {
-  const list = []
+  const list: any = []
   hypercerts.forEach((item) => {
     list.push(
       <div>
