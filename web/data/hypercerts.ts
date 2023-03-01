@@ -18,7 +18,7 @@ export const hypercerts: HyperCert[] = [
         {
           name: 'cipherZ.eth',
           relationship: 'contributor',
-          avatar: 'https://cdn.discordapp.com/avatars/184560867097051136/5e8e979af29054d22f92ccb8cf57ae2d.webp',
+          avatar: 'https://cdn.discordapp.com/avatars/376720653455458305/eb23962af4e80d1cfaaf4853000e825a.webp',
           percentage: 16.67,
         },
         {
@@ -69,7 +69,7 @@ export const hypercerts: HyperCert[] = [
         {
           name: 'cipherZ.eth',
           relationship: 'contributor',
-          avatar: 'https://cdn.discordapp.com/avatars/184560867097051136/5e8e979af29054d22f92ccb8cf57ae2d.webp',
+          avatar: 'https://cdn.discordapp.com/avatars/376720653455458305/eb23962af4e80d1cfaaf4853000e825a.webp',
           percentage: 33.33,
         },
         {
