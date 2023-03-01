@@ -19,9 +19,33 @@ export interface BountyxMetadata {
      */
     description?: string;
     /**
-     * Bounty issuer
+     * Issuer of the bounty
      */
-    issuer?: string;
+    issuer?: {
+      /**
+       * Bounty issuer address
+       */
+      issuerAddress?: string;
+      /**
+       * Bounty issuer public name
+       */
+      issuerName?: string;
+      /**
+       * Bounty issuer logo url
+       */
+      issuerLogoUrl?: string;
+      [k: string]: unknown;
+    };
+    /**
+     * Information about the reward
+     */
+    reward?: {
+      /**
+       * Amount paid out by bounty issuer to the project
+       */
+      rewardAmountUsd?: number;
+      [k: string]: unknown;
+    };
     /**
      * Message to be signed by the bounty issuer to prove hypercert authenticity
      */

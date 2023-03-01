@@ -18,8 +18,32 @@
             "description": "Description of the bounty"
           },
           "issuer": {
-            "type": "string",
-            "description": "Bounty issuer"
+            "type": "object",
+            "description": "Issuer of the bounty",
+            "properties": {
+              "issuerAddress": {
+                "type": "string",
+                "description": "Bounty issuer address"
+              },
+              "issuerName": {
+                "type": "string",
+                "description": "Bounty issuer public name"
+              },
+              "issuerLogoUrl": {
+                "type": "string",
+                "description": "Bounty issuer logo url"
+              }
+            }
+          },
+          "reward": {
+            "type": "object",
+            "description": "Information about the reward",
+            "properties": {
+              "rewardAmountUsd": {
+                "type": "number",
+                "description": "Amount paid out by bounty issuer to the project"
+              }
+            }
           },
           "endorsement": {
             "type": "string",
