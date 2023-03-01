@@ -21,8 +21,23 @@ import { FADE_DOWN_ANIMATION_VARIANTS } from '@/config/design'
 import { DEPLOY_URL, siteConfig } from '@/config/site'
 import { turboIntegrations } from '@/data/turbo-integrations'
 import erc20TokenSymbolToAddress from '@/lib/erc20TokenSymbolToAddress'
-import { DummyHypercert } from '@/components/bountyx/dummy-hypercert'
+import { DateTime } from 'luxon'
+import { HyperCert } from '@/types'
+import { hypercerts } from '../../data/hypercerts'
+import { HyperCertListItem } from './hypercert-list-item'
+
+const certs = () => {
+  const list = []
+  hypercerts.forEach((item) => {
+    list.push(
+      <div>
+        <HyperCertListItem hyperCertInfo={item} />
+      </div>
+    )
+  })
+  return list
+}
 
 export default function Home() {
-  return <DummyHypercert />
+  return <div className="grid grid-cols-1 gap-1">{certs()}</div>
 }
