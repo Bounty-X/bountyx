@@ -14,7 +14,33 @@ export const hypercerts: HyperCert[] = [
       scope: "cipherZ's Big Idea",
       start: new Date(2023, 1, 1),
       end: new Date(2023, 6, 1),
-      contributors: ['cipherZ.eth'],
+      contributors: [
+        {
+          name: 'cipherZ.eth',
+          relationship: 'contributor',
+          avatar: 'https://cdn.discordapp.com/avatars/184560867097051136/5e8e979af29054d22f92ccb8cf57ae2d.webp',
+          percentage: 16.67,
+        },
+        {
+          name: 'gold0x.eth',
+          relationship: 'contributor',
+          avatar: 'https://cdn.discordapp.com/avatars/184560867097051136/5e8e979af29054d22f92ccb8cf57ae2d.webp',
+          percentage: 16.67,
+        },
+        {
+          name: 'artem0x.eth',
+          relationship: 'contributor',
+          avatar: 'https://cdn.discordapp.com/avatars/357427622889652224/8bce762a88e42ad100d71b121fdf6c48.webp',
+          percentage: 16.67,
+        },
+        {
+          name: 'metamask.eth',
+          relationship: 'sponsor',
+          avatar:
+            'https://imgs.search.brave.com/DEgyR_HYgvNzlCXAqIwQ-JcKQPaIm0v0rFdZRAPLHHs/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5U/Y3h5OEYwajJrZzJo/N05XeEJoMXVRSGFI/YSZwaWQ9QXBp',
+          percentage: 50,
+        },
+      ],
     },
     advanced: {
       impactScope: 'all',
@@ -39,7 +65,26 @@ export const hypercerts: HyperCert[] = [
       scope: "artem0x.eth's Big Idea",
       start: new Date(2023, 2, 1),
       end: new Date(2023, 7, 1),
-      contributors: ['artem0x.eth'],
+      contributors: [
+        {
+          name: 'cipherZ.eth',
+          relationship: 'contributor',
+          avatar: 'https://cdn.discordapp.com/avatars/184560867097051136/5e8e979af29054d22f92ccb8cf57ae2d.webp',
+          percentage: 33.33,
+        },
+        {
+          name: 'gold0x.eth',
+          relationship: 'contributor',
+          avatar: 'https://cdn.discordapp.com/avatars/184560867097051136/5e8e979af29054d22f92ccb8cf57ae2d.webp',
+          percentage: 33.33,
+        },
+        {
+          name: 'artem0x.eth',
+          relationship: 'contributor',
+          avatar: 'https://cdn.discordapp.com/avatars/357427622889652224/8bce762a88e42ad100d71b121fdf6c48.webp',
+          percentage: 33.33,
+        },
+      ],
     },
     advanced: {
       impactScope: 'all',
@@ -64,7 +109,20 @@ export const hypercerts: HyperCert[] = [
       scope: "gold0x.eth's Big Idea",
       start: new Date(2023, 3, 1),
       end: new Date(2023, 8, 1),
-      contributors: ['gold0x.eth'],
+      contributors: [
+        {
+          name: 'gold0x.eth',
+          relationship: 'contributor',
+          avatar: 'https://cdn.discordapp.com/avatars/184560867097051136/5e8e979af29054d22f92ccb8cf57ae2d.webp',
+          percentage: 50.0,
+        },
+        {
+          name: 'artem0x.eth',
+          relationship: 'contributor',
+          avatar: 'https://cdn.discordapp.com/avatars/357427622889652224/8bce762a88e42ad100d71b121fdf6c48.webp',
+          percentage: 50.0,
+        },
+      ],
     },
     advanced: {
       impactScope: 'all',

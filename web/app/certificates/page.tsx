@@ -29,11 +29,15 @@ import { HyperCertListItem } from './hypercert-list-item'
 const certs = () => {
   const list = []
   hypercerts.forEach((item) => {
-    list.push(<HyperCertListItem hyperCertInfo={item} />)
+    list.push(
+      <div>
+        <HyperCertListItem hyperCertInfo={item} />
+      </div>
+    )
   })
   return list
 }
 
 export default function Home() {
-  return <>{certs()}</>
+  return <div className="grid grid-cols-1 gap-1">{certs()}</div>
 }

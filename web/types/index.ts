@@ -11,7 +11,12 @@ export type HyperCert = {
     scope: string
     start: Date
     end: Date
-    contributors: string[]
+    contributors: {
+      name: string
+      relationship: string
+      avatar: string
+      percentage: number
+    }[]
   }
   advanced: {
     impactScope: string
