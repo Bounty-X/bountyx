@@ -6,54 +6,58 @@
  */
 
 /**
- * Extension data for hypercert. Represents information about won bounties
+ * Bountyx metadata structure
  */
 export interface BountyxMetadata {
-  bounties: {
+  /**
+   * Name of the bounty
+   */
+  name: string;
+  /**
+   * Description of the bounty
+   */
+  description?: string;
+  /**
+   * Issuer of the bounty
+   */
+  issuer: {
     /**
-     * Name of the bounty
+     * Bounty issuer address
      */
-    name?: string;
+    issuerAddress?: string;
     /**
-     * Description of the bounty
+     * Bounty issuer public name
      */
-    description?: string;
+    issuerName?: string;
     /**
-     * Issuer of the bounty
+     * Bounty issuer logo url
      */
-    issuer?: {
-      /**
-       * Bounty issuer address
-       */
-      issuerAddress?: string;
-      /**
-       * Bounty issuer public name
-       */
-      issuerName?: string;
-      /**
-       * Bounty issuer logo url
-       */
-      issuerLogoUrl?: string;
-      [k: string]: unknown;
-    };
-    /**
-     * Information about the reward
-     */
-    reward?: {
-      /**
-       * Amount paid out by bounty issuer to the project
-       */
-      rewardAmountUsd?: number;
-      [k: string]: unknown;
-    };
-    /**
-     * Message to be signed by the bounty issuer to prove hypercert authenticity
-     */
-    endorsement?: string;
-    /**
-     * Signature of the bounty issuer endorsing the receiver
-     */
-    signature?: string;
+    issuerLogoUrl?: string;
     [k: string]: unknown;
-  }[];
+  };
+  /**
+   * Receiver of the bounty
+   */
+  receiver?: {
+    receiverAddress?: string;
+    [k: string]: unknown;
+  };
+  /**
+   * Information about the reward
+   */
+  reward: {
+    /**
+     * Amount paid out by bounty issuer to the project
+     */
+    rewardAmountUsd?: number;
+    /**
+     * Token used to pay the bounty
+     */
+    rewardToken?: string;
+    [k: string]: unknown;
+  };
+  /**
+   * Signature of the bounty issuer endorsing the receiver
+   */
+  signature?: string;
 }

@@ -1,0 +1,17 @@
+{
+  "$id": "schema/bountyxcollection.json",
+  "title": "Bountyx metadata collection",
+  "description": "Extension data for hypercert. Represents information about won bounties",
+  "type": "object",
+  "properties": {
+    "bounties": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "$ref": "bountyxdata.json#"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": ["bounties"]
+}

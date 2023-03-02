@@ -1,62 +1,64 @@
 {
   "$id": "schema/bountyxdata.json",
   "title": "Bountyx metadata",
-  "description": "Extension data for hypercert. Represents information about won bounties",
+  "description": "Bountyx metadata structure",
   "type": "object",
   "properties": {
-    "bounties": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "Name of the bounty"
-          },
-          "description": {
-            "type": "string",
-            "description": "Description of the bounty"
-          },
-          "issuer": {
-            "type": "object",
-            "description": "Issuer of the bounty",
-            "properties": {
-              "issuerAddress": {
-                "type": "string",
-                "description": "Bounty issuer address"
-              },
-              "issuerName": {
-                "type": "string",
-                "description": "Bounty issuer public name"
-              },
-              "issuerLogoUrl": {
-                "type": "string",
-                "description": "Bounty issuer logo url"
-              }
-            }
-          },
-          "reward": {
-            "type": "object",
-            "description": "Information about the reward",
-            "properties": {
-              "rewardAmountUsd": {
-                "type": "number",
-                "description": "Amount paid out by bounty issuer to the project"
-              }
-            }
-          },
-          "endorsement": {
-            "type": "string",
-            "description": "Message to be signed by the bounty issuer to prove hypercert authenticity"
-          },
-          "signature": {
-            "type": "string",
-            "description": "Signature of the bounty issuer endorsing the receiver"
-          }
+    "name": {
+      "type": "string",
+      "description": "Name of the bounty"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the bounty"
+    },
+    "issuer": {
+      "type": "object",
+      "description": "Issuer of the bounty",
+      "properties": {
+        "issuerAddress": {
+          "type": "string",
+          "description": "Bounty issuer address"
+        },
+        "issuerName": {
+          "type": "string",
+          "description": "Bounty issuer public name"
+        },
+        "issuerLogoUrl": {
+          "type": "string",
+          "description": "Bounty issuer logo url"
         }
       }
+    },
+    "receiver": {
+      "type": "object",
+      "description": "Receiver of the bounty",
+      "properties": {
+        "receiverAddress": {
+          "type": "string",
+          "desription": "The address that eligible to receive or have received the bounty"
+        }
+      }
+    },
+    "reward": {
+      "type": "object",
+      "description": "Information about the reward",
+      "properties": {
+        "rewardAmountUsd": {
+          "type": "number",
+          "description": "Amount paid out by bounty issuer to the project"
+        },
+        "rewardToken": {
+          "type": "string",
+          "description": "Token used to pay the bounty"
+        }
+      }
+    },
+    "signature": {
+      "type": "string",
+      "description": "Signature of the bounty issuer endorsing the receiver"
     }
   },
   "additionalProperties": false,
-  "required": ["bounties"]
+  "required": ["name", "issuer", "reward"]
 }

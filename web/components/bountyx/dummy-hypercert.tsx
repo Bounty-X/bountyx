@@ -1,16 +1,22 @@
-// import { promises as fs } from 'fs'
-// import path from 'path'
-
 import { useEffect, useState } from 'react'
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
+import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
 import { getBountyxMetadata } from '@/bountyxlib/bountyx-storage'
-
-// interface DummyHypercertProps {
-//   bounties: any
-// }
+import { useSignMessage } from 'wagmi'
 
 export const DummyHypercert = () => {
+  const [metadata, setMetadata] = useState<HypercertMetadata & BountyxMetadataCollection>({} as any)
+
+  useEffect(() => {
+    const receiveBountyxHypercert = async () => {
+      const receivedData = await getBountyxMetadata('bafkreihqfy7tkimvuldlg33fncg5ubhkqadq33a2gd36z6sciw6f7pxbly')
+      console.log('Received bountyx data', receivedData)
+      setMetadata(receivedData)
+    }
+    receiveBountyxHypercert()
+  }, [])
+
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
@@ -28,22 +34,6 @@ export const DummyHypercert = () => {
           <p>{metadata?.hypercert?.contributors.name}</p>
           <div className="badge badge-outline">{metadata?.hypercert?.contributors.display_value}</div>
         </div>
-        <br />
-        {metadata.bounties && (
-          <>
-            <figure>
-              <img src={metadata.bounties[0].issuer?.issuerLogoUrl} alt="Metamask" />
-            </figure>
-            <p>Bounty Name</p>
-            <div className="badge badge-secondary">{metadata.bounties[0].name}</div>
-            <p>Bounty Issuer</p>
-            <div className="badge badge-secondary">{metadata.bounties[0].issuer?.issuerName}</div>
-            <p>Reward</p>
-            <div className="badge badge-secondary">{metadata.bounties[0].reward?.rewardAmountUsd}</div>
-            <p>{metadata.bounties[0].description}</p>
-            <br />
-          </>
-        )}
         <p>{metadata?.description}</p>
       </div>
     </div>

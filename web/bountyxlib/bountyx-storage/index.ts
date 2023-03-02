@@ -3,7 +3,7 @@ import { defaultNftStorageClient, getNftStorageGatewayUri } from '@hypercerts-or
 import axios from 'axios'
 // @ts-ignore
 import { NFTStorage, CIDString, Blob } from 'nft.storage'
-import { BountyxMetadata } from '../types/bountyxdata.js'
+import { BountyxMetadataCollection } from '../types/bountyxcollection.js'
 import { HypercertMetadata } from '../types/metadata.js'
 
 /**
@@ -12,7 +12,7 @@ import { HypercertMetadata } from '../types/metadata.js'
  * @param targetClient
  * @returns
  */
-export const storeBountyxMetadata = async (data: HypercertMetadata & BountyxMetadata, targetClient?: NFTStorage): Promise<CIDString> => {
+export const storeBountyxMetadata = async (data: HypercertMetadata & BountyxMetadataCollection, targetClient?: NFTStorage): Promise<CIDString> => {
   console.log('Storing bouuntyx & hypercert metadata: ', data)
   const client = targetClient ?? defaultNftStorageClient
   const blob = new Blob([JSON.stringify(data)], { type: 'application/json' })
@@ -25,8 +25,8 @@ export const storeBountyxMetadata = async (data: HypercertMetadata & BountyxMeta
  * @param cidOrIpfsUri
  * @returns
  */
-export const getBountyxMetadata = async (cidOrIpfsUri: string): Promise<HypercertMetadata & BountyxMetadata> => {
+export const getBountyxMetadata = async (cidOrIpfsUri: string): Promise<HypercertMetadata & BountyxMetadataCollection> => {
   const nftStorageGatewayLink = getNftStorageGatewayUri(cidOrIpfsUri)
   console.log(`Getting metadata ${cidOrIpfsUri} at ${nftStorageGatewayLink}`)
-  return axios.get<HypercertMetadata & BountyxMetadata>(nftStorageGatewayLink).then((result) => result.data)
+  return axios.get<HypercertMetadata & BountyxMetadataCollection>(nftStorageGatewayLink).then((result) => result.data)
 }
