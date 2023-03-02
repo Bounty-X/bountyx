@@ -36,54 +36,74 @@ import useLocalStorage from '@/hooks/utils/use-local-storage'
 
 export default function Home() {
   let defaultProjectMetatadata: ProjectMetadata = {
-    name: "",
-    description: "",
-    contributors: []
+    name: '',
+    description: '',
+    contributors: [],
   }
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: any) => {
     // Stop the form from submitting and refreshing the page.
-    event.preventDefault();
+    event.preventDefault()
     let currentProjectMetadata: ProjectMetadata = {
       name: event.target.projectname.value,
       description: event.target.projectdescription.value,
-      contributors: event.target.projectcontributors.value,    
-    };
+      contributors: event.target.projectcontributors.value,
+    }
     setProjectData(currentProjectMetadata)
-    alert('we did it!');
+    alert('we did it!')
   }
 
-  const [projectMetadata, setProjectData] = useLocalStorage("projectMetadata", defaultProjectMetatadata);
-  return (  
-      <>
-        <div class="flex flex-row">
-          <div class="container mx-auto px-4">
+  const [projectMetadata, setProjectData] = useLocalStorage('projectMetadata', defaultProjectMetatadata)
+  return (
+    <>
+      <div className="flex flex-row">
+        <div className="container mx-auto px-4">
           <form onSubmit={handleSubmit}>
-          <div class="form-control w-full max-w-xs">
-            <label class="label">
-              <span class="label-text">Project Name:</span>
-            </label>
-            <input type="text" id="projectname" placeholder="Type here" defaultValue={projectMetadata.name} class="input input-bordered w-full max-w-xs" />
-          </div>
-          <div class="form-control w-full max-w-xs">
-            <label class="label">
-              <span class="label-text">Project Description:</span>
-            </label>
-            <input type="text" id="projectdescription" placeholder="Type here" defaultValue={projectMetadata.description} class="input input-bordered w-full max-w-xs" />
-          </div>
-          <div class="form-control w-full max-w-xs">
-            <label class="label">
-              <span class="label-text">Project Contributors:</span>
-            </label>
-            <input type="text" id="projectcontributors" placeholder="Type here" defaultValue={projectMetadata.contributors} class="input input-bordered w-full max-w-xs" />
-          </div>
-          <button type="submit" className="btn">Continue</button>
-        </form>
-          </div>
-          <div class="container mx-auto px-4">
-            <CertificateImageHtml/>
-          </div>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">Project Name:</span>
+              </label>
+              <input
+                type="text"
+                id="projectname"
+                placeholder="Type here"
+                defaultValue={projectMetadata.name}
+                className="input input-bordered w-full max-w-xs"
+              />
+            </div>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">Project Description:</span>
+              </label>
+              <input
+                type="text"
+                id="projectdescription"
+                placeholder="Type here"
+                defaultValue={projectMetadata.description}
+                className="input input-bordered w-full max-w-xs"
+              />
+            </div>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">Project Contributors:</span>
+              </label>
+              <input
+                type="text"
+                id="projectcontributors"
+                placeholder="Type here"
+                defaultValue={projectMetadata.contributors}
+                className="input input-bordered w-full max-w-xs"
+              />
+            </div>
+            <button type="submit" className="btn">
+              Continue
+            </button>
+          </form>
         </div>
-      </>
-    )
+        <div className="container mx-auto px-4">
+          <CertificateImageHtml />
+        </div>
+      </div>
+    </>
+  )
 }
