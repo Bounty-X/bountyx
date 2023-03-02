@@ -38,28 +38,23 @@ export default function Home() {
   let defaultProjectMetatadata: ProjectMetadata = {
     name: '',
     description: '',
-    contributors: [],
-  }
-
-  const handleSubmit = async (event: any) => {
-    // Stop the form from submitting and refreshing the page.
-    event.preventDefault()
-    let currentProjectMetadata: ProjectMetadata = {
-      name: event.target.projectname.value,
-      description: event.target.projectdescription.value,
-      contributors: event.target.projectcontributors.value,
-    }
-    setProjectData(currentProjectMetadata)
-    alert('we did it!')
+    contributors: '',
   }
 
   const [projectMetadata, setProjectData] = useLocalStorage('projectMetadata', defaultProjectMetatadata)
+
+  const handleChange = async (field: string, value: string) => {
+    let newProjectMetadata = projectMetadata;
+    newProjectMetadata[field] = value;
+    setProjectData(newProjectMetadata)
+  }
+
   return (
     <>
       <div className="flex flex-row">
         <div className="container mx-auto px-4">
-          <form onSubmit={handleSubmit}>
-            <div className="form-control w-full max-w-xs">
+          <form>
+            <div className="form-control w-full max-w-xs py-4">
               <label className="label">
                 <span className="label-text">Project Name:</span>
               </label>
@@ -69,9 +64,10 @@ export default function Home() {
                 placeholder="Type here"
                 defaultValue={projectMetadata.name}
                 className="input input-bordered w-full max-w-xs"
+                onChange={e => handleChange('name', e.target.value)}
               />
             </div>
-            <div className="form-control w-full max-w-xs">
+            <div className="form-control w-full max-w-xs py-4">
               <label className="label">
                 <span className="label-text">Project Description:</span>
               </label>
@@ -81,9 +77,10 @@ export default function Home() {
                 placeholder="Type here"
                 defaultValue={projectMetadata.description}
                 className="input input-bordered w-full max-w-xs"
+                onChange={e => handleChange('description', e.target.value)}
               />
             </div>
-            <div className="form-control w-full max-w-xs">
+            <div className="form-control w-full max-w-xs py-4">
               <label className="label">
                 <span className="label-text">Project Contributors:</span>
               </label>
@@ -93,11 +90,12 @@ export default function Home() {
                 placeholder="Type here"
                 defaultValue={projectMetadata.contributors}
                 className="input input-bordered w-full max-w-xs"
+                onChange={e => handleChange('contributors', e.target.value)}
               />
             </div>
-            <button type="submit" className="btn">
-              Continue
-            </button>
+            <Link href="/certificates" passHref>
+            <button type="submit" className="btn py-4">Continue</button>
+            </Link>
           </form>
         </div>
         <div className="container mx-auto px-4">

@@ -2,14 +2,16 @@
     /**
      * Identifies the asset to which this token represents
      */
-    name?: string;
+    name: string;
     /**
      * Describes the asset to which this token represents
      */
-    description?: string;
+    description: string;
     /**
      * An url pointing to the external website of the project
      */
-    contributors?: string[];
+    contributors: string;
+    
+    [key: string]: string; // IFoo is indexable; not a new property
   }
   
