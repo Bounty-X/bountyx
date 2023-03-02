@@ -22,8 +22,6 @@ import { DEPLOY_URL, siteConfig } from '@/config/site'
 import { turboIntegrations } from '@/data/turbo-integrations'
 import erc20TokenSymbolToAddress from '@/lib/erc20TokenSymbolToAddress'
 
-import BountyFormDataComponent from '@/components/forms/bounty-form-data'
-import ProjectFormDataComponent from '@/components/forms/project-form-data'
 import { render } from 'react-dom'
 
 import { HyperCertListItem } from '../certificates/hypercert-list-item'

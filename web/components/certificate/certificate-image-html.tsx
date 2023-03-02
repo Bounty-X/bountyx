@@ -7,7 +7,6 @@ export default function CertificateImageHtml() {
     return (
       <>
             <img src="https://d2y4rc9q318ytb.cloudfront.net/accounts/b6ded887-20df-42de-bc10-d22584e2ef9f/350x350/1671505783384-23b46dce.png" alt="Background" />     
-
       </>
     )
   }
