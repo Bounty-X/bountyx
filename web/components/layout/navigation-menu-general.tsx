@@ -31,6 +31,11 @@ export function NavigationMenuGeneral() {
           </LinkComponent>
         </NavigationMenuItem>
         <NavigationMenuItem>
+          <LinkComponent href="/endorsebounty">
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>Endorse A Bounty</NavigationMenuLink>
+          </LinkComponent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
           <LinkComponent href="/certificates">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>My Bounty Certificates</NavigationMenuLink>
           </LinkComponent>
