@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
 import { useBountyxSignBounty } from '@/hooks/bountyx/use-bountyx-sign-bounty'
 
@@ -16,18 +16,21 @@ export const EndorseBountyCard = () => {
     },
     reward: { rewardAmountUsd: 1000, rewardToken: 'USDC' },
   })
-  const [signed, setSigned] = useState<boolean>(false)
+  const [isSigned, setIsSigned] = useState<boolean>(false)
 
   const { data, isError, isLoading, isSuccess, signMessage } = useBountyxSignBounty(bounty)
-  if (data) {
+
+  useEffect(() => {
     console.log('Signature', data)
-    setBounty((prev) => ({ ...prev, signature: data }))
-    setSigned(true)
-  }
+    if (isSuccess) {
+      setBounty((prev) => ({ ...prev, signature: data }))
+      setIsSigned(true)
+    }
+  }, [data])
 
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
-      <div className="badge badge-info">Not Signed</div>
+      {!isSigned && <div className="badge badge-info">Not Signed</div>}
       {isSuccess && <div className="badge badge-success">Signed</div>}
       {isError && <div className="badge badge-error">Signature Error</div>}
       <figure>
@@ -44,7 +47,7 @@ export const EndorseBountyCard = () => {
         </div>
         <p>{bounty.description}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary" disabled={isLoading || signed} onClick={() => signMessage()}>
+          <button className="btn btn-primary" disabled={isLoading || isSigned} onClick={() => signMessage()}>
             Endorse
           </button>
         </div>
