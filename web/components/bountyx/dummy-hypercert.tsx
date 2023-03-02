@@ -11,32 +11,6 @@ import { getBountyxMetadata } from '@/bountyxlib/bountyx-storage'
 // }
 
 export const DummyHypercert = () => {
-  const [metadata, setMetadata] = useState<HypercertMetadata & BountyxMetadata>({} as any)
-
-  useEffect(() => {
-    const receiveBountyxHypercert = async () => {
-      const receivedData = await getBountyxMetadata('bafkreihqfy7tkimvuldlg33fncg5ubhkqadq33a2gd36z6sciw6f7pxbly')
-      console.log('Received bountyx data', receivedData)
-
-      receivedData.bounties = []
-      receivedData.bounties.push({
-        name: 'Metamask Bounty',
-        description: 'metamask description',
-        issuer: {
-          issuerAddress: '0x0',
-          issuerName: 'Metamask',
-          issuerLogoUrl: 'https://org-resources.s3.amazonaws.com/a301ff9b-d07c-419b-9bbb-6da09bd7423a/logo/logo.png',
-        },
-        reward: { rewardAmountUsd: 1000 },
-        endorsement: 'I metamask say that I paid x usd to y',
-        signature: 'signature',
-      })
-      console.log('Full metadata', receivedData)
-      setMetadata(receivedData)
-    }
-    receiveBountyxHypercert()
-  }, [])
-
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
