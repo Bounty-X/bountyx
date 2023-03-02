@@ -47,7 +47,13 @@ export const HyperCertListItem = ({ hyperCertInfo }: { hyperCertInfo: HyperCert 
           </div>
           <div className="w-2"></div>
           <div className="grid flex-grow card bg-base-300 rounded-box">
-            <div className="text-xl font-bold">BOUNTY</div>
+            <div>
+              <div className="text-xl font-bold">BOUNTY</div>
+              <div className="text-2xl font-italic font-bold mt-8 mb-2">$5000.00 USDC</div>
+              <a className="link">View Transaction</a>
+            </div>
+            <div className="divider" />
+            <button className="btn btn-block">ACCESS TEAM CHAT</button>
           </div>
         </div>
       </div>
