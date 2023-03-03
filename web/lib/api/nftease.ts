@@ -11,7 +11,7 @@ const settings = {
 
 const alchemy = new Alchemy(settings)
 
-export const getNftsForOwner = async (args: { address: string; collection: string }): Promise<HypercertMetadata[]> => {
+export const getNftsForOwner = async (args: { address: any; collection: string }): Promise<HypercertMetadata[]> => {
   console.log('NFT_STORAGE_TOKEN', process.env.NFT_STORAGE_TOKEN)
   console.log('WEB3_STORAGE_TOKEN', process.env.WEB3_STORAGE_TOKEN)
 

@@ -54,7 +54,7 @@ export function Header(props: Props) {
         <NavigationMenuGeneral />
       </div>
 
-      <div className="flex items-center gap-4">
+      {/* <div className="flex items-center gap-4">
         <BranchIsWalletConnected>
           <BranchIsAuthenticated>
             <ButtonSIWELogout className="tag tag-light" />
@@ -62,7 +62,7 @@ export function Header(props: Props) {
           </BranchIsAuthenticated>
           <></>
         </BranchIsWalletConnected>
-      </div>
+      </div> */}
     </header>
   )
 }
