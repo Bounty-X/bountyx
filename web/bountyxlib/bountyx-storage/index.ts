@@ -1,5 +1,4 @@
 import { BountyxStorage } from './bountyx-storage'
-import { Constants } from '@/config/constants'
 
 export { BountyxStorage }
 
