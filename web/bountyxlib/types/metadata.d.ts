@@ -12,35 +12,41 @@ export interface HypercertMetadata {
   /**
    * Identifies the asset to which this token represents
    */
-  name: string;
+  name: string
   /**
    * Describes the asset to which this token represents
    */
-  description: string;
+  description: string
   /**
    * An url pointing to the external website of the project
    */
-  external_url?: string;
+  external_url?: string
   /**
    * A URI pointing to a resource with mime type image/* representing the asset to which this token represents. Consider making any images at a width between 320 and 1080 pixels and aspect ratio between 1.91:1 and 4:5 inclusive.
    */
-  image: string;
+  image: string
   /**
    * The version of Hypercert schema used to describe this hypercert
    */
-  version?: string;
+  version?: string
   /**
    * Describes the asset to which this token represents
    */
-  ref?: string;
+  ref?: string
   /**
    * A CID pointer to the merke tree proof json on ipfs
    */
-  allowList?: string;
+  allowList?: string
   properties: {
-    trait_type?: string;
-    value?: string;
-    [k: string]: unknown;
-  }[];
-  hypercert?: HypercertClaimdata;
+    trait_type?: string
+    value?: string
+    [k: string]: unknown
+  }[]
+  hypercert?: HypercertClaimdata
+
+  /**
+   * Added these for now - we can clean up later
+   */
+  tokenId?: string
+  collection?: string
 }

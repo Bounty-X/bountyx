@@ -25,19 +25,33 @@ import { DateTime } from 'luxon'
 import { HyperCert } from '@/types'
 import { hypercerts } from '../../data/hypercerts'
 import { HyperCertListItem } from './hypercert-list-item'
-
-const certs = () => {
-  const list: any = []
-  hypercerts.forEach((item) => {
-    list.push(
-      <div>
-        <HyperCertListItem hyperCertInfo={item} />
-      </div>
-    )
-  })
-  return list
-}
+import { useEffect, useState } from 'react'
+import { getNftsForOwner } from '@/lib/api/nftease'
+import { HypercertMetadata } from '@/bountyxlib/types/metadata'
 
 export default function Home() {
-  return <div className="grid grid-cols-1 gap-1">{certs()}</div>
+  const [certs, setCerts] = useState([])
+
+  const renderCerts = (): any[] => {
+    if (!certs) return []
+
+    const list: any[] = []
+    certs.forEach((item: HypercertMetadata) => {
+      list.push(<HyperCertListItem hyperCertMetadata={item} />)
+    })
+    return list
+  }
+
+  useEffect(() => {
+    const getCerts = async () => {
+      const hypercerts: any = await getNftsForOwner({
+        address: '0xa0facBd53826095f65CBe48F43ddba293d8FD19b',
+        collection: '0x822f17a9a5eecfd66dbaff7946a8071c265d1d07',
+      })
+      setCerts(hypercerts)
+    }
+    getCerts()
+  }, [])
+
+  return <div className="grid grid-cols-1 gap-1">{renderCerts(certs)}</div>
 }
