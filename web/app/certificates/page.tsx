@@ -29,10 +29,12 @@ import { useEffect, useState } from 'react'
 import { getNftsForOwner } from '@/lib/api/nftease'
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
 import { useAccount } from 'wagmi'
+import { Network } from 'alchemy-sdk'
 
 export default function Home() {
   const [certs, setCerts] = useState([])
   const { address, isConnected } = useAccount()
+  const collection = process.env.HYPERCERT_COLLECTION_ADDRESS
 
   const renderCerts = (): any[] => {
     if (!certs) return []
@@ -45,18 +47,34 @@ export default function Home() {
   }
 
   useEffect(() => {
-    const getCerts = async (args: { address: `0x${string}` | undefined; collection: string }) => {
-      console.log('connected', args.address)
+    // For now
+    const static_address = process.env.NEXT_PUBLIC_HYPERCERT_OWNER_ADDRESS
+    const static_collection = process.env.NEXT_PUBLIC_HYPERCERT_COLLECTION_ADDRESS
+    const static_network = process.env.NEXT_PUBLIC_NETWORK ? Number(process.env.NEXT_PUBLIC_NETWORK) : 1
+
+    let network: Network
+    switch (static_network) {
+      case 5:
+        network = Network.ETH_GOERLI
+      default:
+        network = Network.ETH_MAINNET
+    }
+
+    const getCerts = async (args: { address: any; collection: string | undefined; network: Network }) => {
       const hypercerts: any = await getNftsForOwner({
-        address: '0xa0facBd53826095f65CBe48F43ddba293d8FD19b',
-        //address: args.address,
+        address: args.address,
         collection: args.collection,
+        network: args.network,
       })
       setCerts(hypercerts)
     }
 
-    if (isConnected) {
-      getCerts({ address, collection: '0x822f17a9a5eecfd66dbaff7946a8071c265d1d07' })
+    if (isConnected && static_collection) {
+      getCerts({
+        address: static_address,
+        collection: static_collection,
+        network,
+      })
     }
   }, [])
 

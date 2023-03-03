@@ -18,7 +18,7 @@ export function Footer(props: Props) {
     <footer className={classes}>
       <h3>{siteConfig.title}</h3>
       <a className="link my-2 text-xs" target={'_blank'} href="https://districtlabs.com/" rel="noreferrer">
-        Built by artem0x.eth, gold0x.eth, and cypherz.eth
+        Built by artem0x.eth, gold0x.eth, and cipherz.eth
       </a>
       <div className="mt-2 flex items-center">
         <LinkComponent href={`${siteConfig.links.github}`}>
