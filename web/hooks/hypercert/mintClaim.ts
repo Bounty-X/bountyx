@@ -10,7 +10,7 @@ import { mintInteractionLabels } from '../../lib/hypercert/chainInteractions'
 import { HyperCertMinterFactory } from '@hypercerts-org/hypercerts-protocol'
 import { toast } from 'react-toastify'
 // import { hypercertsStorage } from '../lib/hypercerts-storage'
-import { bountyxStorage } from '@/bountyxlib/bountyx-storage'
+import { getBountyxStorage } from '@/bountyxlib/bountyx-storage'
 import { useAccountLowerCase } from './../../hooks/hypercert/account'
 import { cidToIpfsUri } from '../../lib/hypercert/formatting'
 
@@ -33,7 +33,7 @@ export const useMintClaim = ({ onComplete }: { onComplete?: () => void }) => {
     setUnits(units)
     // setStep('uploading')
     console.log('uploading')
-    const cid = await bountyxStorage.storeBountyxMetadata(metaData)
+    const cid = await getBountyxStorage().storeBountyxMetadata(metaData)
     setCidUri(cidToIpfsUri(cid))
   }
 
