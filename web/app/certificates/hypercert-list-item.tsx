@@ -47,10 +47,24 @@ export const HyperCertListItem = ({ hyperCertInfo }: { hyperCertInfo: HyperCert 
           </div>
           <div className="w-2"></div>
           <div className="grid flex-grow card bg-base-300 rounded-box">
-            <div>
-              <div className="text-xl font-bold">BOUNTY</div>
-              <div className="text-2xl font-italic font-bold mt-8 mb-2">$5000.00 USDC</div>
-              <a className="link">View Transaction</a>
+            <div className="flex w-full">
+              <div className="grid h-20 flex-grow">
+                <div>
+                  <div className="text-xl font-bold">BOUNTY</div>
+                  <div className="text-2xl font-italic font-bold mt-8 mb-2">$5000.00 USDC</div>
+                  <a className="link">View Transaction</a>
+                </div>
+              </div>
+              <div className="divider divider-horizontal" />
+              <div className="grid h-20 flex-grow">
+                <div>
+                  <div className="text-xl font-bold">NFT</div>
+                  <div className="text-2xl font-italic font-bold mt-8 mb-2">Token ID - 7</div>
+                  <a className="link" href="https://testnets.opensea.io/assets/goerli/0xead9674689379d939a16e32866c8ec17e2d994ab/7">
+                    View On OpenSea
+                  </a>
+                </div>
+              </div>
             </div>
             <div className="divider" />
             <button className="btn btn-block">ACCESS TEAM CHAT</button>
