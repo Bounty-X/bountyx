@@ -31,7 +31,7 @@ export const EndorseBountyCard = () => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       {!isSigned && <div className="badge badge-info">Not Signed</div>}
-      {isSuccess && <div className="badge badge-success">Signed</div>}
+      {isSigned && <div className="badge badge-success">Signed</div>}
       {isError && <div className="badge badge-error">Signature Error</div>}
       <figure>
         <img src={bounty.issuer.issuerLogoUrl} alt={bounty.issuer.issuerName} />

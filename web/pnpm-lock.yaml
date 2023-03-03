@@ -4,7 +4,8 @@ specifiers:
   '@babel/core': 7.18.5
   '@commitlint/cli': ^17.3.0
   '@commitlint/config-conventional': ^17.3.0
-  '@hypercerts-org/hypercerts-sdk': ^0.0.28
+  '@hypercerts-org/hypercerts-protocol': ^0.0.10
+  '@hypercerts-org/hypercerts-sdk': ^0.0.31
   '@next/bundle-analyzer': ^13.1.1
   '@next/font': 13.1.1
   '@prisma/client': ^4.8.1
@@ -45,6 +46,7 @@ specifiers:
   '@turbo-eth/core-wagmi': 0.0.0-beta.4
   '@turbo-eth/erc20-wagmi': 0.0.0-beta.8
   '@turbo-eth/erc721-wagmi': 0.0.0-beta.5
+  '@types/lodash': ^4.14.191
   '@types/luxon': ^3.2.0
   '@types/node': ^17.0.31
   '@types/react': 18.0.26
@@ -86,6 +88,7 @@ specifiers:
   ky: ^0.33.2
   ky-universal: ^0.11.0
   lint-staged: ^13.1.0
+  lodash: ^4.17.21
   lokijs: ^1.5.12
   lucide-react: 0.105.0-alpha.4
   luxon: ^3.2.1
@@ -111,6 +114,7 @@ specifiers:
   react-responsive: ^9.0.2
   react-spring: ^9.6.1
   react-table: ^7.8.0
+  react-toastify: ^9.1.1
   react-use-keypress: ^1.3.1
   react-wrap-balancer: ^0.3.0
   siwe: 1.1.6
@@ -122,7 +126,8 @@ specifiers:
   wagmi: ~0.11.0
 
 dependencies:
-  '@hypercerts-org/hypercerts-sdk': 0.0.28_uwtnurzw3bkkyfpkrttayidusm
+  '@hypercerts-org/hypercerts-protocol': 0.0.10
+  '@hypercerts-org/hypercerts-sdk': 0.0.31_uwtnurzw3bkkyfpkrttayidusm
   '@next/bundle-analyzer': 13.1.6
   '@next/font': 13.1.1
   '@prisma/client': 4.9.0_prisma@4.9.0
@@ -178,6 +183,7 @@ dependencies:
   jotai: 1.13.1_5wvcx74lvxq2lfpc5x4ihgp2jm
   ky: 0.33.2
   ky-universal: 0.11.0_ky@0.33.2
+  lodash: 4.17.21
   lokijs: 1.5.12
   lucide-react: 0.105.0-alpha.4_react@18.2.0
   luxon: 3.2.1
@@ -199,6 +205,7 @@ dependencies:
   react-responsive: 9.0.2_react@18.2.0
   react-spring: 9.6.1_gz3d7hsprqbdrhmbeq6gexp6xq
   react-table: 7.8.0_react@18.2.0
+  react-toastify: 9.1.1_biqbaboplfbrettd7655fr4n2y
   react-use-keypress: 1.3.1_react@18.2.0
   react-wrap-balancer: 0.3.0_react@18.2.0
   siwe: 1.1.6_ethers@5.7.2
@@ -214,6 +221,7 @@ devDependencies:
   '@commitlint/config-conventional': 17.4.2
   '@svgr/webpack': 6.5.1
   '@tsconfig/next': 1.0.5
+  '@types/lodash': 4.14.191
   '@types/luxon': 3.2.0
   '@types/node': 17.0.45
   '@types/react': 18.0.26
@@ -4433,7 +4441,7 @@ packages:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
     dependencies:
       '@ardatan/sync-fetch': 0.0.1
-      '@graphql-tools/delegate': 9.0.26_graphql@16.6.0
+      '@graphql-tools/delegate': 9.0.28_graphql@16.6.0
       '@graphql-tools/executor-graphql-ws': 0.0.10_graphql@16.6.0
       '@graphql-tools/executor-http': 0.1.9_onug3sa4ph53e46o3zvxbixsym
       '@graphql-tools/executor-legacy-ws': 0.0.8_graphql@16.6.0
@@ -4560,9 +4568,10 @@ packages:
     resolution: {integrity: sha512-S2igvcBB5dxB+rHZnZ/9GySJj8lKmREohQDXNJC3HGX58dJPdCwS4U+QduD/neVbMM3drZedIFtVKmxbBPb+8g==}
     dev: false
 
-  /@hypercerts-org/hypercerts-sdk/0.0.28_uwtnurzw3bkkyfpkrttayidusm:
-    resolution: {integrity: sha512-MvzpA6SoIH/oQoQJgg1X9vbxpIf08BrABp2YcPrHBqu/tE04+Ecf1AsoFByZ8g3T0tJhjtg/mvhSGOOzCMZhig==}
+  /@hypercerts-org/hypercerts-sdk/0.0.31_uwtnurzw3bkkyfpkrttayidusm:
+    resolution: {integrity: sha512-LUlxhWGm5i4GjXHnxiRmtzkVNatz3MVB0bhcFNisrtrQgFl5MMNJ7X3UIYHnB1SDFuuHz9ByOym+BOrmfqKLRQ==}
     dependencies:
+      '@graphprotocol/client-add-source-name': 1.0.16_f2ca5ayjrpox53m5x2nvvj2eh4
       '@graphprotocol/client-cli': 2.2.18_d4ahummvtwdnfwsm4xjxb5qvki
       '@hypercerts-org/hypercerts-protocol': 0.0.10
       '@types/jest': 29.4.0
@@ -20001,6 +20010,17 @@ packages:
       react: 18.2.0
     dev: false
 
+  /react-toastify/9.1.1_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-pkFCla1z3ve045qvjEmn2xOJOy4ZciwRXm1oMPULVkELi5aJdHCN/FHnuqXq8IwGDLB7PPk2/J6uP9D8ejuiRw==}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      clsx: 1.2.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /react-use-keypress/1.3.1_react@18.2.0:
     resolution: {integrity: sha512-fo+LQrxviMcZt7efCFPc6CX9/oNEPD+MJ/qSs4nK3/lyRNtquhG9f1J8GQq2VFfIYUVDUdPKz8fGIwErO1Pcuw==}
     peerDependencies:
@@ -21638,7 +21658,7 @@ packages:
       esbuild: 0.15.13
       fast-json-stable-stringify: 2.1.0
       jest: 29.4.3_2263m44mchjafa7bz7l52hbcpa
-      jest-util: 29.4.1
+      jest-util: 29.4.3
       json5: 2.2.3
       lodash.memoize: 4.1.2
       make-error: 1.3.6
