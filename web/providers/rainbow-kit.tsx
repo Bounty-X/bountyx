@@ -5,9 +5,10 @@ import { ReactNode } from 'react'
 import { RainbowKitProvider, darkTheme, lightTheme } from '@rainbow-me/rainbowkit'
 import { connectorsForWallets } from '@rainbow-me/rainbowkit'
 import { coinbaseWallet, injectedWallet, metaMaskWallet, rainbowWallet, walletConnectWallet } from '@rainbow-me/rainbowkit/wallets'
-import { WagmiConfig, configureChains, createClient } from 'wagmi'
+import { WagmiConfig, configureChains, createClient, Chain } from 'wagmi'
 import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
+import { publicProvider } from 'wagmi/providers/public'
 
 import { ETH_CHAINS_PROD, ETH_CHAINS_TEST } from '@/config/networks'
 import { siteConfig } from '@/config/site'
@@ -23,18 +24,13 @@ const { chains, provider } = configureChains(CHAINS, [
   alchemyProvider({
     apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY as string,
   }),
-  jsonRpcProvider({
-    rpc: () => ({
-      chainId: [11155111],
-      http: 'https://sepolia.infura.io/v3/',
-    }),
-  }),
-  jsonRpcProvider({
-    rpc: () => ({
-      chainId: [31337],
-      http: 'http://127.0.0.1:8545/',
-    }),
-  }),
+  publicProvider(),
+  // jsonRpcProvider({
+  //   rpc: (chain: Chain) => ({
+  //     chainId: [31337],
+  //     http: 'http://127.0.0.1:8545/',
+  //   }),
+  // }),
 ])
 
 const connectors = connectorsForWallets([

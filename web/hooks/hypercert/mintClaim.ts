@@ -34,6 +34,7 @@ export const useMintClaim = ({ onComplete }: { onComplete?: () => void }) => {
     // setStep('uploading')
     console.log('uploading')
     const cid = await getBountyxStorage().storeBountyxMetadata(metaData)
+    console.log('CID', cid)
     setCidUri(cidToIpfsUri(cid))
   }
 
@@ -45,7 +46,7 @@ export const useMintClaim = ({ onComplete }: { onComplete?: () => void }) => {
     isLoading: isLoadingPrepareContractWrite,
     isSuccess: isReadyToWrite,
   } = usePrepareContractWrite({
-    address: process.env.CONTRACT_ADDRESS as `0x${string}`,
+    address: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as `0x${string}`,
     args: [
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       address! as `0x${string}`,

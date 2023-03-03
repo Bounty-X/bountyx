@@ -1,14 +1,13 @@
 'use client'
 import Link from 'next/link'
 import { toast } from 'react-toastify'
-
 import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
+import useLocalStorage from '@/hooks/utils/use-local-storage'
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
 import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata.js'
 import CertificateImageHtml from '@/components/certificate/certificate-image-html'
 import { useMintClaim } from '@/hooks/hypercert/mintClaim'
-import useLocalStorage from '@/hooks/utils/use-local-storage'
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
@@ -62,7 +61,11 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
 
   return (
     <div className="container mx-auto px-4">
-      <form>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault()
+          mintHypercert()
+        }}>
         <div className="form-control w-full max-w-xs py-4">
           <label className="label">
             <span className="label-text">Project Name:</span>
@@ -115,7 +118,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
             />
           </div>
           {/* <Link href="/certificates" passHref> */}
-          <button type="submit" className="btn py-4" onClick={() => mintHypercert().catch((err) => console.log(err))}>
+          <button type="submit" className="btn py-4">
             Continue
           </button>
           {/* </Link> */}

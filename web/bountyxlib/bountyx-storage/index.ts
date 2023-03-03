@@ -8,8 +8,8 @@ let bountyxStorage: BountyxStorage
 export const getBountyxStorage = () => {
   if (!bountyxStorage) {
     bountyxStorage = new BountyxStorage({
-      nftStorageToken: Constants.NFT_STORAGE_TOKEN,
-      web3StorageToken: Constants.WEB3_STORAGE_TOKEN,
+      nftStorageToken: process.env.NEXT_PUBLIC_NFT_STORAGE_TOKEN,
+      web3StorageToken: process.env.NEXT_PUBLIC_WEB3_STORAGE_TOKEN,
     })
   }
   return bountyxStorage
