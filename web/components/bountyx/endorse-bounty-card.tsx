@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
 import { useBountyxSignBounty } from '@/hooks/bountyx/use-bountyx-sign-bounty'
 
@@ -30,24 +31,24 @@ export const EndorseBountyCard = () => {
 
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
-      {!isSigned && <div className="badge badge-info">Not Signed</div>}
-      {isSigned && <div className="badge badge-success">Signed</div>}
-      {isError && <div className="badge badge-error">Signature Error</div>}
+      {!isSigned && <div className="badge-info badge">Not Signed</div>}
+      {isSigned && <div className="badge-success badge">Signed</div>}
+      {isError && <div className="badge-error badge">Signature Error</div>}
       <figure>
         <img src={bounty.issuer.issuerLogoUrl} alt={bounty.issuer.issuerName} />
       </figure>
       <div className="card-body">
-        <div className="badge badge-secondary">{bounty.issuer.issuerName}</div>
+        <div className="badge-secondary badge">{bounty.issuer.issuerName}</div>
         <h2 className="card-title">{bounty.name}</h2>
         <div className="card-actions justify-center">
           <p>Bounty Receiver</p>
-          <div className="badge badge-outline">{bounty.receiver?.receiverAddress}</div>
+          <div className="badge-outline badge">{bounty.receiver?.receiverAddress}</div>
           <p>Bounty Amount in USD</p>
-          <div className="badge badge-outline">{bounty.reward.rewardAmountUsd}</div>
+          <div className="badge-outline badge">{bounty.reward.rewardAmountUsd}</div>
         </div>
         <p>{bounty.description}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary" disabled={isLoading || isSigned} onClick={() => signMessage()}>
+          <button className="btn-primary btn" disabled={isLoading || isSigned} onClick={() => signMessage()}>
             Endorse
           </button>
         </div>

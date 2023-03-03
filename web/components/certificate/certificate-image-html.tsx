@@ -1,6 +1,7 @@
-import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata'
 import { useEffect } from 'react'
 import * as React from 'react'
+
+import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata'
 
 export default function CertificateImageHtml({ projectMetadata }: { projectMetadata: ProjectMetadata }) {
   // Declare a new state variable, which we'll call "count"

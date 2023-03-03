@@ -1,8 +1,9 @@
 // This script demonstrates access to the NFT API via the Alchemy SDK.
-import { Network, Alchemy, Nft } from 'alchemy-sdk'
-import { HypercertMetadata } from '@/bountyxlib/types/metadata'
-import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
+import { Alchemy, Network, Nft } from 'alchemy-sdk'
+
 import { getBountyxStorage } from '@/bountyxlib/bountyx-storage'
+import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
+import { HypercertMetadata } from '@/bountyxlib/types/metadata'
 
 const settings = {
   apiKey: 'BJaIUlfPThKFKXvdPfqf19yxXdbYmZ0H', // Todo clean this up
