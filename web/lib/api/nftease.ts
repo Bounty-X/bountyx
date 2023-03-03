@@ -5,16 +5,13 @@ import { getBountyxStorage } from '@/bountyxlib/bountyx-storage'
 import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
 
-const settings = {
-  apiKey: 'BJaIUlfPThKFKXvdPfqf19yxXdbYmZ0H', // Todo clean this up
-  network: Network.ETH_GOERLI, // Todo clean this up
-}
+export const getNftsForOwner = async (args: { address: any; collection: string | undefined; network: Network }): Promise<HypercertMetadata[]> => {
+  const settings = {
+    apiKey: 'BJaIUlfPThKFKXvdPfqf19yxXdbYmZ0H', // Todo clean this up
+    network: args.network,
+  }
 
-const alchemy = new Alchemy(settings)
-
-export const getNftsForOwner = async (args: { address: any; collection: string }): Promise<HypercertMetadata[]> => {
-  console.log('NFT_STORAGE_TOKEN', process.env.NFT_STORAGE_TOKEN)
-  console.log('WEB3_STORAGE_TOKEN', process.env.WEB3_STORAGE_TOKEN)
+  const alchemy = new Alchemy(settings)
 
   const nftsForOwner = await alchemy.nft.getNftsForOwner(args.address)
   const bountyXNFTs: HypercertMetadata[] = []
