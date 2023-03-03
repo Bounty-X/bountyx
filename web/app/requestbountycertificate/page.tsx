@@ -30,23 +30,35 @@ import { HyperCert } from '@/types'
 import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata.js'
 
 import { DummyHypercert } from '@/components/bountyx/dummy-hypercert'
-import CertificateImageHtml from '@/components/certificate/certificate-image-html'
+const CertificateImageHtml = dynamic(() => import('@/components/certificate/certificate-image-html'), {
+  ssr: false,
+})
 
 import useLocalStorage from '@/hooks/utils/use-local-storage'
+import { useState } from 'react'
+
+import dynamic from 'next/dynamic'
+
 
 export default function Home() {
-  let defaultProjectMetatadata: ProjectMetadata = {
+  let defaultProjectMetadata: ProjectMetadata = {
     name: '',
     description: '',
     contributors: '',
   }
 
-  const [projectMetadata, setProjectData] = useLocalStorage('projectMetadata', defaultProjectMetatadata)
-
+  const [projectMetadata, setProjectData] = useLocalStorage('projectMetadata', defaultProjectMetadata)
+    
   const handleChange = async (field: string, value: string) => {
-    let newProjectMetadata = projectMetadata;
+    // Need to reconstruct object and copy so that react knows the object changed
+    let newProjectMetadata: ProjectMetadata = {
+      name: '',
+      description: '',
+      contributors: '',
+    }; 
+    Object.assign(newProjectMetadata, projectMetadata);
     newProjectMetadata[field] = value;
-    setProjectData(newProjectMetadata)
+    setProjectData(newProjectMetadata);
   }
 
   return (
@@ -99,7 +111,7 @@ export default function Home() {
           </form>
         </div>
         <div className="container mx-auto px-4">
-          <CertificateImageHtml />
+          <CertificateImageHtml projectMetadata={projectMetadata}/>
         </div>
       </div>
     </>
