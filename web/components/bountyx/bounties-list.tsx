@@ -1,4 +1,5 @@
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
+
 import { BountyListItem } from './bounty-list-item'
 
 interface BountiesListProps {

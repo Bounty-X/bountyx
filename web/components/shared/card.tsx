@@ -54,7 +54,7 @@ export default function Card({
         </div>
         {!href ? null : (
           <LinkComponent href={href}>
-            <button className="btn btn-light my-4">Demo</button>
+            <button className="btn-light btn my-4">Demo</button>
           </LinkComponent>
         )}
       </div>

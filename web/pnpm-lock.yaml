@@ -107,7 +107,6 @@ specifiers:
   react: '>=17'
   react-dom: '>=17'
   react-icons: ^4.7.1
-  react-konva: ^18.2.5
   react-markdown: ^8.0.4
   react-modal: ^3.16.1
   react-modal-hook: ^3.0.2
@@ -199,13 +198,12 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.7.1_react@18.2.0
-  react-konva: 18.2.5_d7gpxn44oibr567fgtt3qmuz5a
   react-markdown: 8.0.5_kzbn2opkn2327fwg5yzwzya5o4
   react-modal: 3.16.1_biqbaboplfbrettd7655fr4n2y
   react-modal-hook: 3.0.2_v2m5e27vhdewzwhryxwfaorcca
   react-native: 0.71.0_fz72vpftmnaczycpteam7fadla
   react-responsive: 9.0.2_react@18.2.0
-  react-spring: 9.6.1_gz3d7hsprqbdrhmbeq6gexp6xq
+  react-spring: 9.6.1_gllre25ep4edxlqy4kbsg3khky
   react-table: 7.8.0_react@18.2.0
   react-toastify: 9.1.1_biqbaboplfbrettd7655fr4n2y
   react-use-keypress: 1.3.1_react@18.2.0
@@ -7371,7 +7369,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@react-spring/konva/9.6.1_ynd42wi4f7cixhctsv52k7vqty:
+  /@react-spring/konva/9.6.1_xjlc67ud25bko42yehf4pb3enm:
     resolution: {integrity: sha512-MevnU+tnG1LPsmMRpfJfevfLtI0ObIvrwYc+Xg+kmYJe00vwMRSdulQOztKANKalFXBewwk72XrQCeRLXFaUIg==}
     peerDependencies:
       konva: '>=2.6'
@@ -7384,7 +7382,7 @@ packages:
       '@react-spring/types': 9.6.1
       konva: 8.4.2
       react: 18.2.0
-      react-konva: 18.2.5_d7gpxn44oibr567fgtt3qmuz5a
+      react-konva: 16.8.6_d7gpxn44oibr567fgtt3qmuz5a
     dev: false
 
   /@react-spring/native/9.6.1_kuxg7gkzr2feacpcwrwkraywoi:
@@ -19706,20 +19704,18 @@ packages:
   /react-is/18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
 
-  /react-konva/18.2.5_d7gpxn44oibr567fgtt3qmuz5a:
-    resolution: {integrity: sha512-lTqJStcHnpGSXB9RlV7p5at3MpRML/TujzbuUDZRIInsLocJ/I4Nhhg3w6yJm9UV05kcwr88OY6LO+2zRyzXog==}
+  /react-konva/16.8.6_d7gpxn44oibr567fgtt3qmuz5a:
+    resolution: {integrity: sha512-6KRIqHyJuTTMuAehDIXvw+ZrtEj2aMc2fwolhmFlg1HBzH4PJimsMByTcEx292Afh9d38TcHdjXP1C58qqDOlg==}
     peerDependencies:
-      konva: ^8.0.1 || ^7.2.5
-      react: '>=18.0.0'
-      react-dom: '>=18.0.0'
+      konva: ^3.2.3
+      react: 16.8.x
+      react-dom: 16.8.x
     dependencies:
-      '@types/react-reconciler': 0.28.2
-      its-fine: 1.0.8_react@18.2.0
       konva: 8.4.2
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      react-reconciler: 0.29.0_react@18.2.0
-      scheduler: 0.23.0
+      react-reconciler: 0.20.4_react@18.2.0
+      scheduler: 0.13.6
     dev: false
 
   /react-lifecycles-compat/3.0.4:
@@ -19896,17 +19892,6 @@ packages:
       scheduler: 0.21.0
     dev: false
 
-  /react-reconciler/0.29.0_react@18.2.0:
-    resolution: {integrity: sha512-wa0fGj7Zht1EYMRhKWwoo1H9GApxYLBuhoAuXN0TlltESAjDssB+Apf0T/DngVqaMyPypDmabL37vw/2aRM98Q==}
-    engines: {node: '>=0.10.0'}
-    peerDependencies:
-      react: ^18.2.0
-    dependencies:
-      loose-envify: 1.4.0
-      react: 18.2.0
-      scheduler: 0.23.0
-    dev: false
-
   /react-refresh/0.4.3:
     resolution: {integrity: sha512-Hwln1VNuGl/6bVwnd0Xdn1e84gT/8T9aYNL+HAKDArLCS7LWjwr7StE30IEYbIkx0Vi3vs+coQxe+SQDbGbbpA==}
     engines: {node: '>=0.10.0'}
@@ -19989,14 +19974,14 @@ packages:
       react-is: 18.2.0
     dev: false
 
-  /react-spring/9.6.1_gz3d7hsprqbdrhmbeq6gexp6xq:
+  /react-spring/9.6.1_gllre25ep4edxlqy4kbsg3khky:
     resolution: {integrity: sha512-BeP80R4SLb1bZHW/Q62nECoScHw/fH+jzGkD7dc892HNGa+lbGIJXURc6U7N8JfZ8peEO46nPxR57aUMuYzquQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@react-spring/core': 9.6.1_react@18.2.0
-      '@react-spring/konva': 9.6.1_ynd42wi4f7cixhctsv52k7vqty
+      '@react-spring/konva': 9.6.1_xjlc67ud25bko42yehf4pb3enm
       '@react-spring/native': 9.6.1_kuxg7gkzr2feacpcwrwkraywoi
       '@react-spring/three': 9.6.1_3rdppqv7sj4lofmxp54xjrptce
       '@react-spring/web': 9.6.1_biqbaboplfbrettd7655fr4n2y

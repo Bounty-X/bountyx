@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
-import { HypercertMetadata } from '@/bountyxlib/types/metadata'
-import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
+
 import { getBountyxStorage } from '@/bountyxlib/bountyx-storage'
+import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
+import { HypercertMetadata } from '@/bountyxlib/types/metadata'
 
 export const DummyHypercert = () => {
   const [metadata, setMetadata] = useState<HypercertMetadata & BountyxMetadataCollection>({} as any)
@@ -23,14 +24,14 @@ export const DummyHypercert = () => {
       <div className="card-body">
         <h2 className="card-title">{metadata?.name}</h2>
         <p>{metadata?.hypercert?.work_scope.name}</p>
-        <div className="badge badge-secondary">{metadata?.hypercert?.work_scope.display_value}</div>
+        <div className="badge-secondary badge">{metadata?.hypercert?.work_scope.display_value}</div>
         <p>{metadata?.hypercert?.impact_scope.name}</p>
-        <div className="badge badge-secondary">{metadata?.hypercert?.impact_scope.display_value}</div>
+        <div className="badge-secondary badge">{metadata?.hypercert?.impact_scope.display_value}</div>
         <p>{metadata?.hypercert?.rights.name}</p>
-        <div className="badge badge-secondary">{metadata?.hypercert?.rights.display_value}</div>
+        <div className="badge-secondary badge">{metadata?.hypercert?.rights.display_value}</div>
         <div className="card-actions justify-center">
           <p>{metadata?.hypercert?.contributors.name}</p>
-          <div className="badge badge-outline">{metadata?.hypercert?.contributors.display_value}</div>
+          <div className="badge-outline badge">{metadata?.hypercert?.contributors.display_value}</div>
         </div>
         <p>{metadata?.description}</p>
       </div>

@@ -22,7 +22,7 @@ export const DiscoProfileCredentials = ({ className, address }: DiscoProfileCred
       <div className="container mt-10 grid grid-cols-12 gap-x-4">
         {data?.creds?.map((credential: any) => {
           return (
-            <div key={credential.id} className="card bg-gradient-credential col-span-12 lg:col-span-4">
+            <div key={credential.id} className="bg-gradient-credential card col-span-12 lg:col-span-4">
               <div className=" break-words font-bold text-neutral-900 dark:text-neutral-100">{`${credential?.type[1] || credential?.type[0]}`}</div>
               <div className="mt-32">
                 <hr className="my-2" />

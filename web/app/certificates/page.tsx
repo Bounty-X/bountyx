@@ -28,9 +28,11 @@ import { HyperCertListItem } from './hypercert-list-item'
 import { useEffect, useState } from 'react'
 import { getNftsForOwner } from '@/lib/api/nftease'
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
+import { useAccount } from 'wagmi'
 
 export default function Home() {
   const [certs, setCerts] = useState([])
+  const { address, isConnected } = useAccount()
 
   const renderCerts = (): any[] => {
     if (!certs) return []
@@ -43,15 +45,20 @@ export default function Home() {
   }
 
   useEffect(() => {
-    const getCerts = async () => {
+    const getCerts = async (args: { address: `0x${string}` | undefined; collection: string }) => {
+      console.log('connected', args.address)
       const hypercerts: any = await getNftsForOwner({
         address: '0xa0facBd53826095f65CBe48F43ddba293d8FD19b',
-        collection: '0x822f17a9a5eecfd66dbaff7946a8071c265d1d07',
+        //address: args.address,
+        collection: args.collection,
       })
       setCerts(hypercerts)
     }
-    getCerts()
+
+    if (isConnected) {
+      getCerts({ address, collection: '0x822f17a9a5eecfd66dbaff7946a8071c265d1d07' })
+    }
   }, [])
 
-  return <div className="grid grid-cols-1 gap-1">{renderCerts(certs)}</div>
+  return <div className="grid grid-cols-1 gap-1">{renderCerts()}</div>
 }

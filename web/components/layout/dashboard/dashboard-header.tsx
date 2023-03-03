@@ -21,7 +21,7 @@ export function DashboardHeader(props: Props) {
         <WalletAddress className="tag tag-dark" truncate isLink />
       </div>
 
-      <div className="flex items-center gap-4">
+      {/* <div className="flex items-center gap-4">
         <BranchIsWalletConnected>
           <BranchIsAuthenticated>
             <ButtonSIWELogout />
@@ -30,7 +30,7 @@ export function DashboardHeader(props: Props) {
           <WalletConnect />
         </BranchIsWalletConnected>
         <ThemeToggle />
-      </div>
+      </div> */}
     </header>
   )
 }

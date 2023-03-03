@@ -1,13 +1,14 @@
 'use client'
 import Link from 'next/link'
-import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata.js'
-import useLocalStorage from '@/hooks/utils/use-local-storage'
+import { toast } from 'react-toastify'
+
+import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
-import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
-import { useMintClaim } from '@/hooks/hypercert/mintClaim'
-import { toast } from 'react-toastify'
+import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata.js'
 import CertificateImageHtml from '@/components/certificate/certificate-image-html'
+import { useMintClaim } from '@/hooks/hypercert/mintClaim'
+import useLocalStorage from '@/hooks/utils/use-local-storage'
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
@@ -19,7 +20,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
     description: '',
     external_url: '',
     contributors: '',
-  })    
+  })
 
   const handleChange = async (field: string, value: string) => {
     // Need to reconstruct object and copy so that react knows the object changed
@@ -28,10 +29,10 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
       description: '',
       external_url: '',
       contributors: '',
-    }; 
-    Object.assign(newProjectMetadata, projectMetadata);
-    newProjectMetadata[field] = value;
-    setProjectData(newProjectMetadata);
+    }
+    Object.assign(newProjectMetadata, projectMetadata)
+    newProjectMetadata[field] = value
+    setProjectData(newProjectMetadata)
   }
 
   const { write: mintClaim } = useMintClaim({
@@ -71,7 +72,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
             id="projectname"
             placeholder="Type here"
             defaultValue={projectMetadata.name}
-            className="input input-bordered w-full max-w-xs"
+            className="input-bordered input w-full max-w-xs"
             onChange={(e) => handleChange('name', e.target.value)}
           />
           <div className="form-control w-full max-w-xs py-4">
@@ -83,7 +84,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
               id="projectname"
               placeholder="Type here"
               defaultValue={projectMetadata.external_url}
-              className="input input-bordered w-full max-w-xs"
+              className="input-bordered input w-full max-w-xs"
               onChange={(e) => handleChange('external_url', e.target.value)}
             />
           </div>
@@ -96,7 +97,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
               id="projectdescription"
               placeholder="Type here"
               defaultValue={projectMetadata.description}
-              className="input input-bordered w-full max-w-xs"
+              className="input-bordered input w-full max-w-xs"
               onChange={(e) => handleChange('description', e.target.value)}
             />
           </div>
@@ -109,7 +110,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
               id="projectcontributors"
               placeholder="Type here"
               defaultValue={projectMetadata.contributors}
-              className="input input-bordered w-full max-w-xs"
+              className="input-bordered input w-full max-w-xs"
               onChange={(e) => handleChange('contributors', e.target.value)}
             />
           </div>
@@ -120,7 +121,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
           {/* </Link> */}
         </div>
         <div className="container mx-auto px-4">
-          <CertificateImageHtml projectMetadata={projectMetadata}/>
+          <CertificateImageHtml projectMetadata={projectMetadata} />
         </div>
       </form>
     </div>
