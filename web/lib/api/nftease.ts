@@ -16,7 +16,9 @@ export const getNftsForOwner = async (args: { address: any; collection: string |
   const nftsForOwner = await alchemy.nft.getNftsForOwner(args.address)
   const bountyXNFTs: HypercertMetadata[] = []
   if (nftsForOwner.totalCount > 0) {
-    const hypercertNFTs = nftsForOwner.ownedNfts.filter((nft) => nft.contract.address.toLowerCase() === args.collection.toLowerCase())
+    const hypercertNFTs = nftsForOwner.ownedNfts.filter(
+      (nft) => args.collection && nft.contract.address.toLowerCase() === args.collection.toLowerCase()
+    )
     for (const nft of hypercertNFTs) {
       if (!nft.tokenUri) {
         throw Error('No token uri defined')
