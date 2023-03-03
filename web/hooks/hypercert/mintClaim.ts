@@ -34,6 +34,7 @@ export const useMintClaim = ({ onComplete }: { onComplete?: () => void }) => {
     // setStep('uploading')
     console.log('uploading')
     const cid = await getBountyxStorage().storeBountyxMetadata(metaData)
+    console.log('CID', cid)
     setCidUri(cidToIpfsUri(cid))
   }
 
