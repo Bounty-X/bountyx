@@ -53,5 +53,5 @@ export default function Home() {
     getCerts()
   }, [])
 
-  return <div className="grid grid-cols-1 gap-1">{renderCerts(certs)}</div>
+  return <div className="grid grid-cols-1 gap-1">{renderCerts()}</div>
 }

@@ -1,7 +1,8 @@
 // This script demonstrates access to the NFT API via the Alchemy SDK.
 import { Network, Alchemy, Nft } from 'alchemy-sdk'
-import { HypercertMetadata } from '../../bountyxlib/types/metadata'
-import { getBountyxMetadata } from '../../bountyxlib/bountyx-storage'
+import { HypercertMetadata } from '@/bountyxlib/types/metadata'
+import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
+import { getBountyxStorage } from '@/bountyxlib/bountyx-storage'
 
 const settings = {
   apiKey: 'BJaIUlfPThKFKXvdPfqf19yxXdbYmZ0H', // Todo clean this up
@@ -11,6 +12,9 @@ const settings = {
 const alchemy = new Alchemy(settings)
 
 export const getNftsForOwner = async (args: { address: string; collection: string }): Promise<HypercertMetadata[]> => {
+  console.log('NFT_STORAGE_TOKEN', process.env.NFT_STORAGE_TOKEN)
+  console.log('WEB3_STORAGE_TOKEN', process.env.WEB3_STORAGE_TOKEN)
+
   const nftsForOwner = await alchemy.nft.getNftsForOwner(args.address)
   const bountyXNFTs: HypercertMetadata[] = []
   if (nftsForOwner.totalCount > 0) {
@@ -20,7 +24,7 @@ export const getNftsForOwner = async (args: { address: string; collection: strin
         throw Error('No token uri defined')
       }
       console.log(nft.tokenUri.raw.replace('ipfs://', ''))
-      const hcMetadata = await getBountyxMetadata(nft.tokenUri.raw.replace('ipfs://', ''))
+      const hcMetadata = await getBountyxStorage().getBountyxMetadata(nft.tokenUri.raw.replace('ipfs://', ''))
       console.log(nft)
       const bxMetadata: HypercertMetadata = {
         name: hcMetadata.name,

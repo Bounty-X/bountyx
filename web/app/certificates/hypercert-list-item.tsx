@@ -11,7 +11,7 @@ const contributors = (contrib: any) => {
           <div className="flex items-center space-x-3">
             <div className="avatar">
               <div className="mask mask-squircle w-12 h-12">
-                <img src={item.avatar} />
+                <img src={item.avatar ? item.avatar : 'bountyx-default.png'} />
               </div>
             </div>
             <div>
@@ -57,9 +57,9 @@ export const HyperCertListItem = ({ hyperCertMetadata }: { hyperCertMetadata: Hy
           <div className="grid flex-grow card bg-base-300 rounded-box">
             <div className="flex w-full">
               <div className="grid h-20 flex-grow">
-                <div>
+                <div className="mb-4">
                   <div className="text-xl font-bold">BOUNTY</div>
-                  <div className="text-2xl font-italic font-bold mt-8 mb-2">$5000.00 USDC</div>
+                  <div className="text-l font-italic font-bold mt-8 mb-2">$5000.00 USDC</div>
                   <a className="link">View Transaction</a>
                 </div>
               </div>
@@ -67,7 +67,7 @@ export const HyperCertListItem = ({ hyperCertMetadata }: { hyperCertMetadata: Hy
               <div className="grid h-20 flex-grow">
                 <div>
                   <div className="text-xl font-bold">NFT</div>
-                  <div className="text-xl font-italic font-bold mt-8 mb-2">Token ID - {hyperCertMetadata.tokenId}</div>
+                  <div className="text-l font-italic font-bold mt-8 mb-2">Token ID - {hyperCertMetadata.tokenId}</div>
                   <a
                     className="link"
                     href={'https://testnets.opensea.io/assets/goerli/' + hyperCertMetadata.collection + '/' + hyperCertMetadata.tokenId}>
