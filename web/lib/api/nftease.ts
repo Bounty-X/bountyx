@@ -6,6 +6,7 @@ import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
 
 export const getNftsForOwner = async (args: { address: any; collection: string | undefined; network: Network }): Promise<HypercertMetadata[]> => {
+  console.log(args)
   const settings = {
     apiKey: 'BJaIUlfPThKFKXvdPfqf19yxXdbYmZ0H', // Todo clean this up
     network: args.network,
