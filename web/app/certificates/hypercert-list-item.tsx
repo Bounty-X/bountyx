@@ -1,8 +1,10 @@
-import { HyperCert } from '@/types'
+import { HypercertMetadata } from '@/bountyxlib/types/metadata'
 
 const contributors = (contrib: any) => {
+  if (!contrib) return []
+
   const list: any = []
-  contrib.forEach((item: any) => {
+  contrib.value.forEach((item: any) => {
     list.push(
       <tr>
         <td>
@@ -13,7 +15,7 @@ const contributors = (contrib: any) => {
               </div>
             </div>
             <div>
-              <div className="font-bold">{item.name}</div>
+              <div className="font-bold">{item}</div>
               <span className="badge badge-ghost badge-sm">{item.relationship == 'sponsor' ? 'Sponsor' : 'Core Contributor'}</span>
             </div>
           </div>
@@ -27,11 +29,17 @@ const contributors = (contrib: any) => {
   return list
 }
 
-export const HyperCertListItem = ({ hyperCertInfo }: { hyperCertInfo: HyperCert }) => {
+export const HyperCertListItem = ({ hyperCertMetadata }: { hyperCertMetadata: HypercertMetadata }) => {
+  console.log(hyperCertMetadata)
+
+  if (!hyperCertMetadata) {
+    return null
+  }
+
   return (
     <div className="card lg:card-side bg-base-100 shadow-xl">
       <figure>
-        <img src={hyperCertInfo.general.renderedImage} />
+        <img src={hyperCertMetadata.image} />
       </figure>
       <div className="card-body">
         <div className="flex w-full h-full">
@@ -40,7 +48,7 @@ export const HyperCertListItem = ({ hyperCertInfo }: { hyperCertInfo: HyperCert 
               <div className="text-xl font-bold">OWNERSHIP</div>
               <div className="overflow-x-auto w-full">
                 <table className="table w-full">
-                  <tbody>{contributors(hyperCertInfo.work.contributors)}</tbody>
+                  <tbody>{contributors(hyperCertMetadata.hypercert.contributors)}</tbody>
                 </table>
               </div>
             </div>
@@ -59,8 +67,10 @@ export const HyperCertListItem = ({ hyperCertInfo }: { hyperCertInfo: HyperCert 
               <div className="grid h-20 flex-grow">
                 <div>
                   <div className="text-xl font-bold">NFT</div>
-                  <div className="text-2xl font-italic font-bold mt-8 mb-2">Token ID - 7</div>
-                  <a className="link" href="https://testnets.opensea.io/assets/goerli/0xead9674689379d939a16e32866c8ec17e2d994ab/7">
+                  <div className="text-xl font-italic font-bold mt-8 mb-2">Token ID - {hyperCertMetadata.tokenId}</div>
+                  <a
+                    className="link"
+                    href={'https://testnets.opensea.io/assets/goerli/' + hyperCertMetadata.collection + '/' + hyperCertMetadata.tokenId}>
                     View On OpenSea
                   </a>
                 </div>
