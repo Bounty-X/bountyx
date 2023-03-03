@@ -9,7 +9,7 @@ export const BountiesList = ({ bounties }: BountiesListProps) => {
   return (
     <div className="grid">
       {bounties.map((bounty) => (
-        <BountyListItem bounty={bounty} />
+        <BountyListItem key={bounty.name} bounty={bounty} />
       ))}
     </div>
   )

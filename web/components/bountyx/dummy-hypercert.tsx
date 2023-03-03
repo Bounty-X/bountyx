@@ -1,16 +1,14 @@
 import { useEffect, useState } from 'react'
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
 import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
-import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
-import { getBountyxMetadata } from '@/bountyxlib/bountyx-storage'
-import { useSignMessage } from 'wagmi'
+import { bountyxStorage } from '@/bountyxlib/bountyx-storage'
 
 export const DummyHypercert = () => {
   const [metadata, setMetadata] = useState<HypercertMetadata & BountyxMetadataCollection>({} as any)
 
   useEffect(() => {
     const receiveBountyxHypercert = async () => {
-      const receivedData = await getBountyxMetadata('bafkreihqfy7tkimvuldlg33fncg5ubhkqadq33a2gd36z6sciw6f7pxbly')
+      const receivedData = await bountyxStorage.getBountyxMetadata('bafkreihqfy7tkimvuldlg33fncg5ubhkqadq33a2gd36z6sciw6f7pxbly')
       console.log('Received bountyx data', receivedData)
       setMetadata(receivedData)
     }

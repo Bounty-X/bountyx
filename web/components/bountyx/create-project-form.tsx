@@ -5,7 +5,8 @@ import useLocalStorage from '@/hooks/utils/use-local-storage'
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
 import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
-import { storeBountyxMetadata } from '@/bountyxlib/bountyx-storage'
+import { useMintClaim } from '@/hooks/hypercert/mintClaim'
+import { toast } from 'react-toastify'
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
@@ -23,9 +24,14 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
     let newProjectMetadata = projectMetadata
     newProjectMetadata[field] = value
     setProjectData(newProjectMetadata)
+    console.log(newProjectMetadata)
   }
 
-  const uploadMetadata = async () => {
+  const { write: mintClaim } = useMintClaim({
+    onComplete: () => toast('Hypercert with Bountyx minted', { type: 'success' }),
+  })
+
+  const mintHypercert = async () => {
     const metadata: HypercertMetadata & BountyxMetadataCollection = {
       name: projectMetadata.name,
       description: projectMetadata.description,
@@ -36,8 +42,14 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
       hypercert: {},
       bounties,
     }
+    let numberOfFractions = 0
+    bounties.forEach((bounty) => {
+      numberOfFractions += bounty.reward.rewardAmountUsd ?? 0
+    })
 
-    const cidStr = await storeBountyxMetadata(metadata)
+    console.log('Minting hypercert', metadata)
+    console.log('Fractions', numberOfFractions)
+    await mintClaim(metadata, numberOfFractions)
   }
 
   return (
@@ -94,11 +106,11 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
               onChange={(e) => handleChange('contributors', e.target.value)}
             />
           </div>
-          <Link href="/certificates" passHref>
-            <button type="submit" className="btn py-4" onClick={() => uploadMetadata()}>
-              Continue
-            </button>
-          </Link>
+          {/* <Link href="/certificates" passHref> */}
+          <button type="submit" className="btn py-4" onClick={() => mintHypercert().catch((err) => console.log(err))}>
+            Continue
+          </button>
+          {/* </Link> */}
         </div>
       </form>
     </div>
