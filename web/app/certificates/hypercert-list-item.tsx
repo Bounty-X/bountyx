@@ -1,4 +1,5 @@
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
+const ellipsize = require('ellipsize')
 
 const contributors = (contrib: any) => {
   if (!contrib) return []
@@ -15,13 +16,13 @@ const contributors = (contrib: any) => {
               </div>
             </div>
             <div>
-              <div className="font-bold">{item}</div>
+              <div className="font-bold">{ellipsize(item, 9, { truncate: 'middle' })}</div>
               <span className="badge badge-ghost badge-sm">{item.relationship == 'sponsor' ? 'Sponsor' : 'Core Contributor'}</span>
             </div>
           </div>
         </td>
         <td>
-          <div className="text-xl font-bold">{item.percentage} %</div>
+          <div className="text-l font-bold">{item.percentage} %</div>
         </td>
       </tr>
     )
@@ -38,14 +39,14 @@ export const HyperCertListItem = ({ hyperCertMetadata }: { hyperCertMetadata: Hy
 
   return (
     <div className="card lg:card-side bg-base-100 shadow-xl">
-      <figure>
+      <figure className="flex">
         <img src={hyperCertMetadata.image} />
       </figure>
       <div className="card-body">
         <div className="flex w-full h-full">
           <div className="grid flex-grow card bg-base-300 rounded-box">
             <div>
-              <div className="text-xl font-bold">OWNERSHIP</div>
+              <div className="text-l font-bold">OWNERSHIP</div>
               <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                   <tbody>{contributors(hyperCertMetadata.hypercert.contributors)}</tbody>
@@ -67,7 +68,9 @@ export const HyperCertListItem = ({ hyperCertMetadata }: { hyperCertMetadata: Hy
               <div className="grid h-20 flex-grow">
                 <div>
                   <div className="text-xl font-bold">NFT</div>
-                  <div className="text-l font-italic font-bold mt-8 mb-2">Token ID - {hyperCertMetadata.tokenId}</div>
+                  <div className="text-l font-italic font-bold mt-8 mb-2">
+                    Token ID - {ellipsize(hyperCertMetadata.tokenId, 9, { truncate: 'middle' })}
+                  </div>
                   <a
                     className="link"
                     href={'https://testnets.opensea.io/assets/goerli/' + hyperCertMetadata.collection + '/' + hyperCertMetadata.tokenId}>
