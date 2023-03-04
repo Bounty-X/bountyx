@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { HypercertMetadata } from '@hypercerts-org/hypercerts-sdk'
 import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
-// import { useContractModal } from '../components/contract-interaction-dialog-context'
+import { useContractModal } from '../../components/shared/contract-interaction-dialog-context'
 import { useParseBlockchainError } from '../../lib/hypercert/parse-blockchain-error'
 import { useContractWrite, usePrepareContractWrite, useWaitForTransaction } from 'wagmi'
 // import { CONTRACT_ADDRESS } from '../lib/config'
@@ -26,12 +26,12 @@ export const useMintClaim = ({ onComplete }: { onComplete?: () => void }) => {
   }
 
   const { address } = useAccountLowerCase()
-  //   const { setStep, showModal } = useContractModal()
+  const { setStep, showModal, hideModal } = useContractModal()
   const parseBlockchainError = useParseBlockchainError()
 
   const initializeWrite = async (metaData: HypercertMetadata & BountyxMetadataCollection, units: number) => {
     setUnits(units)
-    // setStep('uploading')
+    setStep('uploading')
     console.log('uploading')
     const cid = await getBountyxStorage().storeBountyxMetadata(metaData)
     console.log('CID', cid)
@@ -67,7 +67,7 @@ export const useMintClaim = ({ onComplete }: { onComplete?: () => void }) => {
     },
     onSuccess: () => {
       toast(mintInteractionLabels.toastSuccess, { type: 'success' })
-      //   setStep('writing')
+      setStep('writing')
       console.log('writing')
     },
     enabled: !!cidUri && units !== undefined,
@@ -83,8 +83,9 @@ export const useMintClaim = ({ onComplete }: { onComplete?: () => void }) => {
     hash: data?.hash,
     onSuccess: () => {
       toast(mintInteractionLabels.toastSuccess, { type: 'success' })
-      //   setStep('complete')
+      setStep('complete')
       console.log('complete')
+      hideModal()
       onComplete?.()
     },
   })
@@ -100,8 +101,8 @@ export const useMintClaim = ({ onComplete }: { onComplete?: () => void }) => {
 
   return {
     write: async (metaData: HypercertMetadata & BountyxMetadataCollection, units: number) => {
-      //   showModal({ stepDescriptions })
-      //   setStep('preparing')
+      showModal({ stepDescriptions })
+      setStep('preparing')
       await initializeWrite(metaData, units)
     },
     isLoading: isLoadingPrepareContractWrite || isLoadingContractWrite || isLoadingWaitForTransaction,

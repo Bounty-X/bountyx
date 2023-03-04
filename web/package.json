@@ -28,8 +28,11 @@
     "node": ">=16.0.0"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@hypercerts-org/hypercerts-protocol": "^0.0.10",
     "@hypercerts-org/hypercerts-sdk": "^0.0.31",
+    "@mui/material": "^5.11.11",
     "@next/bundle-analyzer": "^13.1.1",
     "@next/font": "13.1.1",
     "@prisma/client": "^4.8.1",
