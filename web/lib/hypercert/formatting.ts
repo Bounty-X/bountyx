@@ -3,6 +3,21 @@ import _ from 'lodash'
 
 export const formatScope = (scopeLabel: string) => scopeLabel.toLowerCase().replaceAll(/\s+/g, '-').trim()
 
+export const formatScopeList = (scopeLabels: string[]) => {
+  if (scopeLabels.length === 0) {
+    return ''
+  }
+
+  if (scopeLabels.length === 1) {
+    return scopeLabels[0]
+  }
+
+  const initial = _.initial(scopeLabels)
+  const last = _.last(scopeLabels)
+
+  return `${initial.join('-')} & ${last}`
+}
+
 export const formatContributors = (contributors: string[]) => {
   if (contributors.length === 0) {
     return ''

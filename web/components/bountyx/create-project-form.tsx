@@ -11,9 +11,19 @@ import { useMintClaim } from '@/hooks/hypercert/mintClaim'
 import { DummyHypercert } from './dummy-hypercert'
 import { useState } from 'react'
 import { HypercertClaimdata } from '@/bountyxlib/types/claimdata'
+import { useMintClaimWithFractions } from '@/hooks/hypercert/mintClaimWithFractions'
+import { BigNumber } from 'ethers'
+import { useSafeBatchTransferFrom } from '@/hooks/hypercert/safeBatchTransferFrom'
+import { formatContributors, formatScope, formatScopeList } from '@/lib/hypercert/formatting'
+import { parseListFromString } from '@/lib/hypercert/parsing'
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
+}
+
+interface FractionOwnership {
+  owner: `0x${string}`
+  fraction: BigNumber
 }
 
 export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
@@ -35,19 +45,44 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
     bounties,
   })
 
+  const [units, setUnits] = useState<number>(0)
+  const [ownersToFraction, setOwnersToFraction] = useState<FractionOwnership[]>([])
+  const [hypercertMinted, setHypercertMinted] = useState<boolean>(false)
+  const [hyperceretTransferred, setHyperceretTransferred] = useState<boolean>(false)
+
   const updateMetadata = () => {
-    let workTagsStr = ''
-    const workTags: string[] = []
+    let numberOfUnits = 0
+    const workScopeList: string[] = []
+    const owners: `0x${string}`[] = []
+
     bounties.forEach((bounty) => {
-      workTags.push(bounty.issuer.issuerName!)
-      workTagsStr += bounty.issuer.issuerName! + ' '
+      numberOfUnits += bounty.reward.rewardAmountUsd ?? 0
+      if (!workScopeList.includes(bounty.issuer.issuerName!)) {
+        workScopeList.push(bounty.issuer.issuerName!)
+      }
+      owners.push(bounty.issuer.issuerAddress! as `0x${string}`)
     })
+
+    const workScopeStr = formatScopeList(workScopeList)
+    const contributorsList = parseListFromString(projectMetadata.contributors, { lowercase: 'addresses', deduplicate: true })
+    const contributorsStr = formatContributors(contributorsList)
+
+    owners.push(...(contributorsList as [`0x${string}`]))
+    if (owners.length > 0) {
+      const fraction = numberOfUnits / owners.length
+      const distribution: FractionOwnership[] = owners.map((owner) => {
+        return { owner, fraction: BigNumber.from(fraction) }
+      })
+      setOwnersToFraction(distribution)
+      setUnits(numberOfUnits)
+    }
+
     const hypercert: HypercertClaimdata = {
-      work_scope: { name: 'Work', value: workTags, display_value: workTagsStr },
+      work_scope: { name: 'Work', value: workScopeList, display_value: workScopeStr },
       work_timeframe: { name: 'Work Period', value: [0], display_value: '' },
       impact_scope: { name: 'Impact', value: ['all'], display_value: 'all' },
       impact_timeframe: { name: 'Impact Period', value: [0], display_value: '' },
-      contributors: { name: 'Contributors', value: [projectMetadata.contributors], display_value: projectMetadata.contributors },
+      contributors: { name: 'Contributors', value: contributorsList, display_value: contributorsStr },
     }
 
     const newMetadata: HypercertMetadata & BountyxMetadataCollection = {
@@ -82,22 +117,52 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
     updateMetadata()
   }
 
-  const { write: mintClaim } = useMintClaim({
-    onComplete: () => toast('Hypercert with Bountyx minted', { type: 'success' }),
+  // const { write: mintClaim } = useMintClaim({
+  //   onComplete: () => toast('Hypercert with Bountyx minted', { type: 'success' }),
+  // })
+
+  const { write: safeTransferFrom } = useSafeBatchTransferFrom({
+    onComplete: () => {
+      console.log('All steps completed')
+      setHyperceretTransferred(true)
+    },
+  })
+
+  let buttonText = 'Mint Hypercert'
+  if (hypercertMinted && !hyperceretTransferred) {
+    buttonText = 'Transfer Fractions'
+  }
+
+  const transferHypercerts = async () => {
+    if (hypercertMinted && !hyperceretTransferred) {
+      for (const ownership of ownersToFraction) {
+        console.log(`Transferring to ${ownership.fraction} to ${ownership.owner}`)
+        await safeTransferFrom(ownership.owner, ownership.fraction)
+        break
+      }
+    }
+  }
+
+  const { write: mintClaimWithFractions } = useMintClaimWithFractions({
+    onComplete: () => {
+      console.log('Minting is over, Now transferring')
+      setHypercertMinted(true)
+    },
   })
 
   const mintHypercert = async () => {
     //TODO: BUG. If no changes to ui - the metadata is empty
     updateMetadata()
 
-    let numberOfUnits = 0
-    bounties.forEach((bounty) => {
-      numberOfUnits += bounty.reward.rewardAmountUsd ?? 0
-    })
-
     console.log('Minting hypercert', metadata)
-    console.log('Units', numberOfUnits)
-    await mintClaim(metadata, numberOfUnits)
+    console.log('Units', units)
+    console.log('Fractions', ownersToFraction.length)
+    console.log('Fractions are', JSON.stringify(ownersToFraction))
+    await mintClaimWithFractions(
+      metadata,
+      units,
+      ownersToFraction.map((val) => val.fraction)
+    )
   }
 
   return (
@@ -106,7 +171,11 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
         className="basis-2/3"
         onSubmit={(e) => {
           e.preventDefault()
-          mintHypercert()
+          if (!hypercertMinted) {
+            mintHypercert()
+          } else if (hypercertMinted && !hyperceretTransferred) {
+            transferHypercerts()
+          }
         }}>
         <div className="form-control w-full max-w-xs py-4">
           <label className="label">
@@ -160,8 +229,8 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
             />
           </div>
           {/* <Link href="/certificates" passHref> */}
-          <button type="submit" className="btn py-4 mt-6">
-            Mint Hypercert
+          <button type="submit" className="btn py-4 mt-6" disabled={hypercertMinted && hyperceretTransferred}>
+            {buttonText}
           </button>
           {/* </Link> */}
         </div>
