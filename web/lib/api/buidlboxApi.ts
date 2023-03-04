@@ -25,7 +25,7 @@ export const getBountiesForReceiver = (receiver: string): BountyxMetadata[] => {
         //[k: string]: unknown;
       },
       reward: {
-        rewardAmountUsd: Number(challenge.rewards[0].rewardAmountUsd),
+        rewardAmountUsd: Number(challenge.rewards[0]?.rewardAmountUsd),
         rewardToken: challenge.rewardToken,
         // [k: string]: unknown;
       },

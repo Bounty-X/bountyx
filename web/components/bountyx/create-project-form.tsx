@@ -95,9 +95,9 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
   }
 
   return (
-    <div className="flex flex-row justify-center">
+    <div className="flex flex-row justify-evenly">
       <form
-        className="basis-3/4"
+        className="basis-2/3"
         onSubmit={(e) => {
           e.preventDefault()
           mintHypercert()
@@ -116,64 +116,51 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
           />
           <div className="form-control w-full max-w-xs py-4">
             <label className="label">
-              <span className="label-text">Project Name:</span>
+              <span className="label-text">Project URL:</span>
             </label>
             <input
               type="text"
               id="projectname"
               placeholder="Type here"
-              defaultValue={projectMetadata.name}
+              defaultValue={projectMetadata.external_url}
               className="input-bordered input w-full max-w-xs"
-              onChange={(e) => handleChange('name', e.target.value)}
+              onChange={(e) => handleChange('external_url', e.target.value)}
             />
-            <div className="form-control w-full max-w-xs py-4">
-              <label className="label">
-                <span className="label-text">Project URL:</span>
-              </label>
-              <input
-                type="text"
-                id="projectname"
-                placeholder="Type here"
-                defaultValue={projectMetadata.external_url}
-                className="input-bordered input w-full max-w-xs"
-                onChange={(e) => handleChange('external_url', e.target.value)}
-              />
-            </div>
-            <div className="form-control w-full max-w-xs py-4">
-              <label className="label">
-                <span className="label-text">Project Description:</span>
-              </label>
-              <input
-                type="text"
-                id="projectdescription"
-                placeholder="Type here"
-                defaultValue={projectMetadata.description}
-                className="input-bordered input w-full max-w-xs"
-                onChange={(e) => handleChange('description', e.target.value)}
-              />
-            </div>
-            <div className="form-control w-full max-w-xs py-4">
-              <label className="label">
-                <span className="label-text">Project Contributors:</span>
-              </label>
-              <input
-                type="text"
-                id="projectcontributors"
-                placeholder="Type here"
-                defaultValue={projectMetadata.contributors}
-                className="input-bordered input w-full max-w-xs"
-                onChange={(e) => handleChange('contributors', e.target.value)}
-              />
-            </div>
+          </div>
+          <div className="form-control w-full max-w-xs py-4">
+            <label className="label">
+              <span className="label-text">Project Description:</span>
+            </label>
+            <input
+              type="text"
+              id="projectdescription"
+              placeholder="Type here"
+              defaultValue={projectMetadata.description}
+              className="input-bordered input w-full max-w-xs"
+              onChange={(e) => handleChange('description', e.target.value)}
+            />
+          </div>
+          <div className="form-control w-full max-w-xs py-4">
+            <label className="label">
+              <span className="label-text">Project Contributors:</span>
+            </label>
+            <input
+              type="text"
+              id="projectcontributors"
+              placeholder="Type here"
+              defaultValue={projectMetadata.contributors}
+              className="input-bordered input w-full max-w-xs"
+              onChange={(e) => handleChange('contributors', e.target.value)}
+            />
           </div>
           {/* <Link href="/certificates" passHref> */}
-          <button type="submit" className="btn py-4">
-            Continue
+          <button type="submit" className="btn py-4 mt-6">
+            Mint Hypercert
           </button>
           {/* </Link> */}
         </div>
       </form>
-      <div className="basis-1/4">
+      <div className="basis-1/3">
         <CertificateImageHtml projectMetadata={projectMetadata} />
       </div>
     </div>
