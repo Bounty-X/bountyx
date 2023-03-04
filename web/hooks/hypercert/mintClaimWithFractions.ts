@@ -12,9 +12,14 @@ import { getBountyxStorage } from '@/bountyxlib/bountyx-storage'
 import { useAccountLowerCase } from './../../hooks/hypercert/account'
 import { cidToIpfsUri } from '../../lib/hypercert/formatting'
 
-export const useMintClaim = ({ onComplete }: { onComplete?: () => void }) => {
+interface MintClaimWithFractionsProps {
+  onComplete?: () => void
+}
+
+export const useMintClaimWithFractions = ({ onComplete }: MintClaimWithFractionsProps) => {
   const [cidUri, setCidUri] = useState<string>()
   const [units, setUnits] = useState<number>()
+  const [fractions, setFractions] = useState<BigNumber[]>([])
   //   const minter = HypercertMinting({ provider: undefined, chainConfig: {} })
 
   const stepDescriptions = {
@@ -27,8 +32,9 @@ export const useMintClaim = ({ onComplete }: { onComplete?: () => void }) => {
   const { setStep, showModal, hideModal } = useContractModal()
   const parseBlockchainError = useParseBlockchainError()
 
-  const initializeWrite = async (metaData: HypercertMetadata & BountyxMetadataCollection, units: number) => {
+  const initializeWrite = async (metaData: HypercertMetadata & BountyxMetadataCollection, units: number, fractions: BigNumber[]) => {
     setUnits(units)
+    setFractions(fractions)
     setStep('uploading')
     console.log('uploading')
     const cid = await getBountyxStorage().storeBountyxMetadata(metaData)
@@ -49,13 +55,14 @@ export const useMintClaim = ({ onComplete }: { onComplete?: () => void }) => {
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       address! as `0x${string}`,
       BigNumber.from(units || 0),
+      fractions,
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       cidUri!,
       2,
       // minter.transferRestrictions.FromCreatorOnly,
     ],
     abi: HyperCertMinterFactory.abi,
-    functionName: 'mintClaim',
+    functionName: 'mintClaimWithFractions',
     onError: (error) => {
       parseError(error, 'the fallback')
       toast(parseBlockchainError(error, mintInteractionLabels.toastError), {
@@ -99,10 +106,10 @@ export const useMintClaim = ({ onComplete }: { onComplete?: () => void }) => {
   }, [isReadyToWrite])
 
   return {
-    write: async (metaData: HypercertMetadata & BountyxMetadataCollection, units: number) => {
+    write: async (metaData: HypercertMetadata & BountyxMetadataCollection, units: number, fractions: BigNumber[]) => {
       showModal({ stepDescriptions })
       setStep('preparing')
-      await initializeWrite(metaData, units)
+      await initializeWrite(metaData, units, fractions)
     },
     isLoading: isLoadingPrepareContractWrite || isLoadingContractWrite || isLoadingWaitForTransaction,
     isError: isPrepareError || isWriteError || isWaitError,
