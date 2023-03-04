@@ -6,8 +6,10 @@ export const burnInteractionLabels = {
 export const mintInteractionLabels = {
   toastSuccess: `Certificate successfully minted`,
   toastFractionSuccess: 'Successfully minted your share of the hypcert',
+  toastFractionTransferSuccess: 'Successfully transferred a share of the hypcert',
   toastBatchSuccess: 'Successfully minted all available fractions',
   toastError: 'Something went wrong while minting the certificate',
+  toastTransferError: 'Something went wrong while transferring the certificate',
   toastRejected: 'User rejected the contract interaction',
 }
 

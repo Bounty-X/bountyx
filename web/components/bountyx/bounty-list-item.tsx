@@ -11,16 +11,6 @@ export const BountyListItem = ({ bounty }: BountyListItemProps) => {
   const reactElement = htmlToReactParser.parse(bounty.description)
 
   return (
-    // <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
-    //   <div className="avatar">
-    //     <div className="w-24 rounded-full">
-    //       <img src={bounty.issuer.issuerLogoUrl} alt={bounty.issuer.issuerName} />
-    //     </div>
-    //     <p>{bounty.issuer.issuerName}</p>
-    //     {/* <p>{bounty.description}</p> */}
-    //     <p>{`Bounty Reward: ${bounty?.reward?.rewardAmountUsd} USD`}</p>
-    //   </div>
-    // </div>
     <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
       <div className="flex flex-row">
         <div className="w-12 rounded-full ml-2 mt-2 mr-2">
