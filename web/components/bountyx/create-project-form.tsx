@@ -56,11 +56,11 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
     const owners: `0x${string}`[] = []
 
     bounties.forEach((bounty) => {
-      numberOfUnits += bounty.reward.rewardAmountUsd ?? 0
-      if (!workScopeList.includes(bounty.issuer.issuerName!)) {
-        workScopeList.push(bounty.issuer.issuerName!)
+      numberOfUnits += bounty.reward?.rewardAmountUsd ?? 0
+      if (!workScopeList.includes(bounty.issuer?.issuerName!)) {
+        workScopeList.push(bounty.issuer?.issuerName!)
       }
-      owners.push(bounty.issuer.issuerAddress! as `0x${string}`)
+      owners.push(bounty.issuer?.issuerAddress! as `0x${string}`)
     })
 
     const workScopeStr = formatScopeList(workScopeList)

@@ -9,11 +9,11 @@ export const BountyListItem = ({ bounty }: BountyListItemProps) => {
     <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
       <div className="avatar">
         <div className="w-24 rounded-full">
-          <img src={bounty.issuer.issuerLogoUrl} alt={bounty.issuer.issuerName} />
+          <img src={bounty.issuer?.issuerLogoUrl} alt={bounty.issuer?.issuerName} />
         </div>
-        <p>{bounty.issuer.issuerName}</p>
+        <p>{bounty.issuer?.issuerName}</p>
         {/* <p>{bounty.description}</p> */}
-        <p>{`Bounty Reward: ${bounty.reward.rewardAmountUsd} USD`}</p>
+        <p>{`Bounty Reward: ${bounty.reward?.rewardAmountUsd} USD`}</p>
       </div>
     </div>
     // <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
