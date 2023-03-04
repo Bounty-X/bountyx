@@ -322,9 +322,7 @@ export const challenges = [
       "<p>Project must be deployed on Fuel and it must include smart contracts written in Sway, Fuel's rust based DSL. Please show a steady commit trail or provenance and thought process e.g. sketches, discussion, and issues on how you arrived at the decision to incorporate this feature. </p><p></p><p>Judging criteria:</p><ol><li><p><strong>Technical Implementation:</strong> Technical implementation and quality of contract deployed on testnet Weight = 3</p></li><li><p><strong>Design:</strong> Quality of the UI/UX of the Fuel dapp and Sway smart contract Weight = 2</p></li><li><p><strong>Creativity:</strong> The submission should be built with creativity in mind to reflect the team’s passion for building with Sway Weight = 2</p></li><li><p><strong>Quality of Idea:</strong> Quality of the idea/use-case/problem statement. A unique project stands a higher chance to win than one that has been implemented before Weight = 2</p></li></ol><p><strong>Developer Feedback: </strong>Quality and quantity of feedback and questions on the experience of building with Fuel in the developer forum (https://forum.fuel.network/) Weight = 1</p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0xa0facBd53826095f65CBe48F43ddba293d8FD19b',
-    },
+
     submittedByOrgId: 'cf4faee5-1f6f-45c2-b055-3f00ea8a6149',
     submittedByOrgName: 'Fuel Labs',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/cf4faee5-1f6f-45c2-b055-3f00ea8a6149/logo/logo.png',
@@ -3496,9 +3494,7 @@ export const challenges = [
       "<p>Project must be deployed on Fuel and it must include smart contracts written in Sway, Fuel's rust based DSL. Judging will lean towards projects that are full MVPs, although a clean and creative implementation design, whitepaper, etc... is also acceptable. Please show a steady commit trail and thought process e.g. sketches, discussion, issues on how you arrived at the decision to incorporate this feature.</p><p><br>Our Criteria:</p><ol><li><p><strong>Technical Implementation:</strong> Technical implementation and quality of contract deployed on testnet Weight = 3</p></li><li><p><strong>Design:</strong> Quality of the UI/UX of the Fuel dapp and Sway smart contract Weight = 2</p></li><li><p><strong>Creativity:</strong> The submission should be built with creativity in mind to reflect the team’s passion for building with Sway Weight = 2</p></li><li><p><strong>Quality of Idea:</strong> Quality of the idea/use-case/problem statement. A unique project stands a higher chance to win than one that has been implemented before Weight = 2</p></li></ol><p><strong>Developer Feedback: </strong>Quality and quantity of feedback and questions on the experience of building with Fuel in the developer forum (https://forum.fuel.network/) Weight = 1</p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0xa0facBd53826095f65CBe48F43ddba293d8FD19b',
-    },
+
     submittedByOrgId: 'cf4faee5-1f6f-45c2-b055-3f00ea8a6149',
     submittedByOrgName: 'Fuel Labs',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/cf4faee5-1f6f-45c2-b055-3f00ea8a6149/logo/logo.png',
@@ -3622,9 +3618,7 @@ export const challenges = [
       '<p>Demonstrate nanopayments being sent from one entity to another for payment. Must demonstrate a complete, end-to-end use of nanopayments from a valid Orchid account to on-chain payment claims. </p><p></p><p>Judging will lean towards projects that are full MVPs, although a clean and creative implementation of the feature serving as an excellent example of feature usage is also acceptable. </p><p></p><p>Please show a steady commit trail and thought process (e.g. sketches, discussion, issues on how you arrived at the decision to incorporate this feature.). </p><p></p><p>List any challenges or benefits you encountered in the developer experience.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0xa0facBd53826095f65CBe48F43ddba293d8FD19b',
-    },
+
     submittedByOrgId: '9525bcb2-73c8-4d52-8230-93595b61a406',
     submittedByOrgName: 'Orchid',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/9525bcb2-73c8-4d52-8230-93595b61a406/logo/logo.png',
@@ -3697,9 +3691,7 @@ export const challenges = [
       '<p>We want projects that are functional and ready to go live. They include well-polished screens and good UX. We want to see your code and a project that you would be proud to go live with. Please show us how you got to the solution. This may include gists, sketches, discussions, issues, etc. We would like to see a steady commit trail of your development process, and not just one big pull request. There should be a comprehensible README showing how we would be able to run that project locally. List any challenges you’ve had while integrating with our APIthe protocol and using our API and our docs.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0xa0facBd53826095f65CBe48F43ddba293d8FD19b',
-    },
+
     submittedByOrgId: 'ccf0d6a4-d144-4d6a-966b-53b0cf021b63',
     submittedByOrgName: 'Circle',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/ccf0d6a4-d144-4d6a-966b-53b0cf021b63/logo/logo.png',
@@ -4016,9 +4008,7 @@ export const challenges = [
       '<p><strong>Judging</strong> will lean towards projects that are full MVPs, although a clean and creative implementation design, whitepaper, etc... is also acceptable if the contribution is novel.</p><p>- Is it a useful product for the community?</p><p>- Does it have a robust README detailing why Polygon is a great technology choice for the project?</p><p>- Have the builders created something that raises the bar for UX in web3?</p><p>- Please show a <strong>steady commit trail</strong> and thought process e.g. sketches, discussion, issues on how you arrived at the decision to incorporate this feature.</p><p>- List any <strong>challenges or benefits</strong> you encountered in the developer experience.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0xa0facBd53826095f65CBe48F43ddba293d8FD19b',
-    },
+
     submittedByOrgId: '0f8c6055-76e5-465c-8d05-9f23c8350e30',
     submittedByOrgName: 'Polygon',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/0f8c6055-76e5-465c-8d05-9f23c8350e30/logo/logo.png',
@@ -4040,7 +4030,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '0xa0facBd53826095f65CBe48F43ddba293d8FD19b',
         },
         rewardAmountUsd: '5000',
       },
@@ -4185,7 +4175,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '0xa0facBd53826095f65CBe48F43ddba293d8FD19b',
         },
         rewardAmountUsd: '5000',
       },
@@ -4766,7 +4756,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '0xa0facBd53826095f65CBe48F43ddba293d8FD19b',
         },
         rewardAmountUsd: '5000',
       },

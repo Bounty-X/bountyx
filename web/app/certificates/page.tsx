@@ -54,7 +54,10 @@ export default function Home() {
     } else {
       content = (
         <div className="flex justify-center">
-          <Image width="400" height="400" alt="connect your wallet" src="/no-wallet.gif" />
+          <div>
+            <div className="flex justify-center text-xl mb-4">Connect Your Wallet</div>
+            <Image width="400" height="400" alt="connect your wallet" src="/no-wallet.gif" />
+          </div>
         </div>
       )
     }
