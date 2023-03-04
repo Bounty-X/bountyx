@@ -7,32 +7,34 @@ export const getBountiesForReceiver = (receiver: string): BountyxMetadata[] => {
   console.log(receiver)
 
   for (const challenge of challenges) {
-    if (receiver.toLowerCase() !== challenge.receiver.receiverAddress.toLowerCase()) {
-      continue
-    }
+    for (const reward of challenge.rewards) {
+      if (receiver.toLowerCase() !== reward.receiver.receiverAddress.toLowerCase()) {
+        continue
+      }
 
-    const bountyXMetadata = {
-      name: challenge.name,
-      description: challenge.description,
-      issuer: {
-        issuerAddress: '',
-        issuerName: challenge.submittedByOrgName,
-        issuerLogoUrl: challenge.submittedByOrgLogo,
-        // [k: string]: unknown;
-      },
-      receiver: {
-        receiverAddress: challenge.receiver.receiverAddress, // for now
-        //[k: string]: unknown;
-      },
-      reward: {
-        rewardAmountUsd: Number(challenge.rewards[0]?.rewardAmountUsd),
-        rewardToken: challenge.rewardToken,
-        // [k: string]: unknown;
-      },
-      signature: '',
-    }
+      const bountyXMetadata = {
+        name: challenge.name,
+        description: challenge.description,
+        issuer: {
+          issuerAddress: '0xa0facBd53826095f65CBe48F43ddba293d8FD19b',
+          issuerName: challenge.submittedByOrgName,
+          issuerLogoUrl: challenge.submittedByOrgLogo,
+          // [k: string]: unknown;
+        },
+        receiver: {
+          receiverAddress: reward.receiver.receiverAddress, // for now
+          //[k: string]: unknown;
+        },
+        reward: {
+          rewardAmountUsd: parseInt(reward.rewardAmountUsd),
+          rewardToken: challenge.rewardToken,
+          // [k: string]: unknown;
+        },
+        signature: '',
+      }
 
-    bounties.push(bountyXMetadata)
+      bounties.push(bountyXMetadata)
+    }
   }
 
   return bounties

@@ -9,9 +9,7 @@ export const challenges = [
       '<p>Creative incorporation of the various GoPlus APIs towards keeping Web3 SAFU.<br><br>Consideration of function, on-chain behavior, and/or capital flow.<br><br>A README or other document demonstrating your work.<br><br>Please show a steady commit trail and thought process e.g. sketches, discussion, issues on how you arrived at your product.<br><br>List any challenges or benefits you encountered in the security researcher experience.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '8c98320b-ee3c-4f46-a48f-345a9d4c3128',
     submittedByOrgName: 'Go+',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/8c98320b-ee3c-4f46-a48f-345a9d4c3128/logo/logo.png',
@@ -72,10 +70,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
     ],
@@ -110,9 +114,7 @@ export const challenges = [
       '<p>Deploy your contracts to the Scroll testnet </p><p>Judging will consider how well Scroll is integrated into your project </p><p>Creative entries encouraged! </p><p>List any challenges or benefits you encountered in the developer experience</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a3cbce5e-a955-4693-b437-66c5163ad2b3',
     submittedByOrgName: 'Scroll',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a3cbce5e-a955-4693-b437-66c5163ad2b3/logo/logo.png',
@@ -170,9 +172,7 @@ export const challenges = [
       "<p>- Entry Level: Use web3:// and its gateways (w3eth.io and w3link.io) to resolve a web resource on any EVM (Preferred mainnet/testnet/L2).  E.g., images of NFT, static text.</p><p>- Medium Level: Use ERC-5018 and EthFS-Uploader (from npm) to upload local files on-chain (e.g., personal website like Vitalik's blog)</p><p>- High Level and highly encourged: Run dynamic on-chain dWeb applications with multiple user interactions (e.g., Forever Pixel War, etc)</p><p><br>A couple of existing examples can be found at w3eth.io(https://w3url.w3eth.io/) including Vitalik's blog on Arbitrum Nova (https://www.reddit.com/r/ethereum/comments/107ok8e/upload_40mb_vitaliks_blog_to_a_smart_contract_on/).<br><br>We will review and rank the submitted projects based on the completeness, the difficulties, and the innovations of the project.</p><p><br></p><p>Surprise us with your creativity!</p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'e0d67316-807c-4e2d-8711-0222efd4e66a',
     submittedByOrgName: 'ETHStorage',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/e0d67316-807c-4e2d-8711-0222efd4e66a/logo/logo.jpg',
@@ -234,9 +234,7 @@ export const challenges = [
       '<p>Judging<br>All Moonbeam bounties will be judged according to the standard ethDenver judging guidelines - that is: <br>Theme Fit<br>Originality & Innovation<br>Ease of use (UI/UX)<br>Sustainability (marketplace viability)<br>Technical complexity<br>Level of Completion<br><br>We reserve the right to withhold prizes in cases where low-quality submissions do not meet our bounty requirements.</p><p></p><p>Sponsor Bounty Judging Team<br>Alberto Viera, Developer Relations Manager<br>Katie Butler, Director of Marketing<br>Stephen Shelton, Senior Blockchain Engineer<br>Kevin Neilson, Developer Relations Engineer</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '2760b058-eabf-4495-95db-dfb94038fe35',
     submittedByOrgName: 'Moonbeam',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/2760b058-eabf-4495-95db-dfb94038fe35/logo/logo.jpg',
@@ -281,10 +279,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '4000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -345,10 +349,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -387,9 +397,7 @@ export const challenges = [
       '<p><strong>Submission requirements</strong><br>Novel - We are looking for new and interesting use cases made possible only via the Snaps platform. Snaps must extend wallet functionality in a meaningful way. Simple use cases where the dapp could have existed without a Snap will not be awarded.<br>Derp - Repos must contain a text file named “spork.txt” with the phrase “Denver lays claim to the invention of the cheeseburger” This attention to detail helps us reward genuine effort and identify quality projects. <br>Monorepo - Use a monorepo structure (scaffold projects with the guide or the CLI to get started). Feel free to construct a more complex front-end React.<br>README - README should detail what the project is, what it aims to accomplish, steps for running locally etc. <br>Run It - Submissions must hosted or runnable locally<br><br><br><strong>Judging Criteria</strong><br>Innovative - The project uses Snaps in a novel way. It explores something that couldn’t be done before.<br>Impact - Does the solution provide something useful to the users?<br>Functional - Does the solution actually work?</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a301ff9b-d07c-419b-9bbb-6da09bd7423a',
     submittedByOrgName: 'MetaMask Snaps',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a301ff9b-d07c-419b-9bbb-6da09bd7423a/logo/logo.png',
@@ -430,18 +438,30 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 3,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -476,9 +496,7 @@ export const challenges = [
       '<p>Fork the fRPC Starter repo, generously document your solution, provide a dockerized demo of your solution and provide a three to five minute video shilling your masterpiece.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'b94030ef-e65a-4c31-bc31-03ae6f9cdb0c',
     submittedByOrgName: 'Fluence',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/b94030ef-e65a-4c31-bc31-03ae6f9cdb0c/logo/logo.jpg',
@@ -499,14 +517,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -541,9 +568,7 @@ export const challenges = [
       '<p>- Objective usefulness for web3 community and users of Blueprinter<br>- Completeness and Implementation of the submission<br>- Technical Execution</p><p><br></p><p>We reserve the right to withhold prizing in cases where low-quality submissions do not meet our bounty requirements.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '02a5b353-1f9b-4adf-afc7-f12415eb2d51',
     submittedByOrgName: 'Game7',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/02a5b353-1f9b-4adf-afc7-f12415eb2d51/logo/logo.jpg',
@@ -568,6 +593,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -602,9 +630,7 @@ export const challenges = [
       '<ul><li><p>Objective usefulness for web3 community and users of Blueprinter</p></li><li><p>Completeness and Implementation of the submission</p></li><li><p>Technical Execution</p></li></ul><p><br></p><p>In addition, any submission(s) that pass the eligibility criteria and receive a bounty will be prioritized for a subsequent Game7 grant as an extended engagement. We truly believe that any products/tools being built as a part of this prompt will greatly benefit the web3 gaming space. If there are any teams that want to continue building out their projects after the event, we are happy to explore ways for you to obtain funding in the form of grants!</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '02a5b353-1f9b-4adf-afc7-f12415eb2d51',
     submittedByOrgName: 'Game7',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/02a5b353-1f9b-4adf-afc7-f12415eb2d51/logo/logo.jpg',
@@ -629,10 +655,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '0',
       },
     ],
@@ -667,9 +699,7 @@ export const challenges = [
       '<p>A Successful Bounty Submission will possess the following:<br>Your Game Master should be published as free software (under a free software license of your choosing).<br>- It should be possible for anyone to run your Game Master themselves (using their computers).<br>- A document explaining the concept behind your Game Master.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '02a5b353-1f9b-4adf-afc7-f12415eb2d51',
     submittedByOrgName: 'Game7',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/02a5b353-1f9b-4adf-afc7-f12415eb2d51/logo/logo.jpg',
@@ -690,6 +720,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -723,9 +756,7 @@ export const challenges = [
       '<p>Write the best thread (technical or otherwise) on Mantle (check out the docs page for inspiration!)</p><p>You must tag @0xmantle on Twitter</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5d0df6ba-fa3a-49d3-b06a-f0eab124fcf4',
     submittedByOrgName: 'Mantle',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5d0df6ba-fa3a-49d3-b06a-f0eab124fcf4/logo/logo.png',
@@ -746,6 +777,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -780,9 +814,7 @@ export const challenges = [
       '<p>We will judge submissions based on:<br><br>* The degree to which the game uses in-game wallet functionality (transactions, signature requests, add custom network, etc).<br>* Innovative usage of wallet functionality<br>* Gameplay experience & fun<br><br>Games that have previously been built, but are newly integrating with HyperPlay ARE eligible for this bounty. Please note that we will be judging based on what was completed during the hackathon, so an advanced gameplay experience built previously won’t give you an advantage over someone whose whole game was built during the hackathon.<br><br>Games must be genuinely fun to play, in order to be eligible for this submission. Sorry, no cash grab ponzi farms :)<br><br>While browser games are playable in the HyperPlay app, your submission must be a desktop game in order to be eligible for this bounty.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '02a5b353-1f9b-4adf-afc7-f12415eb2d51',
     submittedByOrgName: 'Game7',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/02a5b353-1f9b-4adf-afc7-f12415eb2d51/logo/logo.jpg',
@@ -823,10 +855,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -861,9 +899,7 @@ export const challenges = [
       '<p>You cannot be working on your project before the event officially begins.</p><p> Builders will be judged based on the following criteria: </p><p>- Innovation and originality </p><p>- Technical execution and implementation </p><p>- Practicality and potential impact of the project </p><p>- User experience and design </p><p>- Presentation and communication</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5d0df6ba-fa3a-49d3-b06a-f0eab124fcf4',
     submittedByOrgName: 'Mantle',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5d0df6ba-fa3a-49d3-b06a-f0eab124fcf4/logo/logo.png',
@@ -884,14 +920,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
     ],
@@ -926,9 +971,7 @@ export const challenges = [
       '<p>Each user will be given a set amount of participating tokens (you need to find us IRL). You can swap for more tokens on MantleSwap, or you can LP and stake the LP tokens to get dripped more of said tokens. However you might encounter IL loss, or you might get frontrunned. What will you do to maximize the number of tokens you hold? The person who has the most amount of tokens by the end of the hackathon wins. </p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5d0df6ba-fa3a-49d3-b06a-f0eab124fcf4',
     submittedByOrgName: 'Mantle',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5d0df6ba-fa3a-49d3-b06a-f0eab124fcf4/logo/logo.png',
@@ -945,6 +988,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -979,9 +1025,7 @@ export const challenges = [
       '<p>Must implement a novel use-case for Ethereum Archive data leveraging Infura - UI/UX - Documentation - Challenges and how you overcame them.</p><ul><li><p>To be eligible for this bounty, developers must implement a novel use-case for Archive data leveraging Infura </p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a7449e8f-3311-4fb2-b0b3-567170b65104',
     submittedByOrgName: 'Infura',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a7449e8f-3311-4fb2-b0b3-567170b65104/logo/logo.jpg',
@@ -1044,9 +1088,7 @@ export const challenges = [
       '<p>Use the various GoPlus APIs to help keep Web3 SAFU.<br><br>A README or other document demonstrating your work.<br><br>Please show a steady commit trail and thought process e.g. sketches, discussion, issues on how you arrived at your product.<br><br>List any challenges or benefits you encountered in the security researcher experience.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '8c98320b-ee3c-4f46-a48f-345a9d4c3128',
     submittedByOrgName: 'Go+',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/8c98320b-ee3c-4f46-a48f-345a9d4c3128/logo/logo.png',
@@ -1111,10 +1153,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1500',
       },
     ],
@@ -1149,9 +1197,7 @@ export const challenges = [
       '<p>Use the various GoPlus APIs towards keeping Web3 SAFU.<br><br>A README or other document demonstrating your work.<br><br>Please show a steady commit trail and thought process e.g. sketches, discussion, issues on how you arrived at your product.<br><br>List any challenges or benefits you encountered in the security researcher experience.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '8c98320b-ee3c-4f46-a48f-345a9d4c3128',
     submittedByOrgName: 'Go+',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/8c98320b-ee3c-4f46-a48f-345a9d4c3128/logo/logo.png',
@@ -1204,6 +1250,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '4000',
       },
     ],
@@ -1238,9 +1287,7 @@ export const challenges = [
       '<ul><li><p>Use NFT REST API, SDK or Truffle NFT API box</p></li><li><p>Judging will lean towards novel applications of integrating NFT experiences that is a fully functional MVP</p></li><li><p>UI/UX - Functionality</p></li><li><p>Documentation and design docs</p></li><li><p>Commit trail that indicates you worked on this project exclusively during the hackathon duration</p></li><li><p>List challenges you encountered and how you overcame them</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a7449e8f-3311-4fb2-b0b3-567170b65104',
     submittedByOrgName: 'Infura',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a7449e8f-3311-4fb2-b0b3-567170b65104/logo/logo.jpg',
@@ -1285,14 +1332,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199',
+        },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -1327,9 +1383,7 @@ export const challenges = [
       '<p>Write comprehensive Scribble properties for two widely used OpenZeppelin contracts- Extra consideration based on number of valuable assertions.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a7449e8f-3311-4fb2-b0b3-567170b65104',
     submittedByOrgName: 'Infura',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a7449e8f-3311-4fb2-b0b3-567170b65104/logo/logo.jpg',
@@ -1366,6 +1420,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -1400,9 +1457,7 @@ export const challenges = [
       '<p>- Use Lens Protocol to develop a social app and using Infura and Truffle</p><p>- Use multiple features of the Lens Protocol such as Follow, Comment, Post and Collect</p><p>- UI/UX - Functionality</p><p>- Documentation</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a7449e8f-3311-4fb2-b0b3-567170b65104',
     submittedByOrgName: 'Infura',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a7449e8f-3311-4fb2-b0b3-567170b65104/logo/logo.jpg',
@@ -1472,9 +1527,7 @@ export const challenges = [
       '<p>In order to be eligible for this bounty, we expect to see:</p><p>- You start by unboxing a L2 Truffle box by using the CLI or VS Code in your demo video</p><p>- The project is deployed on an Infura L2 endpoint (configured in your truffle-config.js)</p><p>- Judging will lean towards full MVPs </p><p>- A list of challenges and benefits when using Infura and the Truffle suite of tools</p><p>- Bonus points if you build a multi-chain dapp and test with multiple instances of detached ganache in your demo video</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a7449e8f-3311-4fb2-b0b3-567170b65104',
     submittedByOrgName: 'Infura',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a7449e8f-3311-4fb2-b0b3-567170b65104/logo/logo.jpg',
@@ -1552,9 +1605,7 @@ export const challenges = [
       '<p>- Creativity, novelty, usefulness for end users and implementation quality. </p><p>- Importance of zkBob integration to the overall application/product (i.e. is it integral to app functionality, usefulness and purpose or is it an add-on without a lot of added value). </p><p>- Coherent integrations between zkBob and other existing protocols/dApps are appreciated </p><p>- Alignment with the BOB and zkBob ecosystem values of on-chain privacy protection within accepted limits. </p><p>- *extra credit will apply to solutions using other zkBob components on top of integration with direct deposits (zkBob SDK libraries, gift cards, compliance tooling, deep smart contract integrations, etc.)</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '14d16669-18b2-4542-ae78-75d9ed9bf5af',
     submittedByOrgName: 'zkBob',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/14d16669-18b2-4542-ae78-75d9ed9bf5af/logo/logo.png',
@@ -1620,9 +1671,7 @@ export const challenges = [
       '<p>Successful submissions will capture all relevant smart contract activity and create notifications on Twitter or Threshold Discord. The person or team submitting the bot will demonstrate a working version at ETH Denver.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '34d46e89-0b45-418c-8d05-cd5e68a6ac2a',
     submittedByOrgName: 'Threshold',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/34d46e89-0b45-418c-8d05-cd5e68a6ac2a/logo/logo.jpg',
@@ -1716,9 +1765,7 @@ export const challenges = [
       '<p>The proposed solutions will mainly be evaluated based on these criteria:</p><p></p><ul><li><p>Completeness of the solution (cover use cases)</p></li><li><p>Elegance of the proposed API (simple, easy to use)</p></li><li><p>Quality of the solution (good design and implementation)</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5a7c46e4-1e02-47c0-a72e-b48cfcf88afd',
     submittedByOrgName: 'Cartesi',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5a7c46e4-1e02-47c0-a72e-b48cfcf88afd/logo/logo.png',
@@ -1755,18 +1802,30 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199',
+        },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 3,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -1801,9 +1860,7 @@ export const challenges = [
       '<p>Criteria To be eligible, the project should make use of Chainlink Functions, and the result of the Functions call should change the state of a smart contract on-chain. Nice to have: how you use Chainlink in the project description. It must be possible for the judges to find the Chainlink use in your code. Only the intention to use is not valid. You must present your project for the Chainlink judges! Projects whose team does not present will not be evaluated. We will look at the following criteria: - UI/UX/DX - How useful is your application? Is it visually appealing? - Blockchain technology application - How valuable this project is for decentralization and adoption of Blockchain and Web3 - Wow Factor - Anything not covered above! This is if you blow us away in some other way. Extra Alpha Users Prize: Since Chainlink Functions has just launched, we are celebrating alpha users by giving them a special backpack. For those of you that use Chainlink Functions in their dApp, you can go to our location (to be decided) on Sunday and pick up your backpack. Note that we only have a limited supply, so please hurry :) Resources Chainlink Functions -Samples Repo Chainlink Functions - Documentation Also you can get started with any resources by checking out the hackathon resources page. You’ll find: Documentation for all the Chainlink features Smart Contract Starter Tutorial Best practices utilized by top protocols like Aave and Synthetix Hardhat Starter Kits Brownie Starter Kits Truffle Starter Kits dApp Tools Starter Kit And unlimited demos. There are plenty of video resources on that page for step-by-step working and building with: - NFTs - DeFi - DAOs - Gaming - And more! Have fun 🙂 "</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'ee8ec41b-b00f-463e-8dfe-e4d0994e2fb8',
     submittedByOrgName: 'Chainlink',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/ee8ec41b-b00f-463e-8dfe-e4d0994e2fb8/logo/logo.png',
@@ -1853,9 +1910,7 @@ export const challenges = [
       '<ul><li><p>Simplicity to run</p></li><li><p>Performance of API (latency + RPS using through localhost) and speed of the sync between nodes (amount of orders per hour)</p></li><li><p>Quality of code base (using basic patterns, modern languages, good project observability) and tests coverage (Unit + Integration tests)</p></li><li><p>Implementation of data structures and API methods as described at [docs](https://docs.1inch.io/docs/limit-order-protocol/api)</p></li></ul><p><strong>Nice to haves:</strong></p><ul><li><p>Documentation (how to use, how to contribute)</p></li><li><p>Multiple options for storage (built in storage like SQLite or something like PostgreSQL) </p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a7533c78-0b7a-4fb0-837f-0a8151070861',
     submittedByOrgName: '1inch',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a7533c78-0b7a-4fb0-837f-0a8151070861/logo/logo.png',
@@ -1913,9 +1968,7 @@ export const challenges = [
       '<p>Criteria The widget performs as outlined above. Please also implement a widget that allows you to see all current bots and manage your own bots. The code of all bots need to live in a single contract and there should be a function trigger_bot(bot_id: String) that allows one to trigger a bot with the given id. </p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5978aeef-1700-43e2-8df7-5f6706f410e2',
     submittedByOrgName: 'NEAR',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5978aeef-1700-43e2-8df7-5f6706f410e2/logo/logo.png',
@@ -1948,6 +2001,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '4000',
       },
     ],
@@ -1982,9 +2038,7 @@ export const challenges = [
       "<p>- The new contribution extends SSX beyond the frontend and backend frameworks currently supported.<br>- Judging will lean more towards ease of use for a developer working with this new environment, so please make sure to include an example of how it can be integrated. <br>- Please make sure to include relevant GitHub links with commits showing the integration process. Additionally, please make sure to open a PR to SSX as well (it's completely fine if it's a work in progress PR!) <br>- Bonus if the extension to SSX is being used in an application for other bounty submissions.</p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '8d522fe2-15a5-48d2-b293-5e8aac76e157',
     submittedByOrgName: 'SpruceID',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/8d522fe2-15a5-48d2-b293-5e8aac76e157/logo/logo.png',
@@ -2049,9 +2103,7 @@ export const challenges = [
       "<p>The search should do fuzzy matching and allow for typos. Preference will be given if you don’t rely on middleware and instead use in-browser JS to iterate through the posts to do the fuzzy matching. For that, you'll need to introduce a spinning wheel UI element and the ability to display results as they're found. Quality of UI design and UX are the major factors in determining whether to grant this bounty. Please create them as separate widgets that we can later embed into https://devgovgigs.near.social/. </p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5978aeef-1700-43e2-8df7-5f6706f410e2',
     submittedByOrgName: 'NEAR',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5978aeef-1700-43e2-8df7-5f6706f410e2/logo/logo.png',
@@ -2080,6 +2132,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '4000',
       },
     ],
@@ -2182,9 +2237,7 @@ export const challenges = [
       '<p>This is a rather complex project, so we will mainly judge how far you get and how much trust we have that you’ll be able to complete this project.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'e70527ef-4c8c-4227-82b4-e5e455d8cf5f',
     submittedByOrgName: 'Dfinity',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/e70527ef-4c8c-4227-82b4-e5e455d8cf5f/logo/logo.png',
@@ -2237,6 +2290,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -2271,9 +2327,7 @@ export const challenges = [
       '<p>Widget displays the ""hottest"" posts, taking into consideration activity recency. Quality of UI design and UX are the major factors in determining whether to grant this bounty. Please create them as separate widgets that we can later embed into https://devgovgigs.near.social/. </p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5978aeef-1700-43e2-8df7-5f6706f410e2',
     submittedByOrgName: 'NEAR',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5978aeef-1700-43e2-8df7-5f6706f410e2/logo/logo.png',
@@ -2302,6 +2356,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
     ],
@@ -2336,9 +2393,7 @@ export const challenges = [
       '<p>✅ Submit link to deployed and verified contract that integrates the “usingTellor” npm package </p><p>✅ Submit a txn hash of your tip to the Tellor reporters (the tip incentivizes reporters to provide data) </p><p></p><p>The key take-away is that we want to see true usage of Tellor demonstrated by those two requirements. (Don’t worry, we’ll guide you through it!) </p><p></p><p>Please see our hacker’s guide “The One-Stop Doc” for more detail and instruction.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '536623d8-3a61-49b7-8f06-cc15e0e03e6c',
     submittedByOrgName: 'Tellor',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/536623d8-3a61-49b7-8f06-cc15e0e03e6c/logo/logo.png',
@@ -2375,22 +2430,37 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 3,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 4,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -2424,9 +2494,7 @@ export const challenges = [
       '<p><strong>Submission requirements</strong><br>Novel - We are looking for new and interesting use cases made possible only via the Snaps platform. Snaps must extend wallet functionality in a meaningful way. Simple use cases where the dapp could have existed without a Snap will not be awarded.<br>Derp - Repos must contain a text file named “spork.txt” with the phrase “Denver lays claim to the invention of the cheeseburger” This attention to detail helps us reward genuine effort and identify quality projects. <br>Monorepo - Use a monorepo structure (scaffold projects with the guide or the CLI to get started). Feel free to construct a more complex front-end React.<br>README - README should detail what the project is, what it aims to accomplish, steps for running locally etc. <br>Run It - Submissions must hosted or runnable locally<br><br><br><strong>Judging Criteria</strong><br>Innovative - The project uses Snaps in a novel way. It explores something that couldn’t be done before.<br>Impact - Does the solution provide something useful to the users?<br>Functional - Does the solution actually work?</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a301ff9b-d07c-419b-9bbb-6da09bd7423a',
     submittedByOrgName: 'MetaMask Snaps',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a301ff9b-d07c-419b-9bbb-6da09bd7423a/logo/logo.png',
@@ -2467,14 +2535,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -2509,9 +2586,7 @@ export const challenges = [
       '<p>When a timestamp is clicked, it should open the webpage with the post the way it looked after that edit. When selecting two timestamps (alternatively you can have a nicely designed diff button), it should open a diff window that shows what parts of the posts have changed between two selected timestamps. Quality of UI design and UX are the major factors in determining whether to grant this bounty. Please create them as separate widgets that we can later embed into https://devgovgigs.near.social/. </p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5978aeef-1700-43e2-8df7-5f6706f410e2',
     submittedByOrgName: 'NEAR',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5978aeef-1700-43e2-8df7-5f6706f410e2/logo/logo.png',
@@ -2544,6 +2619,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
     ],
@@ -2578,9 +2656,7 @@ export const challenges = [
       '<p><strong>Submission requirements</strong><br>Novel - We are looking for new and interesting use cases made possible only via the Snaps platform. Snaps must extend wallet functionality in a meaningful way. Simple use cases where the dapp could have existed without a Snap will not be awarded.<br>Derp - Repos must contain a text file named “spork.txt” with the phrase “Denver lays claim to the invention of the cheeseburger” This attention to detail helps us reward genuine effort and identify quality projects. <br>Monorepo - Use a monorepo structure (scaffold projects with the guide or the CLI to get started). Feel free to construct a more complex front-end React.<br>README - README should detail what the project is, what it aims to accomplish, steps for running locally etc. <br>Run It - Submissions must hosted or runnable locally<br><br><br><strong>Judging Criteria</strong><br>Innovative - The project uses Snaps in a novel way. It explores something that couldn’t be done before.<br>Impact - Does the solution provide something useful to the users?<br>Functional - Does the solution actually work?</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a301ff9b-d07c-419b-9bbb-6da09bd7423a',
     submittedByOrgName: 'MetaMask Snaps',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a301ff9b-d07c-419b-9bbb-6da09bd7423a/logo/logo.png',
@@ -2621,18 +2697,30 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 3,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -2666,9 +2754,7 @@ export const challenges = [
     acceptanceCriteria: '<p>Requirements:</p><ul><li><p>Uses Tally API</p></li><li><p>Improves DAOs</p></li><li><p>Is open source</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '4bc28740-321a-4f24-949f-81a8ef6e64b4',
     submittedByOrgName: 'Tally',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/4bc28740-321a-4f24-949f-81a8ef6e64b4/logo/logo.png',
@@ -2693,6 +2779,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
     ],
@@ -2726,9 +2815,7 @@ export const challenges = [
     acceptanceCriteria: '<p>Please complete your bounties in the form of pull-requests to https://github.com/near/nearcore </p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5978aeef-1700-43e2-8df7-5f6706f410e2',
     submittedByOrgName: 'NEAR',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5978aeef-1700-43e2-8df7-5f6706f410e2/logo/logo.png',
@@ -2786,9 +2873,7 @@ export const challenges = [
       '<p>Design requirements:<br><br>- The goal of this bounty is to create a tool that either creates new attestations, uses existing attestations, or both! As more and more users and applications push data into the AttestationStation it’ll become possible to figure out more and more complex relationships.<br><br>- The ideal entry unlocks new ways for devs to view, grow, and harness this reputation and identity graph.<br><br>- The target users for your tool are developers who use or want to use attestations. Judges will be looking for ease of use, impact on developers’ workflow, and how it unlocks new features for devs.<br><br>Submission requirements:<br><br>- Projects must be deployed on Optimism Goerli or Optimism Mainnet, must be open source, and smart contracts must be verified<br><br>- Post a short video, Twitter thread, or Medium post explaining what you’re doing. This can make use of your 3-5-minute demonstration video.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '23373a81-7bc9-4cc5-93b9-e50994957c1f',
     submittedByOrgName: 'OPLabs',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/23373a81-7bc9-4cc5-93b9-e50994957c1f/logo/logo.png',
@@ -2821,18 +2906,30 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '4844',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2718',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1167',
       },
       {
         winnerRank: 3,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1167',
       },
     ],
@@ -2867,9 +2964,7 @@ export const challenges = [
       "<p>✔️Submission Requirements:</p><p>Live and usable prototype deployed on the Metis Testnet</p><p>Open Source Code (MIT, BSD, GNU, etc.) of the Prototype Problem statement addressing a real-world problem solvable with a DAC Short-term roadmap with milestones that can be converted into tasks using KORIS Demonstration of how the solution can be implemented as a DAC via KORIS Professional and organized powerpoint before the deadline</p><p>Team availability to present and answer questions during the event</p><p>Join the Metis and KORIS Telegram and Discord</p><p>Legal age of the majority</p><p>Developer should be on our Discord (https://discord.com/invite/RqfEJZXnxd) and follow Twitter (@MetisDAO)</p><p>Note: If the winners’ project code doesn’t work on Metis Testnet and shows an error then it won’t be accepted.</p><p></p><p>✔️ Judging Criteria:</p><p>Innovation and relevance of the problem/project focus</p><p>Feasibility and potential impact of the proposed solution</p><p>Quality of research and references provided</p><p>Clarity and organization of the problem statement, roadmap, and proposals/tasks</p><p>Potential of the solution to be implemented as a DAC</p><p>Quality and effectiveness of the team's presentation during the event.</p><p>Quality of the Prototype</p><p></p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'ca76af8c-3952-410e-bfe7-f8bb5b66d45b',
     submittedByOrgName: 'Metis',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/ca76af8c-3952-410e-bfe7-f8bb5b66d45b/logo/logo.png',
@@ -2898,10 +2993,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -2936,9 +3037,7 @@ export const challenges = [
       '<p>Criteria Quality of UI design and UX are the major factors in determining whether to grant this bounty. You can accompany it with a script that would pull data from Github and keep this widget in sync. The widget should above all have a nice design. Please create it as a separate widget that we can later embed into https://devgovgigs.near.social/. </p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5978aeef-1700-43e2-8df7-5f6706f410e2',
     submittedByOrgName: 'NEAR',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5978aeef-1700-43e2-8df7-5f6706f410e2/logo/logo.png',
@@ -2996,9 +3095,7 @@ export const challenges = [
       '<p>✔️Submission Requirements </p><p>Pitch deck or problem statement solving issues in one or more of the following:</p><p>Data ownership Community engagement or development Customer loyalty or exclusivity </p><p>Training and education Digital identity Demonstration of NuvoPower used x </p><p>Roadmap of how NuvoPower will be used</p><p></p><p>Developer should be on our Discord (https://discord.gg/3jnuatySTt) and follow Twitter (@RPSMatrix) </p><p></p><p>✔️ Judging Criteria </p><p>Vision Innovation Usability Use case of NuvoPower Working version of the DApp</p><p></p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'ca76af8c-3952-410e-bfe7-f8bb5b66d45b',
     submittedByOrgName: 'Metis',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/ca76af8c-3952-410e-bfe7-f8bb5b66d45b/logo/logo.png',
@@ -3019,10 +3116,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -3057,9 +3160,7 @@ export const challenges = [
       '<p>Criteria We want a simple working prototype of an app that will help people plan for retirement using their crypto savings and DeFi yields. The app should minimally have: 1. A Metamask and Wallet Connect Integration 2. A way to set a retirement goal in total money saved or annual yield / interest required 3. A chart or calculator showing progress towards a retirement goal 4. Current yield on popular investments (Aave, Curve, Yearn, Idle, or some other DeFi provider) 5. Basic recommendations Bonus points: if you build a working API integration with other retirement providers. </p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '2d73fd41-3f8f-404b-a273-299ffb6f02b1',
     submittedByOrgName: 'Opolis',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/2d73fd41-3f8f-404b-a273-299ffb6f02b1/logo/logo.png',
@@ -3076,6 +3177,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
     ],
@@ -3110,9 +3214,7 @@ export const challenges = [
       '<p>## Option 1: Enable users to discard undesired transactions in dapp UI<br><br>- Build a UI that <strong>shows relevant information about transaction execution</strong> (state changes, tokens swapped, changes to balances, or information derived from that, etc). The information should help the user decide if they want to send a transaction to the chain or discard it.<br>- Build a UI that <strong>enables users to approve sending the transaction to the chain or discard</strong> it after seeing the additional information (above).<br>- Demonstrate reduction of failed transactions: Provide an example of a failing transaction, whose failure is avoided by your solution (either a transaction object in README or video of building it through the UI).<br>- Demonstrate reduction of undesired transactions: Provide an example of a transaction that has suboptimal results, such that the user decides to discard it (either a transaction object in README or video of building it through the UI).<br>- [nice to have]: Build a mechanism to calculate and display suggestions for transaction inputs, so that transaction gets desirable results.<br><br>## Option 2: Automatically discard undesired transactions<br><br>- Provide written criteria for desirable transactions in the project’s README.<br>- Programmatically discard transactions with undesirable effects, according to criteria specific to your dapp.<br>- Inform the users that the transaction is automatically rejected, showing information about what led to the rejection.<br>- Provide an example of a failing (reverting) transaction, whose failure is avoided by your solution.<br>- Provide an example of a succeeding but undesirable transaction that gets automatically discarded (either transaction object in README or video of building it through the UI).<br>- [nice to have] Build a mechanism to calculate and display suggestions for transaction inputs, so that transaction gets desirable results.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'd87af43a-b059-4979-8d4f-1fba5f66172f',
     submittedByOrgName: 'Tenderly',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/d87af43a-b059-4979-8d4f-1fba5f66172f/logo/logo.jpg',
@@ -3166,9 +3268,7 @@ export const challenges = [
       '<ul><li><p>Must use ComposeDB on Ceramic</p></li><li><p>Must be a identity or reputation space</p></li><li><p>At least one new data model created or at least one existing data model re-used for the application</p></li><li><p>Judging will lean towards the completeness of the application: is the project in a concept state or ready to scale</p></li><li><p>Impact to Ceramic developer ecosystem </p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '257765ff-7f71-419d-b683-98dbcac0c014',
     submittedByOrgName: 'Ceramic',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/257765ff-7f71-419d-b683-98dbcac0c014/logo/logo.png',
@@ -3226,9 +3326,7 @@ export const challenges = [
       '<p>- Add an API to go-quai which uses non-interactive proof-of-proof-of-work (NiPoPow) to prove an account balance. </p><p>- Please show a steady commit trail and thought process e.g. sketches, discussion, issues on how you arrived at the decision to incorporate this feature. </p><p>- List any challenges or benefits you encountered in the developer experience. </p><p>- Attention: Because Quai Network is pre-mainnet, any winner(s) will be required to sign a Token Agreement</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'ca05f988-4879-49b1-b41c-84102916b9c8',
     submittedByOrgName: 'Quai Network',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/ca05f988-4879-49b1-b41c-84102916b9c8/logo/logo.png',
@@ -3286,9 +3384,7 @@ export const challenges = [
       '<ul><li><p>Must use ComposeDB on Ceramic</p></li><li><p>Must be a web3 social app - e.g. social media platform, discussions forum, etc.</p></li><li><p>At least one new data model created or at least one existing data model re-used for the application</p></li><li><p>Judging will lean towards the completeness of the application: is the project in a concept state or ready to scale</p></li><li><p>Impact to Ceramic developer ecosystem "  </p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '257765ff-7f71-419d-b683-98dbcac0c014',
     submittedByOrgName: 'Ceramic',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/257765ff-7f71-419d-b683-98dbcac0c014/logo/logo.png',
@@ -3346,9 +3442,7 @@ export const challenges = [
       '<p>- Taking into account Quai Network’s multi-threaded, sharded architecture, create an NFT project that has a landing page, a minting function, and allows for ownership and transfer of NFTs across all Quai Network chains (Prime, Region, and Zone chains) post-mint. </p><p>- Judging will lean towards projects that are full MVPs, although a clean and creative artistic design, landing page, etc... is also acceptable if the NFT project has a great Twitter and Discord community presence. </p><p>- Judging will lean towards projects that have a high quality and unique NFT concept and design, a good social media presence, an excellent marketing strategy, and have started to build a community (Twitter + Discord). </p><p>- Please show a steady commit trail and thought process e.g. sketches, discussion, issues on how you arrived at the decision to incorporate this feature. </p><p>- List any challenges or benefits you encountered in the developer experience. </p><p>- Attention: Because Quai Network is pre-mainnet, any winner(s) will be required to sign a Token Agreement</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'ca05f988-4879-49b1-b41c-84102916b9c8',
     submittedByOrgName: 'Quai Network',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/ca05f988-4879-49b1-b41c-84102916b9c8/logo/logo.png',
@@ -3429,6 +3523,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -3467,9 +3564,7 @@ export const challenges = [
       '<p>Criteria - Must use ComposeDB on Ceramic - At least one new data model created or at least one existing data model re-used for the application - Judging will lean towards the completeness of the application: is the project in a concept state or ready to scale - Impact to Ceramic developer ecosystem </p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '257765ff-7f71-419d-b683-98dbcac0c014',
     submittedByOrgName: 'Ceramic',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/257765ff-7f71-419d-b683-98dbcac0c014/logo/logo.png',
@@ -3558,10 +3653,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
     ],
@@ -3631,6 +3732,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '4000',
       },
     ],
@@ -3665,9 +3769,7 @@ export const challenges = [
       "<p>Criteria Criteria:</p><p>- Integrate one of OKX Web3 products to your project: OKX Non-custodial wallet, Dex, Yeild or NFT marketplace</p><p>- Build something super dope and if we think it's awesome, we'll throw you in our grant program and/or accelerator.</p><p>- Judging will lean towards projects that are universal and give a detector with clear risk reasons.</p><p>We hope that these capabilities can be integrated into our WEB3-wallet products to help our users identify risky malicious websites.</p><p>- Please show a steady commit trail and thought process e.g. sketches, discussion, issues on how you arrived at the decision to incorporate this feature.</p><p>- List any challenges or benefits you encountered in the developer experience.</p><p></p><p>Requirements:</p><p>- A detailed description document of the detector's strategy to describe the risk reasons, detection logic, verification logic, etc. of the WEB3 asset in this scenario</p><p>- An operational MVP - At least 10 malicious domain names and screenshots detected (to prevent them from being opened afterwards) and specific risk reasons</p><p></p><p>Nice to haves:</p><p>- Identify address information related to hackers from the website</p><p>- At least 100 malicious domain names and screenshots detected (to prevent them from being opened afterwards) and specific risk reasons</p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a7d9bd8a-d6c5-4616-a0fe-b11899adcfd4',
     submittedByOrgName: 'OKX',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a7d9bd8a-d6c5-4616-a0fe-b11899adcfd4/logo/logo.png',
@@ -3679,6 +3781,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -3773,9 +3878,7 @@ export const challenges = [
       '<p>**Judging** will lean towards projects that are full MVPs, although a clean and creative implementation design, whitepaper, etc... is also acceptable if the contribution is novel.</p><p> - Is it a useful product for the community? </p><p>- Does it have a robust README detailing why Polygon is a great technology choice for the project? </p><p>- Have the builders created something that raises the bar for UX in web3? </p><p>- Please show a **steady commit trail** and thought process e.g. sketches, discussion, issues on how you arrived at the decision to incorporate this feature. </p><p>- List any **challenges or benefits** you encountered in the developer experience.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '0f8c6055-76e5-465c-8d05-9f23c8350e30',
     submittedByOrgName: 'Polygon',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/0f8c6055-76e5-465c-8d05-9f23c8350e30/logo/logo.png',
@@ -3796,6 +3899,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
     ],
@@ -3830,9 +3936,7 @@ export const challenges = [
       '<p>Dashboard must represent at least these data:</p><ul><li><p>Orders amount executed per resolver / total,</p></li><li><p>Total volume in USD per resolver / total,</p></li><li><p>Unique txs from orders,</p></li><li><p>Gas costs, profits,</p></li><li><p>APR of rewards,</p></li><li><p>Unicorn power,</p></li><li><p>Delegation amount</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a7533c78-0b7a-4fb0-837f-0a8151070861',
     submittedByOrgName: '1inch',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a7533c78-0b7a-4fb0-837f-0a8151070861/logo/logo.png',
@@ -3861,14 +3965,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
     ],
@@ -3926,10 +4039,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -3964,9 +4083,7 @@ export const challenges = [
       '<p>Winners will be chosen by INTU based on the following criteria:</p><ul><li><p>Innovative and useful feature set extending the impact of INTU’s infrastructure</p></li><li><p>Qualified projects may not need to fully integrate the SDK, but should expect and make use of either a) decentralized key generation, b) key resharing, or c) participant rotation</p></li><li><p>Smart contracts must be deployed on an EVM-compatible platform</p></li><li><p>Novel protocols, infrastructure, or additional tooling working in conjunction with INTU’s infrastructure will be considered; a user interface is not required.</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5090bd8d-75ba-4624-b4e0-e6374fb15be7',
     submittedByOrgName: 'Intu',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5090bd8d-75ba-4624-b4e0-e6374fb15be7/logo/logo.png',
@@ -3995,14 +4112,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -4037,9 +4163,7 @@ export const challenges = [
       '<p>**Judging** will lean towards projects that are full MVPs, although a clean and creative implementation design, whitepaper, etc... is also acceptable if the contribution is novel.</p><p>- Is it a useful product for the community?</p><p>- Does it have a robust README detailing why Polygon is a great technology choice for the project?</p><p>- Have the builders created something that raises the bar for UX in web3?</p><p>- Please show a <strong>steady commit trail</strong> and thought process e.g. sketches, discussion, issues on how you arrived at the decision to incorporate this feature.</p><p>- List any **challenges or benefits** you encountered in the developer experience.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '0f8c6055-76e5-465c-8d05-9f23c8350e30',
     submittedByOrgName: 'Polygon',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/0f8c6055-76e5-465c-8d05-9f23c8350e30/logo/logo.png',
@@ -4060,10 +4184,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -4098,9 +4228,7 @@ export const challenges = [
       '<ul><li><p>Security: The solution should be designed with strong security measures in place to ensure the safety and privacy of the transactions during the operational phase on the private network, as well as during the final settlement on the public blockchain.</p></li><li><p>Privacy: The solution should ensure the privacy of the transactions during the operational phase on the private network, while still enabling the transparency and immutability of the final settlement on the public blockchain.</p></li><li><p>Interoperability: The solution should be designed to facilitate the transfer of data and assets between the private and public networks in a seamless and efficient manner.</p></li><li><p>Usability: The solution should be user-friendly, with a well-designed interface and easy-to-use functionalities.</p></li><li><p>Scalability: The solution should be able to handle a high volume of transactions and data transfers between the private and public networks.</p></li><li><p>Compliance: The solution should be compliant with the relevant regulatory requirements for the industries in which it will be used, such as financial services or healthcare.</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '94bf0f2e-3551-4e5a-aeda-3467d2ae9700',
     submittedByOrgName: 'BNB Chain',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/94bf0f2e-3551-4e5a-aeda-3467d2ae9700/logo/logo.png',
@@ -4117,14 +4245,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '6000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '4000',
       },
     ],
@@ -4159,9 +4296,7 @@ export const challenges = [
       '<p>Any successful bounty must meet the 4 requirements specified in the description, namely that zkVM application authors will be able to:</p><ul><li><p>build guest code in the same crate and workspace as host code</p></li><li><p>build guest code without using a custom build.rs script</p></li><li><p>freely locate the guest code in whatever part of the source tree is most sensible for their project</p></li><li><p>without reducing the functionality or performance of the zkVM.</p><p></p></li></ul><p>We’ll also judge bounties on clarity of code, amenability to future maintenance, and other standard code quality criteria.</p><p></p><p>Partial submissions are encouraged!</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '677d3e8b-ba92-4393-ac82-f666814af38f',
     submittedByOrgName: 'RISC Zero',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/677d3e8b-ba92-4393-ac82-f666814af38f/logo/logo.png',
@@ -4215,9 +4350,7 @@ export const challenges = [
       '<ul><li><p>Security: The solution should be designed with strong security measures in place to ensure that the voting process and user data are secure.</p></li><li><p>Transparency: The solution should provide transparency in the voting process and decision-making by enabling public access to relevant data.</p></li><li><p>Decentralization: The solution should provide a decentralized governance system, enabling all community members to participate and propose solutions regardless of their location.</p></li><li><p>User Experience: The solution should be designed with a user-friendly interface, providing ease of use and accessibility to all members of the community.</p></li><li><p>Real-time Reporting and Analytics: The solution should provide real-time reporting and analytics, enabling members to track the progress of proposals and decisions.</p></li><li><p>Customizability: The solution should be customizable, enabling the community to create and modify rule sets that align with their specific needs.</p></li><li><p>Integration: The solution should integrate with existing systems, such as BNB Smart-Chain, Beacon Chain, and Greenfield, to provide a comprehensive governance solution.</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '94bf0f2e-3551-4e5a-aeda-3467d2ae9700',
     submittedByOrgName: 'BNB Chain',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/94bf0f2e-3551-4e5a-aeda-3467d2ae9700/logo/logo.png',
@@ -4238,14 +4371,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '6000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '4000',
       },
     ],
@@ -4280,9 +4422,7 @@ export const challenges = [
       '<ul><li><p>Multiple Network Infura endpoints in your Truffle config</p></li><li><p>Deploying to and interacting with contracts on multiple networks using Infura in your demo video</p></li><li><p>Be sure to account for increased security risk for multi-network deployment</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a7449e8f-3311-4fb2-b0b3-567170b65104',
     submittedByOrgName: 'Infura',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a7449e8f-3311-4fb2-b0b3-567170b65104/logo/logo.jpg',
@@ -4348,9 +4488,7 @@ export const challenges = [
       '<ul><li><p>Functionality: The SDK should provide comprehensive access to all the zkBNB HTTP APIs and allow developers to easily build and deploy blockchain-based mobile applications with zkBNB integration.</p></li><li><p>User Experience: The SDK and plugin should be user-friendly and intuitive, with well-documented features and capabilities to make the development process easier for Android developers.</p></li><li><p>Testing: The SDK and plugin should be thoroughly tested to ensure stability and reliability in production environments.</p></li><li><p>Open Source: The SDK and plugin should be open-sourced to allow for community contributions and improvements.</p></li><li><p>Demonstration: The submission should include a demonstration video/tutorial of the SDK/plugin usage, showcasing the ease of use and functionality for developers.</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '94bf0f2e-3551-4e5a-aeda-3467d2ae9700',
     submittedByOrgName: 'BNB Chain',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/94bf0f2e-3551-4e5a-aeda-3467d2ae9700/logo/logo.png',
@@ -4367,14 +4505,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '6000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '4000',
       },
     ],
@@ -4409,9 +4556,7 @@ export const challenges = [
       '<p>Criteria Submit a working demo (making a swap on a testnet) with the corresponding github repo to check all the relevant code parts. </p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '8ed71957-42cd-49a7-a75e-fd888777f013',
     submittedByOrgName: 'CowSwap',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/8ed71957-42cd-49a7-a75e-fd888777f013/logo/logo.jpg',
@@ -4493,9 +4638,7 @@ export const challenges = [
       '<p>Criteria Base Criteria (all submissions):</p><ul><li><p>You must submit a link to your dapp or project with a live, working NEAR Open Web Component.</p></li><li><p>The component should prompt the user to connect their Ethereum Wallet of choice (MetaMask preferred), display data e.g. account balance / tokens, and allow the user to make a transaction through the component.</p></li><li><p>See our Lido Component example as the minimum requirements: connect wallet, see balance, stake.</p></li></ul><p></p><p>First Place Criteria:</p><ul><li><p>A live working frontend component deployed to NEAR mainnet that interacts with Ethereum contracts on the Ethereum mainnet.</p></li><li><p>Everything in production.</p></li><li><p>A user connecting to the component with an Ethereum Wallet should be able to make a transaction on mainnet in addition to viewing data from a smart contract.</p></li><li><p>The submission should include documentation of the developer experience, challenges faces, and suggestions for improvements.</p></li></ul><p></p><p>TLDR; an outstanding submission has:</p><ul><li><p>Comprehensiveness of functionality Production-grade user experience Code readability and reusability</p></li></ul><p></p><p>BONUS:</p><ul><li><p>provide feedback on your experience of developing with NEAR BOS</p></li><li><p>help evangelize NEAR OS (e.g., contribute to docs, talk about it in presentations and/or social media)</p></li></ul><p></p><p>Second Place criteria:</p><ul><li><p>similar to first place, perhaps falling short in a few areas.</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5978aeef-1700-43e2-8df7-5f6706f410e2',
     submittedByOrgName: 'NEAR',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5978aeef-1700-43e2-8df7-5f6706f410e2/logo/logo.png',
@@ -4565,9 +4708,7 @@ export const challenges = [
       '<p>First, the DApp MVP must work. Whatever is claimed to work, must work. If not, cut the feature.</p><ul><li><p>Documentation should include**:**</p><ul><li><p>a clear README.md with the following:</p><ul><li><p>a clear short one-sentence description of your dapp. Aim for something simple like: “Easy social recovery via Telegram” or “Customizable long-term vaults on smart contract accounts to prevent thefts from hacking”.</p></li><li><p>short description of team and backgrounds.</p></li><li><p>a clear installation/execution process that works.</p></li></ul></li><li><p>a clear Open Source License: MIT, GNU, Unlicensed or any standard open source license your team want.</p></li><li><p>a simple UML to describe how the contracts interact with each other.</p></li><li><p>a clear 2-4 minute video demo walking through the DApp.</p></li><li><p>Have a Project Description section: with a longer written description of what the project does.</p></li><li><p>How its made section: Describe how you made the project, mention any issues you ran into.</p></li><li><p>Please show a steady commit trail and thought process e.g. sketches, discussion, issues on how you arrived at the decision to incorporate this feature.</p></li></ul></li></ul><p><strong>Code:</strong></p><ul><li><p>Your Solidity/Vyper code must use NatSpec.</p></li></ul><p><br></p><ul><li><p><strong>Bonus points for:</strong></p><ul><li><p>Producing a tutorial we can use</p></li><li><p>scripts to automate installation with ease</p></li><li><p>an additional ~2-5 minute video talking about the code. Geek out and show us your skills.</p></li><li><p>Great UX/UI</p></li><li><p>a slide presentation in README.md</p></li><li><p>JSDocs comments for JavaScript or TypeScript code</p></li><li><p>A catchy name and logo</p></li><li><p>a clear Design Statement using the format: <strong>How might we improve <em>(a problem in the domain)</em>_____ for <em>(user)</em>, so that <em>(user-focused outcome)</em>___?</strong></p></li><li><p>For an example: https://tesla809.medium.com/draft-crash-course-how-to-organize-a-hackathon-team-29b221c23905</p></li><li><p>Having tests or fuzzing.</p></li></ul></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '09bb6c40-660a-4f98-9a4f-cf316d090ce7',
     submittedByOrgName: 'zkSync',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/09bb6c40-660a-4f98-9a4f-cf316d090ce7/logo/logo.jpg',
@@ -4624,14 +4765,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -4665,9 +4815,7 @@ export const challenges = [
       "<ul><li><p>Judging will lean towards projects that are full MVPs, with the core requirements of handling user ETH deposits and redemptions, aggregation of user funds into 32 ETH validators which are activated on the Beacon Chain (Ethereum Deposit Contract) and managed by the ssv network (Register validator on SSV Network Smart Contract), while maintaining all required operational costs (SSV payments).</p></li><li><p>Working UI to enable users to deposit, redeem and keep track of their staked amount & rewards.</p></li><li><p>Bonus points: supporting dynamic operator selection (curated / permissioned-less).</p></li><li><p>Nice to have</p><ul><li><p>Liquid staking pool with LSD token</p></li><li><p>Oracle integration for LSD rebasing and presentation of user's staking rewards.</p></li></ul></li><li><p>Promising and well executing teams will be evaluated for additional funding as candidates in our grants program and ecosystem fund programs. Details could be found at: https://ssv.network/get-funded/</p></li></ul><p></p><p></p><p>Please note that we reserve the right to withhold prizing in cases where low-quality submissions do not meet our bounty requirements.</p><p></p><p><strong> Out of eligible submissions, 5 winners will be rewarded: 1st - $3K, 2nd - $2K, 3rd - $2K, 4th - $1K, 5th - $1K  </strong></p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'acf5c3b8-01ce-44bd-b62f-df9f01d1737f',
     submittedByOrgName: 'ssv.network',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/acf5c3b8-01ce-44bd-b62f-df9f01d1737f/logo/logo.png',
@@ -4720,22 +4868,37 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 3,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 4,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -4770,9 +4933,7 @@ export const challenges = [
       '<p>Incorporate either Web3Auth Plug and Play, Core Kit, or Torus Wallet into your application and build a user-centric onboarding flow. Judging will lean towards projects that are full MVPs that focus on the UX, although a clean and creative implementation of the feature serving as an excellent example of feature usage is also acceptable. Please show a steady commit trail and thought process e.g. sketches, discussion, issues on how you arrived at the decision to incorporate this feature.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5c6a7b3c-0179-4afe-9d8d-7767aff13f7a',
     submittedByOrgName: 'Web3Auth',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5c6a7b3c-0179-4afe-9d8d-7767aff13f7a/logo/logo.jpg',
@@ -4822,9 +4983,7 @@ export const challenges = [
       '<ul><li><p>First, the Developer Tool must be practical.</p></li><li><p>Documentation should include**:**</p><ul><li><p>A clear README.md with the following:</p><ul><li><p>A short description of team members with their backgrounds</p></li><li><p>A clear guide for how to use the tool</p></li></ul></li><li><p>A clear Open Source License: MIT, GNU, Unlicensed or any standard open source license your team want</p></li><li><p>Have a Project Description section: with a longer written description of what the project does</p></li><li><p>How its made section: Describe how you made the project, mention any issues you ran into</p></li></ul></li><li><p>Create an easy to understand tutorial of how to build a development tool, following your example of the work</p><ul><li><p>A simple UML to describe the connection between the provided solution</p></li><li><p>A clear 2-4 minute video demo walking through the tool</p></li><li><p>Code must be clearly commented</p></li><li><p>Submission must follow tutorial format: code + explanatory text (see resources for examples)</p></li><li><p>The submission is original and not cross-posted from somewhere else</p></li><li><p>Must be submitted in markdown format</p></li><li><p>Must include Github repository with code of the full project</p></li></ul></li><li><p><strong>Bonus points for:</strong></p><ul><li><p>Great UX/UI</p></li><li><p>a slide presentation in README.md</p></li><li><p>JSDocs comments for JavaScript or TypeScript code</p></li><li><p>A catchy name and logo</p></li><li><p>a clear Design Statement using the format: <strong>How might we improve <em>(a problem in the domain)</em>_____ for <em>(user)</em>, so that <em>(user-focused outcome)</em>___?</strong></p></li><li><p>For an example: https://tesla809.medium.com/draft-crash-course-how-to-organize-a-hackathon-team-29b221c23905</p></li></ul></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '09bb6c40-660a-4f98-9a4f-cf316d090ce7',
     submittedByOrgName: 'zkSync',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/09bb6c40-660a-4f98-9a4f-cf316d090ce7/logo/logo.jpg',
@@ -4885,10 +5044,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -4923,9 +5088,7 @@ export const challenges = [
       '<ul><li><p>Your submission must make use of Soroban as part of its primary function.</p></li><li><p>Judging will lean towards projects that are full MVPs, although a clean and creative implementation design, whitepaper, etc... is also acceptable.</p></li><li><p>Submissions can consist of products with interfaces that can be demoed, or they can consist of contract code that can be effectively deployed on Futurenet or in standalone mode.  </p></li><li><p>Your code repository must be public. Please show a steady commit trail and thought process e.g. sketches, discussion, and issues.</p></li><li><p>List any challenges or benefits you encountered in the developer experience.</p></li></ul><p></p><p><em>We reserve the right to withhold prizes in cases where no submissions meet our bounty requirements.</em></p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '527ac55c-3a82-4fc4-98c6-c26f208d0764',
     submittedByOrgName: 'Stellar',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/527ac55c-3a82-4fc4-98c6-c26f208d0764/logo/logo.png',
@@ -4969,6 +5132,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -5003,9 +5169,7 @@ export const challenges = [
       '<p>Judging<br>All Moonbeam bounties will be judged according to the standard ethDenver judging guidelines - that is: <br>Theme Fit<br>Originality & Innovation<br>Ease of use (UI/UX)<br>Sustainability (marketplace viability)<br>Technical complexity<br>Level of Completion<br><br>We reserve the right to withhold prizes in cases where low-quality submissions do not meet our bounty requirements.<br><br>Sponsor Bounty Judging Team<br>Alberto Viera, Developer Relations Manager<br>Katie Butler, Director of Marketing<br>Stephen Shelton, Senior Blockchain Engineer<br>Kevin Neilson, Developer Relations Engineer</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '2760b058-eabf-4495-95db-dfb94038fe35',
     submittedByOrgName: 'Moonbeam',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/2760b058-eabf-4495-95db-dfb94038fe35/logo/logo.jpg',
@@ -5054,10 +5218,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '4000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -5092,9 +5262,7 @@ export const challenges = [
       '<p>Submit your repo, a dockerized demo of your dAPP and a 60 to 90 second video how fRPC has helped your dAPP stay decentralized.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'b94030ef-e65a-4c31-bc31-03ae6f9cdb0c',
     submittedByOrgName: 'Fluence',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/b94030ef-e65a-4c31-bc31-03ae6f9cdb0c/logo/logo.jpg',
@@ -5144,9 +5312,7 @@ export const challenges = [
       '<ul><li><p>Judging will lean towards projects that are full MVPs, with the core requirement of enabling users to supply batches of 32 ETH or validator keys and select their preferred operators set.</p></li><li><p>a management interface that enables users to monitor their validators, performance, and rewards.</p></li><li><p>Bonus points: having a self-service UI.</p></li><li><p>Promising and well executing teams will be evaluated for additional funding as candidates in our grants program and ecosystem fund programs. Details could be found at: https://ssv.network/get-funded/</p></li></ul><p>Please note that we reserve the right to withhold prizing in cases where low-quality submissions do not meet our bounty requirements.</p><p></p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'acf5c3b8-01ce-44bd-b62f-df9f01d1737f',
     submittedByOrgName: 'ssv.network',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/acf5c3b8-01ce-44bd-b62f-df9f01d1737f/logo/logo.png',
@@ -5195,14 +5361,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '4000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
     ],
@@ -5237,9 +5412,7 @@ export const challenges = [
       "<p>Prizes will be awarded at Covalent's discretion based on:</p><ul><li><p>Use case and problem addressed</p></li><li><p>Quality of the live app or working demo. Judging will lean towards projects that are full MVPs, although a clean and creative implementation of the feature serving as an excellent example of feature usage is also acceptable.</p></li><li><p>Use of the Covalent API (e.g. number of endpoints and chains supported)</p></li><li><p>Please show a steady commit trail and thought process e.g. sketches, discussion, issues on how you arrived at the decision to incorporate this feature.</p></li><li><p>List any challenges or benefits you encountered in the developer experience.</p></li></ul>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '8c6ef2a0-681b-4a9f-9078-d32751934328',
     submittedByOrgName: 'Covalent',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/8c6ef2a0-681b-4a9f-9078-d32751934328/logo/logo.jpg',
@@ -5309,9 +5482,7 @@ export const challenges = [
       '<p>The judges will use the following criteria in evaluating your project and bounty eligibility: <br> - Solution is fun and inviting. <br> - Solution has some novelty to it. <br> - Level of innovation.<br> - Level of problem difficulty.<br> - Usefulness to the Web3 Gaming community.<br> - Coolness<br> - Completeness and Implementation of the idea<br> - Quality of the idea<br> - Potential Impact<br> - Technical execution</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '02a5b353-1f9b-4adf-afc7-f12415eb2d51',
     submittedByOrgName: 'Game7',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/02a5b353-1f9b-4adf-afc7-f12415eb2d51/logo/logo.jpg',
@@ -5365,9 +5536,7 @@ export const challenges = [
       '<ul><li><p>Successful Bounty Submission will possess the following:</p></li><li><p>Working stand alone application or a working integration to an existing application like a discord bot.</p></li><li><p>Interesting and fun user experience built into the application or integration.</p></li><li><p>Well defined quest</p></li><li><p>Set of well defined tasks nested within the quest</p></li><li><p>Clear definition of quest completion and any associated rewards</p></li></ul><p><br></p><p><strong>Reward Distribution:</strong></p><p>$10,000 will be split among top 3 participators:</p><ul><li><p>1st Place - $5,000</p></li><li><p>2nd Place - $3,000</p></li><li><p>3rd Place - $2,000</p></li></ul><p><br>We reserve the right to withhold prizing in cases where low-quality submissions do not meet our bounty requirements.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '02a5b353-1f9b-4adf-afc7-f12415eb2d51',
     submittedByOrgName: 'Game7',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/02a5b353-1f9b-4adf-afc7-f12415eb2d51/logo/logo.jpg',
@@ -5392,14 +5561,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
     ],
@@ -5434,9 +5612,7 @@ export const challenges = [
       '<ul><li><p><strong>X Factor: </strong>What is the wow factor of the idea? How creative/innovative is it?</p></li></ul><ul><li><p><strong>Technical Competence:</strong> What is the quality of the technical designs and source code?</p></li><li><p><strong>Impact:</strong> Does this project solve a real-world problem?  Does it have potential?</p></li><li><p><strong>Readiness</strong>: Can a library be used? Is a service actually usable? </p></li><li><p><strong>ICP Factor:</strong> How well does it showcase the unique capabilities of the Internet Computer?</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'e70527ef-4c8c-4227-82b4-e5e455d8cf5f',
     submittedByOrgName: 'Dfinity',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/e70527ef-4c8c-4227-82b4-e5e455d8cf5f/logo/logo.png',
@@ -5485,6 +5661,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -5519,9 +5698,7 @@ export const challenges = [
       '<p> - Innovation and originality</p><p>- Technical execution and implementation </p><p>- Practicality and potential impact of the project</p><p>- User experience and design </p><p>- Presentation and communication </p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5d0df6ba-fa3a-49d3-b06a-f0eab124fcf4',
     submittedByOrgName: 'Mantle',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5d0df6ba-fa3a-49d3-b06a-f0eab124fcf4/logo/logo.png',
@@ -5542,14 +5719,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
     ],
@@ -5584,9 +5770,7 @@ export const challenges = [
       '<p>- Ease of use<br>- Quality of the idea<br>- Potential Impact<br>- Technical execution</p><p><br></p><p>In addition, any submission(s) that pass the eligibility criteria and receive a bounty will be prioritized for a subsequent Game7 grant as an extended engagement. We truly believe that any products/tools being built as a part of this prompt will greatly benefit the web3 gaming space. If there are any teams that want to continue building out their projects after the event, we are happy to explore ways for you to obtain funding in the form of grants!</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '02a5b353-1f9b-4adf-afc7-f12415eb2d51',
     submittedByOrgName: 'Game7',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/02a5b353-1f9b-4adf-afc7-f12415eb2d51/logo/logo.jpg',
@@ -5607,6 +5791,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -5641,9 +5828,7 @@ export const challenges = [
       '<ul><li><p>X Factor: What is the wow factor of the idea? How creative/innovative is it?</p></li><li><p>Technical Competence: What is the quality of the technical designs and source code?</p></li><li><p>Impact: Does this project solve a real-world problem?  Does it have potential?</p></li><li><p>Readiness: Can a library be used? Is a service actually usable? </p></li><li><p>ICP Factor: How well does it showcase the unique capabilities of the Internet Computer?</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'e70527ef-4c8c-4227-82b4-e5e455d8cf5f',
     submittedByOrgName: 'Dfinity',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/e70527ef-4c8c-4227-82b4-e5e455d8cf5f/logo/logo.png',
@@ -5692,6 +5877,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -5726,9 +5914,7 @@ export const challenges = [
       '<p>A successful submission must be able to overlay UI elements on a native MacOS game. In order to be eligible, submissions for this bounty will need to follow the BSL license of the HyperPlay overlay library, with a CLA agreement assigned rights to HyperPlay. The submission should be submitted as a pull request to our Github repository. <br><br>Your submission must be fully functional, and be testable using a MacOS native game. Your submission must work for native games, not just Windows games leveraging a compatibility library. <br><br>We reserve the right to withhold prizing in cases where low-quality submissions do not meet our bounty requirements.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '02a5b353-1f9b-4adf-afc7-f12415eb2d51',
     submittedByOrgName: 'Game7',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/02a5b353-1f9b-4adf-afc7-f12415eb2d51/logo/logo.jpg',
@@ -5757,6 +5943,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -5791,9 +5980,7 @@ export const challenges = [
       '<p><em>Innovation</em> - How creative, or unusual, is the idea? Is this something new, or unseen?<br>    - 1 - uninteresting, not new<br>    - 2 - interesting<br>    - 3 - compelling<br>    - 4 - compelling and new</p><p><em>Alignment</em> - How well aligned is the concept to the bounty? Does it utilize the products, services or concepts outlined in the bounty?<br>    - 1 - the MVP does not touch on any areas of the EVM<br>    - 2 - the MVP does not meet minimum expectations, but effort to integrate was demonstrated<br>    - 3 - the MVP meets expectations in its use of the EVM<br>    - 4 - the MVP meets and exceeds expectations in its use of the EVM<br>*Execution* - How well was the idea implemented? Is the MVP functional, useable and behaving as presented?<br>    - 1 - not functional<br>    - 2 - behaves as described<br>    - 3 - behaves as described and expected<br>    - 4 - behaves as expected and described and includes some sort of audio interaction<br>*Aspiration* - Where can this idea be taken? Is there scope for further development? Could this be the inspirational use case on Hedera?<br>    - 1 - the builders do not complete the app<br>    - 2 - the builders do not share possible ideas/future plans<br>    - 3 - the builders extend into at least one possible idea/future plan<br>    - 4 - the builders extend into multiple possible ideas/future plans</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '1d598e0c-31fe-4a82-aa1e-25310be61cd6',
     submittedByOrgName: 'Hedera Hashgraph',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/1d598e0c-31fe-4a82-aa1e-25310be61cd6/logo/logo.png',
@@ -5871,10 +6058,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '15000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '10000',
       },
     ],
@@ -5909,9 +6102,7 @@ export const challenges = [
       "<p><strong>Criteria:</strong></p><ol><li><p><strong>User Experience</strong></p><p>Build a project that offers end to end seamless user experience with incredible user onboarding with <strong>Magic Wallet</strong>.</p></li><li><p><strong>Originality</strong></p><p>Build a project that’s resourceful and use various smart contracts protocols and libraries to build cool projects such as PoolTogether.</p></li><li><p><strong>Practicality</strong></p><p>Build a project that’s pragmatic and solves real world problems which decentralize technology.</p></li></ol><ul><li><p>Use the full feature including configuration ****options as outlined in the docs link above.</p></li><li><p><strong>Judging</strong> will lean towards projects that are full MVPs, although a clean and creative implementation of the feature serving as an excellent example of feature usage is also acceptable.</p></li><li><p>Please show a <strong>steady commit trail</strong> and thought process e.g. sketches, discussion, issues on how you arrived at the decision to incorporate this feature.</p></li><li><p>List any <strong>challenges or benefits</strong> you encountered in the developer experience.</p></li><li><p><strong>Nice to haves:</strong></p><ul><li><p>Leave comments in your code</p></li><li><p>Leave a comment of your Magic Wallet integration</p></li></ul></li></ul><p><strong>Criteria for Template Guidelines:</strong></p><p><strong>Prerequisites:</strong></p><ul><li><p>Use of Magic Wallet</p></li><li><p><em>You'll need to install:</em>*</p></li><li><p>Node.js, v12 or higher</p></li><li><p>Hardhat</p></li></ul><p><strong>Stack recommended/not-required:</strong></p><p>Web application framework - Next.js</p><p>Solidity development environment - Hardhat</p><p>File Storage - IPFS / NFT Storage</p><p>Ethereum web client library - Ethers.js</p><p>Login, wallet and fiat on-ramp solution - Magic</p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'fcbd2d58-1d1b-4f4f-bc49-8710d04f254d',
     submittedByOrgName: 'Magic',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/fcbd2d58-1d1b-4f4f-bc49-8710d04f254d/logo/logo.png',
@@ -5973,9 +6164,7 @@ export const challenges = [
       '<ul><li><p><strong>X Factor: </strong>What is the wow factor of the idea? How creative/innovative is it?</p></li><li><p><strong>Technical Competence:</strong> What is the quality of the technical designs and source code?</p></li><li><p><strong>Impact:</strong> Does this project solve a real-world problem?  Does it have potential?</p></li><li><p><strong>Readiness</strong>: Can a library be used? Is a service actually usable? </p></li><li><p><strong>ICP Factor:</strong> How well does it showcase the unique capabilities of the Internet Computer?</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'e70527ef-4c8c-4227-82b4-e5e455d8cf5f',
     submittedByOrgName: 'Dfinity',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/e70527ef-4c8c-4227-82b4-e5e455d8cf5f/logo/logo.png',
@@ -6012,6 +6201,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -6046,9 +6238,7 @@ export const challenges = [
       '<p>A README or other document demonstrating your work.<br><br>Please show a steady commit trail and thought process e.g. sketches, discussion, issues on how you arrived at the project.<br><br>List any challenges or benefits you encountered in the security researcher experience.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '8c98320b-ee3c-4f46-a48f-345a9d4c3128',
     submittedByOrgName: 'Go+',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/8c98320b-ee3c-4f46-a48f-345a9d4c3128/logo/logo.png',
@@ -6113,10 +6303,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
     ],
@@ -6151,9 +6347,7 @@ export const challenges = [
       '<p>Criteria </p><p></p><p>🛠0x API Swap Endpoint Implementation</p><p> - Does it properly implement the 0x API swap/quote endpoint? Does it use the required affiliate Address parameter? Does the use case for the endpoint make sense? </p><p></p><p>💻 Technical Implementation </p><p>- Is the code well-written, technically sound, and clean? Is the project complete? </p><p></p><p>✨Creativity </p><p>- Does it solve an existing problem in a unique way? </p><p></p><p>🌈Design </p><p>- Does it have a delightful UI/UX? Is it easy to use? </p><p></p><p>🌐Adoption & Market </p><p>- How feasible is this project to gain real-world traction? Does it fill a market gap and have the potential to be adopted by a sizable and diverse audience?</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'f1be0228-1257-43e2-9bbe-2320ef8ee187',
     submittedByOrgName: '0x',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/f1be0228-1257-43e2-9bbe-2320ef8ee187/logo/logo.png',
@@ -6194,14 +6388,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1500',
       },
     ],
@@ -6236,9 +6439,7 @@ export const challenges = [
       '<ul><li><p>The bounty has to be accomplished by using the Internet Computer to host and upgrade a frontend for a DAO on Ethereum or other EVM compatible chain. The solution needs to use the HTTPS outcalls feature to fetch a voting result of the DAO on the EVM compatible chain.</p></li><li><p>The solution has to be deployed on the Internet Computer</p></li><li><p>Clean code and a proper documentation</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'e70527ef-4c8c-4227-82b4-e5e455d8cf5f',
     submittedByOrgName: 'Dfinity',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/e70527ef-4c8c-4227-82b4-e5e455d8cf5f/logo/logo.png',
@@ -6287,6 +6488,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -6321,9 +6525,7 @@ export const challenges = [
       "<p>Use the Web3Modal SDK to authenticate and/or sign transactions. Judging will lean towards projects that are full MVPs and have the best user experience. Remember to include your README, it's very important! Make sure to add all the necessary details so we can easily run and test your application locally.<br><br>We reserve the right to withhold prizing in cases where low-quality submissions do not meet our bounty requirements.</p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '0453d5a3-47fa-4ded-a23d-5b7747665b9a',
     submittedByOrgName: 'Wallet Connect',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/0453d5a3-47fa-4ded-a23d-5b7747665b9a/logo/logo.png',
@@ -6348,14 +6550,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -6389,9 +6600,7 @@ export const challenges = [
     acceptanceCriteria: '<p>Users should be able to view and revoke permissions they have granted to contracts for any imported wallet.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5de17e7c-f727-47ed-a768-cf1e2fbb94c4',
     submittedByOrgName: 'Taho',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5de17e7c-f727-47ed-a768-cf1e2fbb94c4/logo/logo.png',
@@ -6440,6 +6649,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
     ],
@@ -6474,9 +6686,7 @@ export const challenges = [
       "<p>Use Web3Wallet SDK as outlined in the docs. The wallet should be able to pair, start new sessions, sign transactions, and authenticate users . Judging will lean towards projects that are full MVPs and have the best user experience. Remember to include your README, it's very important! Make sure to add all the necessary details so we can easily run and test your application locally.<br><br>We reserve the right to withhold prizing in cases where low-quality submissions do not meet our bounty requirements.</p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '0453d5a3-47fa-4ded-a23d-5b7747665b9a',
     submittedByOrgName: 'Wallet Connect',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/0453d5a3-47fa-4ded-a23d-5b7747665b9a/logo/logo.png',
@@ -6509,14 +6719,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -6551,9 +6770,7 @@ export const challenges = [
       '<ul><li><p>Finality of the integration (complete swap via 1inch smart contract based on docs)</p></li><li><p>Unique way of the integration: use super new type of DApp, cross chain, game integration etc</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a7533c78-0b7a-4fb0-837f-0a8151070861',
     submittedByOrgName: '1inch',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a7533c78-0b7a-4fb0-837f-0a8151070861/logo/logo.png',
@@ -6570,14 +6787,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
     ],
@@ -6612,9 +6838,7 @@ export const challenges = [
       "<p>Use the full Web3Modal theming feature as outlined in the docs links above. Judging will lean towards projects that are full MVPs and have the best user experience. Remember to include your README, it's very important! Make sure to add all the necessary details so we can easily run and test your application locally.<br><br>We reserve the right to withhold prizing in cases where low-quality submissions do not meet our bounty requirements.</p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '0453d5a3-47fa-4ded-a23d-5b7747665b9a',
     submittedByOrgName: 'Wallet Connect',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/0453d5a3-47fa-4ded-a23d-5b7747665b9a/logo/logo.png',
@@ -6639,14 +6863,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -6681,9 +6914,7 @@ export const challenges = [
       "<p>Use the Web3Modal SDK to authenticate and/or sign transactions. Judging will lean towards projects that are full MVPs and have the best user experience. Remember to include your README, it's very important! Make sure to add all the necessary details so we can easily run and test your application locally.</p><p></p><p>We reserve the right to withhold prizing in cases where low-quality submissions do not meet our bounty requirements.</p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '0453d5a3-47fa-4ded-a23d-5b7747665b9a',
     submittedByOrgName: 'Wallet Connect',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/0453d5a3-47fa-4ded-a23d-5b7747665b9a/logo/logo.png',
@@ -6708,14 +6939,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -6750,9 +6990,7 @@ export const challenges = [
       '<p>Users will be judged based on the following criteria: </p><p>- Innovation and originality </p><p>- Technical execution and implementation </p><p>- Practicality and potential impact of the project </p><p>- User experience and design </p><p>- Presentation and communication </p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5d0df6ba-fa3a-49d3-b06a-f0eab124fcf4',
     submittedByOrgName: 'Mantle',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5d0df6ba-fa3a-49d3-b06a-f0eab124fcf4/logo/logo.png',
@@ -6773,14 +7011,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
     ],
@@ -6814,9 +7061,7 @@ export const challenges = [
     acceptanceCriteria: '<p>Users should be able to add Custom ERC-20 tokens to the wallet</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5de17e7c-f727-47ed-a768-cf1e2fbb94c4',
     submittedByOrgName: 'Taho',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5de17e7c-f727-47ed-a768-cf1e2fbb94c4/logo/logo.png',
@@ -6882,9 +7127,7 @@ export const challenges = [
       "<p>Use the full Chat API feature as outlined in the docs links above. Users should be able to send messages to the chat box and receive messages.. Judging will lean towards projects that are full MVPs and have the best user experience. Remember to include your README, it's very important! Make sure to add all the necessary details so we can easily run and test your application locally.<br><br>We reserve the right to withhold prizing in cases where low-quality submissions do not meet our bounty requirements.</p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '0453d5a3-47fa-4ded-a23d-5b7747665b9a',
     submittedByOrgName: 'Wallet Connect',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/0453d5a3-47fa-4ded-a23d-5b7747665b9a/logo/logo.png',
@@ -6913,14 +7156,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -6955,9 +7207,7 @@ export const challenges = [
       '<p>Successful submissions will provide one or more compelling name ideas for Threshold’s “Conditions-Based Decryption” - not including the examples given in the video. </p><p></p><p>The submission should include these elements: </p><p>a) product name </p><p>b) a paragraph giving the rationale for the choice of name </p><p>*Bonus points for explaining your process for coming up with the name, as well as providing any research on why the name is viable. </p><p>*Bonus consideration if you also try for a logo.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '34d46e89-0b45-418c-8d05-cd5e68a6ac2a',
     submittedByOrgName: 'Threshold',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/34d46e89-0b45-418c-8d05-cd5e68a6ac2a/logo/logo.jpg',
@@ -7042,9 +7292,7 @@ export const challenges = [
       '<p>Build and deploy a custom GraphQL API that indexes data from a smart contract to query blockchain data to your dapp. Judges may grade your project based on several criterias, such asL</p><p>Technical Implementation</p><p>Product & Design</p><p>Quality of Idea</p><p>Impact on Ecosystem</p><p>Project Sustainability</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'e8b605c4-b38e-4dce-a9b6-f2c327a1079a',
     submittedByOrgName: 'The Graph',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/e8b605c4-b38e-4dce-a9b6-f2c327a1079a/logo/logo.png',
@@ -7089,14 +7337,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1800',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1200',
       },
     ],
@@ -7131,9 +7388,7 @@ export const challenges = [
       '<p>Successful submissions will have accurate technical details (we provide resources below and DAO members will be available in person and in our Discord to answer clarifying questions), tell a compelling story fitting the Threshold brand, and/or be easily shareable on social media.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '34d46e89-0b45-418c-8d05-cd5e68a6ac2a',
     submittedByOrgName: 'Threshold',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/34d46e89-0b45-418c-8d05-cd5e68a6ac2a/logo/logo.jpg',
@@ -7239,9 +7494,7 @@ export const challenges = [
       '<p>The judging criteria, in order of importance:<br><br>- Web3 Gateway integrated in the dapp<br>- Possible to deploy and use the dapp on a network supported by Web3 Gateway<br>- Potential impact of the idea<br>- The uniqueness of the idea</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'd87af43a-b059-4979-8d4f-1fba5f66172f',
     submittedByOrgName: 'Tenderly',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/d87af43a-b059-4979-8d4f-1fba5f66172f/logo/logo.jpg',
@@ -7294,9 +7547,7 @@ export const challenges = [
       '<p>Query an existing subgraph on the Graph Explorer or hosted service using the public query URL from the subgraph dashboard. Judges may grade your project based on several criterias, such as: </p><p>Technical Implementation</p><p>Product & Design</p><p>Quality of Idea</p><p>Impact on Ecosystem</p><p>Project Sustainability</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'e8b605c4-b38e-4dce-a9b6-f2c327a1079a',
     submittedByOrgName: 'The Graph',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/e8b605c4-b38e-4dce-a9b6-f2c327a1079a/logo/logo.png',
@@ -7337,14 +7588,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -7379,9 +7639,7 @@ export const challenges = [
       '<p>The coolest/most innovative project or submission who successfully integrates the SDK or Web3 API into their smart contract system, decentralized application, interface, or local application will be considered. <br></p><p>A successful integration to qualify for the prize pool will be defined as creating and/or using INTU accounts for end-users. INTU reserves the right to determine eligibility.<br></p><p>Submissions earning other INTU bounties are not eligible for the prize pool.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5090bd8d-75ba-4624-b4e0-e6374fb15be7',
     submittedByOrgName: 'Intu',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5090bd8d-75ba-4624-b4e0-e6374fb15be7/logo/logo.png',
@@ -7438,9 +7696,7 @@ export const challenges = [
     acceptanceCriteria: '<p>Requirements:</p><ul><li><p>Uses Tally API</p></li><li><p>Improves DAOs</p></li><li><p>Is open source</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '4bc28740-321a-4f24-949f-81a8ef6e64b4',
     submittedByOrgName: 'Tally',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/4bc28740-321a-4f24-949f-81a8ef6e64b4/logo/logo.png',
@@ -7465,6 +7721,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
     ],
@@ -7499,9 +7758,7 @@ export const challenges = [
       '<p>Criteria Add the ability for users to add Goerli ETH to their logged in address without leaving the wallet. Add the ability for users to initiate and connect to mainnet forks from the wallet - and then browse and use dapps while connected to that fork. </p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5de17e7c-f727-47ed-a768-cf1e2fbb94c4',
     submittedByOrgName: 'Taho',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5de17e7c-f727-47ed-a768-cf1e2fbb94c4/logo/logo.png',
@@ -7567,9 +7824,7 @@ export const challenges = [
       '<ul><li><p>Add the ability to import addresses via private key </p></li><li><p>Add the ability to select a specific address when importing a seed phrase.</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5de17e7c-f727-47ed-a768-cf1e2fbb94c4',
     submittedByOrgName: 'Taho',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5de17e7c-f727-47ed-a768-cf1e2fbb94c4/logo/logo.png',
@@ -7651,9 +7906,7 @@ export const challenges = [
       '<p>Allow users to select one of their NFTs to replace the default dog-avatar associated with a given address. Functionality should include: </p><ul><li><p>Ability to select an owned NFT as wallet avatar </p></li><li><p>Ability to change between avatars </p></li><li><p>Ability to remove avatar and revert to default.</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5de17e7c-f727-47ed-a768-cf1e2fbb94c4',
     submittedByOrgName: 'Taho',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5de17e7c-f727-47ed-a768-cf1e2fbb94c4/logo/logo.png',
@@ -7715,9 +7968,7 @@ export const challenges = [
       '<ul><li><p>Build the DAO using aragonOSx</p></li><li><p>Build the DAO with Mirror subscriptors/post NFT holders as initial members. </p></li><li><p>Judging will be based on of tool effectiveness and easiness of use. Bonus points for great UX/UI and if the tool is directly embedded within either tool (Mirror or Aragon).</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'ebbe2894-1bf3-419b-9430-db440c663994',
     submittedByOrgName: 'Aragon',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/ebbe2894-1bf3-419b-9430-db440c663994/logo/logo.png',
@@ -7754,6 +8005,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
     ],
@@ -7788,9 +8042,7 @@ export const challenges = [
       '<p>- Off-chain voting should have executable impact within the aragonOSx framework<br>- Should include documentation on the implementation and how to use it<br>- Members of an Aragon DAO are able to vote off-chain and link results to executable plugins within the aragonOSx protocol. For ex, after an off-chain vote occurs, the results from the proposal needs to be used by aragonOSx DAOs.<br>- Judging will be based on effectiveness of the tool, rather than front-end. Although a great UX/UI is always a huge bonus.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'ebbe2894-1bf3-419b-9430-db440c663994',
     submittedByOrgName: 'Aragon',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/ebbe2894-1bf3-419b-9430-db440c663994/logo/logo.png',
@@ -7826,7 +8078,9 @@ export const challenges = [
     ],
     rewards: [
       {
-        winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
     ],
@@ -7861,9 +8115,7 @@ export const challenges = [
       '<p>- DAO members should be able to delegate their tokens to others<br>- Build a working plugin and publish it to the aragonOSx protocol<br>- Create documentation about how the plugin works<br>- Bounty will be judged based on effectiveness:<br>    - DAO members should be able to delegate their vote to someone else<br>    - That delegated vote should be counted when counting the results of a given DAO proposal<br>- Bonus points for building a good UX/UI for this<br>- Other contracts from the ecosystem may be used and repurposed.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'ebbe2894-1bf3-419b-9430-db440c663994',
     submittedByOrgName: 'Aragon',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/ebbe2894-1bf3-419b-9430-db440c663994/logo/logo.png',
@@ -7900,6 +8152,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
     ],
@@ -7934,9 +8189,7 @@ export const challenges = [
       '<p>- Use Swing’s SDK or API to build cross-chain features into your application. Use the steps outlined in our developer guides and docs above:</p><p>- We will look to see how you utilize number of endpoints, bridges, liquidity sources </p><p>- Judging will lean towards projects that are full MVPs </p><p>- Please show a steady commit trail and thought process e.g. sketches, discussion, issues on how you arrived at the decision to incorporate Swing’s API or SDK </p><p>- List any challenges or benefits you encountered in the developer experience</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'ddbea295-a569-4090-990c-ce8af5f781b1',
     submittedByOrgName: 'Swing',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/ddbea295-a569-4090-990c-ce8af5f781b1/logo/logo.png',
@@ -8006,9 +8259,7 @@ export const challenges = [
       '<p>- Build an app that fetches any Aragon DAOs’ proposal (we can do this using the Aragon SDK) and presents an unbiased, summarized version of the text to read easily.<br>- Ideally, this summary is in short bullet points (min 2, max 10, ideally 3-4).<br>- Judging will be based off of tool effectiveness and easiness of use.<br>- Bonus points for the best user experience.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'ebbe2894-1bf3-419b-9430-db440c663994',
     submittedByOrgName: 'Aragon',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/ebbe2894-1bf3-419b-9430-db440c663994/logo/logo.png',
@@ -8045,6 +8296,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -8079,9 +8333,7 @@ export const challenges = [
       '<p>- Collect a DAO members point of contact to be notified<br>- Users should receive a notification of an event occurring within 24h of the event happening (the more immediate the better)<br>- They can be notified via email, mobile, or another tool you choose<br>- Judging will be based on accuracy, timeliness, and efficacy. Smooth and user-friendly UX/UI is a great bonus.<br>- Please send a working demo, ideally with a video explaining the flow, for submission.<br>- Please submit documentation on how to run the tool locally.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'ebbe2894-1bf3-419b-9430-db440c663994',
     submittedByOrgName: 'Aragon',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/ebbe2894-1bf3-419b-9430-db440c663994/logo/logo.png',
@@ -8147,9 +8399,7 @@ export const challenges = [
       '<p>Either use Cypher Onboarding SDK with your dApp and create an open source contribution to any of the existing dApps.</p><p></p><p>Projects will be judged for Completeness and Impact.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '7e6d2633-d585-4c10-81c3-de298aabb5a0',
     submittedByOrgName: 'Cypher Wallet',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/7e6d2633-d585-4c10-81c3-de298aabb5a0/logo/logo.png',
@@ -8195,9 +8445,7 @@ export const challenges = [
       '<ul><li><p>Your submission must make use of Soroban as part of its primary function.</p></li><li><p>Judging will lean towards projects that are full MVPs, although a clean and creative implementation design, whitepaper, etc... is also acceptable.</p></li><li><p>Submissions can consist of products with interfaces that can be demoed, or they can consist of contract code that can be effectively deployed on Futurenet or in standalone mode.  </p></li><li><p>Your code repository must be public. Please show a steady commit trail and thought process e.g. sketches, discussion, and issues.</p></li><li><p>List any challenges or benefits you encountered in the developer experience.</p></li></ul><p></p><p><em>We reserve the right to withhold prizes in cases where no submissions meet our bounty requirements.</em></p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '527ac55c-3a82-4fc4-98c6-c26f208d0764',
     submittedByOrgName: 'Stellar',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/527ac55c-3a82-4fc4-98c6-c26f208d0764/logo/logo.png',
@@ -8241,6 +8489,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -8275,9 +8526,7 @@ export const challenges = [
       '<ul><li><p>Your submission must make use of Soroban as part of its primary function.</p></li><li><p>Judging will lean towards projects that are full MVPs, although a clean and creative implementation design, whitepaper, etc... are also acceptable.</p></li><li><p>Submissions can consist of products with interfaces that can be demoed, or they can consist of contract code that can be effectively deployed on Futurenet or in standalone mode.  </p></li><li><p>Your code repository must be public. Please show a steady commit trail and thought process e.g. sketches, discussion, and issues.</p></li><li><p>List any challenges or benefits you encountered in the developer experience.</p></li></ul><p></p><p><em>We reserve the right to withhold prizes in cases where no submissions meet our bounty requirements.</em></p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '527ac55c-3a82-4fc4-98c6-c26f208d0764',
     submittedByOrgName: 'Stellar',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/527ac55c-3a82-4fc4-98c6-c26f208d0764/logo/logo.png',
@@ -8321,6 +8570,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -8355,9 +8607,7 @@ export const challenges = [
       '<ul><li><p>Your submission must make use of Soroban as part of its primary function.</p></li><li><p>Judging will lean towards projects that are full MVPs, although a clean and creative implementation design, whitepaper, etc... is also acceptable.</p></li><li><p>Submissions can consist of products with interfaces that can be demoed, or they can consist of contract code that can be effectively deployed on Futurenet or in standalone mode.  </p></li><li><p>Your code repository must be public. Please show a steady commit trail and thought process e.g. sketches, discussion, and issues.</p></li><li><p>List any challenges or benefits you encountered in the developer experience.</p></li></ul><p></p><p><em>We reserve the right to withhold prizes in cases where no submissions meet our bounty requirements.</em></p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '527ac55c-3a82-4fc4-98c6-c26f208d0764',
     submittedByOrgName: 'Stellar',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/527ac55c-3a82-4fc4-98c6-c26f208d0764/logo/logo.png',
@@ -8401,6 +8651,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -8435,9 +8688,7 @@ export const challenges = [
       '<ul><li><p>Your submission must make use of Soroban as part of its primary function.</p></li><li><p>Judging will lean towards projects that are full MVPs, although a clean and creative implementation design, whitepaper, etc... is also acceptable.</p></li><li><p>Submissions can consist of products with interfaces that can be demoed, or they can consist of contract code that can be effectively deployed on Futurenet or in standalone mode.  </p></li><li><p>Your code repository must be public. Please show a steady commit trail and thought process e.g. sketches, discussion, and issues.</p></li><li><p>List any challenges or benefits you encountered in the developer experience. <strong> </strong></p></li></ul><p></p><p><em>We reserve the right to withhold prizes in cases where no submissions meet our bounty requirements.</em></p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '527ac55c-3a82-4fc4-98c6-c26f208d0764',
     submittedByOrgName: 'Stellar',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/527ac55c-3a82-4fc4-98c6-c26f208d0764/logo/logo.png',
@@ -8510,9 +8761,7 @@ export const challenges = [
       '<ul><li><p>Your submission must make use of Soroban as part of its primary function.</p></li><li><p>Judging will lean towards projects that are full MVPs, although a clean and creative implementation design, whitepaper, etc... are also acceptable.</p></li><li><p>Submissions can consist of products with interfaces that can be demoed, or they can consist of contract code that can be effectively deployed on Futurenet or in standalone mode.  </p></li><li><p>Your code repository must be public. Please show a steady commit trail and thought process e.g. sketches, discussion, and issues.</p></li><li><p>List any challenges or benefits you encountered in the developer experience.</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '527ac55c-3a82-4fc4-98c6-c26f208d0764',
     submittedByOrgName: 'Stellar',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/527ac55c-3a82-4fc4-98c6-c26f208d0764/logo/logo.png',
@@ -8556,6 +8805,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -8590,9 +8842,7 @@ export const challenges = [
       '<ul><li><p>Judging will lean towards tooling that can reduce the complexity and duration of SSV integrations - technical stack "building blocks" (e.g. SDK, CLIs, code snippets, scripts)</p></li><li><p>We would also welcome any application that could externalize and present transparency and insights of our network, with focus on operators and operator sets (clusters) performance, reputation and diversification. </p></li></ul><p>Please that we reserve the right to withhold prizing in cases where low-quality submissions do not meet our bounty requirements.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'acf5c3b8-01ce-44bd-b62f-df9f01d1737f',
     submittedByOrgName: 'ssv.network',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/acf5c3b8-01ce-44bd-b62f-df9f01d1737f/logo/logo.png',
@@ -8670,9 +8920,7 @@ export const challenges = [
       '<ul><li><p>Use GMP’s  <code>callContract</code> or <code>callContractWithToken</code> to provide valuable interchain functionality as part of your DApp</p></li><li><p>Projects will be judged on Viability, Creativity, and how essential being Interchain is to your DApp</p></li><li><p>Please include the following in the readme.md / bounty.md of your application:</p></li><li><p>You must share an AxelarScan link with a completed Interchain transaction</p></li><li><p>You must share the source code of your DApp</p></li><li><p>You must share at least 2 positive or negative experiences you had with learning and using Axelar</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '7ea966b8-e6db-4c14-88f5-724dbb629e22',
     submittedByOrgName: 'Axelar',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/7ea966b8-e6db-4c14-88f5-724dbb629e22/logo/logo.png',
@@ -8705,22 +8953,37 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '7500',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '6000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 3,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '4000',
       },
       {
         winnerRank: 4,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
     ],
@@ -8755,9 +9018,7 @@ export const challenges = [
       "<p>- Implement the full Sign-In with Etherereum workflow along with ENS resolution in your dapp via SSX and SSX's feature flags<br>- Judging will lean more towards what's enabled via the integration rather than just a basic integration of the software<br>- Please make sure to include relevant GitHub links with commits showing the integration process</p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '8d522fe2-15a5-48d2-b293-5e8aac76e157',
     submittedByOrgName: 'SpruceID',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/8d522fe2-15a5-48d2-b293-5e8aac76e157/logo/logo.png',
@@ -8823,9 +9084,7 @@ export const challenges = [
       '<ul><li><p>Judging will lean towards projects that can validate the use-case market segment, value offering and potential user segments, and demonstrate technical feasibility through a POC deployment on testnet.</p></li><li><p>Promising and well executing teams will be evaluated for additional funding as candidates in our grants program and ecosystem fund programs. Details could be found at: https://ssv.network/get-funded/</p></li></ul><p>Please note that we reserve the right to withhold prizing in cases where low-quality submissions do not meet our bounty requirements.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'acf5c3b8-01ce-44bd-b62f-df9f01d1737f',
     submittedByOrgName: 'ssv.network',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/acf5c3b8-01ce-44bd-b62f-df9f01d1737f/logo/logo.png',
@@ -8874,6 +9133,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
     ],
@@ -8908,9 +9170,7 @@ export const challenges = [
       '<ol><li><p>FIlecoin Virtual Machine Judging Criteria: https://www.notion.so/ecosystem-wg/Filecoin-VM-Hackathon-Judging-Criteria-81e27f4737f047a4a503e22dce6f4f7f</p></li><li><p>FVM Cheat Sheet: https://github.com/filecoin-project/community/discussions/585</p></li></ol>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'd264ef74-2c79-480c-9303-2ae6ea1d97d6',
     submittedByOrgName: 'Protocol Labs',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/d264ef74-2c79-480c-9303-2ae6ea1d97d6/logo/logo.png',
@@ -8997,9 +9257,7 @@ export const challenges = [
       '<ul><li><p>Usability: The solution should be user-friendly, with a well-designed interface and easy-to-use functionalities.</p></li><li><p>Security: The solution should be designed with strong security measures in place to ensure the safety and privacy of user data.</p></li><li><p>Performance: The solution should have high performance and be able to handle large amounts of storage demand.</p></li><li><p>Integration: The solution should be able to integrate with the BNB Greenfield protocol and BNB Smart Chain to ensure interoperability.</p></li><li><p>Innovation: The solution should be innovative, providing new and creative ways of using decentralized storage;</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '94bf0f2e-3551-4e5a-aeda-3467d2ae9700',
     submittedByOrgName: 'BNB Chain',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/94bf0f2e-3551-4e5a-aeda-3467d2ae9700/logo/logo.png',
@@ -9024,14 +9282,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '6000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '4000',
       },
     ],
@@ -9066,9 +9333,7 @@ export const challenges = [
       "<p>- Implement a feature that can be used alongside existing workflows to enhance Sign-In with Ethereum beyond logging in.<br>- Judging will lean more towards creativity, and we welcome the usage of existing protocols as features (for example, Sign-In with Ethereum and pulling in a user's decentralized chat history to an application!) <br>- Please make sure to include relevant GitHub links with commits showing the integration process, and feel free to send feedback on what worked and didn't work for you.<br>- Bonus points if the feature is not only submitted / PR'd to SSX but used in an application featuring other bounties.</p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '8d522fe2-15a5-48d2-b293-5e8aac76e157',
     submittedByOrgName: 'SpruceID',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/8d522fe2-15a5-48d2-b293-5e8aac76e157/logo/logo.png',
@@ -9105,10 +9370,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '0',
       },
     ],
@@ -9143,9 +9414,7 @@ export const challenges = [
       "<ul><li><p>Design and implement a framework that exposes an API for either counter-party or market risks on the BNB Smart Chain.</p></li><li><p>The framework can have academic backing with references to research papers.</p></li><li><p>The methodology used should be able to assess the risks effectively and provide actionable insights.</p></li><li><p>Bonus points will be given for including a user interface to visualize the results.</p></li><li><p>The implementation should be secure and reliable, with a focus on risk management and mitigation.</p></li><li><p>The solution should address the risk factors specific to the BNB Smart Chain ecosystem.</p></li><li><p>The code should be well-documented, easy to understand, and open-sourced.</p></li><li><p>The submission should include a demonstration video/tutorial of the framework's usage.</p></li></ul>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '94bf0f2e-3551-4e5a-aeda-3467d2ae9700',
     submittedByOrgName: 'BNB Chain',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/94bf0f2e-3551-4e5a-aeda-3467d2ae9700/logo/logo.png',
@@ -9162,14 +9431,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '6000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '4000',
       },
     ],
@@ -9204,9 +9482,7 @@ export const challenges = [
       '<p>- Vision and use case </p><p>- Live and usable MVP on Abritrum Goerli </p><p>- Video demo of a live application </p><p>- Open Source code: e.g. MIT, BSD, GNU </p><p>- Great documentation in code and a well-explained **README**. </p><p>- Please show a **steady commit trail** and thought process e.g. sketches, discussion, and issues on how you arrived at the decision to incorporate this feature. </p><p>- List any **challenges or benefits** you encountered in the developer experience. </p><p></p><p>- Overall Value Proposition (any of the following): </p><p>  - Improves capital efficiency of lenders and borrowers in DeFi protocols. </p><p>  - Improves the functionality of Web3 protocols. </p><p>  - Implementation of MACRO score in an application creates value in novel ways. </p><p>  - Creation of a tool that improves the MACRO Score. - User Experience - Creativity</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'e5a1602e-5e42-4c3f-8982-6d6adeed4862',
     submittedByOrgName: 'Spectral Finance',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/e5a1602e-5e42-4c3f-8982-6d6adeed4862/logo/logo.png',
@@ -9243,18 +9519,30 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '8000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 3,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -9289,9 +9577,7 @@ export const challenges = [
       '<p>While judging will lean towards projects that are full MVPs, a clean and creative implementation design, whitepaper, etc... is also acceptable. We will score projects based on the following criteria, and each will be scored from 1 to 5 for a maximum of 25 points:</p><ul><li><p>Product-market fit and economic viability.</p></li><li><p>Originality and innovation.</p></li><li><p>Implementation quality.</p></li><li><p>Technical complexity.</p></li><li><p>Level of completion.</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5a7c46e4-1e02-47c0-a72e-b48cfcf88afd',
     submittedByOrgName: 'Cartesi',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5a7c46e4-1e02-47c0-a72e-b48cfcf88afd/logo/logo.png',
@@ -9328,18 +9614,30 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 3,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -9374,9 +9672,7 @@ export const challenges = [
       '<ul><li><p>Must use ComposeDB on Ceramic</p></li><li><p>Must be in knowledge management field</p></li><li><p>At least one new data model created or at least one existing data model re-used for the application</p></li><li><p>Judging will lean towards the completeness of the application: is the project in a concept state or ready to scale</p></li><li><p>Impact to Ceramic developer ecosystem</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '257765ff-7f71-419d-b683-98dbcac0c014',
     submittedByOrgName: 'Ceramic',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/257765ff-7f71-419d-b683-98dbcac0c014/logo/logo.png',
@@ -9434,9 +9730,7 @@ export const challenges = [
       '<p>Criteria - Must use ComposeDB on Ceramic - Must be a DAO or Community tool - At least one new data model created or at least one existing data model re-used for the application - Judging will lean towards the completeness of the application: is the project in a concept state or ready to scale - Impact to Ceramic developer ecosystem </p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '257765ff-7f71-419d-b683-98dbcac0c014',
     submittedByOrgName: 'Ceramic',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/257765ff-7f71-419d-b683-98dbcac0c014/logo/logo.png',
@@ -9490,9 +9784,7 @@ export const challenges = [
       '<p>Show us some cool ZK use cases and prototypes!</p><p>Integrate the Scroll testnet in some way</p><p>Judging will consider creativity, execution, and novelty.</p><p>List any challenges or benefits you encountered in the developer experience.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a3cbce5e-a955-4693-b437-66c5163ad2b3',
     submittedByOrgName: 'Scroll',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a3cbce5e-a955-4693-b437-66c5163ad2b3/logo/logo.png',
@@ -9550,9 +9842,7 @@ export const challenges = [
       '<p>What does success look like? </p><ul><li><p>Build tool </p></li><li><p>Can they check interactions/assets/processes like using the tool </p></li><li><p>Integrating/interacting with their project </p></li><li><p>Environmentally related project/or component using CO2 Storage that unlocks some new use case for the community</p></li><li><p>Don’t have to come in with a ReFi project </p></li><li><p>Back up or store data on CO2 Storage</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'd264ef74-2c79-480c-9303-2ae6ea1d97d6',
     submittedByOrgName: 'Protocol Labs',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/d264ef74-2c79-480c-9303-2ae6ea1d97d6/logo/logo.png',
@@ -9581,14 +9871,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -9623,9 +9922,7 @@ export const challenges = [
       '<p>We’ll be looking for projects that demonstrate <em>why </em>a generic zero knowledge compute platform is so interesting. This means that porting an existing Solidity application to Bonsai is probably <em>not</em> a good strategy. We will be judging submissions based on utility, novelty, and quality. <em>Partially finished submissions will be considered for awards.</em></p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '677d3e8b-ba92-4393-ac82-f666814af38f',
     submittedByOrgName: 'RISC Zero',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/677d3e8b-ba92-4393-ac82-f666814af38f/logo/logo.png',
@@ -9687,9 +9984,7 @@ export const challenges = [
       '<p>Propose, prototype or deploy a project that explore decentralized social on Scroll</p><p>Judging will prioritize reusable, open-source projects that build on the existing Lens ecosystem.</p><p>Nice to haves: A. understanding the value zk-rollups bring for fast finality and messaging, B. a working prototype! </p><p>List any challenges or benefits you encountered in the design or developer experience.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a3cbce5e-a955-4693-b437-66c5163ad2b3',
     submittedByOrgName: 'Scroll',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a3cbce5e-a955-4693-b437-66c5163ad2b3/logo/logo.png',
@@ -9751,9 +10046,7 @@ export const challenges = [
       '<ol><li><p>FIlecoin Virtual Machine Judging Criteria: https://www.notion.so/ecosystem-wg/Filecoin-VM-Hackathon-Judging-Criteria-81e27f4737f047a4a503e22dce6f4f7f</p></li><li><p>FVM Cheat Sheet: https://github.com/filecoin-project/community/discussions/585</p></li></ol>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'd264ef74-2c79-480c-9303-2ae6ea1d97d6',
     submittedByOrgName: 'Protocol Labs',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/d264ef74-2c79-480c-9303-2ae6ea1d97d6/logo/logo.png',
@@ -9811,10 +10104,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -9848,9 +10147,7 @@ export const challenges = [
       '<p>**Judging** will lean towards projects that are full MVPs, although a clean and creative implementation design, whitepaper, etc... is also acceptable if the contribution is novel.</p><p>- Is it a useful product for the community?</p><p>- Does it have a robust README detailing why Polygon is a great technology choice for the project?</p><p>- Have the builders created something that raises the bar for UX in web3?</p><p>- Please show a <strong>steady commit trail</strong> and thought process e.g. sketches, discussion, issues on how you arrived at the decision to incorporate this feature.</p><p>- List any **challenges or benefits** you encountered in the developer experience.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '0f8c6055-76e5-465c-8d05-9f23c8350e30',
     submittedByOrgName: 'Polygon',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/0f8c6055-76e5-465c-8d05-9f23c8350e30/logo/logo.png',
@@ -9900,9 +10197,7 @@ export const challenges = [
       '<p><strong>Judging</strong> will lean towards projects that are full MVPs, although a clean and creative implementation design, whitepaper, etc... is also acceptable if the contribution is novel.</p><p>- Is it a useful product for the community?</p><p>- Does it have a robust README detailing why Polygon is a great technology choice for the project?</p><p>- Have the builders created something that raises the bar for UX in web3?</p><p>- Please show a <strong>steady commit trail</strong> and thought process e.g. sketches, discussion, issues on how you arrived at the decision to incorporate this feature.</p><p>- List any <strong>challenges or benefits</strong> you encountered in the developer experience.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '0f8c6055-76e5-465c-8d05-9f23c8350e30',
     submittedByOrgName: 'Polygon',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/0f8c6055-76e5-465c-8d05-9f23c8350e30/logo/logo.png',
@@ -9927,6 +10222,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
     ],
@@ -9961,9 +10259,7 @@ export const challenges = [
       "<p>In order to be eligible for this bounty, we expect to see: </p><p>- You start by unboxing the Truffle React box using the CLI 'truffle unbox react ' or with the VS Code extension </p><p>- An Infura endpoint configured in your truffle-config.js </p><p>- Judging will lean towards full MVPs deployed to a testnet </p><p>- A list of challenges and benefits encountered with Truffle, Ganache, or the VS Code extension</p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a7449e8f-3311-4fb2-b0b3-567170b65104',
     submittedByOrgName: 'Infura',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a7449e8f-3311-4fb2-b0b3-567170b65104/logo/logo.jpg',
@@ -10029,9 +10325,7 @@ export const challenges = [
       '<ul><li><p>Sign up for the Fireblocks Developer Sandbox (https://info.fireblocks.com/ethdenver-sandbox)</p></li><li><p>Ensure your project utilizes Fireblocks wallets in some way, using the Fireblocks APIs or SDKs</p></li><li><p>Judging will be based on the most innovative use cases that rely on the Fireblocks Developer Sandbox and Fireblocks API. Be creative! We’d love to see a working MVP.</p></li><li><p>Show your work! We’d love to see your thought process, architecture notes, design considerations or issue resolutions you had to make for your project</p></li><li><p>Please list out challenges you faced using the Developer Sandbox, API or SDKs, as well as how you tackled them</p></li><li><p>Bonus points for:</p><ul><li><p>Providing valuable feedback that helps us improve the developer experience</p></li></ul></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'd9502cd5-c66f-495c-9984-b43f2ea62ab0',
     submittedByOrgName: 'Fireblocks',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/d9502cd5-c66f-495c-9984-b43f2ea62ab0/logo/logo.jpg',
@@ -10076,26 +10370,44 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 3,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 4,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 5,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
     ],
@@ -10130,9 +10442,7 @@ export const challenges = [
       '<p><strong>Criteria</strong><br><br>To be eligible, the project should make use of Chainlink to make a state change on the blockchain to be eligible. It can be any Chainlink services, except Chainlink Functions, which has his own bounty. If you would like to use both, you can submit to both tracks, but the judges will choose different projects, so if you are the best in one Chainlink bounty, will not be awarded in the other. Nice to have: how you use Chainlink in the project description. It must be possible for the judges to find the Chainlink use in your code. Only the intention to use is not valid. You must present your project for the Chainlink judges! Projects whose team does not present will not be evaluated. We will look at the following criteria: - UI/UX/DX - How useful is your application? Is it visually appealing? - Blockchain technology application - How valuable this project is for decentralization and adoption of Blockchain and Web3 - Wow Factor - Anything not covered above! This is if you blow us away in some other way. <br><br><strong>Resources</strong><br><br>You can get started with any resources by checking out the hackathon resources page. You’ll find: Smart Contract Starter Tutorial Documentation for all the Chainlink features Best practices utilized by top protocols like Aave and Synthetix Hardhat Starter Kits Brownie Starter Kits Truffle Starter Kits dApp Tools Starter Kit And unlimited demos. There are plenty of video resources on that page for step-by-step working and building with: NFTs DeFi DAOs Gaming And more! "</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'ee8ec41b-b00f-463e-8dfe-e4d0994e2fb8',
     submittedByOrgName: 'Chainlink',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/ee8ec41b-b00f-463e-8dfe-e4d0994e2fb8/logo/logo.png',
@@ -10182,9 +10492,7 @@ export const challenges = [
       '<p>We want projects that are full MVPs that include code and not just a proof of concept in a powerpoint. These should be functional and able show the functionality in action Please show us how you got to the solution. This may include gists, sketches, discussion, issues, etc. We would like to see a steady commit trail of your development process, and not just one big pull request. List any challenges you’ve had while integrating with the protocol and using our API and our docs.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'ccf0d6a4-d144-4d6a-966b-53b0cf021b63',
     submittedByOrgName: 'Circle',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/ccf0d6a4-d144-4d6a-966b-53b0cf021b63/logo/logo.png',
@@ -10226,6 +10534,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
     ],
@@ -10260,9 +10571,7 @@ export const challenges = [
       '<p>● Decentralize your RPC for any project using a Pocket endpoint<br>● Endpoints must be private and minted by application developers (no public RPC usage)</p><p><br>We reserve the right to withhold prizing in cases where low-quality submissions do not meet our bounty requirements.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '6868b5e2-4848-4972-931f-36b351aef6fc',
     submittedByOrgName: 'Pokt Network',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/6868b5e2-4848-4972-931f-36b351aef6fc/logo/logo.png',
@@ -10332,9 +10641,7 @@ export const challenges = [
       '<h1>Eligibility Criteria</h1><p>Deploy at least one smart contract on the Base testnet to qualify. To be eligible, you must also link to your smart contract.</p><p><br></p><p><em>Exception: If you are building a developer tooling/infrastructure and not deploying a smart contract, you must specify and demonstrate how your tool benefits the Base ecosystem, and/or makes it easier to build on Base.<br><br></em></p><h1>Judging Criteria</h1><p>Projects will be judged based on the following criteria:</p><ul><li><p>Creativity</p></li><li><p>Innovation</p></li><li><p>Technical complexity</p></li><li><p>Positive impact to the Base ecosystem</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '1e533dba-e567-4b85-9f81-edafae03a30e',
     submittedByOrgName: 'Coinbase',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/1e533dba-e567-4b85-9f81-edafae03a30e/logo/logo.png',
@@ -10375,14 +10682,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '7000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
     ],
@@ -10417,9 +10733,7 @@ export const challenges = [
       '<p>● Must utilize Pocket Network’s Private RPC Endpoint minted on Pocket’s Portal (see resources)</p><p>● Must provide a demo/presentation on how & why Pocket Network’s RPC Endpoint is used</p><p>● Can be an addition to/extension of an existing service or a net new service<br>● Should solve an existing and real problem<br>● Nice to haves: </p><p>● Pocket-specific utility</p><p>● A free public good service</p><p>● 2022 ETHDenver Bounty Winners: https://www.blog.pokt.network/pocket-ethdenver-2022-bounty-winners/</p><p><br>We reserve the right to withhold prizing in cases where low-quality submissions do not meet our bounty requirements</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '6868b5e2-4848-4972-931f-36b351aef6fc',
     submittedByOrgName: 'Pokt Network',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/6868b5e2-4848-4972-931f-36b351aef6fc/logo/logo.png',
@@ -10460,14 +10774,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '6000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3750',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1500',
       },
     ],
@@ -10502,9 +10825,7 @@ export const challenges = [
       '<p>Design Criteria:<br><br>- A tool for visualizing a specific set of attestations and showing how those attestations have changed and grown over time.<br><br>- This can include network maps, analytics derived from attestations, or other visualizations that are interesting, informative, or actionable.<br><br>Submission Criteria:<br><br>- Submission must use data from the AttestationStation on Optimism Mainnet in some way.<br><br>- Provide a link to your visualization, along with source code or query for how you made it.<br><br>- Experience matters. Provide a link to your visualization or tool that does not require technical implementation by the viewer.<br><br>- Show your work. Provide the source code, query, or explainer for how you made it. This can include a github repo, Dune analytics dash, or Medium post.<br><br>- Three winners will be chosen based on usability, clarity, and insightfulness.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '23373a81-7bc9-4cc5-93b9-e50994957c1f',
     submittedByOrgName: 'OPLabs',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/23373a81-7bc9-4cc5-93b9-e50994957c1f/logo/logo.png',
@@ -10570,9 +10891,7 @@ export const challenges = [
       "<p>Criteria In order to be eligible for this bounty, we expect to see: </p><p>- You start by unboxing the Truffle Snaps box through the CLI 'truffle unbox metamask/snap-box ' or using our VS Code extension. </p><p>- Judging will lean towards projects that are full MVPs </p><p>- A list of challenges or benefits when building snaps or using Truffle (Truffle, Ganache, or the VS Code extension)</p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a301ff9b-d07c-419b-9bbb-6da09bd7423a',
     submittedByOrgName: 'MetaMask Snaps',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a301ff9b-d07c-419b-9bbb-6da09bd7423a/logo/logo.png',
@@ -10638,9 +10957,7 @@ export const challenges = [
       '<p>Design requirements:<br><br>- The goal of this bounty is to create an app that either creates new attestations, uses existing attestations, or both! As more and more users and applications push data into the AttestationStation it’ll become possible to figure out more and more complex relationships.<br><br>- We’re looking for apps that are exciting, fun, novel, or clever. The ideal entry unlocks new ways for users to experience reputation and identity, in particular by adding to the attestation graph and seeing its emerging complexity. It could also be a dead-simple use case, such as an online event ticket.<br><br>- Your app should target end users in some way – not just developers – and use attestations to improve their experience. Because of this, judges care about user experience, clear messaging for users, and design.<br><br>Submission requirements:<br><br>- Projects must be deployed on Optimism Goerli or Optimism Mainnet, must be open source, and smart contracts must be verified<br><br>- Post a short video, Twitter thread, or Medium post explaining what you’re doing. This can make use of your 3-5-minute demonstration video.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '23373a81-7bc9-4cc5-93b9-e50994957c1f',
     submittedByOrgName: 'OPLabs',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/23373a81-7bc9-4cc5-93b9-e50994957c1f/logo/logo.png',
@@ -10706,9 +11023,7 @@ export const challenges = [
       '<p>In order to be eligible for this bounty, we expect to see: </p><p>- A ganache network configured in your Truffle, HardHat, or Foundry config </p><p>- Deploying to and interacting with a forked Ganache instance in your demo video </p><p>- A list of any challenges or benefits you encountered while using Ganache </p><p>- Judging will lean towards full MVPs and applications that interact with pre-deployed contracts</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a7449e8f-3311-4fb2-b0b3-567170b65104',
     submittedByOrgName: 'Infura',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a7449e8f-3311-4fb2-b0b3-567170b65104/logo/logo.jpg',
@@ -10762,9 +11077,7 @@ export const challenges = [
       '<p>In order to be eligible for this bounty, we expect to see: </p><p>- A dashboard network configured in your Truffle, HardHat, or Foundry config </p><p>- Deploying with Dashboard to a testnet in your demo video </p><p>- A list of challenges or benefits you encountered while developing with Dashboard </p><p>- Judging will lean towards full MVPs </p><p>- Nice to haves: Deploy to Dashboard via the Truffle VS Code Extension</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a7449e8f-3311-4fb2-b0b3-567170b65104',
     submittedByOrgName: 'Infura',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a7449e8f-3311-4fb2-b0b3-567170b65104/logo/logo.jpg',
@@ -10814,9 +11127,7 @@ export const challenges = [
       '<p>1. Use the docs below to create a "test flight" miniapp.</p><p>2. Judging will lean towards projects that focus on community safety, support, or engagement and are full MVPs.</p><p>3. Please show a steady commit trail and thought process e.g. sketches, discussion, issues on how you arrived at the decision to create the miniapp.</p><p>4. List any challenges or benefits you encountered in the developer experience.</p><p>5. Nice to have: Identifying a community problem and working with a community to solve it.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '1a5d0516-8bc7-4259-84c2-a453e467f4e1',
     submittedByOrgName: 'Collab.Land',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/1a5d0516-8bc7-4259-84c2-a453e467f4e1/logo/logo.png',
@@ -10845,6 +11156,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -10879,9 +11193,7 @@ export const challenges = [
       '<p>Sign-up for a free-tier Defender account and utilize one or more of the platform features in your ETHDenver project. Defender platform features include Admin for contract management, Autotasks for automation, Relayers for transaction delivery and Sentinels for monitoring and alerts. Your use of Defender should be featured in your project presentation and some reference should be included in your project source code.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '9de3e7ab-ed8e-4814-9048-46e3a1a7b5a1',
     submittedByOrgName: 'Open Zeppelin',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/9de3e7ab-ed8e-4814-9048-46e3a1a7b5a1/logo/logo.png',
@@ -10926,14 +11238,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '6000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -10968,9 +11289,7 @@ export const challenges = [
       "<p>Judging will lean towards projects that have a better detector of good investment opportunities. We hope that the items found by these detectors can be connected to our WEB3-Yield products. But in any case, we will be interested if your strategies can find a series of projects & the accuracy of the corresponding project address can reach a usable standard.</p><p></p><p>- Integrate one of OKX Web3 products to your project: OKX Non-custodial wallet, Dex, Yeild or NFT marketplace </p><p>- Build something super dope and if we think it's awesome, we'll throw you in our grant program and/or accelerator. </p><p> - Please show a steady commit trail and thought process e.g. sketches, discussion, issues on how you arrived at the decision to incorporate this feature. </p><p>- List any challenges or benefits you encountered in the developer experience. - </p><p></p><p>Requirements: </p><p>- A detailed description document of your detector's strategies - An operational MVP </p><p>- The model should be universal, and the number of Dapp projects that can be identified should exceed 200 </p><p>- At least 20 detected Dapp detailed data (including but not limited to Dapp smart contract address, creator address, address characteristics, service charge capital source) and data indicators you think are useful (including but not limited to APY, 24h address interaction number, etc.) </p><p>- Detailed data of some detected projects and data indicators that you think are useful </p><p></p><p>Nice to haves: </p><p>- Evaluation report on the accuracy of the project and the project address - Detect the value of the project to users: who will pay attention to the project you find?</p><p></p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a7d9bd8a-d6c5-4616-a0fe-b11899adcfd4',
     submittedByOrgName: 'OKX',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a7d9bd8a-d6c5-4616-a0fe-b11899adcfd4/logo/logo.png',
@@ -10982,14 +11301,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '10000',
       },
     ],
@@ -11023,9 +11351,7 @@ export const challenges = [
       '<p>Criteria *To qualify for the bounty, the submission will need to include: A smart contract that matches the functionality of the current OpolisPay contract (found here: https://github.com/opolis/crypto-payroll-contracts) A version of the Opolis Subgraph (found here: https://github.com/opolis/opolis-subgraph) A simple front-end that should take parameters such as a payrollID and USD amount and allow someone to pay in a chosen token after connecting a Near wallet (example of front-end: https://www.loom.com/share/08b17c33d5124d08be26f23e3889722a) </p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '2d73fd41-3f8f-404b-a273-299ffb6f02b1',
     submittedByOrgName: 'Opolis',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/2d73fd41-3f8f-404b-a273-299ffb6f02b1/logo/logo.png',
@@ -11050,6 +11376,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
     ],
@@ -11084,9 +11413,7 @@ export const challenges = [
       "<p>- Integrate one of OKX Web3 products to your project: OKX Non-custodial wallet, Dex, Yeild or NFT marketplace </p><p>- Build something super dope and if we think it's awesome, we'll throw you in our grant program and/or accelerator.</p><p>- Judging will lean towards projects that have address models with precise logic and high interpretability. It should be used to display in our multi-chain browser OKLink. </p><p>- Please show a steady commit trail and thought process e.g. sketches, discussion, issues on how you arrived at the decision to incorporate this feature. </p><p>- List any challenges or benefits you encountered in the developer experience. </p><p></p><p>Requirements: - A detailed description document about the address labeling strategy, including at least five different address types - An operational MVP - How to make money with this address - At least 100 address labels can be found for each label type model </p><p></p><p>Nice to haves: - More than 10 smartmoney types, at least 10 addresses and corresponding revenue back-test data for each category </p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'a7d9bd8a-d6c5-4616-a0fe-b11899adcfd4',
     submittedByOrgName: 'OKX',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/a7d9bd8a-d6c5-4616-a0fe-b11899adcfd4/logo/logo.png',
@@ -11098,14 +11425,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '10000',
       },
     ],
@@ -11140,9 +11476,7 @@ export const challenges = [
       '<p>Submit a working demo (making a swap on a testnet) with the corresponding github repo to check all the relevant code parts.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '8ed71957-42cd-49a7-a75e-fd888777f013',
     submittedByOrgName: 'CowSwap',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/8ed71957-42cd-49a7-a75e-fd888777f013/logo/logo.jpg',
@@ -11220,9 +11554,7 @@ export const challenges = [
       '<p>Use Cypher Wallet Push SDK to create a push notification for any of the existing dApp use-cases or for a new dApp that you are building.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '7e6d2633-d585-4c10-81c3-de298aabb5a0',
     submittedByOrgName: 'Cypher Wallet',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/7e6d2633-d585-4c10-81c3-de298aabb5a0/logo/logo.png',
@@ -11247,14 +11579,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
     ],
@@ -11285,9 +11626,7 @@ export const challenges = [
       '<p>Each project will be ranked by our judges on the following 5 factors: </p><p>Technicality </p><p>Originality </p><p>Usability (UI/UX/UD) </p><p>Practicality </p><p>WOW factor</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'e8b33884-1603-454a-8624-ca75069412b6',
     submittedByOrgName: 'Neon Labs',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/e8b33884-1603-454a-8624-ca75069412b6/logo/logo.png',
@@ -11316,14 +11655,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -11358,9 +11706,7 @@ export const challenges = [
       '<p>Submit a working demo (making a swap on a testnet) with the corresponding github repo to check all the relevant code parts.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '8ed71957-42cd-49a7-a75e-fd888777f013',
     submittedByOrgName: 'CowSwap',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/8ed71957-42cd-49a7-a75e-fd888777f013/logo/logo.jpg',
@@ -11438,9 +11784,7 @@ export const challenges = [
       '<p>Three posts with the current highest bid are displayed at the top of the page. There should also be a small button/link (“Show All Promoted”) that shows all posts that were promoted. Users should be able to set intervals for each bid to spread the funds evenly, i.e. a bid of 100 NEAR over 10 days has the same power as a bid of 10 NEAR for 1 day if their schedules overlap, or to designate specific amounts for certain days over the time frame. Bids of equal costs should be randomly displayed. Proceeds should be immediately transferred to a hardcoded NEAR account (you will have to transfer ownership over it to DevGov DAO to receive the bounty). Quality of UI design and UX are the major factors in determining whether to grant this bounty. Please create them as separate widgets that we can later embed into https://devgovgigs.near.social/. </p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5978aeef-1700-43e2-8df7-5f6706f410e2',
     submittedByOrgName: 'NEAR',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5978aeef-1700-43e2-8df7-5f6706f410e2/logo/logo.png',
@@ -11469,6 +11813,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '4000',
       },
     ],
@@ -11503,9 +11850,7 @@ export const challenges = [
       '<p>The judges will use the following criteria to evaluate all submissions. Innovation: we will look at the originality and creativity of the submission, and how it solves a problem in a unique way. User Experience: The design, usability, and overall user experience of the solution will be considered, we want to see creative solutions that are accessible to all types of users. Completeness: The closest an application is ready to be deployed to mainnet the better, so, is your application ready to go to public beta? Is the front-end usable to onboard users right away? Viability and Business Potential: Judges will consider the viability of the solution in the real world, including its scalability, sustainability and its potential to generate revenue. Technical Difficulty: Judges will evaluate the level of technical difficulty involved in creating the solution and the skill level demonstrated by the team. Code Quality: The quality, reusability and maintainability of the code will be considered too, including the use of best practices and adherence to coding standards. </p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '5978aeef-1700-43e2-8df7-5f6706f410e2',
     submittedByOrgName: 'NEAR',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/5978aeef-1700-43e2-8df7-5f6706f410e2/logo/logo.png',
@@ -11538,6 +11883,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -11571,9 +11919,7 @@ export const challenges = [
       "<ul><li><p>You and your team must be physically present at ETHDenver to work on a project for submission</p></li><li><p>You and your entire team must be physically present at the closing ceremonies to win a prize</p></li><li><p><strong>You must form a team of 2-4 members</strong></p></li><li><p>Your project must integrate blockchain technology (other chains besides Ethereum are fine)</p></li><li><p><strong>You cannot work on your project before the event begins on February 24, 2023, 10 AM MST</strong></p></li><li><p>You cannot steal another team's source code or use previous code from another hackathon</p></li><li><p><strong>Pre-existing projects are not allowed.</strong> You may, however, build a new feature for an existing project that is unique and standalone. <em>If you are going to #BUIDL on a pre-existing project, we strongly suggest speaking with the BUIDLx Stewards and get permission from the #BUIDL Steward.</em></p></li><li><p>Please comply with all instructions from ETHDenver organizers</p></li><li><p>Be cool - disruptive behavior will not be tolerated and may result in disqualification</p></li><li><p>Please refer to the waiver you signed when applying for the event for additional details regarding appropriate behavior.</p></li><li><p>Decisions are final for determining prizes and awards by the #BUIDL Steward and/or #BUIDLx Team</p><p></p><p><strong>The #BUIDL Steward is like the commissioner of any sports league. The #BUIDL Steward will hav final say in your team and projects eligibility in #BUIDLathon, prizes, and awards for all track prizes and sponsor bounties.</strong> </p></li></ul><p></p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '17eba7e9-440d-4498-9917-8eaf5b74e986',
     submittedByOrgName: 'ETHDenver',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/17eba7e9-440d-4498-9917-8eaf5b74e986/logo/logo.jpg',
@@ -11601,9 +11947,7 @@ export const challenges = [
       "<ul><li><p>You and your team must be physically present at ETHDenver to work on a project for submission</p></li><li><p>You and your entire team must be physically present at the closing ceremonies to win a prize</p></li><li><p><strong>You must form a team of 2-4 members</strong></p></li><li><p>Your project must integrate blockchain technology (other chains besides Ethereum are fine)</p></li><li><p><strong>You cannot work on your project before the event begins on February 24, 2023, 10 AM MST</strong></p></li><li><p>You cannot steal another team's source code or use previous code from another hackathon</p></li><li><p><strong>Pre-existing projects are not allowed.</strong> You may, however, build a new feature for an existing project that is unique and standalone. <em>If you are going to #BUIDL on a pre-existing project, we strongly suggest speaking with the BUIDLx Stewards and get permission from the #BUIDL Steward.</em></p></li><li><p>Please comply with all instructions from ETHDenver organizers</p></li><li><p>Be cool - disruptive behavior will not be tolerated and may result in disqualification</p></li><li><p>Please refer to the waiver you signed when applying for the event for additional details regarding appropriate behavior.</p></li><li><p>Decisions are final for determining prizes and awards by the #BUIDL Steward and/or #BUIDLx Team</p><p></p><p><strong>The #BUIDL Steward is like the commissioner of any sports league. The #BUIDL Steward will hav final say in your team and projects eligibility in #BUIDLathon, prizes, and awards for all track prizes and sponsor bounties.</strong> </p></li></ul><p></p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '17eba7e9-440d-4498-9917-8eaf5b74e986',
     submittedByOrgName: 'ETHDenver',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/17eba7e9-440d-4498-9917-8eaf5b74e986/logo/logo.jpg',
@@ -11631,9 +11975,7 @@ export const challenges = [
       "<ul><li><p>You and your team must be physically present at ETHDenver to work on a project for submission</p></li><li><p>You and your entire team must be physically present at the closing ceremonies to win a prize</p></li><li><p><strong>You must form a team of 2-4 members</strong></p></li><li><p>Your project must integrate blockchain technology (other chains besides Ethereum are fine)</p></li><li><p><strong>You cannot work on your project before the event begins on February 24, 2023, 10 AM MST</strong></p></li><li><p>You cannot steal another team's source code or use previous code from another hackathon</p></li><li><p><strong>Pre-existing projects are not allowed.</strong> You may, however, build a new feature for an existing project that is unique and standalone. <em>If you are going to #BUIDL on a pre-existing project, we strongly suggest speaking with the BUIDLx Stewards and get permission from the #BUIDL Steward.</em></p></li><li><p>Please comply with all instructions from ETHDenver organizers</p></li><li><p>Be cool - disruptive behavior will not be tolerated and may result in disqualification</p></li><li><p>Please refer to the waiver you signed when applying for the event for additional details regarding appropriate behavior.</p></li><li><p>Decisions are final for determining prizes and awards by the #BUIDL Steward and/or #BUIDLx Team</p><p></p><p><strong>The #BUIDL Steward is like the commissioner of any sports league. The #BUIDL Steward will hav final say in your team and projects eligibility in #BUIDLathon, prizes, and awards for all track prizes and sponsor bounties.</strong> </p></li></ul><p></p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '17eba7e9-440d-4498-9917-8eaf5b74e986',
     submittedByOrgName: 'ETHDenver',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/17eba7e9-440d-4498-9917-8eaf5b74e986/logo/logo.jpg',
@@ -11661,9 +12003,7 @@ export const challenges = [
       "<ul><li><p>You and your team must be physically present at ETHDenver to work on a project for submission</p></li><li><p>You and your entire team must be physically present at the closing ceremonies to win a prize</p></li><li><p><strong>You must form a team of 2-4 members</strong></p></li><li><p>Your project must integrate blockchain technology (other chains besides Ethereum are fine)</p></li><li><p><strong>You cannot work on your project before the event begins on February 24, 2023, 10 AM MST</strong></p></li><li><p>You cannot steal another team's source code or use previous code from another hackathon</p></li><li><p><strong>Pre-existing projects are not allowed.</strong> You may, however, build a new feature for an existing project that is unique and standalone. <em>If you are going to #BUIDL on a pre-existing project, we strongly suggest speaking with the BUIDLx Stewards and get permission from the #BUIDL Steward.</em></p></li><li><p>Please comply with all instructions from ETHDenver organizers</p></li><li><p>Be cool - disruptive behavior will not be tolerated and may result in disqualification</p></li><li><p>Please refer to the waiver you signed when applying for the event for additional details regarding appropriate behavior.</p></li><li><p>Decisions are final for determining prizes and awards by the #BUIDL Steward and/or #BUIDLx Team</p><p></p><p><strong>The #BUIDL Steward is like the commissioner of any sports league. The #BUIDL Steward will hav final say in your team and projects eligibility in #BUIDLathon, prizes, and awards for all track prizes and sponsor bounties.</strong> </p></li></ul><p></p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '17eba7e9-440d-4498-9917-8eaf5b74e986',
     submittedByOrgName: 'ETHDenver',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/17eba7e9-440d-4498-9917-8eaf5b74e986/logo/logo.jpg',
@@ -11691,9 +12031,7 @@ export const challenges = [
       "<ul><li><p>You and your team must be physically present at ETHDenver to work on a project for submission</p></li><li><p>You and your entire team must be physically present at the closing ceremonies to win a prize</p></li><li><p><strong>You must form a team of 2-4 members</strong></p></li><li><p>Your project must integrate blockchain technology (other chains besides Ethereum are fine)</p></li><li><p><strong>You cannot work on your project before the event begins on February 24, 2023, 10 AM MST</strong></p></li><li><p>You cannot steal another team's source code or use previous code from another hackathon</p></li><li><p><strong>Pre-existing projects are not allowed.</strong> You may, however, build a new feature for an existing project that is unique and standalone. <em>If you are going to #BUIDL on a pre-existing project, we strongly suggest speaking with the BUIDLx Stewards and get permission from the #BUIDL Steward.</em></p></li><li><p>Please comply with all instructions from ETHDenver organizers</p></li><li><p>Be cool - disruptive behavior will not be tolerated and may result in disqualification</p></li><li><p>Please refer to the waiver you signed when applying for the event for additional details regarding appropriate behavior.</p></li><li><p>Decisions are final for determining prizes and awards by the #BUIDL Steward and/or #BUIDLx Team</p><p></p><p><strong>The #BUIDL Steward is like the commissioner of any sports league. The #BUIDL Steward will hav final say in your team and projects eligibility in #BUIDLathon, prizes, and awards for all track prizes and sponsor bounties.</strong> </p></li></ul><p></p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '17eba7e9-440d-4498-9917-8eaf5b74e986',
     submittedByOrgName: 'ETHDenver',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/17eba7e9-440d-4498-9917-8eaf5b74e986/logo/logo.jpg',
@@ -11722,9 +12060,7 @@ export const challenges = [
       '<p>-   Prototype that demonstrates the end-to-end flow. <br>-   Tokenize the payment stream and have a decent design for credit risk management. <br>-   Use Huma protocol</p><p></p><p>We reserve the right to withhold in cases where low-quality submissions do not meet our bounty requirements.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '746207cc-d120-4b38-afb7-978e3c1e2e6d',
     submittedByOrgName: 'Huma',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/746207cc-d120-4b38-afb7-978e3c1e2e6d/logo/logo.png',
@@ -11762,6 +12098,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -11796,9 +12135,7 @@ export const challenges = [
       '<ul><li><p>(for Signal Adapter) Prototype that works</p></li><li><p>(for Research Paper) Reproducible data analysis, shows impactful insight </p></li><li><p>Technical soundness of the adapter </p></li><li><p>Conforming to Huma DSP/EA standards</p></li><li><p>Potential impact of the adapter</p></li></ul><p></p><p>We reserve the right to withhold in cases where low-quality submissions do not meet our bounty requirements.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '746207cc-d120-4b38-afb7-978e3c1e2e6d',
     submittedByOrgName: 'Huma',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/746207cc-d120-4b38-afb7-978e3c1e2e6d/logo/logo.png',
@@ -11835,10 +12172,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -11873,9 +12216,7 @@ export const challenges = [
       '<p>-   WOW effect and creativity matter the most<br> -   Prototype that works (credit line for each wallet, sound mechanism to minimize default)<br> -   Use Huma protocol (lending contracts, DSP, EA)<br> -   [Bonus] Build with account abstraction wallet<br> -   [Bonus] The solution is implemented with a privacy-preserving design</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '746207cc-d120-4b38-afb7-978e3c1e2e6d',
     submittedByOrgName: 'Huma',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/746207cc-d120-4b38-afb7-978e3c1e2e6d/logo/logo.png',
@@ -11912,10 +12253,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '7500',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
     ],
@@ -11950,9 +12297,7 @@ export const challenges = [
       '<p>-   Prototype that demonstrates the end-to-end flow. <br>-   Use Huma protocol</p><p></p><p>We reserve the right to withhold in cases where low-quality submissions do not meet our bounty requirements.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '746207cc-d120-4b38-afb7-978e3c1e2e6d',
     submittedByOrgName: 'Huma',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/746207cc-d120-4b38-afb7-978e3c1e2e6d/logo/logo.png',
@@ -11989,10 +12334,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
     ],
@@ -12027,9 +12378,7 @@ export const challenges = [
       '<p>Content published via Huma Medium <br> Write-up has in-depth coverage of Huma’s product, technical, or potential use cases<br> Meme that’s original, creative, and related to Huma</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '746207cc-d120-4b38-afb7-978e3c1e2e6d',
     submittedByOrgName: 'Huma',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/746207cc-d120-4b38-afb7-978e3c1e2e6d/logo/logo.png',
@@ -12066,10 +12415,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '750',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '250',
       },
     ],
@@ -12104,9 +12459,7 @@ export const challenges = [
       '<h2><strong>Submission Requirements</strong></h2><ul><li><p>Pitch deck or problem statement solving issues in one or more of the following:</p><ul><li><p>Data ownership</p></li><li><p>Community engagement or development</p></li><li><p>Customer loyalty or exclusivity</p></li><li><p>Training and education</p></li><li><p>Digital identity</p></li></ul></li><li><p>Demonstration of NuvoPower used</p></li><li><p>Roadmap of how NuvoPower will be used</p></li></ul><p>Developer should be on our Discord (https://discord.gg/3jnuatySTt) and follow Twitter (@nuvosphere)</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'ca76af8c-3952-410e-bfe7-f8bb5b66d45b',
     submittedByOrgName: 'Metis',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/ca76af8c-3952-410e-bfe7-f8bb5b66d45b/logo/logo.png',
@@ -12123,10 +12476,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -12165,9 +12524,7 @@ export const challenges = [
       '<p>1. Using Liquality SDKs</p><p>2. Emailing the github and the pitch deck <br>where you describe the use of these SDKs to   ethdenver@liquality.io</p><p>3. Listing benefits and challenges you encountered in the developer experience, including documented bug fixes</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '35a8218f-3917-4a9e-ad4f-9c5d3569d6e8',
     submittedByOrgName: 'Liquality',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/35a8218f-3917-4a9e-ad4f-9c5d3569d6e8/logo/logo.jpg',
@@ -12223,22 +12580,37 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 3,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 4,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1000',
       },
     ],
@@ -12265,9 +12637,7 @@ export const challenges = [
       '<p>1. Using Liquality SDKs to solve a problem</p><p>2. Added value by creatively extending features, and/or using the SDKs in other interesting ways</p><p>3. Listing benefits and challenges you encountered in the developer experience including documented bug fixes</p><p>4. Documenting path to decisions made, additional not realised ideas etc</p><p>5. Nice to have: additional use cases, monetization models, position of your idea within web3 competitive landscape.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '35a8218f-3917-4a9e-ad4f-9c5d3569d6e8',
     submittedByOrgName: 'Liquality',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/35a8218f-3917-4a9e-ad4f-9c5d3569d6e8/logo/logo.jpg',
@@ -12317,10 +12687,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3500',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1500',
       },
     ],
@@ -12363,9 +12739,7 @@ export const challenges = [
       '<ol><li><p><strong>Technical Implementation:</strong> Technical implementation and quality of contract deployed on testnet Weight = 3</p></li><li><p><strong>Design:</strong> Quality of the UI/UX of the Fuel dapp and Sway smart contract Weight = 2</p></li><li><p><strong>Creativity:</strong> The submission should be built with creativity in mind to reflect the team’s passion for building with Sway Weight = 2</p></li><li><p><strong>Quality of Idea:</strong> Quality of the idea/use-case/problem statement. A unique project stands a higher chance to win than one that has been implemented before Weight = 2</p></li><li><p><strong>Developer Feedback:</strong> Quality and quantity of feedback and questions on the experience of building with Fuel in the developer forum (https://forum.fuel.network/) Weight = 1</p></li></ol>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'cf4faee5-1f6f-45c2-b055-3f00ea8a6149',
     submittedByOrgName: 'Fuel Labs',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/cf4faee5-1f6f-45c2-b055-3f00ea8a6149/logo/logo.png',
@@ -12398,6 +12772,9 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '2500',
       },
     ],
@@ -12436,9 +12813,7 @@ export const challenges = [
       '<p>1. Using Liquality SDKs to add web3 features and onboarding, and game still works</p><p>2. Using the most functionalities from the SDK in the project</p><p>3. Listing benefits and challenges you encountered in the developer experience, including documented bug fixes</p><p>4. Documenting path to decisions made, additional not realized ideas etc</p><p>5. Nice to have: additional use cases, monetization models, competitors/other beneficiaries, etc.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '35a8218f-3917-4a9e-ad4f-9c5d3569d6e8',
     submittedByOrgName: 'Liquality',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/35a8218f-3917-4a9e-ad4f-9c5d3569d6e8/logo/logo.jpg',
@@ -12479,10 +12854,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3500',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1500',
       },
     ],
@@ -12521,9 +12902,7 @@ export const challenges = [
       '<p>1. Using Liquality SDKs in a decentralized <br>social media project</p><p>2. Using the most functionalities from the SDK in the project</p><p>3. Listing benefits and challenges you encountered <br>in the developer experience including documented bug fixes</p><p>4. Documenting path to decisions made, additional <br>not realized ideas, etc.</p><p>5. Nice to have: additional use cases, monetization models, competitors/other beneficiaries etc.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '35a8218f-3917-4a9e-ad4f-9c5d3569d6e8',
     submittedByOrgName: 'Liquality',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/35a8218f-3917-4a9e-ad4f-9c5d3569d6e8/logo/logo.jpg',
@@ -12583,10 +12962,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3500',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '1500',
       },
     ],
@@ -12625,9 +13010,7 @@ export const challenges = [
       "<p><strong>This bounty is aimed for early stage startups - if you are a new team, this bounty is also offered for MVP on testnet as requirements. </strong></p><p></p><ul><li><p>Judging will lean towards projects that are full MVPs, with the core requirements of handling user ETH deposits and redemptions, aggregation of user funds into 32 ETH validators which are activated on the Beacon Chain (Ethereum Deposit Contract) and managed by the ssv network (Register validator on SSV Network Smart Contract), while maintaining all required operational costs (SSV payments).</p><p></p></li><li><p>Working UI to enable users to deposit, redeem and keep track of their staked amount & rewards.</p><p></p></li><li><p>Bonus points: supporting dynamic operator selection (curated / permissioned-less).</p></li></ul><p></p><ul><li><p>Liquid staking pool with LSD token</p><p>Oracle integration for LSD rebasing and presentation of user's staking rewards.</p></li></ul><p></p><p>Promising and well executing teams will be evaluated for additional funding as candidates in our grants program and ecosystem fund programs. Details could be found at: https://ssv.network/get-funded/</p><p></p><p>Please note that we reserve the right to withhold prizing in cases where low-quality submissions do not meet our bounty requirements.</p><p></p><p><strong>Out of eligible submissions, 3 winners will be rewarded: 1st - $5K, 2nd - $4K, 3rd - $3K</strong></p><p></p><p><strong>This bounty is co-sponsored with Chainlink - an extra $1K (LINK) will be awarded to the best team who utilized Chainlink’s PoR as part of this bounty.</strong></p>",
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: 'acf5c3b8-01ce-44bd-b62f-df9f01d1737f',
     submittedByOrgName: 'ssv.network',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/acf5c3b8-01ce-44bd-b62f-df9f01d1737f/logo/logo.png',
@@ -12672,14 +13055,23 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '4000',
       },
       {
         winnerRank: 2,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '3000',
       },
     ],
@@ -12713,9 +13105,7 @@ export const challenges = [
       '<p>Social web or mobile app built using Lens Protocol APIs. Code should be available to review in some public repository like GitHub.</p><p>Apps will be judged on the following criteria:</p><ul><li><p>Originality</p></li><li><p>UX</p></li><li><p>UI / design</p></li><li><p>Real-world usefulness</p></li><li><p>Potential</p></li></ul>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '50624e27-d42b-4a14-9aff-74c30023be5f',
     submittedByOrgName: 'Lens Protocol',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/50624e27-d42b-4a14-9aff-74c30023be5f/logo/logo.jpg',
@@ -12748,10 +13138,16 @@ export const challenges = [
     rewards: [
       {
         winnerRank: 0,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 1,
+        receiver: {
+          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+        },
         rewardAmountUsd: '5000',
       },
     ],
@@ -12789,9 +13185,7 @@ export const challenges = [
     acceptanceCriteria: '<p>Working demo of a Lens feature in your app.</p>',
     logoUrl: null,
     approvalStatus: 'accepted',
-    receiver: {
-      receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
-    },
+
     submittedByOrgId: '50624e27-d42b-4a14-9aff-74c30023be5f',
     submittedByOrgName: 'Lens Protocol',
     submittedByOrgLogo: 'https://org-resources.s3.amazonaws.com/50624e27-d42b-4a14-9aff-74c30023be5f/logo/logo.jpg',
