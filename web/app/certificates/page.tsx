@@ -30,6 +30,7 @@ import { getNftsForOwner } from '@/lib/api/nftApi'
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
 import { useAccount } from 'wagmi'
 import { Network } from 'alchemy-sdk'
+import { WalletConnectCustom } from '@/components/blockchain/wallet-connect-custom'
 
 export default function Home() {
   const [certs, setCerts] = useState([])
@@ -44,6 +45,20 @@ export default function Home() {
       list.push(<HyperCertListItem hyperCertMetadata={item} />)
     })
     return list
+  }
+
+  const renderScreen = () => {
+    let content = null
+    if (isConnected) {
+      content = <div className="grid grid-cols-1 gap-1">{renderCerts()}</div>
+    } else {
+      content = (
+        <div className="flex justify-center">
+          <Image width="400" height="400" alt="connect your wallet" src="/no-wallet.gif" />
+        </div>
+      )
+    }
+    return content
   }
 
   useEffect(() => {
@@ -82,5 +97,5 @@ export default function Home() {
     }
   }, [])
 
-  return <div className="grid grid-cols-1 gap-1">{renderCerts()}</div>
+  return renderScreen()
 }
