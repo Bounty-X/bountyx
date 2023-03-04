@@ -167,7 +167,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
         </div>
       </form>
       <div className="basis-1/3">
-        <CertificateImageHtml projectMetadata={projectMetadata} />
+        <CertificateImageHtml metadata={metadata} />
       </div>
     </div>
   )
