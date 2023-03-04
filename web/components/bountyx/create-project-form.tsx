@@ -8,6 +8,9 @@ import { HypercertMetadata } from '@/bountyxlib/types/metadata'
 import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata.js'
 import CertificateImageHtml from '@/components/certificate/certificate-image-html'
 import { useMintClaim } from '@/hooks/hypercert/mintClaim'
+import { DummyHypercert } from './dummy-hypercert'
+import { useState } from 'react'
+import { HypercertClaimdata } from '@/bountyxlib/types/claimdata'
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
@@ -21,6 +24,17 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
     contributors: '',
   })
 
+  const [metadata, setMetadata] = useState<HypercertMetadata & BountyxMetadataCollection>({
+    name: projectMetadata.name,
+    description: projectMetadata.description,
+    external_url: projectMetadata.external_url,
+    image: 'https://d2y4rc9q318ytb.cloudfront.net/accounts/b6ded887-20df-42de-bc10-d22584e2ef9f/350x350/1671505783384-23b46dce.png',
+    version: '0.0.1',
+    properties: [],
+    hypercert: {},
+    bounties,
+  })
+
   const handleChange = async (field: string, value: string) => {
     // Need to reconstruct object and copy so that react knows the object changed
     let newProjectMetadata: ProjectMetadata = {
@@ -32,6 +46,37 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
     Object.assign(newProjectMetadata, projectMetadata)
     newProjectMetadata[field] = value
     setProjectData(newProjectMetadata)
+
+    let workTagsStr = ''
+    const workTags: string[] = []
+    bounties.forEach((bounty) => {
+      workTags.push(bounty.issuer.issuerName!)
+      workTagsStr += bounty.issuer.issuerName! + ' '
+    })
+    const hypercert: HypercertClaimdata = {
+      work_scope: { name: 'Work', value: workTags, display_value: workTagsStr },
+      work_timeframe: { name: 'Work Period', value: [0], display_value: '' },
+      impact_scope: { name: 'Impact', value: ['all'], display_value: 'all' },
+      impact_timeframe: { name: 'Impact Period', value: [0], display_value: '' },
+      contributors: { name: 'Contributors', value: [projectMetadata.contributors], display_value: projectMetadata.contributors },
+    }
+
+    const newMetadata: HypercertMetadata & BountyxMetadataCollection = {
+      name: projectMetadata.name,
+      description: projectMetadata.description,
+      external_url: projectMetadata.external_url,
+      image: 'https://d2y4rc9q318ytb.cloudfront.net/accounts/b6ded887-20df-42de-bc10-d22584e2ef9f/350x350/1671505783384-23b46dce.png',
+      version: '0.0.1',
+      properties: [
+        {
+          trait_type: 'Event',
+          value: 'ETHDenver 2023',
+        },
+      ],
+      hypercert,
+      bounties,
+    }
+    setMetadata(newMetadata)
   }
 
   const { write: mintClaim } = useMintClaim({
@@ -39,29 +84,20 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
   })
 
   const mintHypercert = async () => {
-    const metadata: HypercertMetadata & BountyxMetadataCollection = {
-      name: projectMetadata.name,
-      description: projectMetadata.description,
-      external_url: projectMetadata.external_url,
-      image: 'https://d2y4rc9q318ytb.cloudfront.net/accounts/b6ded887-20df-42de-bc10-d22584e2ef9f/350x350/1671505783384-23b46dce.png',
-      version: '0.0.1',
-      properties: [],
-      hypercert: {},
-      bounties,
-    }
-    let numberOfFractions = 0
+    let numberOfUnits = 0
     bounties.forEach((bounty) => {
-      numberOfFractions += bounty.reward.rewardAmountUsd ?? 0
+      numberOfUnits += bounty.reward.rewardAmountUsd ?? 0
     })
 
     console.log('Minting hypercert', metadata)
-    console.log('Fractions', numberOfFractions)
-    await mintClaim(metadata, numberOfFractions)
+    console.log('Units', numberOfUnits)
+    await mintClaim(metadata, numberOfUnits)
   }
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="flex flex-row justify-center">
       <form
+        className="basis-3/4"
         onSubmit={(e) => {
           e.preventDefault()
           mintHypercert()
@@ -123,10 +159,11 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
           </button>
           {/* </Link> */}
         </div>
-        <div className="container mx-auto px-4">
-          <CertificateImageHtml projectMetadata={projectMetadata} />
-        </div>
       </form>
+      <div className="basis-1/4">
+        {/* <CertificateImageHtml projectMetadata={projectMetadata} /> */}
+        <DummyHypercert metadata={metadata} />
+      </div>
     </div>
   )
 }
