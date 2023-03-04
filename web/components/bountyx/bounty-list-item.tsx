@@ -12,7 +12,6 @@ export const BountyListItem = ({ bounty }: BountyListItemProps) => {
 
   return (
     <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
-<<<<<<< HEAD
       <div className="flex flex-row">
         <div className="w-12 rounded-full ml-2 mt-2 mr-2">
           <img src={bounty.issuer.issuerLogoUrl} alt={bounty.issuer.issuerName} />
@@ -23,15 +22,6 @@ export const BountyListItem = ({ bounty }: BountyListItemProps) => {
       <div className="collapse-content">
         <div tabIndex={0} />
         <p>{reactElement}</p>
-=======
-      <div className="avatar">
-        <div className="w-24 rounded-full">
-          <img src={bounty.issuer?.issuerLogoUrl} alt={bounty.issuer?.issuerName} />
-        </div>
-        <p>{bounty.issuer?.issuerName}</p>
-        {/* <p>{bounty.description}</p> */}
-        <p>{`Bounty Reward: ${bounty.reward?.rewardAmountUsd} USD`}</p>
->>>>>>> a52372e08a3c91c1f0f0d1fccf32d70e7fdf8893
       </div>
     </div>
   )
