@@ -51,6 +51,10 @@
         "rewardToken": {
           "type": "string",
           "description": "Token used to pay the bounty"
+        },
+        "winnerRank": {
+          "type": "number",
+          "description": "Rank of the winner"
         }
       }
     },

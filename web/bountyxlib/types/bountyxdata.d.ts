@@ -32,7 +32,7 @@ export interface BountyxMetadata {
     /**
      * Bounty issuer logo url
      */
-    issuerLogoUrl: string;
+    issuerLogoUrl?: string;
     [k: string]: unknown;
   };
   /**
@@ -45,7 +45,7 @@ export interface BountyxMetadata {
   /**
    * Information about the reward
    */
-  reward?: {
+  reward: {
     /**
      * Amount paid out by bounty issuer to the project
      */
@@ -54,11 +54,14 @@ export interface BountyxMetadata {
      * Token used to pay the bounty
      */
     rewardToken?: string;
+    /**
+     * Rank of the winner
+     */
+    winnerRank?: number;
     [k: string]: unknown;
   };
   /**
    * Signature of the bounty issuer endorsing the receiver
    */
   signature?: string;
-  [k: string]: unknown;
 }

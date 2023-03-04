@@ -166,9 +166,9 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
   }
 
   return (
-    <div className="flex flex-row justify-evenly">
+    <div className="flex flex-row justify-start gap-10">
       <form
-        className="basis-2/3"
+        className=" basis-1/4"
         onSubmit={(e) => {
           e.preventDefault()
           if (!hypercertMinted) {
