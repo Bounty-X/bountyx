@@ -6,6 +6,7 @@ import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata';
 import { BountyIconListItem } from './bounty-icon-list-item';
 
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
+import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection';
 
 export default function CertificateImageHtml({ metadata }: { metadata: HypercertMetadata & BountyxMetadataCollection }) {
   // Declare a new state variable, which we'll call "count"

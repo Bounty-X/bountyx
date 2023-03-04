@@ -22,7 +22,7 @@ export interface HypercertMetadata {
    */
   external_url?: string;
   /**
-   * A URI pointing to a resource with mime type image/* representing the asset to which this token represents. Consider making any images at a width between 320 and 1080 pixels and aspect ratio between 1.91:1 and 4:5 inclusive.
+   * A URI pointing to a resource with mime type image representing the asset to which this token represents. Consider making any images at a width between 320 and 1080 pixels and aspect ratio between 1.91:1 and 4:5 inclusive.
    */
   image: string;
   /**

@@ -56,11 +56,11 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
     const owners: `0x${string}`[] = []
 
     bounties.forEach((bounty) => {
-      numberOfUnits += bounty.reward.rewardAmountUsd ?? 0
-      if (!workScopeList.includes(bounty.issuer.issuerName!)) {
-        workScopeList.push(bounty.issuer.issuerName!)
+      numberOfUnits += bounty.reward?.rewardAmountUsd ?? 0
+      if (!workScopeList.includes(bounty.issuer?.issuerName!)) {
+        workScopeList.push(bounty.issuer?.issuerName!)
       }
-      owners.push(bounty.issuer.issuerAddress! as `0x${string}`)
+      owners.push(bounty.issuer?.issuerAddress! as `0x${string}`)
     })
 
     const workScopeStr = formatScopeList(workScopeList)
@@ -166,9 +166,9 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
   }
 
   return (
-    <div className="flex flex-row justify-evenly">
+    <div className="flex flex-row justify-start gap-10">
       <form
-        className="basis-2/3"
+        className=" basis-1/4"
         onSubmit={(e) => {
           e.preventDefault()
           if (!hypercertMinted) {

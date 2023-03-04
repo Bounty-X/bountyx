@@ -44,7 +44,7 @@ export const EndorseBountyCard = () => {
           <p>Bounty Receiver</p>
           <div className="badge-outline badge">{bounty.receiver?.receiverAddress}</div>
           <p>Bounty Amount in USD</p>
-          <div className="badge-outline badge">{bounty.reward.rewardAmountUsd}</div>
+          <div className="badge-outline badge">{bounty.reward?.rewardAmountUsd}</div>
         </div>
         <p>{bounty.description}</p>
         <div className="card-actions justify-end">
