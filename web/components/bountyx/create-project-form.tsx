@@ -35,18 +35,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
     bounties,
   })
 
-  const handleChange = async (field: string, value: string) => {
-    // Need to reconstruct object and copy so that react knows the object changed
-    let newProjectMetadata: ProjectMetadata = {
-      name: '',
-      description: '',
-      external_url: '',
-      contributors: '',
-    }
-    Object.assign(newProjectMetadata, projectMetadata)
-    newProjectMetadata[field] = value
-    setProjectData(newProjectMetadata)
-
+  const updateMetadata = () => {
     let workTagsStr = ''
     const workTags: string[] = []
     bounties.forEach((bounty) => {
@@ -73,10 +62,24 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
           value: 'ETHDenver 2023',
         },
       ],
-      hypercert,
-      bounties,
+      hypercert: hypercert,
+      bounties: bounties,
     }
     setMetadata(newMetadata)
+  }
+
+  const handleChange = async (field: string, value: string) => {
+    // Need to reconstruct object and copy so that react knows the object changed
+    let newProjectMetadata: ProjectMetadata = {
+      name: '',
+      description: '',
+      external_url: '',
+      contributors: '',
+    }
+    Object.assign(newProjectMetadata, projectMetadata)
+    newProjectMetadata[field] = value
+    setProjectData(newProjectMetadata)
+    updateMetadata()
   }
 
   const { write: mintClaim } = useMintClaim({
@@ -84,6 +87,9 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
   })
 
   const mintHypercert = async () => {
+    //TODO: BUG. If no changes to ui - the metadata is empty
+    updateMetadata()
+
     let numberOfUnits = 0
     bounties.forEach((bounty) => {
       numberOfUnits += bounty.reward.rewardAmountUsd ?? 0
@@ -161,7 +167,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
         </div>
       </form>
       <div className="basis-1/3">
-        <CertificateImageHtml projectMetadata={projectMetadata} />
+        <CertificateImageHtml metadata={metadata} />
       </div>
     </div>
   )

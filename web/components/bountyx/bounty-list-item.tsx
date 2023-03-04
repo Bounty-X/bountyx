@@ -13,7 +13,7 @@ export const BountyListItem = ({ bounty }: BountyListItemProps) => {
         </div>
         <p>{bounty.issuer.issuerName}</p>
         {/* <p>{bounty.description}</p> */}
-        <p>{`Bounty Reward: ${bounty.reward.rewardAmountUsd} USD`}</p>
+        <p>{`Bounty Reward: ${bounty?.reward?.rewardAmountUsd} USD`}</p>
       </div>
     </div>
   )

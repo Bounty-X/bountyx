@@ -10,6 +10,7 @@ import HandleWalletEvents from '@/components/blockchain/handle-wallet-events'
 import { useIsMounted } from '@/hooks/utils/use-is-mounted'
 import fetchJson from '@/lib/fetch-json'
 import { RainbowKit } from '@/providers/rainbow-kit'
+import { ContractInteractionDialogProvider } from '@/components/shared/contract-interaction-dialog-context'
 
 const queryClient = new QueryClient()
 interface RootProviderProps {
@@ -30,11 +31,13 @@ export default function RootProvider({ children }: RootProviderProps) {
         <ThemeProvider>
           <QueryClientProvider client={queryClient}>
             <RWBProvider>
-              <ModalProvider>
-                <RainbowKit>
-                  <HandleWalletEvents>{children}</HandleWalletEvents>
-                </RainbowKit>
-              </ModalProvider>
+              <ContractInteractionDialogProvider>
+                <ModalProvider>
+                  <RainbowKit>
+                    <HandleWalletEvents>{children}</HandleWalletEvents>
+                  </RainbowKit>
+                </ModalProvider>
+              </ContractInteractionDialogProvider>
             </RWBProvider>
           </QueryClientProvider>
         </ThemeProvider>
