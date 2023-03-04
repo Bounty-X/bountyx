@@ -95,9 +95,9 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
   }
 
   return (
-    <div className="flex flex-row justify-center">
+    <div className="flex flex-row justify-evenly">
       <form
-        className="basis-3/4"
+        className="basis-2/3"
         onSubmit={(e) => {
           e.preventDefault()
           mintHypercert()
@@ -154,15 +154,14 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
             />
           </div>
           {/* <Link href="/certificates" passHref> */}
-          <button type="submit" className="btn py-4">
-            Continue
+          <button type="submit" className="btn py-4 mt-6">
+            Mint Hypercert
           </button>
           {/* </Link> */}
         </div>
       </form>
-      <div className="basis-1/4">
-        {/* <CertificateImageHtml projectMetadata={projectMetadata} /> */}
-        <DummyHypercert metadata={metadata} />
+      <div className="basis-1/3">
+        <CertificateImageHtml projectMetadata={projectMetadata} />
       </div>
     </div>
   )
