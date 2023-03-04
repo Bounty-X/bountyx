@@ -33,10 +33,6 @@ export interface HypercertMetadata {
    * Describes the asset to which this token represents
    */
   ref?: string;
-  /*
-   * The token id of the hypercert on the blockchain.
-   */
-  tokenId: string;
   /**
    * A CID pointer to the merke tree proof json on ipfs
    */
