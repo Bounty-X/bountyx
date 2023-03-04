@@ -52,12 +52,16 @@ export default function Home() {
     const static_collection = process.env.NEXT_PUBLIC_HYPERCERT_COLLECTION_ADDRESS
     const static_network = process.env.NEXT_PUBLIC_NETWORK ? Number(process.env.NEXT_PUBLIC_NETWORK) : 1
 
+    console.log(static_address, static_collection, static_network)
+
     let network: Network
     switch (static_network) {
       case 5:
         network = Network.ETH_GOERLI
+        break
       default:
         network = Network.ETH_MAINNET
+        break
     }
 
     const getCerts = async (args: { address: any; collection: string | undefined; network: Network }) => {
