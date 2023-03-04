@@ -80,12 +80,12 @@ export const useMintClaim = ({ onComplete }: { onComplete?: () => void }) => {
     isError: isWaitError,
     error: waitError,
   } = useWaitForTransaction({
+    confirmations: 1,
     hash: data?.hash,
     onSuccess: () => {
       toast(mintInteractionLabels.toastSuccess, { type: 'success' })
       setStep('complete')
       console.log('complete')
-      hideModal()
       onComplete?.()
     },
   })
