@@ -17,7 +17,11 @@ export default function Home() {
       <div className="flex flex-row">
         <CreateProjectForm bounties={bounties} />
       </div>
-      <BountiesList bounties={getBountiesForReceiver(static_receiver)} />
+      <div className="flex flex-row">
+        <div className="basis-1/2">
+          <BountiesList bounties={getBountiesForReceiver(static_receiver)} />
+        </div>
+      </div>
     </div>
   )
 }

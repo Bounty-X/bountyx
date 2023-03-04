@@ -6,7 +6,7 @@ interface BountyListItemProps {
 
 export const BountyListItem = ({ bounty }: BountyListItemProps) => {
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row bg-base-300 rounded-box">
       <div className="avatar">
         <div className="w-24 rounded-full">
           <img src={bounty.issuer.issuerLogoUrl} alt={bounty.issuer.issuerName} />
