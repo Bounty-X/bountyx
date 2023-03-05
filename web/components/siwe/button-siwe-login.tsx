@@ -5,7 +5,6 @@ import * as React from 'react'
 import classNames from 'clsx'
 import { useAccount, useNetwork, useSignMessage } from 'wagmi'
 
-import useUser from '@/hooks/app/use-user'
 import { siweLogin } from '@/lib/actions/siwe/siweLogin'
 import { cn } from '@/lib/utils/cn'
 
@@ -17,7 +16,6 @@ interface ButtonSIWELoginProps {
   disabled?: boolean
 }
 export const ButtonSIWELogin = ({ className, label = 'Login', disabled, children, styled }: ButtonSIWELoginProps) => {
-  const { mutateUser } = useUser()
   const { isLoading, signMessageAsync } = useSignMessage()
   const { address } = useAccount()
   const { chain } = useNetwork()
@@ -25,7 +23,6 @@ export const ButtonSIWELogin = ({ className, label = 'Login', disabled, children
   const handleCreateMessage = async () => {
     try {
       await siweLogin({ address, chainId: chain?.id, signMessageAsync })
-      mutateUser()
     } catch (error) {
       console.error(error)
     }

@@ -280,7 +280,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '',
+          receiverAddress: '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199',
         },
         rewardAmountUsd: '4000',
       },
@@ -348,7 +348,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '',
+          receiverAddress: '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199',
         },
         rewardAmountUsd: '1000',
       },
@@ -437,7 +437,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '',
+          receiverAddress: '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199',
         },
         rewardAmountUsd: '3000',
       },
@@ -516,7 +516,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '',
+          receiverAddress: '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199',
         },
         rewardAmountUsd: '3000',
       },
