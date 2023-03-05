@@ -6,14 +6,15 @@ import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
 import { CreateProjectForm } from '@/components/bountyx/create-project-form'
 import { BountiesList } from '@/components/bountyx/bounties-list'
 import { getBountiesForReceiver } from '@/lib/api/buidlboxApi'
+import { useAccount } from 'wagmi'
 
 export default function Home() {
   const [bounties, setBounties] = useState<BountyxMetadata[]>([])
 
-  const static_receiver = process.env.NEXT_PUBLIC_HYPERCERT_OWNER_ADDRESS ? process.env.NEXT_PUBLIC_HYPERCERT_OWNER_ADDRESS : ''
+  const { address } = useAccount()
 
   useEffect(() => {
-    setBounties(getBountiesForReceiver(static_receiver))
+    setBounties(getBountiesForReceiver(address!))
   })
 
   return (
@@ -21,7 +22,7 @@ export default function Home() {
       <CreateProjectForm bounties={bounties} />
       <div className="flex flex-row">
         <div className="basis-1/3">
-          <BountiesList bounties={getBountiesForReceiver(static_receiver)} />
+          <BountiesList bounties={getBountiesForReceiver(address!)} />
         </div>
       </div>
     </div>
