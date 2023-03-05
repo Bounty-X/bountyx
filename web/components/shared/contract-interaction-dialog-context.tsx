@@ -1,5 +1,6 @@
 import React, { PropsWithChildren, useContext, useState } from 'react'
-import { Box, Dialog, DialogTitle, DialogContentText, Step, StepLabel, Stepper, DialogContent } from '@mui/material'
+
+import { Box, Dialog, DialogContent, DialogContentText, DialogTitle, Step, StepLabel, Stepper } from '@mui/material'
 
 type StepDescriptions = Record<string, string>
 

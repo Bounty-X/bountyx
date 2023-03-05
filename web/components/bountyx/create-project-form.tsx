@@ -1,21 +1,25 @@
 'use client'
+import { useState } from 'react'
+
+import { BigNumber } from 'ethers'
 import Link from 'next/link'
 import { toast } from 'react-toastify'
+
 import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
-import useLocalStorage from '@/hooks/utils/use-local-storage'
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
+import { HypercertClaimdata } from '@/bountyxlib/types/claimdata'
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
 import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata.js'
 import CertificateImageHtml from '@/components/certificate/certificate-image-html'
-import { useMintClaim } from '@/hooks/hypercert/mintClaim'
-import { DummyHypercert } from './dummy-hypercert'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { HypercertClaimdata } from '@/bountyxlib/types/claimdata'
 import { useMintClaimWithFractions } from '@/hooks/hypercert/mintClaimWithFractions'
-import { BigNumber } from 'ethers'
 import { useSafeBatchTransferFrom } from '@/hooks/hypercert/safeBatchTransferFrom'
+import useLocalStorage from '@/hooks/utils/use-local-storage'
 import { formatContributors, formatScope, formatScopeList } from '@/lib/hypercert/formatting'
 import { parseListFromString } from '@/lib/hypercert/parsing'
+
+import { DummyHypercert } from './dummy-hypercert'
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
@@ -229,7 +233,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
             />
           </div>
           {/* <Link href="/certificates" passHref> */}
-          <button type="submit" className="btn py-4 mt-6" disabled={hypercertMinted && hyperceretTransferred}>
+          <button type="submit" className="btn mt-6 py-4" disabled={hypercertMinted && hyperceretTransferred}>
             {buttonText}
           </button>
           {/* </Link> */}

@@ -35,8 +35,6 @@ export const getNftsForOwner = async (args: { address: any; collection: string |
         properties: hcMetadata.properties,
         hypercert: hcMetadata.hypercert,
         version: hcMetadata.version,
-        tokenId: nft.tokenId,
-        collection: nft.contract.address,
       }
       bountyXNFTs.push(bxMetadata)
     }

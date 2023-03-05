@@ -1,5 +1,6 @@
-import _ from 'lodash'
 import { isAddress } from 'ethers/lib/utils'
+import _ from 'lodash'
+
 import { assertNever } from './common'
 
 export const parseCsv = (csv: string) => {

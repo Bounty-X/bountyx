@@ -68,14 +68,19 @@ export const HyperCertListItem = ({ hyperCertMetadata }: { hyperCertMetadata: Hy
               <div className="grid h-20 flex-grow">
                 <div>
                   <div className="text-xl font-bold">NFT</div>
-                  <div className="text-l font-italic font-bold mt-8 mb-2">
+                  {/* <div className="text-l font-italic font-bold mt-8 mb-2">
                     Token ID - {ellipsize(hyperCertMetadata.tokenId, 9, { truncate: 'middle' })}
-                  </div>
-                  <a
+                  </div> */}
+                  {/* <a
                     className="link"
-                    href={'https://testnets.opensea.io/assets/goerli/' + hyperCertMetadata.collection + '/' + hyperCertMetadata.tokenId}>
+                    href={
+                      'https://testnets.opensea.io/assets/goerli/' +
+                      process.env.NEXT_PUBLIC_HYPERCERT_COLLECTION_ADDRESS +
+                      '/' +
+                      hyperCertMetadata.tokenId
+                    }>
                     View On OpenSea
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

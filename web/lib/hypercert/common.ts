@@ -1,4 +1,4 @@
-import { NullOrUndefinedValueError, AssertionError } from './errors'
+import { AssertionError, NullOrUndefinedValueError } from './errors'
 
 /**
  * Assert that value should not be `null` or `undefined`
