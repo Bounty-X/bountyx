@@ -12,7 +12,7 @@ export const getNftsForOwner = async (args: {
 }): Promise<{ tokenId: string; collection: string; metadata: HypercertMetadata & BountyxMetadataCollection }[]> => {
   console.log(args)
   const settings = {
-    apiKey: 'BJaIUlfPThKFKXvdPfqf19yxXdbYmZ0H', // Todo clean this up
+    apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
     network: args.network,
   }
 

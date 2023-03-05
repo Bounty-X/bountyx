@@ -90,7 +90,7 @@ export const HyperCertListItem = ({
                 <div>
                   <div className="text-xl font-bold">NFT</div>
                   <div className="text-l font-italic font-bold mt-8 mb-2">Token ID - {ellipsize(tokenId, 9, { truncate: 'middle' })}</div>
-                  <a className="link" href={'https://testnets.opensea.io/assets/goerli/' + collection + '/' + tokenId}>
+                  <a className="link" target="_blank" href={'https://testnets.opensea.io/assets/goerli/' + collection + '/' + tokenId}>
                     View On OpenSea
                   </a>
                 </div>
