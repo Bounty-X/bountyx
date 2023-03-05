@@ -25,25 +25,26 @@ import erc20TokenSymbolToAddress from '@/lib/erc20TokenSymbolToAddress'
 export default function Home() {
   return (
     <>
-    <div className="hero min-h-screen bg-base-200 bg-[url('/astronomy-bg.jpeg')]">
-      <div className="hero-content text-center">
-        <div className="flex flex-col">
-          <h1 className="text-5xl font-bold">The Bounty Was Just The Beginning.</h1>
-          <p className="py-6">Use our Tools to Multiply your Impact</p>
-          <div className="form-control mx-auto">
-            <label className="label cursor-pointer">
-            <input type="checkbox" className="checkbox checkbox-primary" />
-            <span className="label-text text-white italic px-4">I certify that my project is for the public good.</span> 
-            </label>
-          </div>
-          <div className="py-4 px-4 align-center">
-            <Link href="/requestbountycertificate" passHref>
-              <button className="btn btn-primary flex-auto w-64">Continue My Project</button>
-            </Link>
+      {/* <div className="hero min-h-screen bg-base-200 bg-[url('/astronomy-bg.jpeg')]"> */}
+      <div className="hero min-h-screen">
+        <div className="hero-content text-center">
+          <div className="flex flex-col">
+            <h1 className="text-5xl font-bold">The Bounty Was Just The Beginning</h1>
+            <p className="py-6">Multiply the Impact of your Project</p>
+            <div className="form-control mx-auto">
+              <label className="label cursor-pointer">
+                <input type="checkbox" className="checkbox checkbox-primary" />
+                <span className="label-text italic px-4">I certify that my project is open-source and has a public license</span>
+              </label>
+            </div>
+            <div className="py-4 px-4 align-center">
+              <Link href="/requestbountycertificate" passHref>
+                <button className="btn btn-primary flex-auto w-64">I won a bounty!</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </>
   )
 }
