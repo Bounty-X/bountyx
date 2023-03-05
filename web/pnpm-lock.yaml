@@ -65,6 +65,7 @@ specifiers:
   classnames: ^2.3.2
   clsx: ^1.2.1
   daisyui: ^2.51.2
+  downloadjs: ^1.4.7
   ellipsize: ^0.5.1
   eslint: 8.30.0
   eslint-config-next: 13.1.1
@@ -182,6 +183,7 @@ dependencies:
   class-variance-authority: 0.4.0_typescript@4.9.4
   classnames: 2.3.2
   clsx: 1.2.1
+  downloadjs: 1.4.7
   ellipsize: 0.5.1
   ethers: 5.7.2
   focus-trap-react: 10.0.2_v2m5e27vhdewzwhryxwfaorcca
@@ -12143,6 +12145,10 @@ packages:
   /dotenv/16.0.3:
     resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
     engines: {node: '>=12'}
+    dev: false
+
+  /downloadjs/1.4.7:
+    resolution: {integrity: sha512-LN1gO7+u9xjU5oEScGFKvXhYf7Y/empUIIEAGBs1LzUq/rg5duiDrkuH5A2lQGd5jfMOb9X9usDa2oVXwJ0U/Q==}
     dev: false
 
   /dset/3.1.2:

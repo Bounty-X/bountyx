@@ -9,9 +9,8 @@ import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata'
 
 import { BountyIconListItem } from './bounty-icon-list-item'
 
-export default function CertificateImageHtml({ projectMetadata, bounties }: { projectMetadata: ProjectMetadata; bounties: BountyxMetadata[] }) {
+export default function CertificateImageHtml({ projectMetadata, bounties, backgroundUrl }: { projectMetadata: ProjectMetadata; bounties: BountyxMetadata[]; backgroundUrl: string }) {
   // Declare a new state variable, which we'll call "count"
-  const [backgroundUrl, setBackgroundUrl] = useState('/astronomy-bg.jpeg')
 
   const renderBounties = (): any[] => {
     if (!bounties) return []
@@ -21,21 +20,6 @@ export default function CertificateImageHtml({ projectMetadata, bounties }: { pr
       list.push(<BountyIconListItem bountyMetadata={item} />)
     })
     return list
-  }
-  const handleBackgroundToggleClick = (buttonNum: number, target: EventTarget) => {
-    switch (buttonNum) {
-      case 0:
-        setBackgroundUrl('/astronomy-bg.jpeg')
-        break
-      case 1:
-        setBackgroundUrl('/ethdenverstage.png')
-        break
-      case 2:
-        setBackgroundUrl('/mountains-bg.jpeg')
-        break
-      default:
-        break
-    }
   }
 
   const renderImpactBadges = (): any[] => {
@@ -70,19 +54,6 @@ export default function CertificateImageHtml({ projectMetadata, bounties }: { pr
             </div>
             {renderImpactBadges()}
           </div>
-        </div>
-      </div>
-      <div className="mx-4 flex flex-row">
-        <div className="btn-group">
-          <button className="btn-active btn" onClick={(e) => handleBackgroundToggleClick(0, e.target)}>
-            Galactic
-          </button>
-          <button className="btn" onClick={(e) => handleBackgroundToggleClick(1, e.target)}>
-            EthDenver
-          </button>
-          <button className="btn" onClick={(e) => handleBackgroundToggleClick(2, e.target)}>
-            Mountains
-          </button>
         </div>
       </div>
     </>

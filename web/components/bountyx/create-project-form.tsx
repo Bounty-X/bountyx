@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 import { BigNumber } from 'ethers'
 import Link from 'next/link'
@@ -11,7 +11,6 @@ import { HypercertClaimdata } from '@/bountyxlib/types/claimdata'
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
 import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata.js'
 import CertificateImageHtml from '@/components/certificate/certificate-image-html'
-import { useMintClaim } from '@/hooks/hypercert/mintClaim'
 import { useMintClaimWithFractions } from '@/hooks/hypercert/mintClaimWithFractions'
 import { useSafeBatchTransferFrom } from '@/hooks/hypercert/safeBatchTransferFrom'
 import useLocalStorage from '@/hooks/utils/use-local-storage'
@@ -19,6 +18,9 @@ import { formatContributors, formatScope, formatScopeList } from '@/lib/hypercer
 import { parseListFromString } from '@/lib/hypercert/parsing'
 
 import { DummyHypercert } from './dummy-hypercert'
+import { useMintClaim } from '@/hooks/hypercert/mintClaim'
+
+import html2canvas from 'html2canvas';
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
@@ -30,6 +32,8 @@ interface FractionOwnership {
 }
 
 export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
+  const certificateElementRef = useRef(null);
+
   const [projectMetadata, setProjectData] = useLocalStorage<ProjectMetadata>('projectMetadata', {
     name: '',
     description: '',
@@ -53,7 +57,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
   const [hypercertMinted, setHypercertMinted] = useState<boolean>(false)
   const [hyperceretTransferred, setHyperceretTransferred] = useState<boolean>(false)
 
-  const updateMetadata = () => {
+  const updateMetadata = (base64Image : string) => {
     let numberOfUnits = 0
     const workScopeList: string[] = []
     const owners: `0x${string}`[] = []
@@ -92,7 +96,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
       name: projectMetadata.name,
       description: projectMetadata.description,
       external_url: projectMetadata.external_url,
-      image: 'https://i.ibb.co/ZG0m9Jp/Screenshot-from-2023-03-04-18-40-25.png',
+      image: base64Image,
       version: '0.0.1',
       properties: [
         {
@@ -117,7 +121,6 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
     Object.assign(newProjectMetadata, projectMetadata)
     newProjectMetadata[field] = value
     setProjectData(newProjectMetadata)
-    updateMetadata()
   }
 
   const { write: mintClaim } = useMintClaim({
@@ -156,9 +159,39 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
     }
   }
 
-  const mintHypercert = async () => {
+  const [backgroundUrl, setBackgroundUrl] = useState('/astronomy-bg.jpeg')
+  const handleBackgroundToggleClick = (buttonNum: number, target: EventTarget) => {
+    switch (buttonNum) {
+      case 0:
+        setBackgroundUrl('/astronomy-bg.jpeg')
+        break
+      case 1:
+        setBackgroundUrl('/ethdenverstage.png')
+        break
+      case 2:
+        setBackgroundUrl('/mountains-bg.jpeg')
+        break
+      default:
+        break
+    }
+  }
+
+  const generateCertImageAndMintHypercert = async () => {
+    window.scrollTo(0,0);
+    const certificateElement = certificateElementRef.current;
+    if (certificateElement) {
+      html2canvas(certificateElement).then(function(canvas) {
+        console.log("certificate width: " + certificateElement.clientWidth + " canvas height: " + certificateElement.clientHeight);
+        console.log("canvas width: " + canvas.width + " canvas height: " + canvas.height);
+        const imageString = canvas.toDataURL("image/base64", 1);
+        mintHypercert(imageString);
+      });
+    }
+  }
+
+  const mintHypercert = async (base64Image : string) => {
     //TODO: BUG. If no changes to ui - the metadata is empty
-    updateMetadata()
+    updateMetadata(base64Image);
 
     console.log('Minting hypercert', metadata)
     console.log('Units', units)
@@ -178,7 +211,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
         onSubmit={(e) => {
           e.preventDefault()
           if (!hypercertMinted) {
-            mintHypercert()
+            generateCertImageAndMintHypercert()
           } else if (hypercertMinted && !hyperceretTransferred) {
             transferHypercerts()
           }
@@ -242,7 +275,22 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
         </div>
       </form>
       <div className="basis-1/3">
-        <CertificateImageHtml projectMetadata={projectMetadata} bounties={bounties} />
+        <div className="h-[525px] w-[375px] rounded-3xl" ref={certificateElementRef}>
+          <CertificateImageHtml projectMetadata={projectMetadata} bounties={bounties} backgroundUrl={backgroundUrl} />
+        </div>
+        <div className="mx-4 flex flex-row">
+        <div className="btn-group">
+          <button className="btn-active btn" onClick={(e) => handleBackgroundToggleClick(0, e.target)}>
+            Galactic
+          </button>
+          <button className="btn" onClick={(e) => handleBackgroundToggleClick(1, e.target)}>
+            EthDenver
+          </button>
+          <button className="btn" onClick={(e) => handleBackgroundToggleClick(2, e.target)}>
+            Mountains
+          </button>
+        </div>
+      </div>
       </div>
     </div>
   )
