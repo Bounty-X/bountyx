@@ -83,7 +83,7 @@
 ### Built With
 
 [![Solidity][solidity.org]][solidity-url]
-[![Vitejs][vitejs.dev]][vite-url]
+[![Next][next.js]][next-url]
 [![React][react.js]][react-url]
 [![Apollo GraphQL][apollographql.com]][apollographql-url]
 [![TailwindCSS][tailwindcss.com]][tailwindcss-url]
@@ -97,7 +97,7 @@
 
 ### Prerequisites
 
-Install `yarn` or `npm`
+Install `pnpm`
 
 ### Installation
 
@@ -107,16 +107,11 @@ Install `yarn` or `npm`
    ```
 2. Install packages
    ```sh
-   yarn install && cd ./dapp && yarn install && cd ..
+   cd ./web && pnpm install
    ```
 3. Compile contracts
    ```sh
-   yarn hardhat compile
-   ```
-4. Enter your API `VITE_ALCHEMY_API_KEY` in the `./dapp/.env `
-5. Start the dApp
-   ```sh
-   cd ./dapp && yarn dev
+   cd ./contracts && yarn hardhat compile
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -166,8 +161,8 @@ Project Link: [https://github.com/Bounty-X/bountyx](https://github.com/Bounty-X/
 [license-shield]: https://img.shields.io/github/license/Bounty-X/bountyx.svg?style=for-the-badge
 [license-url]: https://github.com/Bounty-X/bountyx/blob/main/LICENSE.txt
 [product-screenshot]: docs/images/home-page-screenshot.png
-[vitejs.dev]: https://img.shields.io/badge/Vitejs-000000?style=for-the-badge&logo=vite&logoColor
-[vite-url]: https://vitejs.dev/
+[next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[next-url]: https://nextjs.org/
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [react-url]: https://reactjs.org/
 [solidity.org]: https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white
