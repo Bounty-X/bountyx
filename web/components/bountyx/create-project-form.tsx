@@ -285,7 +285,7 @@ export const CreateProjectForm = () => {
                 onChange={(e) => handleChange('contributors', e.target.value)}
               />
             </div>
-            <button type="submit" className="btn mt-10 py-4" disabled={hypercertMinted && hyperceretTransferred}>
+            <button type="submit" className="btn mt-[57px] py-4" disabled={hypercertMinted && hyperceretTransferred}>
               {buttonText}
             </button>
             {/* </Link> */}
@@ -296,7 +296,7 @@ export const CreateProjectForm = () => {
         <div className="h-[525px] w-[375px] bg-transparent" ref={certificateElementRef}>
           <CertificateImageHtml projectMetadata={projectMetadata} bounties={bounties} backgroundUrl={backgroundUrl} />
         </div>
-        <div className="container mx-auto">
+        <div className="container mx-auto mt-4">
           <div className="btn-group">
             <button className={`btn ${selectedBGIndex === 0 ? 'btn-active' : ''}`} onClick={(e) => handleBackgroundToggleClick(0, e.target)}>
               Galactic
