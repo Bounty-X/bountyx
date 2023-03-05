@@ -71,14 +71,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
@@ -280,14 +280,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199',
         },
         rewardAmountUsd: '4000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -348,14 +348,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199',
         },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -437,28 +437,28 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199',
         },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 3,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -516,21 +516,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199',
         },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -592,7 +592,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -654,14 +654,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '0',
       },
@@ -719,7 +719,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -776,7 +776,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -854,14 +854,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -919,21 +919,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
@@ -987,7 +987,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -1152,14 +1152,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1500',
       },
@@ -1249,7 +1249,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '4000',
       },
@@ -1331,21 +1331,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -1419,7 +1419,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -1801,28 +1801,28 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 3,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -2000,7 +2000,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '4000',
       },
@@ -2131,7 +2131,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '4000',
       },
@@ -2289,7 +2289,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -2355,7 +2355,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
@@ -2429,35 +2429,35 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 3,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 4,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -2534,21 +2534,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -2618,7 +2618,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
@@ -2696,28 +2696,28 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 3,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -2778,7 +2778,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
@@ -2905,28 +2905,28 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '4844',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2718',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1167',
       },
       {
         winnerRank: 3,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1167',
       },
@@ -2992,14 +2992,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -3115,14 +3115,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -3176,7 +3176,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
@@ -3520,7 +3520,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -3648,14 +3648,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
@@ -3725,7 +3725,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '4000',
       },
@@ -3774,7 +3774,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -3892,7 +3892,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
@@ -3958,21 +3958,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
@@ -4037,7 +4037,7 @@ export const challenges = [
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -4103,21 +4103,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -4182,7 +4182,7 @@ export const challenges = [
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -4236,21 +4236,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '6000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '4000',
       },
@@ -4362,21 +4362,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '6000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '4000',
       },
@@ -4496,21 +4496,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '6000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '4000',
       },
@@ -4763,14 +4763,14 @@ export const challenges = [
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -4859,35 +4859,35 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 3,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 4,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -5035,14 +5035,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -5123,7 +5123,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -5209,14 +5209,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '4000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -5352,21 +5352,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '4000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
@@ -5552,21 +5552,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
@@ -5652,7 +5652,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -5710,21 +5710,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
@@ -5782,7 +5782,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -5868,7 +5868,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -5934,7 +5934,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -6049,14 +6049,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '15000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '10000',
       },
@@ -6192,7 +6192,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -6294,14 +6294,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
@@ -6379,21 +6379,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1500',
       },
@@ -6479,7 +6479,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -6541,21 +6541,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -6640,7 +6640,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
@@ -6710,21 +6710,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -6778,21 +6778,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
@@ -6854,21 +6854,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -6930,21 +6930,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -7002,21 +7002,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
@@ -7147,21 +7147,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -7328,21 +7328,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1800',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1200',
       },
@@ -7579,21 +7579,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -7712,7 +7712,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
@@ -7996,7 +7996,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
@@ -8069,7 +8069,7 @@ export const challenges = [
     rewards: [
       {
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
@@ -8143,7 +8143,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
@@ -8287,7 +8287,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -8480,7 +8480,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -8561,7 +8561,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -8642,7 +8642,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -8796,7 +8796,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -8944,35 +8944,35 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '7500',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '6000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 3,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '4000',
       },
       {
         winnerRank: 4,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
@@ -9124,7 +9124,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
@@ -9273,21 +9273,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '6000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '4000',
       },
@@ -9361,14 +9361,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '0',
       },
@@ -9422,21 +9422,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '6000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '4000',
       },
@@ -9510,28 +9510,28 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '8000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 3,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -9605,28 +9605,28 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 3,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -9862,21 +9862,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -10095,14 +10095,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -10213,7 +10213,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
@@ -10361,42 +10361,42 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 3,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 4,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 5,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
@@ -10525,7 +10525,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
@@ -10673,21 +10673,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '7000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
@@ -10765,21 +10765,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '6000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3750',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1500',
       },
@@ -11147,7 +11147,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -11229,21 +11229,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '6000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -11292,21 +11292,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '10000',
       },
@@ -11367,7 +11367,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
@@ -11416,21 +11416,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '10000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '10000',
       },
@@ -11570,21 +11570,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
@@ -11646,21 +11646,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1500',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -11804,7 +11804,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '4000',
       },
@@ -11874,7 +11874,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -12089,7 +12089,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
@@ -12163,14 +12163,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -12244,14 +12244,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '7500',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
@@ -12325,14 +12325,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
@@ -12406,14 +12406,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '750',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '250',
       },
@@ -12467,14 +12467,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -12571,35 +12571,35 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 3,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
       {
         winnerRank: 4,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1000',
       },
@@ -12678,14 +12678,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3500',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1500',
       },
@@ -12763,7 +12763,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '2500',
       },
@@ -12845,14 +12845,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3500',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1500',
       },
@@ -12953,14 +12953,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3500',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '1500',
       },
@@ -13046,21 +13046,21 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '4000',
       },
       {
         winnerRank: 2,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
@@ -13129,14 +13129,14 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },
       {
         winnerRank: 1,
         receiver: {
-          receiverAddress: '0x851c04b2c8CC4b3af6c886EA7cc4D326ffAEFe5A',
+          receiverAddress: '',
         },
         rewardAmountUsd: '5000',
       },

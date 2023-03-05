@@ -6,10 +6,8 @@ import AppUsersTable from '@/components/app/app-users-table'
 import MenuAdminSidebar from '@/components/layout/dashboard/menu-admin-sidebar'
 import ButtonSIWELogout from '@/components/siwe/button-siwe-logout'
 import { FADE_DOWN_ANIMATION_VARIANTS } from '@/config/design'
-import { useGetAppUsers } from '@/hooks/app/use-get-app-users'
 
 export default function PageAdmin() {
-  const { isLoading, isError, data } = useGetAppUsers()
   return (
     <>
       <div className="flex-center container mx-auto flex flex-1 flex-col items-center justify-center">
@@ -28,10 +26,6 @@ export default function PageAdmin() {
               <hr className="my-5 dark:border-gray-200 dark:opacity-50" />
               <ButtonSIWELogout className="link">Logout</ButtonSIWELogout>
             </div>
-          </div>
-          <div className="flex-center col-span-12 flex flex-col lg:col-span-9">
-            {isError && <h3 className="text-lg font-normal">Unauthorized Access</h3>}
-            {!isLoading && <AppUsersTable data={data?.users} className="w-full flex-1" />}
           </div>
         </motion.div>
       </div>
