@@ -10,6 +10,8 @@ export const BountyIconListItem = ({ bountyMetadata }: BountyIconListProps) => {
   }
 
   return (
-    <div style={{ backgroundImage: `url(${bountyMetadata.issuer.issuerLogoUrl})` }} className="my-4 h-12 w-12 rounded-full bg-cover bg-center "></div>
+    <div
+      style={{ backgroundImage: `url(/sponsor-images/${bountyMetadata.issuer.issuerName + '-logo.png'})` }}
+      className="my-4 h-12 w-12 rounded-full bg-cover bg-center "></div>
   )
 }

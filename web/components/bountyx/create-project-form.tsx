@@ -65,6 +65,7 @@ export const CreateProjectForm = () => {
   const [ownersToFraction, setOwnersToFraction] = useState<FractionOwnership[]>([])
   const [hypercertMinted, setHypercertMinted] = useState<boolean>(false)
   const [hyperceretTransferred, setHyperceretTransferred] = useState<boolean>(false)
+  const [selectedBGIndex, setSelectedBGIndex] = useState<number>(0)
 
   const updateMetadata = (base64Image: string) => {
     let numberOfUnits = 0
@@ -172,12 +173,15 @@ export const CreateProjectForm = () => {
   const handleBackgroundToggleClick = (buttonNum: number, target: EventTarget) => {
     switch (buttonNum) {
       case 0:
+        setSelectedBGIndex(0)
         setBackgroundUrl('/astronomy-bg.jpeg')
         break
       case 1:
+        setSelectedBGIndex(1)
         setBackgroundUrl('/ethdenverstage.png')
         break
       case 2:
+        setSelectedBGIndex(2)
         setBackgroundUrl('/mountains-bg.jpeg')
         break
       default:
@@ -232,7 +236,7 @@ export const CreateProjectForm = () => {
             <input
               type="text"
               id="projectname"
-              placeholder="Type here"
+              placeholder="Type your team's project name here..."
               defaultValue={projectMetadata.name}
               className="input-bordered input w-full max-w-xs"
               onChange={(e) => handleChange('name', e.target.value)}
@@ -244,7 +248,7 @@ export const CreateProjectForm = () => {
               <input
                 type="text"
                 id="projectname"
-                placeholder="Type here"
+                placeholder="Give us a project/informational url... "
                 defaultValue={projectMetadata.external_url}
                 className="input-bordered input w-full max-w-xs"
                 onChange={(e) => handleChange('external_url', e.target.value)}
@@ -257,7 +261,7 @@ export const CreateProjectForm = () => {
               <input
                 type="text"
                 id="projectdescription"
-                placeholder="Type here"
+                placeholder="I don't know your project - describe it for me..."
                 defaultValue={projectMetadata.description}
                 className="input-bordered input w-full max-w-xs"
                 onChange={(e) => handleChange('description', e.target.value)}
@@ -270,14 +274,13 @@ export const CreateProjectForm = () => {
               <input
                 type="text"
                 id="projectcontributors"
-                placeholder="Type here"
+                placeholder="Enter fellow contributors - comma separated"
                 defaultValue={projectMetadata.contributors}
                 className="input-bordered input w-full max-w-xs"
                 onChange={(e) => handleChange('contributors', e.target.value)}
               />
             </div>
-            {/* <Link href="/certificates" passHref> */}
-            <button type="submit" className="btn mt-6 py-4" disabled={hypercertMinted && hyperceretTransferred}>
+            <button type="submit" className="btn mt-10 py-4" disabled={hypercertMinted && hyperceretTransferred}>
               {buttonText}
             </button>
             {/* </Link> */}
@@ -288,15 +291,15 @@ export const CreateProjectForm = () => {
         <div className="h-[525px] w-[375px] rounded-3xl" ref={certificateElementRef}>
           <CertificateImageHtml projectMetadata={projectMetadata} bounties={bounties} backgroundUrl={backgroundUrl} />
         </div>
-        <div className="mx-4 flex flex-row">
+        <div className="container mx-auto">
           <div className="btn-group">
-            <button className="btn-active btn" onClick={(e) => handleBackgroundToggleClick(0, e.target)}>
+            <button className={`btn ${selectedBGIndex === 0 ? 'btn-active' : ''}`} onClick={(e) => handleBackgroundToggleClick(0, e.target)}>
               Galactic
             </button>
-            <button className="btn" onClick={(e) => handleBackgroundToggleClick(1, e.target)}>
+            <button className={`btn ${selectedBGIndex === 1 ? 'btn-active' : ''}`} onClick={(e) => handleBackgroundToggleClick(1, e.target)}>
               EthDenver
             </button>
-            <button className="btn" onClick={(e) => handleBackgroundToggleClick(2, e.target)}>
+            <button className={`btn ${selectedBGIndex === 2 ? 'btn-active' : ''}`} onClick={(e) => handleBackgroundToggleClick(2, e.target)}>
               Mountains
             </button>
           </div>
