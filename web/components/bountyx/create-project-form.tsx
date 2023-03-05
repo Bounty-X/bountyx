@@ -196,7 +196,9 @@ export const CreateProjectForm = () => {
     window.scrollTo(0, 0)
     const certificateElement = certificateElementRef.current
     if (certificateElement) {
-      const canvas = await html2canvas(certificateElement)
+      const canvas = await html2canvas(certificateElement, {
+        backgroundColor: null,
+      })
       const imageString = canvas.toDataURL('image/base64', 1)
       updateMetadata(imageString)
     }
