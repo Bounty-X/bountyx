@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react'
-import { useState } from 'react'
 
 import { BigNumber } from 'ethers'
 import Link from 'next/link'
@@ -8,7 +7,6 @@ import { toast } from 'react-toastify'
 
 import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
-import { HypercertClaimdata } from '@/bountyxlib/types/claimdata'
 import { HypercertClaimdata } from '@/bountyxlib/types/claimdata'
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
 import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata.js'
@@ -240,7 +238,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
         </div>
       </form>
       <div className="basis-1/3">
-        <CertificateImageHtml projectMetadata={projectMetadata} bounties={metadata.bounties} />
+        <CertificateImageHtml projectMetadata={projectMetadata} bounties={metadata.bounties} hypercert={metadata.hypercert} />
       </div>
     </div>
   )
