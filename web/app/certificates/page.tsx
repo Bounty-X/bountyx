@@ -38,9 +38,13 @@ export default function Home() {
   const renderCerts = (): any[] => {
     if (!certs) return []
 
+    console.log('certs', certs)
+
     const list: any[] = []
-    certs.forEach((item: HypercertMetadata) => {
-      list.push(<HyperCertListItem hyperCertMetadata={item} />)
+    certs.forEach((item: any) => {
+      list.push(
+        <HyperCertListItem key={item.collection + item.tokenId} tokenId={item.tokenId} collection={item.collection} metadata={item.metadata} />
+      )
     })
     return list
   }
