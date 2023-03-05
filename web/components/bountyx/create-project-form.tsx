@@ -202,7 +202,7 @@ export const CreateProjectForm = () => {
             <input
               type="text"
               id="projectname"
-              placeholder="Type here"
+              placeholder="Type your team's project name here..."
               defaultValue={projectMetadata.name}
               className="input-bordered input w-full max-w-xs"
               onChange={(e) => handleChange('name', e.target.value)}
@@ -214,7 +214,7 @@ export const CreateProjectForm = () => {
               <input
                 type="text"
                 id="projectname"
-                placeholder="Type here"
+                placeholder="Give us a project/informational url... "
                 defaultValue={projectMetadata.external_url}
                 className="input-bordered input w-full max-w-xs"
                 onChange={(e) => handleChange('external_url', e.target.value)}
@@ -227,7 +227,7 @@ export const CreateProjectForm = () => {
               <input
                 type="text"
                 id="projectdescription"
-                placeholder="Type here"
+                placeholder="I don't know your project - describe it for me..."
                 defaultValue={projectMetadata.description}
                 className="input-bordered input w-full max-w-xs"
                 onChange={(e) => handleChange('description', e.target.value)}
@@ -240,7 +240,7 @@ export const CreateProjectForm = () => {
               <input
                 type="text"
                 id="projectcontributors"
-                placeholder="Type here"
+                placeholder="Enter fellow contributors - comma separated"
                 defaultValue={projectMetadata.contributors}
                 className="input-bordered input w-full max-w-xs"
                 onChange={(e) => handleChange('contributors', e.target.value)}
