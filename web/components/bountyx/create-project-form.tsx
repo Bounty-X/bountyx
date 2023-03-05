@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 
 import { BigNumber } from 'ethers'
 import html2canvas from 'html2canvas'
+import { image } from 'html2canvas/dist/types/css/types/image'
 import Link from 'next/link'
 import { toast } from 'react-toastify'
 import { useAccount } from 'wagmi'
@@ -23,7 +24,6 @@ import { formatContributors, formatScope, formatScopeList } from '@/lib/hypercer
 import { parseListFromString } from '@/lib/hypercert/parsing'
 
 import { DummyHypercert } from './dummy-hypercert'
-import { image } from 'html2canvas/dist/types/css/types/image'
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
