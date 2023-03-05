@@ -1,4 +1,5 @@
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
+
 import { challenges } from './challenges'
 
 export const getBountiesForReceiver = (receiver: string): BountyxMetadata[] => {
