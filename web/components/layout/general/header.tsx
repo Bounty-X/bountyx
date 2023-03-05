@@ -54,15 +54,16 @@ export function Header(props: Props) {
         <NavigationMenuGeneral />
       </div>
 
-      {/* <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4">
         <BranchIsWalletConnected>
-          <BranchIsAuthenticated>
+          {/* <BranchIsAuthenticated>
             <ButtonSIWELogout className="tag tag-light" />
             <ButtonSIWELogin className="tag tag-emerald" />
-          </BranchIsAuthenticated>
+          </BranchIsAuthenticated> */}
           <></>
         </BranchIsWalletConnected>
-      </div> */}
+        <ThemeToggle />
+      </div>
     </header>
   )
 }
