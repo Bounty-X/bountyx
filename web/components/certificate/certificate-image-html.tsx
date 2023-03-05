@@ -3,17 +3,21 @@ import * as React from 'react'
 
 import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
+import { HypercertClaimdata } from '@/bountyxlib/types/claimdata'
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
 import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata'
 
-<<<<<<< HEAD
-import { BountiesList } from '../bountyx/bounties-list';
-import { HypercertClaimdata } from '@/bountyxlib/types/claimdata';
-=======
 import { BountyIconListItem } from './bounty-icon-list-item'
->>>>>>> 245baa729a5604bca95066c36bf6035e06200ba4
 
-export default function CertificateImageHtml({ projectMetadata, bounties, hypercert }: { projectMetadata: ProjectMetadata, bounties: BountyxMetadata[], hypercert: HypercertClaimdata }) {
+export default function CertificateImageHtml({
+  projectMetadata,
+  bounties,
+  hypercert,
+}: {
+  projectMetadata: ProjectMetadata
+  bounties: BountyxMetadata[]
+  hypercert: HypercertClaimdata
+}) {
   // Declare a new state variable, which we'll call "count"
   const [backgroundUrl, setBackgroundUrl] = useState('/astronomy-bg.jpeg')
 
