@@ -14,17 +14,54 @@ const contributors = (contrib: any) => {
           <div className="flex items-center space-x-3">
             <div className="avatar">
               <div className="mask mask-squircle w-12 h-12">
-                <img src={item.avatar ? item.avatar : 'bountyx-default.png'} />
+                <img src={'bountyx-default.png'} />
               </div>
             </div>
             <div>
               <div className="font-bold">{ellipsize(item, 9, { truncate: 'middle' })}</div>
-              <span className="badge badge-ghost badge-sm">{item.relationship == 'sponsor' ? 'Sponsor' : 'Core Contributor'}</span>
+              <span className="badge badge-ghost badge-sm">{item?.relationship == 'sponsor' ? 'Sponsor' : 'Core Contributor'}</span>
+            </div>
+          </div>
+        </td>
+      </tr>
+    )
+  })
+  return list
+}
+const hypercertOwners = (contributors: string[], issuers: string[]) => {
+  if (!contributors && !issuers) return []
+  console.log('contributors', contributors)
+  console.log('issuers', issuers)
+  const owners = contributors.concat(issuers)
+  const ownerPercentage = 100 / owners.length
+
+  const ownersMap = new Map<string, number>()
+  for (const owner of owners) {
+    if (ownersMap.has(owner)) {
+      ownersMap.set(owner, ownersMap.get(owner)! + ownerPercentage)
+    } else {
+      ownersMap.set(owner, ownerPercentage)
+    }
+  }
+
+  const list: any = []
+  ownersMap.forEach((value, key) => {
+    list.push(
+      <tr>
+        <td>
+          <div className="flex items-center space-x-3">
+            <div className="avatar">
+              <div className="mask mask-squircle w-12 h-12">
+                <img src={'bountyx-default.png'} />
+              </div>
+            </div>
+            <div>
+              <div className="font-bold">{ellipsize(key, 9, { truncate: 'middle' })}</div>
             </div>
           </div>
         </td>
         <td>
-          <div className="text-l font-bold">{item.percentage} %</div>
+          <div className="text-l font-bold">{value} %</div>
         </td>
       </tr>
     )
@@ -67,10 +104,21 @@ export const HyperCertListItem = ({
         <div className="flex w-full h-full">
           <div className="grid flex-grow card bg-base-300 rounded-box">
             <div>
-              <div className="text-l font-bold">OWNERSHIP</div>
+              <div className="text-l font-bold">CONTRIBUTORS</div>
               <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                   <tbody>{contributors(metadata.hypercert.contributors)}</tbody>
+                </table>
+              </div>
+              <div className="text-l font-bold">OWNERS</div>
+              <div className="overflow-x-auto w-full">
+                <table className="table w-full">
+                  <tbody>
+                    {hypercertOwners(
+                      metadata.hypercert?.contributors?.value.map((val: string) => val.toLowerCase()),
+                      metadata.bounties?.map((val) => val.issuer.issuerAddress.toLowerCase())
+                    )}
+                  </tbody>
                 </table>
               </div>
             </div>
@@ -81,7 +129,7 @@ export const HyperCertListItem = ({
               <div className="grid h-20 flex-grow">
                 <div className="mb-4">
                   <div className="text-xl font-bold">BOUNTY</div>
-                  <div className="text-l font-italic font-bold mt-8 mb-2">{sumAndFormatAmounts(metadata.bounties)}</div>
+                  {metadata.bounties && <div className="text-l font-italic font-bold mt-8 mb-2">{sumAndFormatAmounts(metadata.bounties)}</div>}
                   <a className="link">View Transaction</a>
                 </div>
               </div>
@@ -98,6 +146,7 @@ export const HyperCertListItem = ({
             </div>
             <div className="divider" />
             <button className="btn btn-block">ACCESS TEAM CHAT</button>
+            <button className="btn btn-block">CREATE GITCOIN PROJECT</button>
           </div>
         </div>
       </div>
