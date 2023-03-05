@@ -147,6 +147,7 @@ export const HyperCertListItem = ({
             <div className="divider" />
             <button className="btn btn-block">ACCESS TEAM CHAT</button>
             <button className="btn btn-block">CREATE GITCOIN PROJECT</button>
+            <button className="btn btn-block">SELL FRACTION</button>
           </div>
         </div>
       </div>
