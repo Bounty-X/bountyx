@@ -61,7 +61,7 @@ const hypercertOwners = (contributors: string[], issuers: string[]) => {
           </div>
         </td>
         <td>
-          <div className="text-l font-bold">{value} %</div>
+          <div className="text-l font-bold">{value.toFixed(2)} %</div>
         </td>
       </tr>
     )
