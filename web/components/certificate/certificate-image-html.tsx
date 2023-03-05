@@ -9,13 +9,7 @@ import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata'
 
 import { BountyIconListItem } from './bounty-icon-list-item'
 
-export default function CertificateImageHtml({
-  projectMetadata,
-  bounties,
-}: {
-  projectMetadata: ProjectMetadata
-  bounties: BountyxMetadata[]
-}) {
+export default function CertificateImageHtml({ projectMetadata, bounties }: { projectMetadata: ProjectMetadata; bounties: BountyxMetadata[] }) {
   // Declare a new state variable, which we'll call "count"
   const [backgroundUrl, setBackgroundUrl] = useState('/astronomy-bg.jpeg')
 
@@ -28,17 +22,32 @@ export default function CertificateImageHtml({
     })
     return list
   }
+  const handleBackgroundToggleClick = (buttonNum: number, target: EventTarget) => {
+    switch(buttonNum) {
+      case 0:  
+        setBackgroundUrl('/astronomy-bg.jpeg');
+        break;
+      case 1:  
+        setBackgroundUrl('/ethdenverstage.png');
+        break;
+      case 2:  
+        setBackgroundUrl('/mountains-bg.jpeg');
+        break;
+      default:
+        break;
+    }
+  }
 
   const renderImpactBadges = (): any[] => {
     let impactScopeBadgeList: any[] = []
     let impactScopeNameList: string[] = []
     bounties.forEach((bounty) => {
       if (!impactScopeNameList.includes(bounty.issuer?.issuerName!)) {
-        impactScopeNameList.push(bounty.issuer?.issuerName!);
-        impactScopeBadgeList.push(<div className="mr-2 badge badge-outline">{bounty.issuer?.issuerName!}</div>)
+        impactScopeNameList.push(bounty.issuer?.issuerName!)
+        impactScopeBadgeList.push(<div className="badge-outline badge mr-2">{bounty.issuer?.issuerName!}</div>)
       }
-    });
-    return impactScopeBadgeList;
+    })
+    return impactScopeBadgeList
   }
 
   return (
@@ -55,6 +64,7 @@ export default function CertificateImageHtml({
             <div className="my-2">
               <span className="text-small font-sans decoration-white antialiased">2023-02-25 ⟶ 2023-03-04</span>
             </div>
+            <div className="badge-outline badge mr-2">EthDenver 2023</div>
             <div className="mt-10 mb-2 flex-row">
               <span className="text-small font-sans decoration-white antialiased">Impacted Organizations</span>
             </div>
@@ -64,9 +74,9 @@ export default function CertificateImageHtml({
       </div>
       <div className="mx-4 flex flex-row">
         <div className="btn-group">
-          <button className="btn-active btn">Galactic</button>
-          <button className="btn">EthDenver</button>
-          <button className="btn">Mountains</button>
+          <button className="btn-active btn" onClick={(e) => handleBackgroundToggleClick(0, e.target)}>Galactic</button>
+          <button className="btn" onClick={(e) => handleBackgroundToggleClick(1, e.target)}>EthDenver</button>
+          <button className="btn" onClick={(e) => handleBackgroundToggleClick(2, e.target)}>Mountains</button>
         </div>
       </div>
     </>
