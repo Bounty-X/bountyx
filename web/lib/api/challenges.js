@@ -2534,7 +2534,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '0x02C58C3f9D86bb6bFD04589BC30e7Fe5BFB14078',
+          receiverAddress: '',
         },
         rewardAmountUsd: '3000',
       },
@@ -3520,7 +3520,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '',
+          receiverAddress: '0x02C58C3f9D86bb6bFD04589BC30e7Fe5BFB14078',
         },
         rewardAmountUsd: '5000',
       },
