@@ -27,10 +27,10 @@ export default function RootLayout({ children }: any) {
                 </BranchColorMode>
               </LinkComponent>
               <LinkComponent className="flex items-center" href="/">
-                {/* <BranchColorMode>
+                <BranchColorMode>
                   <Image alt="Logo" src="/logo-dark.svg" width={32} height={32} />
                   <Image alt="Logo" src="/logo-light.svg" width={32} height={32} />
-                </BranchColorMode> */}
+                </BranchColorMode>
                 <h1 className="text-gradient-sand ml-2 text-2xl font-bold">{siteConfig.name}</h1>
               </LinkComponent>
             </ResponsiveMobileAndDesktop>
