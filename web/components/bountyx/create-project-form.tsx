@@ -9,7 +9,7 @@ import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata.js'
 import CertificateImageHtml from '@/components/certificate/certificate-image-html'
 import { useMintClaim } from '@/hooks/hypercert/mintClaim'
 import { DummyHypercert } from './dummy-hypercert'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { HypercertClaimdata } from '@/bountyxlib/types/claimdata'
 import { useMintClaimWithFractions } from '@/hooks/hypercert/mintClaimWithFractions'
 import { BigNumber } from 'ethers'
@@ -166,9 +166,9 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
   }
 
   return (
-    <div className="flex flex-row justify-start gap-10">
+    <div className="flex flex-row justify-evenly">
       <form
-        className=" basis-1/4"
+        className="basis-2/3"
         onSubmit={(e) => {
           e.preventDefault()
           if (!hypercertMinted) {
@@ -236,7 +236,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
         </div>
       </form>
       <div className="basis-1/3">
-        <CertificateImageHtml metadata={metadata} />
+        <CertificateImageHtml projectMetadata={projectMetadata} bounties={metadata.bounties} />
       </div>
     </div>
   )

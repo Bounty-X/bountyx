@@ -5,18 +5,18 @@ import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata'
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata';
 import { BountyIconListItem } from './bounty-icon-list-item';
 
-import { HypercertMetadata } from '@/bountyxlib/types/metadata'
-import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection';
+import { BountiesList } from '../bountyx/bounties-list';
+import { HypercertClaimdata } from '@/bountyxlib/types/claimdata';
 
-export default function CertificateImageHtml({ metadata }: { metadata: HypercertMetadata & BountyxMetadataCollection }) {
+export default function CertificateImageHtml({ projectMetadata, bounties, hypercert }: { projectMetadata: ProjectMetadata, bounties: BountyxMetadata[], hypercert: HypercertClaimdata }) {
   // Declare a new state variable, which we'll call "count"
   const [backgroundUrl, setBackgroundUrl] = useState("/astronomy-bg.jpeg");
 
   const renderBounties = (): any[] => {
-    if (!metadata.bounties) return []
+    if (!bounties) return []
 
     const list: any[] = []
-    metadata.bounties.forEach((item: BountyxMetadata) => {
+    bounties.forEach((item: BountyxMetadata) => {
       list.push(<BountyIconListItem bountyMetadata={item} />)
     })
     return list
@@ -31,13 +31,13 @@ export default function CertificateImageHtml({ metadata }: { metadata: Hypercert
       <div className=" absolute left-0 top-[300px] h-[225px] w-[375px] bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
         <div className="mx-10">
           <div className="my-4">
-            <span className="text-3xl font-bold antialiased font-sans decoration-white">{metadata.name}</span>
+            <span className="text-3xl font-bold antialiased font-sans decoration-white">{projectMetadata.name}</span>
           </div>
           <div className="my-2">
             <span className="text-small antialiased font-sans decoration-white">2023-02-25 ⟶ 2023-03-04</span>
           </div>
           <div className="my-2 flex-row">
-            <span className="text-small antialiased font-sans decoration-white">Impact: {metadata?.hypercert?.impact_scope?.value}</span>
+            <span className="text-small antialiased font-sans decoration-white">Impact: {projectMetadata?.hypercert?.impact_scope?.value}</span>
           </div>
           <div className="my-2 flex-row">
             <span className="text-small antialiased font-sans decoration-white">Rights: public</span>
