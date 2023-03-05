@@ -19,7 +19,6 @@ export const BountyListItem = ({ bounty }: BountyListItemProps) => {
         </div>
         <div className="collapse-title text-xl font-medium">{bounty.issuer.issuerName}</div>
       </div>
-      <div className="badge-outline badge">first</div>
       <div className="collapse-content">
         <div tabIndex={0} />
         <p>{reactElement}</p>
