@@ -24,6 +24,8 @@ import { parseListFromString } from '@/lib/hypercert/parsing'
 
 import { DummyHypercert } from './dummy-hypercert'
 
+import downloadjs from 'downloadjs'
+
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
 }
@@ -67,7 +69,7 @@ export const CreateProjectForm = () => {
   const [hyperceretTransferred, setHyperceretTransferred] = useState<boolean>(false)
   const [selectedBGIndex, setSelectedBGIndex] = useState<number>(0)
 
-  const updateMetadata = (base64Image: string) => {
+  const updateMetadata = (imageData: string) => {
     let numberOfUnits = 0
     const workScopeList: string[] = []
     const owners: `0x${string}`[] = []
@@ -106,7 +108,7 @@ export const CreateProjectForm = () => {
       name: projectMetadata.name,
       description: projectMetadata.description,
       external_url: projectMetadata.external_url,
-      image: base64Image,
+      image: imageData,
       version: '0.0.1',
       properties: [
         {
@@ -193,16 +195,19 @@ export const CreateProjectForm = () => {
     window.scrollTo(0, 0)
     const certificateElement = certificateElementRef.current
     if (certificateElement) {
-      html2canvas(certificateElement).then(function (canvas) {
-        const imageString = canvas.toDataURL('image/base64', 1)
+      html2canvas(certificateElement, {
+        backgroundColor: null
+      }).then(function (canvas) {
+        const imageString = canvas.toDataURL('image/png', 1)
+        //downloadjs(imageString, 'download.png', 'image/png');
         mintHypercert(imageString)
       })
     }
   }
 
-  const mintHypercert = async (base64Image: string) => {
+  const mintHypercert = async (imageData: string) => {
     //TODO: BUG. If no changes to ui - the metadata is empty
-    updateMetadata(base64Image)
+    updateMetadata(imageData)
 
     console.log('Minting hypercert', metadata)
     console.log('Units', units)
@@ -288,7 +293,7 @@ export const CreateProjectForm = () => {
         </form>
       </div>
       <div className="basis-1/3">
-        <div className="h-[525px] w-[375px] rounded-3xl" ref={certificateElementRef}>
+        <div className="h-[525px] w-[375px] bg-transparent" ref={certificateElementRef}>
           <CertificateImageHtml projectMetadata={projectMetadata} bounties={bounties} backgroundUrl={backgroundUrl} />
         </div>
         <div className="container mx-auto">
