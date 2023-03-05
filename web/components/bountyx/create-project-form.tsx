@@ -1,5 +1,5 @@
 'use client'
-import { useState, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 import { BigNumber } from 'ethers'
 import Link from 'next/link'
@@ -16,6 +16,9 @@ import { useSafeBatchTransferFrom } from '@/hooks/hypercert/safeBatchTransferFro
 import useLocalStorage from '@/hooks/utils/use-local-storage'
 import { formatContributors, formatScope, formatScopeList } from '@/lib/hypercert/formatting'
 import { parseListFromString } from '@/lib/hypercert/parsing'
+import { BountiesList } from '@/components/bountyx/bounties-list'
+import { getBountiesForReceiver } from '@/lib/api/buidlboxApi'
+import { useAccount } from 'wagmi'
 
 import { DummyHypercert } from './dummy-hypercert'
 import { useMintClaim } from '@/hooks/hypercert/mintClaim'
@@ -31,8 +34,15 @@ interface FractionOwnership {
   fraction: BigNumber
 }
 
-export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
+export const CreateProjectForm = () => {
   const certificateElementRef = useRef(null);
+
+  const [bounties, setBounties] = useState<BountyxMetadata[]>([])
+
+  const { address } = useAccount()
+  useEffect(() => {
+    setBounties(getBountiesForReceiver(address!))
+  }, [])
 
   const [projectMetadata, setProjectData] = useLocalStorage<ProjectMetadata>('projectMetadata', {
     name: '',
@@ -206,74 +216,77 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
 
   return (
     <div className="flex flex-row justify-evenly">
-      <form
-        className="basis-2/3"
-        onSubmit={(e) => {
-          e.preventDefault()
-          if (!hypercertMinted) {
-            generateCertImageAndMintHypercert()
-          } else if (hypercertMinted && !hyperceretTransferred) {
-            transferHypercerts()
-          }
-        }}>
-        <div className="form-control w-full max-w-xs py-4">
-          <label className="label">
-            <span className="label-text">Project Name:</span>
-          </label>
-          <input
-            type="text"
-            id="projectname"
-            placeholder="Type here"
-            defaultValue={projectMetadata.name}
-            className="input-bordered input w-full max-w-xs"
-            onChange={(e) => handleChange('name', e.target.value)}
-          />
+      <div className="basis-1/3 bg-base-200 rounded-box mr-8 outline-2 outline-slate-400">
+        <form
+          className="align-middle mt-4 ml-4"
+          onSubmit={(e) => {
+            e.preventDefault()
+            if (!hypercertMinted) {
+              generateCertImageAndMintHypercert()
+            } else if (hypercertMinted && !hyperceretTransferred) {
+              transferHypercerts()
+            }
+          }}>
+          <h1 className="font-bold">Project Info</h1>
           <div className="form-control w-full max-w-xs py-4">
             <label className="label">
-              <span className="label-text">Project URL:</span>
+              <span className="label-text">Project Name:</span>
             </label>
             <input
               type="text"
               id="projectname"
               placeholder="Type here"
-              defaultValue={projectMetadata.external_url}
+              defaultValue={projectMetadata.name}
               className="input-bordered input w-full max-w-xs"
-              onChange={(e) => handleChange('external_url', e.target.value)}
+              onChange={(e) => handleChange('name', e.target.value)}
             />
+            <div className="form-control w-full max-w-xs py-4">
+              <label className="label">
+                <span className="label-text">Project URL:</span>
+              </label>
+              <input
+                type="text"
+                id="projectname"
+                placeholder="Type here"
+                defaultValue={projectMetadata.external_url}
+                className="input-bordered input w-full max-w-xs"
+                onChange={(e) => handleChange('external_url', e.target.value)}
+              />
+            </div>
+            <div className="form-control w-full max-w-xs py-4">
+              <label className="label">
+                <span className="label-text">Project Description:</span>
+              </label>
+              <input
+                type="text"
+                id="projectdescription"
+                placeholder="Type here"
+                defaultValue={projectMetadata.description}
+                className="input-bordered input w-full max-w-xs"
+                onChange={(e) => handleChange('description', e.target.value)}
+              />
+            </div>
+            <div className="form-control w-full max-w-xs py-4">
+              <label className="label">
+                <span className="label-text">Project Contributors:</span>
+              </label>
+              <input
+                type="text"
+                id="projectcontributors"
+                placeholder="Type here"
+                defaultValue={projectMetadata.contributors}
+                className="input-bordered input w-full max-w-xs"
+                onChange={(e) => handleChange('contributors', e.target.value)}
+              />
+            </div>
+            {/* <Link href="/certificates" passHref> */}
+            <button type="submit" className="btn mt-6 py-4" disabled={hypercertMinted && hyperceretTransferred}>
+              {buttonText}
+            </button>
+            {/* </Link> */}
           </div>
-          <div className="form-control w-full max-w-xs py-4">
-            <label className="label">
-              <span className="label-text">Project Description:</span>
-            </label>
-            <input
-              type="text"
-              id="projectdescription"
-              placeholder="Type here"
-              defaultValue={projectMetadata.description}
-              className="input-bordered input w-full max-w-xs"
-              onChange={(e) => handleChange('description', e.target.value)}
-            />
-          </div>
-          <div className="form-control w-full max-w-xs py-4">
-            <label className="label">
-              <span className="label-text">Project Contributors:</span>
-            </label>
-            <input
-              type="text"
-              id="projectcontributors"
-              placeholder="Type here"
-              defaultValue={projectMetadata.contributors}
-              className="input-bordered input w-full max-w-xs"
-              onChange={(e) => handleChange('contributors', e.target.value)}
-            />
-          </div>
-          {/* <Link href="/certificates" passHref> */}
-          <button type="submit" className="btn mt-6 py-4" disabled={hypercertMinted && hyperceretTransferred}>
-            {buttonText}
-          </button>
-          {/* </Link> */}
-        </div>
-      </form>
+        </form>
+      </div>
       <div className="basis-1/3">
         <div className="h-[525px] w-[375px] rounded-3xl" ref={certificateElementRef}>
           <CertificateImageHtml projectMetadata={projectMetadata} bounties={bounties} backgroundUrl={backgroundUrl} />
@@ -291,6 +304,9 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
           </button>
         </div>
       </div>
+      </div>
+      <div className="basis-1/3 bg-base-200 rounded-box mr-8 outline-2 outline-slate-400">
+        <BountiesList bounties={getBountiesForReceiver(address!)} />
       </div>
     </div>
   )

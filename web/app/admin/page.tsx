@@ -2,10 +2,10 @@
 
 import { motion } from 'framer-motion'
 
-import AppUsersTable from '@/components/app/app-users-table'
 import MenuAdminSidebar from '@/components/layout/dashboard/menu-admin-sidebar'
 import ButtonSIWELogout from '@/components/siwe/button-siwe-logout'
 import { FADE_DOWN_ANIMATION_VARIANTS } from '@/config/design'
+import { EndorseBountyCard } from '@/components/bountyx/endorse-bounty-card'
 
 export default function PageAdmin() {
   return (
@@ -28,6 +28,7 @@ export default function PageAdmin() {
             </div>
           </div>
         </motion.div>
+        <EndorseBountyCard />
       </div>
     </>
   )

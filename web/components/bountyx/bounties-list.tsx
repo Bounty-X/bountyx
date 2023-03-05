@@ -16,5 +16,10 @@ const renderBountiesList = (bounties: BountyxMetadata[]) => {
 }
 
 export const BountiesList = ({ bounties }: BountiesListProps) => {
-  return <div className="grid">{renderBountiesList(bounties)}</div>
+  return (
+    <div>
+      <h1 className="font-bold mt-4 ml-4 mb-4">Bounties Won</h1>
+      <div className="grid">{renderBountiesList(bounties)}</div>
+    </div>
+  )
 }
