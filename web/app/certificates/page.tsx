@@ -40,9 +40,13 @@ export default function Home() {
   const renderCerts = (): any[] => {
     if (!certs) return []
 
+    console.log('certs', certs)
+
     const list: any[] = []
-    certs.forEach((item: HypercertMetadata) => {
-      list.push(<HyperCertListItem hyperCertMetadata={item} />)
+    certs.forEach((item: any) => {
+      list.push(
+        <HyperCertListItem key={item.collection + item.tokenId} tokenId={item.tokenId} collection={item.collection} metadata={item.metadata} />
+      )
     })
     return list
   }
@@ -67,7 +71,7 @@ export default function Home() {
   useEffect(() => {
     // For now
     const static_address = process.env.NEXT_PUBLIC_HYPERCERT_OWNER_ADDRESS
-    const static_collection = process.env.NEXT_PUBLIC_HYPERCERT_COLLECTION_ADDRESS
+    const static_collection = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
     const static_network = process.env.NEXT_PUBLIC_NETWORK ? Number(process.env.NEXT_PUBLIC_NETWORK) : 1
 
     console.log(static_address, static_collection, static_network)
