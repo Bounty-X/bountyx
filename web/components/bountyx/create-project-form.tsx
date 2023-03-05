@@ -23,6 +23,7 @@ import { formatContributors, formatScope, formatScopeList } from '@/lib/hypercer
 import { parseListFromString } from '@/lib/hypercert/parsing'
 
 import { DummyHypercert } from './dummy-hypercert'
+import { image } from 'html2canvas/dist/types/css/types/image'
 
 import downloadjs from 'downloadjs'
 
@@ -56,7 +57,7 @@ export const CreateProjectForm = () => {
     name: projectMetadata.name,
     description: projectMetadata.description,
     external_url: projectMetadata.external_url,
-    image: 'https://d2y4rc9q318ytb.cloudfront.net/accounts/b6ded887-20df-42de-bc10-d22584e2ef9f/350x350/1671505783384-23b46dce.png',
+    image: '',
     version: '0.0.1',
     properties: [],
     hypercert: {},
@@ -69,7 +70,7 @@ export const CreateProjectForm = () => {
   const [hyperceretTransferred, setHyperceretTransferred] = useState<boolean>(false)
   const [selectedBGIndex, setSelectedBGIndex] = useState<number>(0)
 
-  const updateMetadata = (imageData: string) => {
+  const updateMetadata = (base64Image?: string) => {
     let numberOfUnits = 0
     const workScopeList: string[] = []
     const owners: `0x${string}`[] = []
@@ -108,7 +109,7 @@ export const CreateProjectForm = () => {
       name: projectMetadata.name,
       description: projectMetadata.description,
       external_url: projectMetadata.external_url,
-      image: imageData,
+      image: base64Image ?? '',
       version: '0.0.1',
       properties: [
         {
@@ -133,6 +134,8 @@ export const CreateProjectForm = () => {
     Object.assign(newProjectMetadata, projectMetadata)
     newProjectMetadata[field] = value
     setProjectData(newProjectMetadata)
+
+    generateCertImageAndMintHypercert()
   }
 
   const { write: mintClaim } = useMintClaim({
@@ -195,19 +198,15 @@ export const CreateProjectForm = () => {
     window.scrollTo(0, 0)
     const certificateElement = certificateElementRef.current
     if (certificateElement) {
-      html2canvas(certificateElement, {
-        backgroundColor: null
-      }).then(function (canvas) {
-        const imageString = canvas.toDataURL('image/png', 1)
-        //downloadjs(imageString, 'download.png', 'image/png');
-        mintHypercert(imageString)
-      })
+      const canvas = await html2canvas(certificateElement)
+      const imageString = canvas.toDataURL('image/base64', 1)
+      //downloadjs(imageString, 'download.png', 'image/png');
+      updateMetadata(imageString)
     }
   }
 
-  const mintHypercert = async (imageData: string) => {
+  const mintHypercert = async () => {
     //TODO: BUG. If no changes to ui - the metadata is empty
-    updateMetadata(imageData)
 
     console.log('Minting hypercert', metadata)
     console.log('Units', units)
@@ -228,7 +227,8 @@ export const CreateProjectForm = () => {
           onSubmit={(e) => {
             e.preventDefault()
             if (!hypercertMinted) {
-              generateCertImageAndMintHypercert()
+              mintHypercert()
+              // generateCertImageAndMintHypercert()
             } else if (hypercertMinted && !hyperceretTransferred) {
               transferHypercerts()
             }
