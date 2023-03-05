@@ -15,7 +15,7 @@ export default function Home() {
 
   useEffect(() => {
     setBounties(getBountiesForReceiver(address!))
-  })
+  }, [])
 
   return (
     <div className="flex flex-col">
