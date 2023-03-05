@@ -22,9 +22,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Bounty-X/bountyx">
-    <img src="" alt="Logo" width="80" height="80">
-  </a>
 
 <h3 align="center">BountyX</h3>
 
@@ -72,15 +69,9 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Motivation
+### BountyX
 
-### What is it?
-
-### Use Cases
-
-### How It Works?
-
-### Built With
+BountyX is an open source project supporting the public goods and retroactive funding ecosystem. As a first step, BountyX is supporting hackathon projects by providing HyperCerts to teams and their participants. The product allows owners to mint a hypercert for their project and helps kickstart interest and potentially funding for the future.
 
 [![Solidity][solidity.org]][solidity-url]
 [![Next][next.js]][next-url]
