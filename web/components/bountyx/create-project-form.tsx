@@ -25,8 +25,6 @@ import { parseListFromString } from '@/lib/hypercert/parsing'
 import { DummyHypercert } from './dummy-hypercert'
 import { image } from 'html2canvas/dist/types/css/types/image'
 
-import downloadjs from 'downloadjs'
-
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
 }
@@ -200,7 +198,6 @@ export const CreateProjectForm = () => {
     if (certificateElement) {
       const canvas = await html2canvas(certificateElement)
       const imageString = canvas.toDataURL('image/base64', 1)
-      //downloadjs(imageString, 'download.png', 'image/png');
       updateMetadata(imageString)
     }
   }
