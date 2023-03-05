@@ -9,7 +9,15 @@ import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata'
 
 import { BountyIconListItem } from './bounty-icon-list-item'
 
-export default function CertificateImageHtml({ projectMetadata, bounties, backgroundUrl }: { projectMetadata: ProjectMetadata; bounties: BountyxMetadata[]; backgroundUrl: string }) {
+export default function CertificateImageHtml({
+  projectMetadata,
+  bounties,
+  backgroundUrl,
+}: {
+  projectMetadata: ProjectMetadata
+  bounties: BountyxMetadata[]
+  backgroundUrl: string
+}) {
   // Declare a new state variable, which we'll call "count"
 
   const renderBounties = (): any[] => {

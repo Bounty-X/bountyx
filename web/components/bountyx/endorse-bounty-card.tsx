@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
 import { useBountyxSignAllBounties } from '@/hooks/bountyx/use-bountyx-sign-bounty'
 import { getAllBounties } from '@/lib/api/buidlboxApi'
+
 import { BountiesList } from './bounties-list'
 
 export const EndorseBountyCard = () => {
@@ -26,11 +27,11 @@ export const EndorseBountyCard = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-row items-center gap-10 my-10">
+      <div className="my-10 flex flex-row items-center gap-10">
         <button className="btn-primary btn w-36" disabled={isSigned || isLoading} onClick={() => signMessage()}>
           Endorse
         </button>
-        {isSigned && <div className="badge badge-success py-5 w-32">SIGNED</div>}
+        {isSigned && <div className="badge-success badge w-32 py-5">SIGNED</div>}
       </div>
       <BountiesList bounties={bounties} />
     </div>

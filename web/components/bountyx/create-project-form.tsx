@@ -1,29 +1,28 @@
 'use client'
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { BigNumber } from 'ethers'
+import html2canvas from 'html2canvas'
 import Link from 'next/link'
 import { toast } from 'react-toastify'
+import { useAccount } from 'wagmi'
 
 import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
 import { HypercertClaimdata } from '@/bountyxlib/types/claimdata'
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
 import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata.js'
+import { BountiesList } from '@/components/bountyx/bounties-list'
 import CertificateImageHtml from '@/components/certificate/certificate-image-html'
+import { useMintClaim } from '@/hooks/hypercert/mintClaim'
 import { useMintClaimWithFractions } from '@/hooks/hypercert/mintClaimWithFractions'
 import { useSafeBatchTransferFrom } from '@/hooks/hypercert/safeBatchTransferFrom'
 import useLocalStorage from '@/hooks/utils/use-local-storage'
+import { getBountiesForReceiver } from '@/lib/api/buidlboxApi'
 import { formatContributors, formatScope, formatScopeList } from '@/lib/hypercert/formatting'
 import { parseListFromString } from '@/lib/hypercert/parsing'
-import { BountiesList } from '@/components/bountyx/bounties-list'
-import { getBountiesForReceiver } from '@/lib/api/buidlboxApi'
-import { useAccount } from 'wagmi'
 
 import { DummyHypercert } from './dummy-hypercert'
-import { useMintClaim } from '@/hooks/hypercert/mintClaim'
-
-import html2canvas from 'html2canvas';
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
@@ -35,7 +34,7 @@ interface FractionOwnership {
 }
 
 export const CreateProjectForm = () => {
-  const certificateElementRef = useRef(null);
+  const certificateElementRef = useRef(null)
 
   const [bounties, setBounties] = useState<BountyxMetadata[]>([])
 
@@ -67,7 +66,7 @@ export const CreateProjectForm = () => {
   const [hypercertMinted, setHypercertMinted] = useState<boolean>(false)
   const [hyperceretTransferred, setHyperceretTransferred] = useState<boolean>(false)
 
-  const updateMetadata = (base64Image : string) => {
+  const updateMetadata = (base64Image: string) => {
     let numberOfUnits = 0
     const workScopeList: string[] = []
     const owners: `0x${string}`[] = []
@@ -187,21 +186,19 @@ export const CreateProjectForm = () => {
   }
 
   const generateCertImageAndMintHypercert = async () => {
-    window.scrollTo(0,0);
-    const certificateElement = certificateElementRef.current;
+    window.scrollTo(0, 0)
+    const certificateElement = certificateElementRef.current
     if (certificateElement) {
-      html2canvas(certificateElement).then(function(canvas) {
-        console.log("certificate width: " + certificateElement.clientWidth + " canvas height: " + certificateElement.clientHeight);
-        console.log("canvas width: " + canvas.width + " canvas height: " + canvas.height);
-        const imageString = canvas.toDataURL("image/base64", 1);
-        mintHypercert(imageString);
-      });
+      html2canvas(certificateElement).then(function (canvas) {
+        const imageString = canvas.toDataURL('image/base64', 1)
+        mintHypercert(imageString)
+      })
     }
   }
 
-  const mintHypercert = async (base64Image : string) => {
+  const mintHypercert = async (base64Image: string) => {
     //TODO: BUG. If no changes to ui - the metadata is empty
-    updateMetadata(base64Image);
+    updateMetadata(base64Image)
 
     console.log('Minting hypercert', metadata)
     console.log('Units', units)
@@ -216,9 +213,9 @@ export const CreateProjectForm = () => {
 
   return (
     <div className="flex flex-row justify-evenly">
-      <div className="basis-1/3 bg-base-200 rounded-box mr-8 outline-2 outline-slate-400">
+      <div className="rounded-box mr-8 basis-1/3 bg-base-200 outline-2 outline-slate-400">
         <form
-          className="align-middle mt-4 ml-4"
+          className="mt-4 ml-4 align-middle"
           onSubmit={(e) => {
             e.preventDefault()
             if (!hypercertMinted) {
@@ -292,20 +289,20 @@ export const CreateProjectForm = () => {
           <CertificateImageHtml projectMetadata={projectMetadata} bounties={bounties} backgroundUrl={backgroundUrl} />
         </div>
         <div className="mx-4 flex flex-row">
-        <div className="btn-group">
-          <button className="btn-active btn" onClick={(e) => handleBackgroundToggleClick(0, e.target)}>
-            Galactic
-          </button>
-          <button className="btn" onClick={(e) => handleBackgroundToggleClick(1, e.target)}>
-            EthDenver
-          </button>
-          <button className="btn" onClick={(e) => handleBackgroundToggleClick(2, e.target)}>
-            Mountains
-          </button>
+          <div className="btn-group">
+            <button className="btn-active btn" onClick={(e) => handleBackgroundToggleClick(0, e.target)}>
+              Galactic
+            </button>
+            <button className="btn" onClick={(e) => handleBackgroundToggleClick(1, e.target)}>
+              EthDenver
+            </button>
+            <button className="btn" onClick={(e) => handleBackgroundToggleClick(2, e.target)}>
+              Mountains
+            </button>
+          </div>
         </div>
       </div>
-      </div>
-      <div className="basis-1/3 bg-base-200 rounded-box mr-8 outline-2 outline-slate-400">
+      <div className="rounded-box mr-8 basis-1/3 bg-base-200 outline-2 outline-slate-400">
         <BountiesList bounties={getBountiesForReceiver(address!)} />
       </div>
     </div>
