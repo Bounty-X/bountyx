@@ -35,7 +35,6 @@ import { WalletConnectCustom } from '@/components/blockchain/wallet-connect-cust
 export default function Home() {
   const [certs, setCerts] = useState([])
   const { address, isConnected } = useAccount()
-  const collection = process.env.HYPERCERT_COLLECTION_ADDRESS
 
   const renderCerts = (): any[] => {
     if (!certs) return []
@@ -66,11 +65,10 @@ export default function Home() {
 
   useEffect(() => {
     // For now
-    const static_address = process.env.NEXT_PUBLIC_HYPERCERT_OWNER_ADDRESS
-    const static_collection = process.env.NEXT_PUBLIC_HYPERCERT_COLLECTION_ADDRESS
+    const static_collection = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
     const static_network = process.env.NEXT_PUBLIC_NETWORK ? Number(process.env.NEXT_PUBLIC_NETWORK) : 1
 
-    console.log(static_address, static_collection, static_network)
+    console.log(address, static_collection, static_network)
 
     let network: Network
     switch (static_network) {
@@ -93,7 +91,7 @@ export default function Home() {
 
     if (isConnected && static_collection) {
       getCerts({
-        address: static_address,
+        address: address,
         collection: static_collection,
         network,
       })

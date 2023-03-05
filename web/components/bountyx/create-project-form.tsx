@@ -18,6 +18,7 @@ import { formatContributors, formatScope, formatScopeList } from '@/lib/hypercer
 import { parseListFromString } from '@/lib/hypercert/parsing'
 
 import { DummyHypercert } from './dummy-hypercert'
+import { useMintClaim } from '@/hooks/hypercert/mintClaim'
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
@@ -91,7 +92,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
       name: projectMetadata.name,
       description: projectMetadata.description,
       external_url: projectMetadata.external_url,
-      image: 'https://d2y4rc9q318ytb.cloudfront.net/accounts/b6ded887-20df-42de-bc10-d22584e2ef9f/350x350/1671505783384-23b46dce.png',
+      image: 'https://i.ibb.co/ZG0m9Jp/Screenshot-from-2023-03-04-18-40-25.png',
       version: '0.0.1',
       properties: [
         {
@@ -119,8 +120,18 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
     updateMetadata()
   }
 
-  // const { write: mintClaim } = useMintClaim({
-  //   onComplete: () => toast('Hypercert with Bountyx minted', { type: 'success' }),
+  const { write: mintClaim } = useMintClaim({
+    onComplete: () => {
+      console.log('Minting is over, Now transferring')
+      setHypercertMinted(true)
+    },
+  })
+
+  // const { write: mintClaimWithFractions } = useMintClaimWithFractions({
+  //   onComplete: () => {
+  //     console.log('Minting is over, Now transferring')
+  //     setHypercertMinted(true)
+  //   },
   // })
 
   const { write: safeTransferFrom } = useSafeBatchTransferFrom({
@@ -145,13 +156,6 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
     }
   }
 
-  const { write: mintClaimWithFractions } = useMintClaimWithFractions({
-    onComplete: () => {
-      console.log('Minting is over, Now transferring')
-      setHypercertMinted(true)
-    },
-  })
-
   const mintHypercert = async () => {
     //TODO: BUG. If no changes to ui - the metadata is empty
     updateMetadata()
@@ -160,10 +164,10 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
     console.log('Units', units)
     console.log('Fractions', ownersToFraction.length)
     console.log('Fractions are', JSON.stringify(ownersToFraction))
-    await mintClaimWithFractions(
+    await mintClaim(
       metadata,
-      units,
-      ownersToFraction.map((val) => val.fraction)
+      units
+      // ownersToFraction.map((val) => val.fraction)
     )
   }
 
