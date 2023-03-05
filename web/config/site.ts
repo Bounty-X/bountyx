@@ -25,7 +25,7 @@ export const siteConfig: SiteConfig = {
   localeDefault: 'en',
   links: {
     twitter: 'https://twitter.com',
-    github: 'https://github.com/bountyx',
+    github: 'https://github.com/bounty-x',
   },
 }
 
