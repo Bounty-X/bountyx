@@ -2168,7 +2168,7 @@ export const challenges = [
     logoUrl: null,
     approvalStatus: 'accepted',
     receiver: {
-      receiverAddress: '',
+      receiverAddress: '0xa8d7e2D7C76c45D9cf305C2e65AF900dcBB6CE81',
     },
     submittedByOrgId: '5c6a7b3c-0179-4afe-9d8d-7767aff13f7a',
     submittedByOrgName: 'Web3Auth',
@@ -3648,7 +3648,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '',
+          receiverAddress: '0xa8d7e2D7C76c45D9cf305C2e65AF900dcBB6CE81',
         },
         rewardAmountUsd: '2500',
       },
@@ -3725,7 +3725,7 @@ export const challenges = [
       {
         winnerRank: 0,
         receiver: {
-          receiverAddress: '',
+          receiverAddress: '0xa8d7e2D7C76c45D9cf305C2e65AF900dcBB6CE81',
         },
         rewardAmountUsd: '4000',
       },
