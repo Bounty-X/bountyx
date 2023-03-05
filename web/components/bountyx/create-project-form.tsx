@@ -100,7 +100,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
         },
       ],
       hypercert: hypercert,
-      bounties: bounties,
+      bounties: bounties
     }
     setMetadata(newMetadata)
   }
@@ -238,7 +238,7 @@ export const CreateProjectForm = ({ bounties }: CreateProjectFormProps) => {
         </div>
       </form>
       <div className="basis-1/3">
-        <CertificateImageHtml projectMetadata={projectMetadata} bounties={metadata.bounties} hypercert={metadata.hypercert} />
+        <CertificateImageHtml projectMetadata={projectMetadata} bounties={bounties} />
       </div>
     </div>
   )

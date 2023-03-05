@@ -12,11 +12,9 @@ import { BountyIconListItem } from './bounty-icon-list-item'
 export default function CertificateImageHtml({
   projectMetadata,
   bounties,
-  hypercert,
 }: {
   projectMetadata: ProjectMetadata
   bounties: BountyxMetadata[]
-  hypercert: HypercertClaimdata
 }) {
   // Declare a new state variable, which we'll call "count"
   const [backgroundUrl, setBackgroundUrl] = useState('/astronomy-bg.jpeg')
@@ -30,6 +28,19 @@ export default function CertificateImageHtml({
     })
     return list
   }
+
+  const renderImpactBadges = (): any[] => {
+    let impactScopeBadgeList: any[] = []
+    let impactScopeNameList: string[] = []
+    bounties.forEach((bounty) => {
+      if (!impactScopeNameList.includes(bounty.issuer?.issuerName!)) {
+        impactScopeNameList.push(bounty.issuer?.issuerName!);
+        impactScopeBadgeList.push(<div className="mr-2 badge badge-outline">{bounty.issuer?.issuerName!}</div>)
+      }
+    });
+    return impactScopeBadgeList;
+  }
+
   return (
     <>
       <div
@@ -44,12 +55,10 @@ export default function CertificateImageHtml({
             <div className="my-2">
               <span className="text-small font-sans decoration-white antialiased">2023-02-25 ⟶ 2023-03-04</span>
             </div>
-            <div className="my-2 flex-row">
-              <span className="text-small font-sans decoration-white antialiased">Impact: {hypercert.impact_scope?.value}</span>
+            <div className="mt-10 mb-2 flex-row">
+              <span className="text-small font-sans decoration-white antialiased">Impacted Organizations</span>
             </div>
-            <div className="my-2 flex-row">
-              <span className="text-small font-sans decoration-white antialiased">Rights: public</span>
-            </div>
+            {renderImpactBadges()}
           </div>
         </div>
       </div>
