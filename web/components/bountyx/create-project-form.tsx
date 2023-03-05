@@ -11,6 +11,7 @@ import { HypercertClaimdata } from '@/bountyxlib/types/claimdata'
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
 import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata.js'
 import CertificateImageHtml from '@/components/certificate/certificate-image-html'
+import { useMintClaim } from '@/hooks/hypercert/mintClaim'
 import { useMintClaimWithFractions } from '@/hooks/hypercert/mintClaimWithFractions'
 import { useSafeBatchTransferFrom } from '@/hooks/hypercert/safeBatchTransferFrom'
 import useLocalStorage from '@/hooks/utils/use-local-storage'
@@ -18,7 +19,6 @@ import { formatContributors, formatScope, formatScopeList } from '@/lib/hypercer
 import { parseListFromString } from '@/lib/hypercert/parsing'
 
 import { DummyHypercert } from './dummy-hypercert'
-import { useMintClaim } from '@/hooks/hypercert/mintClaim'
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
