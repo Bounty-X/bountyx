@@ -31,6 +31,8 @@ export const cantoTestnet = {
 
 // @ts-ignore
 cantoTestnet.iconUrl = '/icons/CantoIcon.svg'
+// @ts-ignore
+canto.iconUrl = '/icons/CantoIcon.svg'
 
 export const ETH_CHAINS_PROD = [optimism, goerli]
 export const ETH_CHAINS_TEST = [mainnet, optimismGoerli, goerli, hardhat]
