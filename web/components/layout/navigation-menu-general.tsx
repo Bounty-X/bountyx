@@ -26,8 +26,8 @@ export function NavigationMenuGeneral() {
     <NavigationMenu className="self-center">
       <NavigationMenuList className="w-full">
         <NavigationMenuItem>
-          <LinkComponent href="/requestbountycertificate">
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>Request A Bounty Certificate</NavigationMenuLink>
+          <LinkComponent href="/minthypercert">
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>Mint A Bounty Hypercert</NavigationMenuLink>
           </LinkComponent>
         </NavigationMenuItem>
         <NavigationMenuItem>
