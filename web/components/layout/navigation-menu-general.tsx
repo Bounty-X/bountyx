@@ -32,7 +32,7 @@ export function NavigationMenuGeneral() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <LinkComponent href="/certificates">
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>My Bounty Certificates</NavigationMenuLink>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>My Bounty Hypercerts</NavigationMenuLink>
           </LinkComponent>
         </NavigationMenuItem>
       </NavigationMenuList>
