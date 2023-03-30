@@ -6,7 +6,7 @@ import html2canvas from 'html2canvas'
 import { image } from 'html2canvas/dist/types/css/types/image'
 import Link from 'next/link'
 import { toast } from 'react-toastify'
-import { useAccount } from 'wagmi'
+import { useAccount, useNetwork } from 'wagmi'
 
 import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
@@ -89,7 +89,8 @@ export const CreateProjectForm = () => {
     if (owners.length > 0) {
       const fraction = numberOfUnits / owners.length
       const distribution: FractionOwnership[] = owners.map((owner) => {
-        return { owner, fraction: BigNumber.from(fraction) }
+        const fractionRounded = Math.round(fraction)
+        return { owner, fraction: BigNumber.from(fractionRounded) }
       })
       setOwnersToFraction(distribution)
       setUnits(numberOfUnits)
