@@ -6,34 +6,18 @@ import { ERC20Decimals, ERC20Name, ERC20Symbol } from '@turbo-eth/erc20-wagmi'
 import { ERC721Image, ERC721Name } from '@turbo-eth/erc721-wagmi'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
-import { FaGithub } from 'react-icons/fa'
-import Balancer from 'react-wrap-balancer'
 
-import WalletConnect from '@/components/blockchain/wallet-connect'
-import { BranchColorMode } from '@/components/shared/branch-color-mode'
-import { BranchIsAuthenticated } from '@/components/shared/branch-is-authenticated'
-import { BranchIsWalletConnected } from '@/components/shared/branch-is-wallet-connected'
-import Card from '@/components/shared/card'
-import ButtonSIWELogin from '@/components/siwe/button-siwe-login'
-import ButtonSIWELogout from '@/components/siwe/button-siwe-logout'
-import { FADE_DOWN_ANIMATION_VARIANTS } from '@/config/design'
-import { DEPLOY_URL, siteConfig } from '@/config/site'
-import { turboIntegrations } from '@/data/turbo-integrations'
-import erc20TokenSymbolToAddress from '@/lib/erc20TokenSymbolToAddress'
-import { DateTime } from 'luxon'
-import { HyperCert } from '@/types'
 import { HyperCertListItem } from './hypercert-list-item'
 import { useEffect, useState } from 'react'
 import { getNftsForOwner } from '@/lib/api/nftApi'
-import { HypercertMetadata } from '@/bountyxlib/types/metadata'
-import { useAccount } from 'wagmi'
+import { useAccount, useNetwork } from 'wagmi'
 import { Network } from 'alchemy-sdk'
-import { WalletConnectCustom } from '@/components/blockchain/wallet-connect-custom'
+import { cantoTestnet } from '@/config/networks'
 
 export default function Home() {
   const [certs, setCerts] = useState([])
   const { address, isConnected } = useAccount()
+  const { chain } = useNetwork()
 
   const renderCerts = (): any[] => {
     if (!certs) return []
@@ -68,14 +52,14 @@ export default function Home() {
 
   useEffect(() => {
     // For now
-    const static_collection = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
-    const static_network = process.env.NEXT_PUBLIC_NETWORK ? Number(process.env.NEXT_PUBLIC_NETWORK) : 1
+    const static_collection = chain?.id === cantoTestnet.id ? '0x822F17A9A5EeCFd66dBAFf7946a8071C265D1d07' : process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
 
-    console.log(address, static_collection, static_network)
+    console.log(address, static_collection, chain?.id)
 
-    let network: Network
-    switch (static_network) {
+    let network = Network.ETH_MAINNET
+    switch (chain?.id) {
       case 5:
+      case cantoTestnet.id:
         network = Network.ETH_GOERLI
         break
       default:

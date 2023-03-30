@@ -37,5 +37,7 @@ canto.iconUrl = '/icons/CantoIcon.svg'
 export const ETH_CHAINS_PROD = [optimism, goerli]
 export const ETH_CHAINS_TEST = [mainnet, optimismGoerli, goerli, hardhat]
 
-export const NOT_ETH_CHAINS_PROD = [canto]
+// Uncomment when deployed live to Canto:
+// export const NOT_ETH_CHAINS_PROD = [canto]
+export const NOT_ETH_CHAINS_PROD = [cantoTestnet]
 export const NOT_ETH_CHAINS_TEST = [cantoTestnet]

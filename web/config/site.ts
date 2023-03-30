@@ -24,7 +24,7 @@ export const siteConfig: SiteConfig = {
   previewImg: `${SITE_CANONICAL}/preview.png`,
   localeDefault: 'en',
   links: {
-    twitter: 'https://twitter.com',
+    twitter: 'https://twitter.com/_BountyX_',
     github: 'https://github.com/bounty-x',
   },
 }

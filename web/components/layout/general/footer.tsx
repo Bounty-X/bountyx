@@ -17,10 +17,14 @@ export function Footer(props: Props) {
   return (
     <footer className={classes}>
       <h3>{siteConfig.title}</h3>
-      <p className="my-2 text-xs">Built by artem0x.eth, gold0x.eth, and cipherz.eth</p>
+      <p className="my-2 text-xs">Built by avee.eth, gold0x.eth, and cipherz.eth</p>
       <div className="mt-2 flex items-center">
         <LinkComponent href={`${siteConfig.links.github}`}>
           <FaGithub />
+        </LinkComponent>
+        <div className="mx-2" />
+        <LinkComponent href={`${siteConfig.links.twitter}`}>
+          <FaTwitter />
         </LinkComponent>
       </div>
     </footer>

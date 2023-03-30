@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
 import { CreateProjectForm } from '@/components/bountyx/create-project-form'
 
-export default function Home() {
+export default function MintHypercert() {
   const [bounties, setBounties] = useState<BountyxMetadata[]>([])
 
   return (
