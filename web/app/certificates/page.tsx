@@ -10,12 +10,14 @@ import Image from 'next/image'
 import { HyperCertListItem } from './hypercert-list-item'
 import { useEffect, useState } from 'react'
 import { getNftsForOwner } from '@/lib/api/nftApi'
-import { useAccount } from 'wagmi'
+import { useAccount, useNetwork } from 'wagmi'
 import { Network } from 'alchemy-sdk'
+import { cantoTestnet } from '@/config/networks'
 
 export default function Home() {
   const [certs, setCerts] = useState([])
   const { address, isConnected } = useAccount()
+  const { chain } = useNetwork()
 
   const renderCerts = (): any[] => {
     if (!certs) return []
@@ -50,14 +52,14 @@ export default function Home() {
 
   useEffect(() => {
     // For now
-    const static_collection = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
-    const static_network = process.env.NEXT_PUBLIC_NETWORK ? Number(process.env.NEXT_PUBLIC_NETWORK) : 1
+    const static_collection = chain?.id === cantoTestnet.id ? '0x822F17A9A5EeCFd66dBAFf7946a8071C265D1d07' : process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
 
-    console.log(address, static_collection, static_network)
+    console.log(address, static_collection, chain?.id)
 
-    let network: Network
-    switch (static_network) {
+    let network = Network.ETH_MAINNET
+    switch (chain?.id) {
       case 5:
+      case cantoTestnet.id:
         network = Network.ETH_GOERLI
         break
       default:
