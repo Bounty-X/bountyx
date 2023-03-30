@@ -10,7 +10,6 @@ import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
 import { publicProvider } from 'wagmi/providers/public'
 
-import { canto } from '@wagmi/chains'
 import { ETH_CHAINS_PROD, ETH_CHAINS_TEST, NOT_ETH_CHAINS_PROD, NOT_ETH_CHAINS_TEST } from '@/config/networks'
 import { siteConfig } from '@/config/site'
 import { useColorMode } from '@/lib/state/color-mode'
@@ -26,14 +25,6 @@ const { chains, provider } = configureChains(CHAINS, [
     apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY as string,
   }),
   publicProvider(),
-  // jsonRpcProvider({
-  //   rpc: (chain) => {
-  //     if (chain.id === canto.id) {
-  //       return { http: 'https://canto.slingshot.finance' }
-  //     }
-  //     return { http: chain.rpcUrls.default.http[0] }
-  //   },
-  // }),
 ])
 
 const connectors = connectorsForWallets([
