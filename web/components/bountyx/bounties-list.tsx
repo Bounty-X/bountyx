@@ -6,6 +6,7 @@ import { BountyListItem } from './bounty-list-item'
 const ANY_EVENT = 'Any Event'
 
 interface BountiesListProps {
+  setGroup: (group: string) => void
   groups: string[]
   bounties: BountyxMetadata[]
 }
@@ -19,13 +20,18 @@ const renderBountiesList = (bounties: BountyxMetadata[]) => {
   return list
 }
 
-export const BountiesList = ({ groups, bounties }: BountiesListProps) => {
+export const BountiesList = ({ setGroup, groups, bounties }: BountiesListProps) => {
   const [currentGroup, setCurrentGroup] = useState<string>(ANY_EVENT)
 
   return (
     <div className="flex flex-col">
       <h1 className="my-4 ml-4 font-bold">Bounties Won</h1>
-      <select className="select select-bordered w-full max-w-xs m-4" onChange={(e) => setCurrentGroup(e.target.value)}>
+      <select
+        className="select select-bordered w-full max-w-xs m-4"
+        onChange={(e) => {
+          setCurrentGroup(e.target.value)
+          setGroup(e.target.value)
+        }}>
         <option selected>{ANY_EVENT}</option>
         {groups.map((group) => (
           <option key={group}>{group}</option>

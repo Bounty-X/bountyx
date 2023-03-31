@@ -9,6 +9,7 @@ import { BountiesList } from './bounties-list'
 
 export const EndorseBountyCard = () => {
   const [bounties, setBounties] = useState<BountyxMetadata[]>([])
+  const [group, setGroup] = useState<string>('')
 
   useEffect(() => {
     setBounties(getAllBounties())
@@ -34,7 +35,7 @@ export const EndorseBountyCard = () => {
         </button>
         {isSigned && <div className="badge-success badge w-32 py-5">SIGNED</div>}
       </div>
-      <BountiesList groups={getAllGroups()} bounties={bounties} />
+      <BountiesList setGroup={(group: string) => setGroup(group)} groups={getAllGroups()} bounties={bounties} />
     </div>
   )
 }

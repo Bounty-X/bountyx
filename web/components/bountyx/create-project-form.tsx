@@ -38,12 +38,15 @@ interface FractionOwnership {
 export const CreateProjectForm = () => {
   const certificateElementRef = useRef(null)
 
+  const [group, setGroup] = useState<string>('')
   const [bounties, setBounties] = useState<BountyxMetadata[]>([])
 
   const { address } = useAccount()
   useEffect(() => {
-    setBounties(getBountiesForReceiver(address!))
-  }, [])
+    const allReceiverBounties = getBountiesForReceiver(address!)
+
+    setBounties(allReceiverBounties.filter((bounty) => bounty.group! === group))
+  }, [group])
 
   const [projectMetadata, setProjectData] = useLocalStorage<ProjectMetadata>('projectMetadata', {
     name: '',
@@ -297,7 +300,7 @@ export const CreateProjectForm = () => {
         <div className="h-[525px] w-[375px] bg-transparent" ref={certificateElementRef}>
           <CertificateImageHtml projectMetadata={projectMetadata} bounties={bounties} backgroundUrl={backgroundUrl} />
         </div>
-        <div className="container mx-auto mt-4">
+        {/* <div className="container mx-auto mt-4">
           <div className="btn-group">
             <button className={`btn ${selectedBGIndex === 0 ? 'btn-active' : ''}`} onClick={(e) => handleBackgroundToggleClick(0, e.target)}>
               Galactic
@@ -309,10 +312,10 @@ export const CreateProjectForm = () => {
               Mountains
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="rounded-box mr-8 basis-1/3 bg-base-200 outline-2 outline-slate-400">
-        <BountiesList groups={getAllGroups()} bounties={getBountiesForReceiver(address!)} />
+        <BountiesList setGroup={(group: string) => setGroup(group)} groups={getAllGroups()} bounties={getBountiesForReceiver(address!)} />
       </div>
     </div>
   )
