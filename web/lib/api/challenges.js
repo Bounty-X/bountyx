@@ -452,7 +452,7 @@ export const groupedBountyData = [
           {
             winnerRank: 1,
             receiver: {
-              receiverAddress: '',
+              receiverAddress: '0x8E553AabaCEf3De184fc1D28Cf81bAa49d82e8e0',
             },
             rewardAmountUsd: '2000',
           },
@@ -2913,7 +2913,7 @@ export const groupedBountyData = [
           {
             winnerRank: 0,
             receiver: {
-              receiverAddress: '',
+              receiverAddress: '0x8E553AabaCEf3De184fc1D28Cf81bAa49d82e8e0',
             },
             rewardAmountUsd: '4844',
           },
@@ -13247,6 +13247,7 @@ export const groupedBountyData = [
         tags: [],
         rewardInToken: true,
         rewardPool: '40000',
+        rewardPoolReceivers: ['0x8E553AabaCEf3De184fc1D28Cf81bAa49d82e8e0'],
         rewardChain: 'Canto',
         rewardToken: 'CANTO',
         rewards: [],
