@@ -37,7 +37,7 @@ export const BountiesList = ({ setGroup, groups, bounties }: BountiesListProps) 
           <option key={group}>{group}</option>
         ))}
       </select>
-      {bounties.length === 0 && <span className="badge badge-info m-4">You don't have any bounties to claim</span>}
+      {bounties.length === 0 && <span className="badge badge-info m-4">You do not have any bounties to claim</span>}
       <div className="grid">{renderBountiesList(bounties.filter((bounty) => ANY_EVENT === currentGroup || bounty.group! === currentGroup))}</div>
     </div>
   )
