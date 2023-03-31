@@ -34,7 +34,7 @@ export const BountiesList = ({ bounties }: BountiesListProps) => {
           Event
         </option>
         {groups.map((group) => (
-          <option>{group}</option>
+          <option key={group}>{group}</option>
         ))}
       </select>
       <div className="grid">{renderBountiesList(bounties.filter((bounty) => bounty.group! === currentGroup))}</div>
