@@ -13234,7 +13234,7 @@ export const groupedBountyData = [
   {
     group: {
       groupName: 'COH Chapter 1: Season 6',
-      groupDisplayName: 'Canto Online Hackathon - COH Chapter 1: Season 6',
+      groupDisplayName: 'COH Chapter 1: Season 6',
     },
     bounties: [
       {
