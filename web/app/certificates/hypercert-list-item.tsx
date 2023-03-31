@@ -71,7 +71,7 @@ const hypercertOwners = (contributors: string[], issuers: string[]) => {
 
 const sumAndFormatAmounts = (bounties: BountyxMetadata[]): string => {
   const sum = bounties.reduce((sum, addend) => {
-    return sum + addend.reward.rewardAmountUsd!
+    return sum + addend.reward.rewardAmount!
   }, 0)
 
   const formatter = new Intl.NumberFormat('en-US', {

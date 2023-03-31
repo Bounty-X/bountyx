@@ -4,6 +4,10 @@
   "description": "Bountyx metadata structure",
   "type": "object",
   "properties": {
+    "group": {
+      "type": "string",
+      "description": "Name of the bounty group, usually event name"
+    },
     "name": {
       "type": "string",
       "description": "Name of the bounty"
@@ -44,9 +48,13 @@
       "type": "object",
       "description": "Information about the reward",
       "properties": {
-        "rewardAmountUsd": {
+        "rewardAmount": {
           "type": "number",
-          "description": "Amount paid out by bounty issuer to the project"
+          "description": "Amount paid out by bounty issuer to the project in USD or token"
+        },
+        "rewardInToken": {
+          "type": "boolean",
+          "description": "Tells if the reward amount is in USD or token"
         },
         "rewardToken": {
           "type": "string",

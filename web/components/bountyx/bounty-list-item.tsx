@@ -17,7 +17,9 @@ export const BountyListItem = ({ bounty }: BountyListItemProps) => {
         <div className="mx-2 mt-2 w-12 rounded-full">
           <img src={bounty.issuer.issuerLogoUrl} alt={bounty.issuer.issuerName} />
         </div>
-        <div className="collapse-title text-xl font-medium">{`${bounty.issuer.issuerName} - Reward: $${bounty.reward.rewardAmountUsd}`}</div>
+        <div className="collapse-title text-xl font-medium">
+          {`${bounty.issuer.issuerName} - Reward: ${bounty.reward.rewardAmount}`} {bounty.reward.rewardInToken ? bounty.reward.rewardToken : '$'}
+        </div>
       </div>
       <div className="collapse-content">
         <div tabIndex={0} />

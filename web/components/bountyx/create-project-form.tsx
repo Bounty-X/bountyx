@@ -74,7 +74,7 @@ export const CreateProjectForm = () => {
     const owners: `0x${string}`[] = []
 
     bounties.forEach((bounty) => {
-      numberOfUnits += bounty.reward?.rewardAmountUsd ?? 0
+      numberOfUnits += bounty.reward?.rewardAmount ?? 0
       if (!workScopeList.includes(bounty.issuer?.issuerName!)) {
         workScopeList.push(bounty.issuer?.issuerName!)
       }

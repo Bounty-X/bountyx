@@ -10,6 +10,10 @@
  */
 export interface BountyxMetadata {
   /**
+   * Name of the bounty group, usually event name
+   */
+  group?: string;
+  /**
    * Name of the bounty
    */
   name: string;
@@ -47,9 +51,13 @@ export interface BountyxMetadata {
    */
   reward: {
     /**
-     * Amount paid out by bounty issuer to the project
+     * Amount paid out by bounty issuer to the project in USD or token
      */
-    rewardAmountUsd?: number;
+    rewardAmount?: number;
+    /**
+     * Tells if the reward amount is in USD or token
+     */
+    rewardInToken?: boolean;
     /**
      * Token used to pay the bounty
      */

@@ -1,4 +1,5 @@
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
+import { useState } from 'react'
 
 import { BountyListItem } from './bounty-list-item'
 
@@ -16,10 +17,27 @@ const renderBountiesList = (bounties: BountyxMetadata[]) => {
 }
 
 export const BountiesList = ({ bounties }: BountiesListProps) => {
+  const [currentGroup, setCurrentGroup] = useState<string>('')
+
+  const groups: string[] = []
+  bounties.map((item) => {
+    if (item.group && groups.findIndex((el) => el === item.group) === -1) {
+      groups.push(item.group)
+    }
+  })
+
   return (
-    <div>
+    <div className="flex flex-col">
       <h1 className="my-4 ml-4 font-bold">Bounties Won</h1>
-      <div className="grid">{renderBountiesList(bounties)}</div>
+      <select className="select select-bordered w-full max-w-xs" onChange={(e) => setCurrentGroup(e.target.value)}>
+        <option disabled selected>
+          Event
+        </option>
+        {groups.map((group) => (
+          <option>{group}</option>
+        ))}
+      </select>
+      <div className="grid">{renderBountiesList(bounties.filter((bounty) => bounty.group! === currentGroup))}</div>
     </div>
   )
 }
