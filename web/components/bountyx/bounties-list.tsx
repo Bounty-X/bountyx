@@ -3,7 +3,10 @@ import { useState } from 'react'
 
 import { BountyListItem } from './bounty-list-item'
 
+const ANY_EVENT = 'Any Event'
+
 interface BountiesListProps {
+  groups: string[]
   bounties: BountyxMetadata[]
 }
 
@@ -16,28 +19,20 @@ const renderBountiesList = (bounties: BountyxMetadata[]) => {
   return list
 }
 
-export const BountiesList = ({ bounties }: BountiesListProps) => {
-  const [currentGroup, setCurrentGroup] = useState<string>('')
-
-  const groups: string[] = []
-  bounties.map((item) => {
-    if (item.group && groups.findIndex((el) => el === item.group) === -1) {
-      groups.push(item.group)
-    }
-  })
+export const BountiesList = ({ groups, bounties }: BountiesListProps) => {
+  const [currentGroup, setCurrentGroup] = useState<string>(ANY_EVENT)
 
   return (
     <div className="flex flex-col">
       <h1 className="my-4 ml-4 font-bold">Bounties Won</h1>
-      <select className="select select-bordered w-full max-w-xs" onChange={(e) => setCurrentGroup(e.target.value)}>
-        <option disabled selected>
-          Event
-        </option>
+      <select className="select select-bordered w-full max-w-xs m-4" onChange={(e) => setCurrentGroup(e.target.value)}>
+        <option selected>{ANY_EVENT}</option>
         {groups.map((group) => (
           <option key={group}>{group}</option>
         ))}
       </select>
-      <div className="grid">{renderBountiesList(bounties.filter((bounty) => bounty.group! === currentGroup))}</div>
+      {bounties.length === 0 && <span className="badge badge-info m-4">You don't have any bounties to claim</span>}
+      <div className="grid">{renderBountiesList(bounties.filter((bounty) => ANY_EVENT === currentGroup || bounty.group! === currentGroup))}</div>
     </div>
   )
 }

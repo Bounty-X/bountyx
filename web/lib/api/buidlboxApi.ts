@@ -73,3 +73,7 @@ export const getAllBounties = (): BountyxMetadata[] => {
     return true
   })
 }
+
+export const getAllGroups = (): string[] => {
+  return groupedBountyData.map((item) => item.group.groupDisplayName)
+}

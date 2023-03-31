@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
 import { useBountyxSignAllBounties } from '@/hooks/bountyx/use-bountyx-sign-bounty'
 import { getAllBounties } from '@/lib/api/buidlboxApi'
+import { getAllGroups } from '@/lib/api/buidlboxApi'
 
 import { BountiesList } from './bounties-list'
 
@@ -33,7 +34,7 @@ export const EndorseBountyCard = () => {
         </button>
         {isSigned && <div className="badge-success badge w-32 py-5">SIGNED</div>}
       </div>
-      <BountiesList bounties={bounties} />
+      <BountiesList groups={getAllGroups()} bounties={bounties} />
     </div>
   )
 }

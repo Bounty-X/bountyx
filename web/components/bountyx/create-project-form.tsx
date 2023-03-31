@@ -19,11 +19,12 @@ import { useMintClaim } from '@/hooks/hypercert/mintClaim'
 import { useMintClaimWithFractions } from '@/hooks/hypercert/mintClaimWithFractions'
 import { useSafeBatchTransferFrom } from '@/hooks/hypercert/safeBatchTransferFrom'
 import useLocalStorage from '@/hooks/utils/use-local-storage'
-import { getBountiesForReceiver } from '@/lib/api/buidlboxApi'
+import { getAllGroups, getBountiesForReceiver } from '@/lib/api/buidlboxApi'
 import { formatContributors, formatScope, formatScopeList } from '@/lib/hypercert/formatting'
 import { parseListFromString } from '@/lib/hypercert/parsing'
 
 import { DummyHypercert } from './dummy-hypercert'
+import { getgroups } from 'process'
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
@@ -311,7 +312,7 @@ export const CreateProjectForm = () => {
         </div>
       </div>
       <div className="rounded-box mr-8 basis-1/3 bg-base-200 outline-2 outline-slate-400">
-        <BountiesList bounties={getBountiesForReceiver(address!)} />
+        <BountiesList groups={getAllGroups()} bounties={getBountiesForReceiver(address!)} />
       </div>
     </div>
   )
