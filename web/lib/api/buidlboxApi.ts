@@ -67,8 +67,6 @@ export const getBountiesForReceiver = (receiver: string): BountyxMetadata[] => {
 }
 
 export const getAllBounties = (): BountyxMetadata[] => {
-  const bounties: BountyxMetadata[] = []
-
   return getBountiesFor('', (account: string, receiver: string[]) => {
     return true
   })

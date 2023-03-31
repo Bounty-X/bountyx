@@ -42,6 +42,8 @@ export default function CertificateImageHtml({
     return impactScopeBadgeList
   }
 
+  const timeline = bounties.at(0)?.group === 'Eth Denver 2023' ? '2023-02-25 ⟶ 2023-03-04' : '2023-03-13 ⟶ 2023-03-31'
+
   return (
     <>
       <div
@@ -54,9 +56,9 @@ export default function CertificateImageHtml({
               <span className="font-sans text-3xl font-bold decoration-white antialiased">{projectMetadata.name}</span>
             </div>
             <div className="my-2">
-              <span className="text-small font-sans decoration-white antialiased">2023-02-25 ⟶ 2023-03-04</span>
+              <span className="text-small font-sans decoration-white antialiased">{timeline}</span>
             </div>
-            <div className="badge-outline badge mr-2">EthDenver 2023</div>
+            <div className="badge-outline badge mr-2">{bounties.at(0)?.group}</div>
             <div className="mt-10 mb-2 flex-row">
               <span className="text-small font-sans decoration-white antialiased">Impacted Organizations</span>
             </div>
