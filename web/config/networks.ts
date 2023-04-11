@@ -3,6 +3,10 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 import { arbitrum, goerli, hardhat, mainnet, optimism, polygon, sepolia, canto, optimismGoerli } from '@wagmi/chains'
 import { Chain } from 'wagmi'
+import { configureChains } from 'wagmi'
+import { alchemyProvider } from 'wagmi/providers/alchemy'
+import { infuraProvider } from 'wagmi/providers/infura'
+import { publicProvider } from 'wagmi/providers/public'
 
 // @ts-ignore
 goerli.iconUrl = '/icons/NetworkEthereumTest.svg'
@@ -41,3 +45,32 @@ export const ETH_CHAINS_TEST = [mainnet, optimismGoerli, goerli, hardhat]
 // export const NOT_ETH_CHAINS_PROD = [canto]
 export const NOT_ETH_CHAINS_PROD = [cantoTestnet]
 export const NOT_ETH_CHAINS_TEST = [cantoTestnet]
+
+const CHAINS = process.env.NODE_ENV === 'production' ? [...ETH_CHAINS_PROD, ...NOT_ETH_CHAINS_PROD] : [...ETH_CHAINS_TEST, ...NOT_ETH_CHAINS_TEST]
+
+const PROVIDERS = []
+
+if (process.env.NEXT_PUBLIC_ALCHEMY_API_KEY) {
+  PROVIDERS.push(
+    alchemyProvider({
+      apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY as string,
+    })
+  )
+}
+
+if (process.env.NEXT_PUBLIC_INFURA_API_KEY) {
+  PROVIDERS.push(
+    infuraProvider({
+      apiKey: process.env.NEXT_PUBLIC_INFURA_API_KEY as string,
+    })
+  )
+}
+
+// Fallback to public provider
+// Only include public provider if no other providers are available.
+if (PROVIDERS.length === 0) {
+  PROVIDERS.push(publicProvider())
+}
+
+// @ts-ignore
+export const { chains, provider } = configureChains(CHAINS, [...PROVIDERS])
