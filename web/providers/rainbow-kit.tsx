@@ -5,15 +5,27 @@ import { ReactNode } from 'react'
 import { RainbowKitProvider, darkTheme, lightTheme } from '@rainbow-me/rainbowkit'
 import { connectorsForWallets } from '@rainbow-me/rainbowkit'
 import { coinbaseWallet, injectedWallet, metaMaskWallet, rainbowWallet, walletConnectWallet } from '@rainbow-me/rainbowkit/wallets'
-import { WagmiConfig, createClient } from 'wagmi'
+import { WagmiConfig, configureChains, createClient, Chain } from 'wagmi'
+import { alchemyProvider } from 'wagmi/providers/alchemy'
+import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
+import { publicProvider } from 'wagmi/providers/public'
+
+import { ETH_CHAINS_PROD, ETH_CHAINS_TEST, NOT_ETH_CHAINS_PROD, NOT_ETH_CHAINS_TEST } from '@/config/networks'
 import { siteConfig } from '@/config/site'
 import { useColorMode } from '@/lib/state/color-mode'
-import { chains, provider } from '@/config/networks'
 
 interface Props {
   children: ReactNode
   autoConnect?: boolean
 }
+
+const CHAINS = process.env.NODE_ENV === 'production' ? [...ETH_CHAINS_PROD, ...NOT_ETH_CHAINS_PROD] : [...ETH_CHAINS_TEST, ...NOT_ETH_CHAINS_TEST]
+const { chains, provider } = configureChains(CHAINS, [
+  alchemyProvider({
+    apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY as string,
+  }),
+  publicProvider(),
+])
 
 const connectors = connectorsForWallets([
   {
