@@ -1,26 +1,32 @@
 'use client'
 
+import { useConnectModal } from '@rainbow-me/rainbowkit'
 // @ts-nocheck
 import Link from 'next/link'
+import { useAccount } from 'wagmi'
 
 export default function Home() {
+  const { openConnectModal } = useConnectModal()
+  const { isConnected } = useAccount()
   return (
     <>
       <div className="hero min-h-screen">
         <div className="hero-content text-center">
           <div className="flex flex-col">
-            <h1 className="text-5xl font-bold">The Bounty Was Just The Beginning</h1>
-            <p className="py-6">Multiply the Impact of your Project</p>
-            <div className="form-control mx-auto">
-              <label className="label cursor-pointer">
-                <input type="checkbox" className="checkbox checkbox-primary" />
-                <span className="label-text italic px-4">I certify that my project is open-source and has a public license</span>
-              </label>
-            </div>
+            <h1 className="text-5xl font-bold">Multiply Your Impact</h1>
+            <h2 className="py-6 text-3xl">BountyX is a gateway between winning a bounty and the next step of your project</h2>
+            <h2 className="pb-6 text-2xl">Check your eligibility to claim a Bounty Hypercert</h2>
             <div className="py-4 px-4 align-center">
-              <Link href="/minthypercert" passHref>
-                <button className="btn btn-primary flex-auto w-64">I won a bounty!</button>
-              </Link>
+              {openConnectModal && (
+                <button className="btn btn-info flex-auto w-64" onClick={openConnectModal}>
+                  Connect Wallet
+                </button>
+              )}
+              {isConnected && (
+                <Link href="/minthypercert" passHref>
+                  <button className="btn btn-info flex-auto w-64">Check Eligibility</button>
+                </Link>
+              )}
             </div>
           </div>
         </div>
