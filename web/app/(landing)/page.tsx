@@ -6,7 +6,6 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <>
-      {/* <div className="hero min-h-screen bg-base-200 bg-[url('/astronomy-bg.jpeg')]"> */}
       <div className="hero min-h-screen">
         <div className="hero-content text-center">
           <div className="flex flex-col">
@@ -19,7 +18,7 @@ export default function Home() {
               </label>
             </div>
             <div className="py-4 px-4 align-center">
-              <Link href="/requestbountycertificate" passHref>
+              <Link href="/minthypercert" passHref>
                 <button className="btn btn-primary flex-auto w-64">I won a bounty!</button>
               </Link>
             </div>
