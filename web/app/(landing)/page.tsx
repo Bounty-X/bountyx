@@ -25,7 +25,7 @@ export default function Home() {
                 </button>
               )}
               {isConnected && (
-                <Link href="/minthypercert" passHref>
+                <Link href="/eligibility" passHref>
                   <button className="btn btn-info flex-auto w-64">Check Eligibility</button>
                 </Link>
               )}
