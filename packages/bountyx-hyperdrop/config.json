@@ -1,0 +1,16 @@
+{
+  "hyperdrop": [
+    {
+      "group": "ethdenver2023",
+      "bountyName": "Deploy your smart contract on Scroll",
+      "issuerName": "Scroll",
+      "receiverAddress": "0xa0Ee7A142d267C1f36714E4a8F75612F20a79720",
+      "reward": {
+        "rewardAmount": "4844",
+        "rewardToken": "USDC",
+        "amountInUsd": true,
+        "winnerRank": 0
+      }
+    }
+  ]
+}

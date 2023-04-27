@@ -1,0 +1,49 @@
+{
+  "$id": "schema/bountyxmerkleleaf.json",
+  "title": "Bountyx merkle leaf",
+  "description": "Bountyx merkle tree leaf data",
+  "type": "object",
+  "properties": {
+    "group": {
+      "type": "string",
+      "description": "Name of the bounty group, usually event name"
+    },
+    "bountyName": {
+      "type": "string",
+      "description": "Name of the bounty"
+    },
+    "issuerName": {
+      "type": "string",
+      "description": "Bounty issuer public name"
+    },
+    "receiverAddress": {
+      "type": "string",
+      "description": "The address that eligible to receive or have received the bounty"
+    },
+    "reward": {
+      "type": "object",
+      "description": "Information about the reward",
+      "properties": {
+        "rewardAmount": {
+          "type": "number",
+          "description": "Amount paid out by bounty issuer to the project in USD or token"
+        },
+        "rewardToken": {
+          "type": "string",
+          "description": "Token used to pay the bounty"
+        },
+        "amountInUsd": {
+          "type": "boolean",
+          "description": "Tells if the reward amount is in USD or token"
+        },
+        "winnerRank": {
+          "type": "number",
+          "description": "Rank of the winner"
+        }
+      },
+      "required": ["rewardAmount"]
+    }
+  },
+  "additionalProperties": false,
+  "required": ["group", "bountyName", "issuerName", "receiverAddress", "reward"]
+}

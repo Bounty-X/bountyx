@@ -1,0 +1,27 @@
+{
+  "name": "bountyx-hyperdrop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/app.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "AGPL-3.0-only",
+  "devDependencies": {
+    "@types/node": "^18.16.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "ethers": "^6.3.0",
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.3.10",
+    "winston": "^3.8.2"
+  }
+}
