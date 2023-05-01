@@ -1,0 +1,32 @@
+{
+  "name": "bountyx-contracts",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "anvil": "source ./.env && anvil --fork-url $ANVIL_FORK_URL --chain-id $ANVIL_CHAIN_ID",
+    "node": "npx hardhat node",
+    "dev": "npm run wagmi && vite",
+    "dev:foundry": "npm run anvil",
+    "dev:hardhat": "npm run node",
+    "lint": "prettier --write \"**/*.{ts,tsx}\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "solidity",
+    "web3",
+    "bountyx"
+  ],
+  "author": "",
+  "devDependencies": {
+    "@typechain/ethers-v5": "^10.2.0",
+    "@typechain/ethers-v6": "^0.3.0",
+    "@typechain/hardhat": "^6.1.5",
+    "@types/node": "^18.16.3",
+    "ethers": "^6.3.0",
+    "hardhat": "^2.14.0",
+    "hardhat-preprocessor": "^0.1.5",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.1.1",
+    "typescript": "^5.0.4"
+  }
+}
