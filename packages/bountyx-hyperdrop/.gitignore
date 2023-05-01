@@ -7,4 +7,5 @@
 
 # specific files
 generator.log
+config.json
 merkle.json
