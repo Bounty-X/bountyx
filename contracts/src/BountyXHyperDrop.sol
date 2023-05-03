@@ -2,7 +2,7 @@
 pragma solidity 0.8.19;
 
 import { IHyperDrop } from "./interfaces/IHyperDrop.sol";
-import { MerkleProof } from "@openzeppelin/utils/cryptography/MerkleProof.sol";
+import { MerkleProof } from "openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 
 contract BountyXHyperDrop is IHyperDrop {
 
