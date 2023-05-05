@@ -3,22 +3,22 @@ import path from "path"; // Path
 import keccak256 from "keccak256"; // Keccak256 hashing
 import MerkleTree from "merkletreejs"; // MerkleTree.js
 import { logger } from "./utils/logger"; // Logging
-import { getAddress, solidityPackedKeccak256 } from "ethers";
-import { BountyxMerkleLeaf } from "./types/bountyxmerkleleaf";
+import { getAddress, solidityPackedKeccak256 } from "ethers"; // TODO: update to ethersv6
+import { BountyxMerkleLeafData } from "./types/bountyxmerkleleafdata";
 
 // Output file path
 const outputPath: string = path.join(__dirname, "../merkle.json");
 
 export default class Generator {
   // Airdrop recipients
-  recipients: BountyxMerkleLeaf[] = [];
+  recipients: BountyxMerkleLeafData[] = [];
 
   /**
    * Setup generator
    * @param {number} decimals of token
    * @param {Record<string, number>} airdrop address to token claim mapping
    */
-  constructor(hyperdrop: BountyxMerkleLeaf[]) {
+  constructor(hyperdrop: BountyxMerkleLeafData[]) {
     //TODO: implement validation
     this.recipients = hyperdrop;
     // For each airdrop entry
@@ -39,7 +39,7 @@ export default class Generator {
    * @param {string} value of airdrop tokens to claimee
    * @returns {Buffer} Merkle Tree node
    */
-  generateLeaf(hyperdropLeaf: BountyxMerkleLeaf): Buffer {
+  generateLeaf(hyperdropLeaf: BountyxMerkleLeafData): Buffer {
     return Buffer.from(
       // Hash in appropriate Merkle format
       solidityPackedKeccak256(

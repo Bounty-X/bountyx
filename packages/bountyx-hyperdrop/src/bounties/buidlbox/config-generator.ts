@@ -1,8 +1,8 @@
-import { BountyxMerkleLeaf } from "../../types/bountyxmerkleleaf";
+import { BountyxMerkleLeafData } from "../../types/bountyxmerkleleafdata";
 import { groupedBountyData } from "./ethdenver2023";
 
-export const getHyperdropLeafs = (): BountyxMerkleLeaf[] => {
-  const bountyxMerkleLeafs: BountyxMerkleLeaf[] = [];
+export const getHyperdropLeavesData = (): BountyxMerkleLeafData[] => {
+  const bountyxMerkleLeafs: BountyxMerkleLeafData[] = [];
   for (const groupedBounties of groupedBountyData) {
     for (const bounty of groupedBounties.bounties) {
       const { name, submittedByOrgName } = bounty;

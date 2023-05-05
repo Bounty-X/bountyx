@@ -2,8 +2,8 @@ import fs from "fs"; // Filesystem
 import path from "path"; // Path routing
 import Generator from "./generator"; // Generator
 import { logger } from "./utils/logger"; // Logging
-import { BountyxMerkleLeaf } from "./types/bountyxmerkleleaf";
-import { getHyperdropLeafs } from "./bounties/buidlbox/config-generator";
+import { BountyxMerkleLeafData } from "./types/bountyxmerkleleafdata";
+import { getHyperdropLeavesData } from "./bounties/buidlbox/config-generator";
 
 // Config file path
 const configPath: string = path.join(__dirname, "../config.json");
@@ -18,7 +18,7 @@ function throwErrorAndExit(error: string): void {
 }
 
 (async () => {
-  const bountyxMerkleLeafs: BountyxMerkleLeaf[] = getHyperdropLeafs();
+  const bountyxMerkleLeafs: BountyxMerkleLeafData[] = getHyperdropLeavesData();
   fs.writeFileSync(
     configPath,
     JSON.stringify({
@@ -41,7 +41,7 @@ function throwErrorAndExit(error: string): void {
   }
 
   // Collect config
-  const hyperdrop: BountyxMerkleLeaf[] = configData.hyperdrop;
+  const hyperdrop: BountyxMerkleLeafData[] = configData.hyperdrop;
 
   // Initialize and call generator
   const generator = new Generator(hyperdrop);

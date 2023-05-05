@@ -8,7 +8,7 @@
 /**
  * Bountyx merkle tree leaf data
  */
-export interface BountyxMerkleLeaf {
+export interface BountyxMerkleLeafData {
   /**
    * Name of the bounty group, usually event name
    */
