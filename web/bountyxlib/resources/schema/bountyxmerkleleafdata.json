@@ -1,6 +1,6 @@
 {
-  "$id": "schema/bountyxmerkleleaf.json",
-  "title": "Bountyx merkle leaf",
+  "$id": "schema/bountyxmerkleleafdata.json",
+  "title": "Bountyx merkle leaf data",
   "description": "Bountyx merkle tree leaf data",
   "type": "object",
   "properties": {

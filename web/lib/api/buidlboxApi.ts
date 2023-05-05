@@ -1,4 +1,5 @@
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
+import { BountyxMerkleLeafData } from '@/../packages/bountyx-hyperdrop/src/types/bountyxmerkleleafdata'
 
 import { groupedBountyData } from './challenges'
 
@@ -74,4 +75,25 @@ export const getAllBounties = (): BountyxMetadata[] => {
 
 export const getAllGroups = (): string[] => {
   return groupedBountyData.map((item) => item.group.groupDisplayName)
+}
+
+export const getHyperdropLeavesPublicData = (): BountyxMerkleLeafData[] => {
+  const bountyxMerkleLeafs: BountyxMerkleLeafData[] = []
+  for (const groupedBounties of groupedBountyData) {
+    for (const bounty of groupedBounties.bounties) {
+      const { name, submittedByOrgName } = bounty
+      bounty.rewards.map((reward) => {
+        bountyxMerkleLeafs.push({
+          group: groupedBounties.group.groupName,
+          bountyName: name,
+          issuerName: submittedByOrgName,
+          receiverAddress: '0x',
+          reward: {
+            rewardAmount: parseInt(reward.rewardAmountUsd),
+          },
+        })
+      })
+    }
+  }
+  return bountyxMerkleLeafs
 }
