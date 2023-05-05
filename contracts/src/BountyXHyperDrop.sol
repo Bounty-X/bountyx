@@ -23,6 +23,13 @@ contract BountyXHyperDrop is Ownable, IHyperDrop {
     // @notice Mapping of addresses to leafs of the trees that identify claimed tokens
     mapping(address => mapping(bytes32 => bool)) claims;
 
+    // @notice Hypercert Minter address
+    address hypercertMinter;
+
+    constructor(address _hypercertMinter) {
+        hypercertMinter = _hypercertMinter;
+    }
+
     /**
      * @notice Allows to claim a hypercert if an address is eligible and the leaf is a part of the merkle tree
      */ 
@@ -47,6 +54,9 @@ contract BountyXHyperDrop is Ownable, IHyperDrop {
         hyperdropMerkleRoots[newMerkleRoot] = msg.sender;
     }
 
+    /**
+     * @notice Verifies that leaf is included in the merkle root
+     */
     function isClaimableHyperdrop(bytes32 leaf, bytes32[] calldata proof, bytes32 merkleRoot) external view returns (bool) {
         if (hyperdropMerkleRoots[merkleRoot] == address(0)) revert BountyXHyperDrop__InvalidRoot();
         return MerkleProof.verify(proof, merkleRoot, leaf);
