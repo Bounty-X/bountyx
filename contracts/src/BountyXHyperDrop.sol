@@ -11,20 +11,24 @@ contract BountyXHyperDrop is Ownable, IHyperDrop {
     error BountyXHyperDrop__AlreadyClaimed();
     // @notice thrown if the leaf is not a part of the merkle tree
     error BountyXHyperDrop__NotClaimable();
+    // @notice thrown if the provided merkle tree root is not a part of the drop
+    error BountyXHyperDrop__InvalidRoot();
 
     event Claimed(address indexed to, bytes32 indexed leaf);
-    event MerkleRootUpdated(bytes32 indexed newRoot);
+    event MerkleRootAdded(bytes32 indexed newRoot, address indexed publisher);
 
-    // @notice root of the merkle tree for the hyperdrop, updateable
-    bytes32 public merkleRoot;
+    // @notice merkle tree roots for the hyperdrops
+    mapping(bytes32 => address) hyperdropMerkleRoots;
 
-    // @notice Mapping of addresses to leafs of the tree that identify claimed tokens
+    // @notice Mapping of addresses to leafs of the trees that identify claimed tokens
     mapping(address => mapping(bytes32 => bool)) claims;
 
     /**
      * @notice Allows to claim a hypercert if an address is eligible and the leaf is a part of the merkle tree
      */ 
-    function claim(address to, bytes32 leaf, bytes32[] calldata proof) external {
+    function claim(address to, bytes32 leaf, bytes32[] calldata proof, bytes32 merkleRoot) external {
+        if (hyperdropMerkleRoots[merkleRoot] == address(0)) revert BountyXHyperDrop__InvalidRoot();
+
         if (claims[to][leaf]) revert BountyXHyperDrop__AlreadyClaimed();
 
         bool isClaimable = MerkleProof.verify(proof, merkleRoot, leaf);
@@ -37,9 +41,14 @@ contract BountyXHyperDrop is Ownable, IHyperDrop {
     }
     
     /**
-     * @notice Updates the root of the merkle tree when a new drop is added to it
+     * @notice Creates a new hyperdrop by registering a new merkle root
      */
-    function updateRoot(bytes32 newRoot) external onlyOwner {
-        merkleRoot = newRoot;
+    function createHyperdrop(bytes32 newMerkleRoot) external { //from allowlist
+        hyperdropMerkleRoots[newMerkleRoot] = msg.sender;
+    }
+
+    function isClaimableHyperdrop(bytes32 leaf, bytes32[] calldata proof, bytes32 merkleRoot) external view returns (bool) {
+        if (hyperdropMerkleRoots[merkleRoot] == address(0)) revert BountyXHyperDrop__InvalidRoot();
+        return MerkleProof.verify(proof, merkleRoot, leaf);
     }
 }
