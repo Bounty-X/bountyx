@@ -18,13 +18,14 @@ const generateLeaf = (hyperdropLeaf: BountyxMerkleLeafData): Buffer => {
 }
 
 export type EligibleClaim = {
-  address: `0x{string}`
+  address: `0x${string}`
   leaf: Buffer
   proof: string[]
   merkleRoot: string
+  bountyData: BountyxMerkleLeafData
 }
 
-export const getEligibleHyperdropClaims = (address: `0x{string}`): EligibleClaim[] => {
+export const getEligibleHyperdropClaims = (address: `0x${string}`): EligibleClaim[] => {
   const eligibleClaims: EligibleClaim[] = []
 
   const leaves: Buffer[] = merkleData.tree.leaves.map((leaf) => Buffer.from(leaf.data))
@@ -45,6 +46,7 @@ export const getEligibleHyperdropClaims = (address: `0x{string}`): EligibleClaim
         leaf,
         proof,
         merkleRoot: merkleTree.getHexRoot(),
+        bountyData,
       })
     }
   }
