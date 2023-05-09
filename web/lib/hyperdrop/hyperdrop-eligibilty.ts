@@ -1,8 +1,9 @@
 import * as merkleData from './merkle.json'
 import MerkleTree from 'merkletreejs'
 import keccak256 from 'keccak256'
-import { getHyperdropLeavesPublicData } from '../api/hackathon-providers/buidlbox/buidlbox-api'
+import { getBountyXMetadataItem, getHyperdropLeavesPublicData } from '../api/hackathon-providers/buidlbox/buidlbox-api'
 import { BountyxMerkleLeafData } from '@/../packages/bountyx-hyperdrop/src/types/bountyxmerkleleafdata'
+import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
 // import { solidityPackedKeccak256 } from 'ethers' //TODO: update to ethersv6
 import { solidityKeccak256 } from 'ethers/lib/utils.js'
 
@@ -22,7 +23,7 @@ export type EligibleClaim = {
   leaf: Buffer
   proof: string[]
   merkleRoot: string
-  bountyData: BountyxMerkleLeafData
+  bounty: BountyxMetadata
 }
 
 export const getEligibleHyperdropClaims = (address: `0x${string}`): EligibleClaim[] => {
@@ -46,7 +47,7 @@ export const getEligibleHyperdropClaims = (address: `0x${string}`): EligibleClai
         leaf,
         proof,
         merkleRoot: merkleTree.getHexRoot(),
-        bountyData,
+        bounty: getBountyXMetadataItem(bountyData),
       })
     }
   }

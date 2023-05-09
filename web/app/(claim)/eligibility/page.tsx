@@ -1,5 +1,5 @@
 'use client'
-import Card from '@/components/shared/card'
+
 import { EligibleClaim, getEligibleHyperdropClaims } from '@/lib/hyperdrop/hyperdrop-eligibilty'
 import { useEffect, useState } from 'react'
 import { useAccount } from 'wagmi'
@@ -28,22 +28,8 @@ export default function Eligibility() {
           : 'You are not eligible to claim a Hypercert today. But it just means you can keep participating in different hackathons, applying for bounties, and then come back to manifest your impact!'}
       </p>
       {eligibleClaims.map((claim) => (
-        <Card
-          title={claim.bountyData.bountyName}
-          description={claim.bountyData.issuerName}
-          href={claim.bountyData.receiverAddress}
-          demo={<button className="btn btn-primary">Get Started</button>}
-        />
+
       ))}
     </div>
-    //   <p>Address: {address}</p>
-    //   {eligibleClaims.map((claim) => (
-    //     <div>
-    //       <p>Proof: {claim.proof}</p>
-    //       <p>Merkle Root: {claim.merkleRoot}</p>
-    //       <p>Bounty: {JSON.stringify(claim.bountyData)}</p>
-    //     </div>
-    //   ))}
-    // </div>
   )
 }

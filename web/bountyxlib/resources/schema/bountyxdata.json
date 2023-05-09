@@ -70,5 +70,5 @@
     }
   },
   "additionalProperties": false,
-  "required": ["name", "issuer", "reward"]
+  "required": ["group", "name", "issuer", "reward"]
 }

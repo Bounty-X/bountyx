@@ -12,7 +12,7 @@ export interface BountyxMetadata {
   /**
    * Name of the bounty group, usually event name
    */
-  group?: string;
+  group: string;
   /**
    * Name of the bounty
    */

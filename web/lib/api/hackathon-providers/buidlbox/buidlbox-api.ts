@@ -84,3 +84,19 @@ export const getHyperdropLeavesPublicData = (): BountyxMerkleLeafData[] => {
   }
   return bountyxMerkleLeafs
 }
+
+export const getBountyXMetadataItem = (leafData: BountyxMerkleLeafData): BountyxMetadata => {
+  //TODO: temp before persistency is built
+  const bountyxMetadataItems: BountyxMetadata[] = convertToBountyxMetadata()
+  const metadataItem = bountyxMetadataItems.find(
+    (item) =>
+      leafData.bountyName === item.name &&
+      leafData.issuerName === item.issuer.issuerName &&
+      leafData.group === item.group &&
+      leafData.reward.rewardAmount === item.reward.rewardAmount
+  )
+  if (!metadataItem) {
+    throw new Error('Cannot locate bountyx metadata item')
+  }
+  return metadataItem
+}
