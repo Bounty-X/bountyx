@@ -22,9 +22,9 @@ const convertToBountyxMetadata = (): BountyxMetadata[] => {
       if (bounty.rewardPool) {
         bountiesMetadata.push({
           ...partialBountyXMetadata,
-          receiver: {
-            receiverAddress: "0x0000000000000000000000000000000000000000"
-          },
+          // receiver: {
+          //   receiverAddress: "0x0000000000000000000000000000000000000000"
+          // },
           reward: {
             rewardAmount: parseInt(bounty.rewardPool),
             rewardToken: bounty.rewardToken,
@@ -36,9 +36,9 @@ const convertToBountyxMetadata = (): BountyxMetadata[] => {
       for (const reward of bounty.rewards) {
         bountiesMetadata.push({
           ...partialBountyXMetadata,
-          receiver: {
-            receiverAddress: "0x0000000000000000000000000000000000000000"
-          },
+          // receiver: {
+          //   receiverAddress: "0x0000000000000000000000000000000000000000"
+          // },
           reward: {
             rewardAmount: parseInt(reward.rewardAmountUsd),
             rewardToken: bounty.rewardToken,

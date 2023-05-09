@@ -19,7 +19,7 @@ import { useMintClaim } from '@/hooks/hypercert/mintClaim'
 import { useMintClaimWithFractions } from '@/hooks/hypercert/mintClaimWithFractions'
 import { useSafeBatchTransferFrom } from '@/hooks/hypercert/safeBatchTransferFrom'
 import useLocalStorage from '@/hooks/utils/use-local-storage'
-import { getAllGroups, getBountiesForReceiver } from '@/lib/api/buidlboxApi'
+import { getAllGroups, getBountiesForReceiver } from '@/lib/api/hackathon-providers/buidlbox/buidlbox-api'
 import { formatContributors, formatScope, formatScopeList } from '@/lib/hypercert/formatting'
 import { parseListFromString } from '@/lib/hypercert/parsing'
 

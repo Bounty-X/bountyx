@@ -22,9 +22,9 @@ const convertToBountyxMetadata = (): BountyxMetadata[] => {
       if (bounty.rewardPool) {
         bountiesMetadata.push({
           ...partialBountyXMetadata,
-          receiver: {
-            receiverAddress: '0x0000000000000000000000000000000000000000',
-          },
+          // receiver: {
+          //   receiverAddress: '0x0000000000000000000000000000000000000000',
+          // },
           reward: {
             rewardAmount: parseInt(bounty.rewardPool),
             rewardToken: bounty.rewardToken,
@@ -36,9 +36,9 @@ const convertToBountyxMetadata = (): BountyxMetadata[] => {
       for (const reward of bounty.rewards) {
         bountiesMetadata.push({
           ...partialBountyXMetadata,
-          receiver: {
-            receiverAddress: '0x0000000000000000000000000000000000000000',
-          },
+          // receiver: {
+          //   receiverAddress: '0x0000000000000000000000000000000000000000',
+          // },
           reward: {
             rewardAmount: parseInt(reward.rewardAmountUsd),
             rewardToken: bounty.rewardToken,
@@ -52,21 +52,17 @@ const convertToBountyxMetadata = (): BountyxMetadata[] => {
   return bountiesMetadata
 }
 
-// export const getBountiesForReceiver = (receiver: string): BountyxMetadata[] => {
-//   return convertToBountyxMetadata(receiver, (account: string, receivers: string[]) => {
-//     return receivers.map((item) => item.toLowerCase()).indexOf(account.toLowerCase()) !== -1
-//   })
-// }
+export const getBountiesForReceiver = (receiver: string): BountyxMetadata[] => {
+  return convertToBountyxMetadata()
+}
 
-// export const getAllBounties = (): BountyxMetadata[] => {
-//   return convertToBountyxMetadata('', (account: string, receiver: string[]) => {
-//     return true
-//   })
-// }
+export const getAllBounties = (): BountyxMetadata[] => {
+  return convertToBountyxMetadata()
+}
 
-// export const getAllGroups = (): string[] => {
-//   return groupedBountyData.map((item) => item.group.groupDisplayName)
-// }
+export const getAllGroups = (): string[] => {
+  return groupedBountyData.map((item) => item.group.groupDisplayName)
+}
 
 export const getHyperdropLeavesPublicData = (): BountyxMerkleLeafData[] => {
   const bounties: BountyxMetadata[] = convertToBountyxMetadata()
@@ -76,7 +72,7 @@ export const getHyperdropLeavesPublicData = (): BountyxMerkleLeafData[] => {
       group: bounty.group ?? '',
       bountyName: bounty.name,
       issuerName: bounty.issuer.issuerName,
-      receiverAddress: bounty.receiver?.receiverAddress ?? '0x',
+      receiverAddress: bounty.receiver?.receiverAddress ?? '0x0000000000000000000000000000000000000000',
       reward: {
         rewardAmount: bounty.reward.rewardAmount,
       },
