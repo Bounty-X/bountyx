@@ -1,7 +1,7 @@
 import * as merkleData from './merkle.json'
 import MerkleTree from 'merkletreejs'
 import keccak256 from 'keccak256'
-import { getHyperdropLeavesPublicData } from '../api/buidlboxApi'
+import { getHyperdropLeavesPublicData } from '../api/hackathon-providers/buidlbox/buidlbox-api'
 import { BountyxMerkleLeafData } from '@/../packages/bountyx-hyperdrop/src/types/bountyxmerkleleafdata'
 // import { solidityPackedKeccak256 } from 'ethers' //TODO: update to ethersv6
 import { solidityKeccak256 } from 'ethers/lib/utils.js'

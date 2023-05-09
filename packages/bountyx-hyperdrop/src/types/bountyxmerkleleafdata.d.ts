@@ -33,18 +33,6 @@ export interface BountyxMerkleLeafData {
      * Amount paid out by bounty issuer to the project in USD or token
      */
     rewardAmount: number;
-    /**
-     * Token used to pay the bounty
-     */
-    rewardToken?: string;
-    /**
-     * Tells if the reward amount is in USD or token
-     */
-    amountInUsd?: boolean;
-    /**
-     * Rank of the winner
-     */
-    winnerRank?: number;
     [k: string]: unknown;
   };
 }

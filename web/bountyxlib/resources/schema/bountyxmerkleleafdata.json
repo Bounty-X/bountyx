@@ -27,18 +27,6 @@
         "rewardAmount": {
           "type": "number",
           "description": "Amount paid out by bounty issuer to the project in USD or token"
-        },
-        "rewardToken": {
-          "type": "string",
-          "description": "Token used to pay the bounty"
-        },
-        "amountInUsd": {
-          "type": "boolean",
-          "description": "Tells if the reward amount is in USD or token"
-        },
-        "winnerRank": {
-          "type": "number",
-          "description": "Rank of the winner"
         }
       },
       "required": ["rewardAmount"]

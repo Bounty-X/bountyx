@@ -78,16 +78,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
         ],
@@ -294,9 +290,7 @@ export const groupedBountyData = [
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -362,9 +356,7 @@ export const groupedBountyData = [
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -458,16 +450,12 @@ export const groupedBountyData = [
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
           {
             winnerRank: 3,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -530,16 +518,12 @@ export const groupedBountyData = [
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -599,9 +583,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -661,16 +643,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '0',
           },
         ],
@@ -726,9 +704,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -783,9 +759,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -861,16 +835,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -926,23 +896,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
         ],
@@ -994,9 +958,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -1159,16 +1121,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1500',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1500',
           },
         ],
@@ -1256,9 +1214,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '4000',
           },
         ],
@@ -1345,16 +1301,12 @@ export const groupedBountyData = [
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -1426,9 +1378,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -1808,30 +1758,22 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
           {
             winnerRank: 3,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -2007,9 +1949,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '4000',
           },
         ],
@@ -2138,9 +2078,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '4000',
           },
         ],
@@ -2296,9 +2234,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -2362,9 +2298,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
         ],
@@ -2436,37 +2370,27 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 3,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1500',
           },
           {
             winnerRank: 4,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -2541,23 +2465,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -2625,9 +2543,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3000',
           },
         ],
@@ -2703,30 +2619,22 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
           {
             winnerRank: 3,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -2785,9 +2693,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
         ],
@@ -2919,23 +2825,17 @@ export const groupedBountyData = [
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2718',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1167',
           },
           {
             winnerRank: 3,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1167',
           },
         ],
@@ -2999,16 +2899,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1500',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -3122,16 +3018,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -3183,9 +3075,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
         ],
@@ -3527,9 +3417,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -3781,9 +3669,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -3899,9 +3785,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
         ],
@@ -3965,23 +3849,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
         ],
@@ -4044,9 +3922,7 @@ export const groupedBountyData = [
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -4110,23 +3986,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1500',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -4189,9 +4059,7 @@ export const groupedBountyData = [
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -4243,23 +4111,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '10000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '6000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '4000',
           },
         ],
@@ -4369,23 +4231,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '10000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '6000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '4000',
           },
         ],
@@ -4503,23 +4359,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '10000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '6000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '4000',
           },
         ],
@@ -4770,16 +4620,12 @@ export const groupedBountyData = [
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -4873,30 +4719,22 @@ export const groupedBountyData = [
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 3,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
           {
             winnerRank: 4,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -5049,9 +4887,7 @@ export const groupedBountyData = [
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -5216,16 +5052,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '4000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -5359,23 +5191,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '4000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
         ],
@@ -5559,23 +5385,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
         ],
@@ -5659,9 +5479,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -5717,23 +5535,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
         ],
@@ -5789,9 +5601,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -5875,9 +5685,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -5941,9 +5749,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -6057,16 +5863,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '15000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '10000',
           },
         ],
@@ -6200,9 +6002,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -6302,16 +6102,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
         ],
@@ -6387,23 +6183,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1500',
           },
         ],
@@ -6487,9 +6277,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -6549,23 +6337,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1500',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -6648,9 +6430,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
         ],
@@ -6718,23 +6498,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1500',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -6786,23 +6560,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
         ],
@@ -6862,23 +6630,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1500',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -6938,23 +6700,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1500',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -7010,23 +6766,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
         ],
@@ -7155,23 +6905,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1500',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -7336,23 +7080,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1800',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1200',
           },
         ],
@@ -7588,23 +7326,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1500',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -7721,9 +7453,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3000',
           },
         ],
@@ -8005,9 +7735,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
         ],
@@ -8078,9 +7806,6 @@ export const groupedBountyData = [
         ],
         rewards: [
           {
-            receiver: {
-              receiverAddress: '',
-            },
             rewardAmountUsd: '3000',
           },
         ],
@@ -8152,9 +7877,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3000',
           },
         ],
@@ -8296,9 +8019,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -8489,9 +8210,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -8570,9 +8289,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -8651,9 +8368,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -8805,9 +8520,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -8953,37 +8666,27 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '7500',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '6000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
           {
             winnerRank: 3,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '4000',
           },
           {
             winnerRank: 4,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
         ],
@@ -9133,9 +8836,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
         ],
@@ -9282,23 +8983,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '10000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '6000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '4000',
           },
         ],
@@ -9370,16 +9065,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '0',
           },
         ],
@@ -9431,23 +9122,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '10000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '6000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '4000',
           },
         ],
@@ -9519,30 +9204,22 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '8000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
           {
             winnerRank: 3,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -9614,30 +9291,22 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
           {
             winnerRank: 3,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -9871,23 +9540,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -10104,16 +9767,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -10222,9 +9881,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
         ],
@@ -10370,44 +10027,32 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '10000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
           {
             winnerRank: 3,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
           {
             winnerRank: 4,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
           {
             winnerRank: 5,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
         ],
@@ -10534,9 +10179,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
         ],
@@ -10682,23 +10325,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '7000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3000',
           },
         ],
@@ -10774,23 +10411,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '6000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3750',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1500',
           },
         ],
@@ -11156,9 +10787,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -11238,23 +10867,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '6000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -11301,23 +10924,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '10000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '10000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '10000',
           },
         ],
@@ -11376,9 +10993,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
         ],
@@ -11425,23 +11040,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '10000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '10000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '10000',
           },
         ],
@@ -11579,23 +11188,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
         ],
@@ -11655,23 +11258,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1500',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -11813,9 +11410,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '4000',
           },
         ],
@@ -11883,9 +11478,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -12098,9 +11691,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -12172,16 +11763,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -12253,16 +11840,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '7500',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
         ],
@@ -12334,16 +11917,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
         ],
@@ -12415,16 +11994,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '750',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '250',
           },
         ],
@@ -12476,16 +12051,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -12580,37 +12151,27 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
           {
             winnerRank: 3,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
           {
             winnerRank: 4,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1000',
           },
         ],
@@ -12687,16 +12248,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3500',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1500',
           },
         ],
@@ -12772,9 +12329,7 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '2500',
           },
         ],
@@ -12854,16 +12409,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3500',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1500',
           },
         ],
@@ -12962,16 +12513,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3500',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '1500',
           },
         ],
@@ -13055,23 +12602,17 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '4000',
           },
           {
             winnerRank: 2,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '3000',
           },
         ],
@@ -13138,16 +12679,12 @@ export const groupedBountyData = [
         rewards: [
           {
             winnerRank: 0,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
           {
             winnerRank: 1,
-            receiver: {
-              receiverAddress: '',
-            },
+
             rewardAmountUsd: '5000',
           },
         ],
@@ -13228,101 +12765,6 @@ export const groupedBountyData = [
         ],
         minJudgeCount: 1,
         resultPublished: false,
-      },
-    ],
-  },
-  {
-    group: {
-      groupName: 'COH Chapter 1: Season 6',
-      groupDisplayName: 'COH Chapter 1: Season 6',
-    },
-    bounties: [
-      {
-        name: 'Ecosystem Support Analytics, tooling, and sites for Canto awareness',
-        description: '<p>Ecosystem Support Analytics, tooling, and sites for Canto awareness</p>',
-        logoUrl: null,
-        approvalStatus: 'accepted',
-        submittedByOrgName: 'Canto',
-        submittedByOrgLogo: 'https://canto.io/assets/logo.a672d2b0.svg',
-        tags: [],
-        rewardInToken: true,
-        rewardPool: '40000',
-        rewardPoolReceivers: ['0x8E553AabaCEf3De184fc1D28Cf81bAa49d82e8e0'],
-        rewardChain: 'Canto',
-        rewardToken: 'CANTO',
-        rewards: [],
-      },
-      {
-        name: 'NFTs Collections that break new ground, and/or include experimental aspects. ',
-        description: '<p>NFTs Collections that break new ground, and/or include experimental aspects. </p>',
-        logoUrl: null,
-        approvalStatus: 'accepted',
-        submittedByOrgName: 'Canto',
-        submittedByOrgLogo: 'https://canto.io/assets/logo.a672d2b0.svg',
-        tags: [],
-        rewardInToken: true,
-        rewardPool: '40000',
-        rewardChain: 'Canto',
-        rewardToken: 'CANTO',
-        rewards: [],
-      },
-      {
-        name: 'DeFi & Infrastructure Apps that leverage Canto’s Infrastructure, including its Free Public Infrastructure of DeFi Primitives and Contract Secured Revenue.',
-        description:
-          '<p>DeFi & Infrastructure Apps that leverage Canto’s Infrastructure, including its Free Public Infrastructure of DeFi Primitives and Contract Secured Revenue. </p>',
-        logoUrl: null,
-        approvalStatus: 'accepted',
-        submittedByOrgName: 'Canto',
-        submittedByOrgLogo: 'https://canto.io/assets/logo.a672d2b0.svg',
-        tags: [],
-        rewardInToken: true,
-        rewardPool: '40000',
-        rewardPoolReceivers: ['0xa0facBd53826095f65CBe48F43ddba293d8FD19b'],
-        rewardChain: 'Canto',
-        rewardToken: 'CANTO',
-        rewards: [],
-      },
-      {
-        name: 'New Things The most divergent ideas: games, DAOs, all things weird.',
-        description: '<p>New Things The most divergent ideas: games, DAOs, all things weird.</p>',
-        logoUrl: null,
-        approvalStatus: 'accepted',
-        submittedByOrgName: 'Canto',
-        submittedByOrgLogo: 'https://canto.io/assets/logo.a672d2b0.svg',
-        tags: [],
-        rewardInToken: true,
-        rewardPool: '40000',
-        rewardChain: 'Canto',
-        rewardToken: 'CANTO',
-        rewards: [],
-      },
-      {
-        name: 'Notable Builds Remarkable projects will be awarded as judges see fit.',
-        description: '<p>Notable Builds Remarkable projects will be awarded as judges see fit.</p>',
-        logoUrl: null,
-        approvalStatus: 'accepted',
-        submittedByOrgName: 'Canto',
-        submittedByOrgLogo: 'https://canto.io/assets/logo.a672d2b0.svg',
-        tags: [],
-        rewardInToken: true,
-        rewardPool: '40000',
-        rewardChain: 'Canto',
-        rewardToken: 'CANTO',
-        rewards: [],
-      },
-      {
-        name: 'Overall Winner Prize',
-        description: '<p>Overall Winner Prize</p>',
-        logoUrl: null,
-        approvalStatus: 'accepted',
-        submittedByOrgName: 'Canto',
-        submittedByOrgLogo: 'https://canto.io/assets/logo.a672d2b0.svg',
-        tags: [],
-        rewardInToken: true,
-        rewardPool: '100000',
-        rewardChain: 'Canto',
-        rewardToken: 'CANTO',
-        rewards: [],
       },
     ],
   },

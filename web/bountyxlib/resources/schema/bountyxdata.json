@@ -32,7 +32,8 @@
           "type": "string",
           "description": "Bounty issuer logo url"
         }
-      }
+      },
+      "required": ["issuerName"]
     },
     "receiver": {
       "type": "object",
@@ -64,11 +65,8 @@
           "type": "number",
           "description": "Rank of the winner"
         }
-      }
-    },
-    "signature": {
-      "type": "string",
-      "description": "Signature of the bounty issuer endorsing the receiver"
+      },
+      "required": ["rewardAmount"]
     }
   },
   "additionalProperties": false,
