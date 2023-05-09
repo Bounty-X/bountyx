@@ -24,7 +24,7 @@ export default function Eligibility() {
       </h1>
       <p className="py-6">
         {eligibleClaims.length > 0
-          ? 'You are now eligible to claim one or more Bounty Hypercerts. It is your way to celebrate your victory and get recognized within a community for creating meaningful impact!'
+          ? 'You are now eligible to claim one or more Bounty Hypercerts. Celebrate your victory and get recognized within a community for creating meaningful impact!'
           : 'You are not eligible to claim a Hypercert today. But it just means you can keep participating in different hackathons, applying for bounties, and then come back to manifest your impact!'}
       </p>
       {eligibleClaims.map((claim) => (
