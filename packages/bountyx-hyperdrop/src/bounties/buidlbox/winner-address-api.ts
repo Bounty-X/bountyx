@@ -7,7 +7,8 @@ export default function getWinnerAddress(
     (bountyName === "0x Labs: Build Token Swaps with 0x Swap API" &&
       rewardAmount === 3000) ||
     (bountyName === "Decentralized Frontend Hosting for DAOs" &&
-      rewardAmount === 5000)
+      rewardAmount === 5000) ||
+    (bountyName === "zkBob Bounty" && rewardAmount === 10000)
   ) {
     return "0x8626f6940e2eb28930efb4cef49b2d1f2c9c1190";
   }

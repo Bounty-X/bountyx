@@ -17,7 +17,7 @@ export default function EligibleClaimCard({ bounties }: EligibleClaimCardProps) 
       <div className="card-body py-4 items-center text-center">
         <h2 className="card-title">{bounties[0].group}</h2>
         <div className="badge">Reward: {bounties.reduce<number>((accu, bounty) => accu + bounty.reward.rewardAmount, 0)}</div>
-        <div className="flex flex-row gap-2">
+        <div className="flex flex-row gap-2 flex-wrap">
           {bounties.map((bounty) => (
             <BountyIconListItem bountyMetadata={bounty} />
           ))}

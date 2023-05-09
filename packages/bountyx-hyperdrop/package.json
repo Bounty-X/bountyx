@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/app.ts"
+    "start": "pnpm generate && pnpm copy-merkle",
+    "generate": "ts-node src/app.ts",
+    "copy-merkle": "cp ./merkle.json ../../web/lib/hyperdrop/"
   },
   "keywords": [],
   "author": "",
