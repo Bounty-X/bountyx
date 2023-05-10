@@ -21,7 +21,7 @@ export default function Eligibility() {
   const groupedBounties: Map<string, BountyxMetadata[]> = new Map()
   for (const claim of eligibleClaims) {
     if (groupedBounties.has(claim.bounty.group)) {
-      groupedBounties.get(claim.bounty.group)?.push(claim.bounty)
+      groupedBounties.get(claim.bounty.group)!.push(claim.bounty)
     } else {
       groupedBounties.set(claim.bounty.group, [claim.bounty])
     }
