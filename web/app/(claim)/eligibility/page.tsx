@@ -39,7 +39,7 @@ export default function Eligibility() {
           ? 'You are now eligible to claim one or more Bounty Hypercerts. Celebrate your victory and get recognized within a community for creating meaningful impact!'
           : 'You are not eligible to claim a Hypercert today. But it just means you can keep participating in different hackathons, applying for bounties, and then come back to manifest your impact!'}
       </p>
-      <div className="flex flex-row gap-5">
+      <div className="flex flex-row gap-5 pl-8">
         {[...groupedBounties.values()].map((bounties) => (
           <EligibleClaimCard bounties={bounties} />
         ))}
