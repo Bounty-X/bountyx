@@ -13,8 +13,11 @@ contract BountyXHyperDrop is Ownable, IHyperDrop {
     error BountyXHyperDrop__NotClaimable();
     // @notice thrown if the provided merkle tree root is not a part of the drop
     error BountyXHyperDrop__InvalidRoot();
+    // @notice thrown if the provided leafs and proofs length mismatch for the batch claim
+    error BountyXHyperDrop__InvalidClaimInput();
 
-    event Claimed(address indexed to, bytes32 indexed leaf);
+    event ClaimedSingle(address indexed to, bytes32 indexed leaf);
+    event Claimed(address indexed to, bytes32[] indexed leaves);
     event MerkleRootAdded(bytes32 indexed newRoot, address indexed publisher);
 
     // @notice merkle tree roots for the hyperdrops
@@ -31,9 +34,9 @@ contract BountyXHyperDrop is Ownable, IHyperDrop {
     }
 
     /**
-     * @notice Allows to claim a hypercert if an address is eligible and the leaf is a part of the merkle tree
+     * @notice Allows to claim a hypercert if an address is eligible and the leaf is a part of a merkle tree
      */ 
-    function claim(address to, bytes32 leaf, bytes32[] calldata proof, bytes32 merkleRoot) external {
+    function claimSingle(address to, bytes32 leaf, bytes32[] calldata proof, bytes32 merkleRoot) external {
         if (hyperdropMerkleRoots[merkleRoot] == address(0)) revert BountyXHyperDrop__InvalidRoot();
 
         if (claims[to][leaf]) revert BountyXHyperDrop__AlreadyClaimed();
@@ -44,7 +47,28 @@ contract BountyXHyperDrop is Ownable, IHyperDrop {
 
         // Mint a hypercert
 
-        emit Claimed(to, leaf);
+        emit ClaimedSingle(to, leaf);
+    }
+
+    /**
+     * @notice Allows to claim a hypercert if an address is eligible and the batch of leafs is included in a merkle tree
+     */ 
+    function claim(address to, bytes32[] calldata leaves, bytes32[][] calldata proofs, bytes32 merkleRoot) external {
+        if (hyperdropMerkleRoots[merkleRoot] == address(0)) revert BountyXHyperDrop__InvalidRoot();
+
+        if (leaves.length != proofs.length) revert BountyXHyperDrop__InvalidClaimInput();
+
+        for (uint i = 0; i < leaves.length; ++i) {
+            bool isClaimable = MerkleProof.verify(proofs[i], merkleRoot, leaves[i]);
+            if (!isClaimable) revert BountyXHyperDrop__NotClaimable();
+            
+            if (claims[to][leaves[i]]) revert BountyXHyperDrop__AlreadyClaimed();
+            claims[to][leaves[i]] = true;
+        }
+
+        // Mint a hypercert
+
+        emit Claimed(to, leaves);
     }
     
     /**
