@@ -36,7 +36,7 @@ contract BountyXHyperDrop is Ownable, IHyperDrop {
     /**
      * @notice Allows to claim a hypercert if an address is eligible and the leaf is a part of a merkle tree
      */ 
-    function claimSingle(address to, bytes32 leaf, bytes32[] calldata proof, bytes32 merkleRoot) external {
+    function claimSingleHyperdrop(address to, bytes32 leaf, bytes32[] calldata proof, bytes32 merkleRoot) external {
         if (hyperdropMerkleRoots[merkleRoot] == address(0)) revert BountyXHyperDrop__InvalidRoot();
 
         if (claims[to][leaf]) revert BountyXHyperDrop__AlreadyClaimed();
@@ -53,7 +53,7 @@ contract BountyXHyperDrop is Ownable, IHyperDrop {
     /**
      * @notice Allows to claim a hypercert if an address is eligible and the batch of leafs is included in a merkle tree
      */ 
-    function claim(address to, bytes32[] calldata leaves, bytes32[][] calldata proofs, bytes32 merkleRoot) external {
+    function claimHyperdrop(address to, bytes32[] calldata leaves, bytes32[][] calldata proofs, bytes32 merkleRoot) external {
         if (hyperdropMerkleRoots[merkleRoot] == address(0)) revert BountyXHyperDrop__InvalidRoot();
 
         if (leaves.length != proofs.length) revert BountyXHyperDrop__InvalidClaimInput();
