@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: UNKNOWN
-pragma solidity 0.8.19;
+pragma solidity ^0.8.16;
 
 import { IHyperDrop } from "./interfaces/IHyperDrop.sol";
 import { MerkleProof } from "openzeppelin-contracts/utils/cryptography/MerkleProof.sol";
 import { Ownable } from "openzeppelin-contracts/access/Ownable.sol";
+
+import { IHypercertToken } from "hypercerts/contracts/src/interfaces/IHypercertToken.sol";
 
 contract BountyXHyperDrop is Ownable, IHyperDrop {
 
@@ -27,16 +29,25 @@ contract BountyXHyperDrop is Ownable, IHyperDrop {
     mapping(address => mapping(bytes32 => bool)) claims;
 
     // @notice Hypercert Minter address
-    address hypercertMinter;
+    IHypercertToken hypercertMinter;
 
-    constructor(address _hypercertMinter) {
+    constructor(IHypercertToken _hypercertMinter) {
         hypercertMinter = _hypercertMinter;
     }
 
     /**
      * @notice Allows to claim a hypercert if an address is eligible and the leaf is a part of a merkle tree
      */ 
-    function claimSingleHyperdrop(address to, bytes32 leaf, bytes32[] calldata proof, bytes32 merkleRoot) external {
+    function claimSingleHyperdrop(
+        address to,
+        bytes32 leaf,
+        bytes32[] calldata proof,
+        bytes32 merkleRoot,
+        uint256 units,
+        uint256[] memory fractions,
+        string memory uri,
+        IHypercertToken.TransferRestrictions restrictions
+    ) external {
         if (hyperdropMerkleRoots[merkleRoot] == address(0)) revert BountyXHyperDrop__InvalidRoot();
 
         if (claims[to][leaf]) revert BountyXHyperDrop__AlreadyClaimed();
@@ -45,7 +56,7 @@ contract BountyXHyperDrop is Ownable, IHyperDrop {
         if (!isClaimable) revert BountyXHyperDrop__NotClaimable();
         claims[to][leaf] = true;
 
-        // Mint a hypercert
+        hypercertMinter.mintClaimWithFractions(to, units, fractions, uri, restrictions);
 
         emit ClaimedSingle(to, leaf);
     }
@@ -53,7 +64,16 @@ contract BountyXHyperDrop is Ownable, IHyperDrop {
     /**
      * @notice Allows to claim a hypercert if an address is eligible and the batch of leafs is included in a merkle tree
      */ 
-    function claimHyperdrop(address to, bytes32[] calldata leaves, bytes32[][] calldata proofs, bytes32 merkleRoot) external {
+    function claimHyperdrop(
+        address to,
+        bytes32[] calldata leaves,
+        bytes32[][] calldata proofs,
+        bytes32 merkleRoot,
+        uint256 units,
+        uint256[] memory fractions,
+        string memory uri,
+        IHypercertToken.TransferRestrictions restrictions
+    ) external {
         if (hyperdropMerkleRoots[merkleRoot] == address(0)) revert BountyXHyperDrop__InvalidRoot();
 
         if (leaves.length != proofs.length) revert BountyXHyperDrop__InvalidClaimInput();
@@ -66,7 +86,7 @@ contract BountyXHyperDrop is Ownable, IHyperDrop {
             claims[to][leaves[i]] = true;
         }
 
-        // Mint a hypercert
+        hypercertMinter.mintClaimWithFractions(to, units, fractions, uri, restrictions);
 
         emit Claimed(to, leaves);
     }
