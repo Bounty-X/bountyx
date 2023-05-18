@@ -3,5 +3,6 @@ forge-std/=lib/forge-std/src/
 hypercerts/=lib/hypercerts/
 murky/=lib/hypercerts/contracts/lib/murky/src/
 openzeppelin-contracts-upgradeable/=lib/hypercerts/contracts/lib/openzeppelin-contracts-upgradeable/
+oz-upgradeable/=lib/hypercerts/contracts/lib/openzeppelin-contracts-upgradeable/contracts/
 openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/
 prb-test/=lib/hypercerts/contracts/lib/prb-test/src/
