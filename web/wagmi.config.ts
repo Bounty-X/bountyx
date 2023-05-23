@@ -1,5 +1,5 @@
 import { defineConfig } from '@wagmi/cli'
-import { foundry, react } from '@wagmi/cli/plugins'
+import { foundry, react, actions } from '@wagmi/cli/plugins'
 import * as chains from '@wagmi/chains'
 
 const HYPERCERT_DEPLOYMENT_ADDRESS = '0x822F17A9A5EeCFd66dBAFf7946a8071C265D1d07'
@@ -28,6 +28,9 @@ export default defineConfig({
         },
       },
     }),
-    react(),
+    react({
+      useContract: true,
+    }),
+    actions(),
   ],
 })
