@@ -3,11 +3,10 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "anvil": "source ./.env && anvil --fork-url $ANVIL_FORK_URL --chain-id $ANVIL_CHAIN_ID",
-    "node": "npx hardhat node",
-    "dev": "npm run wagmi && vite",
-    "dev:foundry": "npm run anvil",
-    "dev:hardhat": "npm run node",
+    "deploy:local": ". ./.env && forge script script/HyperDrop.s.sol:HyperDropScriptDeployLocal --rpc-url http://localhost:8545 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 --broadcast -vvv",
+    "node:foundry:fork": ". ./.env && anvil --fork-url $ANVIL_FORK_URL --chain-id $ANVIL_CHAIN_ID",
+    "node:foundry": "anvil",
+    "node:hardhat": "hardhat node",
     "lint": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit"
   },
