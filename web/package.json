@@ -3,6 +3,7 @@
   "version": "0.0.4",
   "license": "MIT",
   "scripts": {
+    "dev:new": "pnpm run deploy && next dev",
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
@@ -10,12 +11,13 @@
     "lint": "next lint --fix",
     "prettier": "prettier './src' --write",
     "wagmi:init": "wagmi init",
-    "wagmi:generate": "wagmi generate",
+    "wagmi:generate": "wagmi generate -w",
     "bountyxlib:clean": "rm -rf ./bountyxlib/types",
     "bountyxlib:types:json": "yarn run json2ts -i './bountyxlib/resources/schema/' -o 'bountyxlib/types' --cwd './bountyxlib/resources/schema' --no-declareExternallyReferenced",
     "bountyxlib:build": "yarn bountyxlib:clean && yarn bountyxlib:types:json",
     "prebuild": "wagmi generate",
-    "predev": "wagmi generate"
+    "predev": "wagmi generate",
+    "deploy": "cd ../contracts && pnpm run deploy:local && cd ../web"
   },
   "lint-staged": {
     "./src": [

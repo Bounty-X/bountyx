@@ -8,14 +8,16 @@ import { useAccount } from 'wagmi'
 import EligibleClaimCard from './eligible-claim-card'
 
 export default function Eligibility() {
-  // const { address, isConnected } = useAccount()
-  const address = '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1190' as `0x${string}`
-  const isConnected = true
+  const { address, isConnected } = useAccount()
   const [eligibleClaims, setEligibleClaims] = useState<EligibleClaim[]>([])
+
   useEffect(() => {
-    if (isConnected) {
-      setEligibleClaims(getEligibleHyperdropClaims(address!))
+    const checkEligibleClaims = async () => {
+      if (isConnected) {
+        setEligibleClaims(await getEligibleHyperdropClaims(address!))
+      }
     }
+    checkEligibleClaims()
   }, [])
 
   const groupedBounties: Map<string, BountyxMetadata[]> = new Map()
