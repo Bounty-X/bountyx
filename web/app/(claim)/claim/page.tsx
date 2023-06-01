@@ -103,7 +103,7 @@ export default function Claim() {
       properties: [
         {
           trait_type: 'Group',
-          value: bounties ? bounties[0].group : '',
+          value: bounties && bounties.length > 0 ? bounties[0].group : '',
         },
       ],
       hypercert: hypercert,

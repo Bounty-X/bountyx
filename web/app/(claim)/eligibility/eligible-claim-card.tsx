@@ -2,7 +2,7 @@ import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
 import { BountyIconListItem } from '@/components/certificate/bounty-icon-list-item'
 import { LinkComponent } from '@/components/shared/link-component'
 import { BountiesContext } from '@/providers/bounties-provider'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 
 type EligibleClaimCardProps = {
   bounties: BountyxMetadata[]
@@ -10,7 +10,9 @@ type EligibleClaimCardProps = {
 
 export default function EligibleClaimCard({ bounties }: EligibleClaimCardProps) {
   const bountiesContext = useContext(BountiesContext)
-  bountiesContext?.setBounties(bounties)
+  useEffect(() => {
+    bountiesContext?.setBounties(bounties)
+  })
 
   if (bounties.length === 0) {
     return <div>No Eligible Claims</div>
