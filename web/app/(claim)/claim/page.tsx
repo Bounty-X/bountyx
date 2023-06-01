@@ -1,26 +1,20 @@
 'use client'
-import { useEffect, useRef, useState } from 'react'
+import { useContext, useRef, useState } from 'react'
 
 import { BigNumber } from 'ethers'
 import html2canvas from 'html2canvas'
-import { image } from 'html2canvas/dist/types/css/types/image'
-import Link from 'next/link'
-import { toast } from 'react-toastify'
-import { useAccount, useNetwork } from 'wagmi'
+import { useAccount } from 'wagmi'
 
 import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
 import { HypercertClaimdata } from '@/bountyxlib/types/claimdata'
 import { HypercertMetadata } from '@/bountyxlib/types/metadata'
-import { BountiesList } from '@/components/bountyx/bounties-list'
 import CertificateImageHtml from '@/components/certificate/certificate-image-html'
 import { useMintClaim } from '@/hooks/hypercert/mintClaim'
-import { useMintClaimWithFractions } from '@/hooks/hypercert/mintClaimWithFractions'
-import { useSafeBatchTransferFrom } from '@/hooks/hypercert/safeBatchTransferFrom'
 import useLocalStorage from '@/hooks/utils/use-local-storage'
-import { getAllGroups, getBountiesForReceiver } from '@/lib/api/hackathon-providers/buidlbox/buidlbox-api'
 import { formatContributors, formatScope, formatScopeList } from '@/lib/hypercert/formatting'
 import { parseListFromString } from '@/lib/hypercert/parsing'
+import { BountiesContext } from '@/providers/bounties-provider'
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
@@ -31,19 +25,17 @@ interface FractionOwnership {
   fraction: BigNumber
 }
 
-interface ClaimPageProps {
-  bounties: BountyxMetadata[]
-}
-
-interface LocalCertData {
+export interface LocalCertData {
   name: string
   description: string
   external_url: string
-  contributors: string[]
+  contributors: string
 }
 
 // Receives a list of bounties for the same group
-export default function Claim({ bounties }: ClaimPageProps) {
+export default function Claim() {
+  const bountiesContext = useContext(BountiesContext)
+  const bounties = bountiesContext?.bounties ?? []
   const { address } = useAccount()
 
   const certificateElementRef = useRef(null)
@@ -52,7 +44,7 @@ export default function Claim({ bounties }: ClaimPageProps) {
     name: '',
     description: '',
     external_url: '',
-    contributors: [],
+    contributors: '',
   })
 
   const [metadata, setMetadata] = useState<HypercertMetadata & BountyxMetadataCollection>({
@@ -80,7 +72,7 @@ export default function Claim({ bounties }: ClaimPageProps) {
     })
 
     const workScopeStr = formatScopeList(workScopeList)
-    const contributorsList = parseListFromString(metadata.hypercert?.contributors, { lowercase: 'addresses', deduplicate: true })
+    const contributorsList = parseListFromString(localCertData.contributors, { lowercase: 'addresses', deduplicate: true })
     const contributorsStr = formatContributors(contributorsList)
 
     owners.push(...(contributorsList as [`0x${string}`]))
@@ -111,11 +103,11 @@ export default function Claim({ bounties }: ClaimPageProps) {
       properties: [
         {
           trait_type: 'Group',
-          value: bounties[0].group,
+          value: bounties ? bounties[0].group : '',
         },
       ],
       hypercert: hypercert,
-      bounties: bounties,
+      bounties,
     }
     setMetadata(newMetadata)
   }
@@ -223,7 +215,7 @@ export default function Claim({ bounties }: ClaimPageProps) {
               />
             </div>
             <button type="submit" className="btn mt-[57px] py-4" disabled={hypercertMinted}>
-              'Claim Hypercert'
+              Claim Hypercert
             </button>
             {/* </Link> */}
           </div>
@@ -231,7 +223,7 @@ export default function Claim({ bounties }: ClaimPageProps) {
       </div>
       <div className="basis-1/3">
         <div className="h-[525px] w-[375px] bg-transparent" ref={certificateElementRef}>
-          <CertificateImageHtml projectMetadata={localCertData} bounties={bounties} backgroundUrl={''} />
+          <CertificateImageHtml localCertData={localCertData} bounties={bounties} backgroundUrl={''} />
         </div>
       </div>
     </div>

@@ -1,20 +1,16 @@
-import { useEffect, useState } from 'react'
 import * as React from 'react'
 
-import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
-import { HypercertClaimdata } from '@/bountyxlib/types/claimdata'
-import { HypercertMetadata } from '@/bountyxlib/types/metadata'
-import { ProjectMetadata } from '@/bountyxlib/types/projectmetadata'
 
 import { BountyIconListItem } from './bounty-icon-list-item'
+import { LocalCertData } from '@/app/(claim)/claim/page'
 
 export default function CertificateImageHtml({
-  projectMetadata,
+  localCertData,
   bounties,
   backgroundUrl,
 }: {
-  projectMetadata: ProjectMetadata
+  localCertData: LocalCertData
   bounties: BountyxMetadata[]
   backgroundUrl: string
 }) {
@@ -42,7 +38,7 @@ export default function CertificateImageHtml({
     return impactScopeBadgeList
   }
 
-  const timeline = bounties.at(0)?.group === 'Eth Denver 2023' ? '2023-02-25 ⟶ 2023-03-04' : '2023-03-13 ⟶ 2023-03-31'
+  const timeline = bounties.length > 0 && bounties[0].group === 'Eth Denver 2023' ? '2023-02-25 ⟶ 2023-03-04' : '2023-03-13 ⟶ 2023-03-31'
 
   return (
     <>
@@ -53,7 +49,7 @@ export default function CertificateImageHtml({
         <div className=" absolute left-0 top-[300px] h-[225px] w-[375px] bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
           <div className="mx-10">
             <div className="my-4">
-              <span className="font-sans text-3xl font-bold decoration-white antialiased">{projectMetadata.name}</span>
+              <span className="font-sans text-3xl font-bold decoration-white antialiased">{localCertData.name}</span>
             </div>
             <div className="my-2">
               <span className="text-small font-sans decoration-white antialiased">{timeline}</span>

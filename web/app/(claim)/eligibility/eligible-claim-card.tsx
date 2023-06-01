@@ -1,11 +1,17 @@
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
 import { BountyIconListItem } from '@/components/certificate/bounty-icon-list-item'
+import { LinkComponent } from '@/components/shared/link-component'
+import { BountiesContext } from '@/providers/bounties-provider'
+import { useContext } from 'react'
 
 type EligibleClaimCardProps = {
   bounties: BountyxMetadata[]
 }
 
 export default function EligibleClaimCard({ bounties }: EligibleClaimCardProps) {
+  const bountiesContext = useContext(BountiesContext)
+  bountiesContext?.setBounties(bounties)
+
   if (bounties.length === 0) {
     return <div>No Eligible Claims</div>
   }
@@ -23,7 +29,9 @@ export default function EligibleClaimCard({ bounties }: EligibleClaimCardProps) 
           ))}
         </div>
         <div className="card-actions">
-          <button className="btn btn-primary">Claim Hypercert</button>
+          <LinkComponent href="/claim">
+            <button className="btn btn-primary">Claim Hypercert</button>
+          </LinkComponent>
         </div>
       </div>
     </div>
