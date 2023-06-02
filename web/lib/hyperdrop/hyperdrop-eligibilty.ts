@@ -19,20 +19,26 @@ const generateLeaf = (hyperdropLeaf: BountyxMerkleLeafData): Buffer => {
   )
 }
 
-export type EligibleClaim = {
+export type EligibleGroupedClaim = {
   address: `0x${string}`
-  leaf: Buffer
-  proof: string[]
-  merkleRoot: string
-  bounty: BountyxMetadata
+  leaves: Buffer[]
+  proofs: `0x${string}`[][]
+  merkleRoot: Buffer
+  bounties: BountyxMetadata[]
 }
 
-export const getEligibleHyperdropClaims = async (address: `0x${string}`): Promise<EligibleClaim[]> => {
-  const eligibleClaims: EligibleClaim[] = []
-
+export const getEligibleHyperdropClaims = async (address: `0x${string}`): Promise<EligibleGroupedClaim> => {
   const leaves: Buffer[] = merkleData.tree.leaves.map((leaf) => Buffer.from(leaf.data))
   const merkleTree = new MerkleTree(leaves, keccak256, { sortPairs: true })
   const hyperdropLeavesData: BountyxMerkleLeafData[] = getHyperdropLeavesPublicData()
+
+  const eligibleGroupedClaim: EligibleGroupedClaim = {
+    address,
+    leaves: [],
+    proofs: [],
+    merkleRoot: merkleTree.getRoot(),
+    bounties: [],
+  }
 
   for (const bountyData of hyperdropLeavesData) {
     bountyData.receiverAddress = address
@@ -50,15 +56,11 @@ export const getEligibleHyperdropClaims = async (address: `0x${string}`): Promis
     })
 
     if (claimable) {
-      eligibleClaims.push({
-        address,
-        leaf,
-        proof,
-        merkleRoot: merkleTree.getHexRoot(),
-        bounty: getBountyXMetadataItem(bountyData),
-      })
+      eligibleGroupedClaim.leaves.push(leaf)
+      eligibleGroupedClaim.proofs.push(proof)
+      eligibleGroupedClaim.bounties.push(getBountyXMetadataItem(bountyData))
     }
   }
 
-  return eligibleClaims
+  return eligibleGroupedClaim
 }

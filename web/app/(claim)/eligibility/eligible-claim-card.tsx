@@ -1,20 +1,17 @@
-import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
 import { BountyIconListItem } from '@/components/certificate/bounty-icon-list-item'
 import { LinkComponent } from '@/components/shared/link-component'
-import { BountiesContext } from '@/providers/bounties-provider'
-import { useContext, useEffect } from 'react'
+import { EligibleGroupedClaim } from '@/lib/hyperdrop/hyperdrop-eligibilty'
+import { EligibleClaimContext } from '@/providers/eligible-claim-provider'
+import { useContext } from 'react'
 
 type EligibleClaimCardProps = {
-  bounties: BountyxMetadata[]
+  claim: EligibleGroupedClaim
 }
 
-export default function EligibleClaimCard({ bounties }: EligibleClaimCardProps) {
-  const bountiesContext = useContext(BountiesContext)
-  useEffect(() => {
-    bountiesContext?.setBounties(bounties)
-  })
+export default function EligibleClaimCard({ claim }: EligibleClaimCardProps) {
+  const eligibleClaimContext = useContext(EligibleClaimContext)
 
-  if (bounties.length === 0) {
+  if (claim.bounties.length === 0) {
     return <div>No Eligible Claims</div>
   }
   return (
@@ -23,16 +20,22 @@ export default function EligibleClaimCard({ bounties }: EligibleClaimCardProps) 
         <img src="/ethdenver-icon.jpeg" alt="Group" className="rounded-xl" />
       </figure>
       <div className="card-body py-4 items-center text-center">
-        <h2 className="card-title">{bounties[0].group}</h2>
-        <div className="badge">Reward: {bounties.reduce<number>((accu, bounty) => accu + bounty.reward.rewardAmount, 0)}</div>
+        <h2 className="card-title">{claim.bounties[0].group}</h2>
+        <div className="badge">Reward: {claim.bounties.reduce<number>((accu, bounty) => accu + bounty.reward.rewardAmount, 0)}</div>
         <div className="flex flex-row gap-2 flex-wrap">
-          {bounties.map((bounty) => (
+          {claim.bounties.map((bounty) => (
             <BountyIconListItem bountyMetadata={bounty} />
           ))}
         </div>
         <div className="card-actions">
           <LinkComponent href="/claim">
-            <button className="btn btn-primary">Claim Hypercert</button>
+            <button
+              className="btn btn-primary"
+              onClick={() => {
+                eligibleClaimContext?.setClaim(claim)
+              }}>
+              Claim Hypercert
+            </button>
           </LinkComponent>
         </div>
       </div>
