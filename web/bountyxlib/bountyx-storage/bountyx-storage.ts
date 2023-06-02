@@ -1,6 +1,6 @@
 import { HypercertsStorage } from '@hypercerts-org/hypercerts-sdk'
 import { BountyxMetadataCollection } from '../types/bountyxcollection.js'
-import { HypercertMetadata } from '../types/metadata.js'
+import { HypercertMetadata } from '@hypercerts-org/hypercerts-sdk'
 import axios from 'axios'
 import { NFTStorage, CIDString, Blob } from 'nft.storage'
 

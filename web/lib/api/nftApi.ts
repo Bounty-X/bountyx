@@ -3,7 +3,7 @@ import { Alchemy, Network, Nft } from 'alchemy-sdk'
 
 import { getBountyxStorage } from '@/bountyxlib/bountyx-storage'
 import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
-import { HypercertMetadata } from '@/bountyxlib/types/metadata'
+import { HypercertMetadata } from '@hypercerts-org/hypercerts-sdk'
 
 export const getNftsForOwner = async (args: {
   address: any

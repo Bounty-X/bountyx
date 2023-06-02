@@ -1,4 +1,4 @@
-import { HypercertMetadata } from '@/bountyxlib/types/metadata'
+import { HypercertMetadata } from '@hypercerts-org/hypercerts-sdk'
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
 import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
 const ellipsize = require('ellipsize')

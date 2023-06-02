@@ -1,24 +1,7 @@
+import { assertNever } from './common'
 import { isAddress } from 'ethers/lib/utils'
 import _ from 'lodash'
 
-import { assertNever } from './common'
-
-export const parseCsv = (csv: string) => {
-  const [headersRaw, ...rest] = csv.split('\n')
-  const headers = headersRaw.split(',').map((x) => x.trim())
-  return rest
-    .filter((row) => row.trim() !== '')
-    .map((row) => {
-      const values = row.split(',').map((x) => x.trim())
-      return values.reduce(
-        (result, value, currentIndex) => ({
-          ...result,
-          [headers[currentIndex]]: value,
-        }),
-        {} as Record<string, string>
-      )
-    })
-}
 
 /**
  * Takes a string and splits into a list of strings

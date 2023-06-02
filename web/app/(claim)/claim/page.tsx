@@ -3,24 +3,22 @@ import { useContext, useRef, useState } from 'react'
 
 import { BigNumber } from 'ethers'
 import html2canvas from 'html2canvas'
-import { useAccount } from 'wagmi'
 
 import { BountyxMetadataCollection } from '@/bountyxlib/types/bountyxcollection'
 import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
-import { HypercertClaimdata } from '@/bountyxlib/types/claimdata'
-import { HypercertMetadata } from '@/bountyxlib/types/metadata'
+import { HypercertMetadata, HypercertClaimdata } from '@hypercerts-org/hypercerts-sdk'
 import CertificateImageHtml from '@/components/certificate/certificate-image-html'
-import { useMintClaim } from '@/hooks/hypercert/mintClaim'
 import useLocalStorage from '@/hooks/utils/use-local-storage'
 import { formatContributors, formatScope, formatScopeList } from '@/lib/hypercert/formatting'
 import { parseListFromString } from '@/lib/hypercert/parsing'
-import { BountiesContext } from '@/providers/bounties-provider'
+import { useClaimSingleHyperdrop } from '@/hooks/hyperdrop/claim-single-hyperdrop'
+import { EligibleClaimContext } from '@/providers/eligible-claim-provider'
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
 }
 
-interface FractionOwnership {
+export interface FractionOwnership {
   owner: `0x${string}`
   fraction: BigNumber
 }
@@ -34,9 +32,10 @@ export interface LocalCertData {
 
 // Receives a list of bounties for the same group
 export default function Claim() {
-  const bountiesContext = useContext(BountiesContext)
-  const bounties = bountiesContext?.bounties ?? []
-  const { address } = useAccount()
+  const eligibleClaimContext = useContext(EligibleClaimContext)
+  const claim = eligibleClaimContext?.claim
+  console.log('Claim is', claim)
+  const bounties = claim ? claim.bounties : []
 
   const certificateElementRef = useRef(null)
 
@@ -110,17 +109,19 @@ export default function Claim() {
       bounties,
     }
     setMetadata(newMetadata)
+    console.log('New metadata', newMetadata)
   }
 
   const handleChange = async (field: string, value: string) => {
     setLocalCertData({ ...localCertData, [field]: value })
-
     generateCertImageAndUpdateMetadata()
   }
 
-  const { write: mintClaim } = useMintClaim({
+  const { write: claimHyperdrop } = useClaimSingleHyperdrop({
+    // Be mindful that claim can be undefined and the hook will crash
+    claim: claim!,
     onComplete: () => {
-      console.log('Minting is over')
+      console.log('Claiming is over')
       setHypercertMinted(true)
     },
   })
@@ -144,11 +145,7 @@ export default function Claim() {
     console.log('Units', units)
     console.log('Fractions', ownersToFraction.length)
     console.log('Fractions are', JSON.stringify(ownersToFraction))
-    await mintClaim(
-      metadata,
-      units
-      // ownersToFraction.map((val) => val.fraction)
-    )
+    await claimHyperdrop({ metadata, units, ownersToFraction, allowlistPercentage: 100 })
   }
 
   return (
