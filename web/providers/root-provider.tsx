@@ -11,7 +11,7 @@ import { useIsMounted } from '@/hooks/utils/use-is-mounted'
 import fetchJson from '@/lib/fetch-json'
 import { RainbowKit } from '@/providers/rainbow-kit'
 import { ContractInteractionDialogProvider } from '@/components/shared/contract-interaction-dialog-context'
-import { BountiesProvider } from './bounties-provider'
+import { EligibleClaimProvider } from './eligible-claim-provider'
 
 const queryClient = new QueryClient()
 interface RootProviderProps {
@@ -36,7 +36,7 @@ export default function RootProvider({ children }: RootProviderProps) {
                 <ModalProvider>
                   <RainbowKit>
                     <HandleWalletEvents>
-                      <BountiesProvider>{children}</BountiesProvider>
+                      <EligibleClaimProvider>{children}</EligibleClaimProvider>
                     </HandleWalletEvents>
                   </RainbowKit>
                 </ModalProvider>
