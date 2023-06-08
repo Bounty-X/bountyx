@@ -13,6 +13,7 @@ import { formatContributors, formatScope, formatScopeList } from '@/lib/hypercer
 import { parseListFromString } from '@/lib/hypercert/parsing'
 import { useClaimSingleHyperdrop } from '@/hooks/hyperdrop/claim-single-hyperdrop'
 import { EligibleClaimContext } from '@/providers/eligible-claim-provider'
+import AddressTagInput from '@/components/shared/ui/address-tag-input'
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
@@ -27,7 +28,7 @@ export interface LocalCertData {
   name: string
   description: string
   external_url: string
-  contributors: string
+  contributors: string[]
 }
 
 // Receives a list of bounties for the same group
@@ -43,7 +44,7 @@ export default function Claim() {
     name: '',
     description: '',
     external_url: '',
-    contributors: '',
+    contributors: [],
   })
 
   const [metadata, setMetadata] = useState<HypercertMetadata & BountyxMetadataCollection>({
@@ -56,6 +57,8 @@ export default function Claim() {
   const [units, setUnits] = useState<number>(0)
   const [ownersToFraction, setOwnersToFraction] = useState<FractionOwnership[]>([])
   const [hypercertMinted, setHypercertMinted] = useState<boolean>(false)
+
+  const [contributors, setContributors] = useState<string[]>([])
 
   const updateMetadata = (base64Image?: string) => {
     let numberOfUnits = 0
@@ -71,7 +74,8 @@ export default function Claim() {
     })
 
     const workScopeStr = formatScopeList(workScopeList)
-    const contributorsList = parseListFromString(localCertData.contributors, { lowercase: 'addresses', deduplicate: true })
+    // const contributorsList = parseListFromString(localCertData.contributors, { lowercase: 'addresses', deduplicate: true })
+    const contributorsList = localCertData.contributors
     const contributorsStr = formatContributors(contributorsList)
 
     owners.push(...(contributorsList as [`0x${string}`]))
@@ -112,7 +116,7 @@ export default function Claim() {
     console.log('New metadata', newMetadata)
   }
 
-  const handleChange = async (field: string, value: string) => {
+  const handleChange = async (field: string, value: string | string[]) => {
     setLocalCertData({ ...localCertData, [field]: value })
     generateCertImageAndUpdateMetadata()
   }
@@ -150,7 +154,7 @@ export default function Claim() {
 
   return (
     <div className="flex flex-row justify-evenly">
-      <div className="rounded-box mr-8 basis-1/3 bg-base-200 outline-2 outline-slate-400">
+      <div className="mr-8 basis-1/3">
         <form
           className="mt-4 ml-4 align-middle"
           onSubmit={(e) => {
@@ -159,22 +163,26 @@ export default function Claim() {
               mintHypercert()
             }
           }}>
-          <h1 className="font-bold">Project Info</h1>
+          <h1 className="font-bold">Project Information</h1>
           <div className="form-control w-full max-w-xs py-4">
             <label className="label">
-              <span className="label-text">Project Name:</span>
+              <span className="label-text">What is your project name?</span>
+              <span className="label-text-alt">Required</span>
             </label>
             <input
               type="text"
               id="projectname"
-              placeholder="Type your team's project name here..."
+              placeholder="Type your project name here..."
               defaultValue={localCertData.name}
-              className="input-bordered input w-full max-w-xs"
+              className="input input-bordered w-full max-w-xs"
               onChange={(e) => handleChange('name', e.target.value)}
             />
+          </div>
+          <div className="form-control w-full max-w-xs">
             <div className="form-control w-full max-w-xs py-4">
               <label className="label">
-                <span className="label-text">Project URL:</span>
+                <span className="label-text">What is your Project URL?</span>
+                <span className="label-text-alt">Required</span>
               </label>
               <input
                 type="text"
@@ -185,31 +193,21 @@ export default function Claim() {
                 onChange={(e) => handleChange('external_url', e.target.value)}
               />
             </div>
+            <AddressTagInput
+              addresses={localCertData.contributors}
+              onAddressesChange={(newAddresses: string[]) => handleChange('contributors', newAddresses)}
+            />
             <div className="form-control w-full max-w-xs py-4">
               <label className="label">
-                <span className="label-text">Project Description:</span>
+                <span className="label-text">Description</span>
+                <span className="label-text-alt">Required</span>
               </label>
-              <input
-                type="text"
+              <textarea
+                className="textarea textarea-bordered h-24 w-full max-w-xs"
                 id="projectdescription"
-                placeholder="I don't know your project - describe it for me..."
+                placeholder="Describe your project..."
                 defaultValue={localCertData.description}
-                className="input-bordered input w-full max-w-xs"
-                onChange={(e) => handleChange('description', e.target.value)}
-              />
-            </div>
-            <div className="form-control w-full max-w-xs py-4">
-              <label className="label">
-                <span className="label-text">Project Contributors:</span>
-              </label>
-              <input
-                type="text"
-                id="projectcontributors"
-                placeholder="Enter fellow contributors - comma separated"
-                defaultValue={localCertData.contributors}
-                className="input-bordered input w-full max-w-xs"
-                onChange={(e) => handleChange('contributors', e.target.value)}
-              />
+                onChange={(e) => handleChange('description', e.target.value)}></textarea>
             </div>
             <button type="submit" className="btn mt-[57px] py-4" disabled={hypercertMinted}>
               Claim Hypercert

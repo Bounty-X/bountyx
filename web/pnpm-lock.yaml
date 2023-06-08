@@ -265,6 +265,9 @@ dependencies:
   react-table:
     specifier: ^7.8.0
     version: 7.8.0(react@18.2.0)
+  react-tagsinput:
+    specifier: ^3.20.1
+    version: 3.20.1(react@18.2.0)
   react-toastify:
     specifier: ^9.1.1
     version: 9.1.1(react-dom@18.2.0)(react@18.2.0)
@@ -324,6 +327,9 @@ devDependencies:
   '@types/react-dom':
     specifier: 18.0.10
     version: 18.0.10
+  '@types/react-tagsinput':
+    specifier: ^3.20.0
+    version: 3.20.0
   '@wagmi/cli':
     specifier: ^1.0.1
     version: 1.0.1(@wagmi/core@0.9.3)(typescript@4.9.4)(wagmi@0.11.7)
@@ -9182,6 +9188,12 @@ packages:
     dependencies:
       '@types/react': 18.0.26
     dev: false
+
+  /@types/react-tagsinput@3.20.0:
+    resolution: {integrity: sha512-jfdX/VzJP7SWRfHQSLUq3lvnIKbbtaB/7yPV2O8KsdBHvcpnBT7reBkWn614cfJsUH/Ge3kQTikHKooaSAPwIA==}
+    dependencies:
+      '@types/react': 18.0.26
+    dev: true
 
   /@types/react-transition-group@4.4.5:
     resolution: {integrity: sha512-juKD/eiSM3/xZYzjuzH6ZwpP+/lejltmiS3QEzV/vmb/Q8+HfDmxu+Baga8UEMGBqV88Nbg4l2hY/K2DkyaLLA==}
@@ -20788,6 +20800,14 @@ packages:
     resolution: {integrity: sha512-hNaz4ygkZO4bESeFfnfOft73iBUj8K5oKi1EcSHPAibEydfsX2MyU6Z8KCr3mv3C9Kqqh71U+DhZkFvibbnPbA==}
     peerDependencies:
       react: ^16.8.3 || ^17.0.0-0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
+
+  /react-tagsinput@3.20.1(react@18.2.0):
+    resolution: {integrity: sha512-JAaquVYooCTRBAofqfE3tFlDCV3HMmIWtMCTGCUJege3trA4wcvYHy8WKnyLg21XagwUkMsck2l95znsdmfQ8Q==}
+    peerDependencies:
+      react: ^18.0.0 || ^17.0.0 || ^16.0.0 || ^15.0.0
     dependencies:
       react: 18.2.0
     dev: false
