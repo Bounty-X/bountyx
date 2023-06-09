@@ -15,13 +15,14 @@ import { useClaimSingleHyperdrop } from '@/hooks/hyperdrop/claim-single-hyperdro
 import { EligibleClaimContext } from '@/providers/eligible-claim-provider'
 import AddressTagInput from '@/components/shared/ui/address-tag-input'
 import RangeSliderNumber from '@/components/shared/ui/range-slider-number'
+import PieChart from '@/components/shared/diagrams/pie-chart'
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
 }
 
 export interface FractionOwnership {
-  owner: `0x${string}`
+  owner: string
   fraction: BigNumber
 }
 
@@ -62,7 +63,7 @@ export default function Claim() {
 
   useEffect(() => {
     generateCertImageAndUpdateMetadata()
-  }, [localCertData])
+  }, [localCertData, futureRewardsPercent])
 
   const updateMetadata = (base64Image?: string) => {
     let numberOfUnits = 0
@@ -82,13 +83,18 @@ export default function Claim() {
     const contributorsList = localCertData.contributors
     const contributorsStr = formatContributors(contributorsList)
 
+    const futureRewardsFraction = (numberOfUnits * futureRewardsPercent) / 100
+    const ownersDistributionUnits = numberOfUnits - futureRewardsFraction
+
     owners.push(...(contributorsList as [`0x${string}`]))
     if (owners.length > 0) {
-      const fraction = numberOfUnits / owners.length
+      const fraction = ownersDistributionUnits / owners.length
       const distribution: FractionOwnership[] = owners.map((owner) => {
         const fractionRounded = Math.round(fraction)
         return { owner, fraction: BigNumber.from(fractionRounded) }
       })
+      // update to be assigned to minter
+      distribution.push({ owner: '0xfuture', fraction: BigNumber.from(futureRewardsFraction) })
       setOwnersToFraction(distribution)
       setUnits(numberOfUnits)
     }
@@ -154,8 +160,8 @@ export default function Claim() {
   }
 
   return (
-    <div className="flex flex-row justify-evenly">
-      <div className="mr-8 basis-1/3">
+    <div className="flex flex-col lg:flex-row justify-center lg:justify-evenly items-center">
+      <div className="lg:mr-8">
         <form
           className="mt-4 ml-4 align-middle"
           onSubmit={(e) => {
@@ -217,7 +223,16 @@ export default function Claim() {
           </div>
         </form>
       </div>
-      <div className="basis-1/3">
+      <div className="lg:flex-1">
+        <PieChart
+          data={ownersToFraction.map(({ owner, fraction }) => ({
+            id: owner.length > 12 ? `${owner.slice(0, 6)}...${owner.slice(-4)}` : owner,
+            label: owner,
+            value: fraction.toNumber(),
+          }))}
+        />
+      </div>
+      <div className="lg:flex-1">
         <div className="h-[525px] w-[375px] bg-transparent" ref={certificateElementRef}>
           <CertificateImageHtml localCertData={localCertData} bounties={bounties} backgroundUrl={''} />
         </div>
