@@ -1,5 +1,5 @@
 'use client'
-import { useContext, useRef, useState } from 'react'
+import { ChangeEvent, useContext, useEffect, useRef, useState } from 'react'
 
 import { BigNumber } from 'ethers'
 import html2canvas from 'html2canvas'
@@ -14,6 +14,7 @@ import { parseListFromString } from '@/lib/hypercert/parsing'
 import { useClaimSingleHyperdrop } from '@/hooks/hyperdrop/claim-single-hyperdrop'
 import { EligibleClaimContext } from '@/providers/eligible-claim-provider'
 import AddressTagInput from '@/components/shared/ui/address-tag-input'
+import RangeSliderNumber from '@/components/shared/ui/range-slider-number'
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
@@ -35,8 +36,8 @@ export interface LocalCertData {
 export default function Claim() {
   const eligibleClaimContext = useContext(EligibleClaimContext)
   const claim = eligibleClaimContext?.claim
-  console.log('Claim is', claim)
   const bounties = claim ? claim.bounties : []
+  console.log('Claim is', claim)
 
   const certificateElementRef = useRef(null)
 
@@ -57,8 +58,11 @@ export default function Claim() {
   const [units, setUnits] = useState<number>(0)
   const [ownersToFraction, setOwnersToFraction] = useState<FractionOwnership[]>([])
   const [hypercertMinted, setHypercertMinted] = useState<boolean>(false)
+  const [futureRewardsPercent, setFutureRewardsPercent] = useState<number>(30)
 
-  const [contributors, setContributors] = useState<string[]>([])
+  useEffect(() => {
+    generateCertImageAndUpdateMetadata()
+  }, [localCertData])
 
   const updateMetadata = (base64Image?: string) => {
     let numberOfUnits = 0
@@ -113,12 +117,11 @@ export default function Claim() {
       bounties,
     }
     setMetadata(newMetadata)
-    console.log('New metadata', newMetadata)
+    console.log('New metadata', metadata)
   }
 
   const handleChange = async (field: string, value: string | string[]) => {
     setLocalCertData({ ...localCertData, [field]: value })
-    generateCertImageAndUpdateMetadata()
   }
 
   const { write: claimHyperdrop } = useClaimSingleHyperdrop({
@@ -143,8 +146,6 @@ export default function Claim() {
   }
 
   const mintHypercert = async () => {
-    //TODO: BUG. If no changes to ui - the metadata is empty
-
     console.log('Minting hypercert', metadata)
     console.log('Units', units)
     console.log('Fractions', ownersToFraction.length)
@@ -209,10 +210,10 @@ export default function Claim() {
                 defaultValue={localCertData.description}
                 onChange={(e) => handleChange('description', e.target.value)}></textarea>
             </div>
+            <RangeSliderNumber updateValue={setFutureRewardsPercent} defaultValue={30} maxValue={70} />
             <button type="submit" className="btn mt-[57px] py-4" disabled={hypercertMinted}>
-              Claim Hypercert
+              Mint Hypercert
             </button>
-            {/* </Link> */}
           </div>
         </form>
       </div>
