@@ -18,6 +18,7 @@ import RangeSliderNumber from '@/components/shared/ui/range-slider-number'
 import PieChart from '@/components/shared/diagrams/pie-chart'
 import { formatAddress } from '@/lib/hypercert/formatting'
 import { useDebounce } from 'usehooks-ts'
+import { useAccount } from 'wagmi'
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
@@ -38,17 +39,26 @@ export interface LocalCertData {
 // Receives a list of bounties for the same group
 export default function Claim() {
   const eligibleClaimContext = useContext(EligibleClaimContext)
-  const claim = eligibleClaimContext?.claim
+  let claim = eligibleClaimContext?.claim
   const bounties = claim ? claim.bounties : []
   // console.log('Claim is', claim)
 
+  const { isConnected, address } = useAccount()
+
   const certificateElementRef = useRef(null)
 
-  const [localCertData, setLocalCertData] = useLocalStorage<LocalCertData>('localCertData', {
+  // Uncomment this to use local storage instead of state
+  // const [localCertData, setLocalCertData] = useLocalStorage<LocalCertData>('localCertData', {
+  //   name: '',
+  //   description: '',
+  //   external_url: '',
+  //   contributors: [],
+  // })
+  const [localCertData, setLocalCertData] = useState<LocalCertData>({
     name: '',
     description: '',
     external_url: '',
-    contributors: [],
+    contributors: [address!],
   })
   const debouncedLocalCertData = useDebounce(localCertData, 500)
 
@@ -90,22 +100,33 @@ export default function Claim() {
     })
 
     const workScopeStr = formatScopeList(workScopeList)
-    const contributorsList = formatContributorsList(debouncedLocalCertData.contributors, { lowercase: 'addresses', deduplicate: true })
+    // const contributorsList = formatContributorsList(debouncedLocalCertData.contributors, { lowercase: 'addresses', deduplicate: true })
+    const contributorsList = debouncedLocalCertData.contributors
     const contributorsStr = formatContributors(contributorsList)
 
     const futureRewardsFraction = (numberOfUnits * futureRewardsPercent) / 100
     const ownersDistributionUnits = numberOfUnits - futureRewardsFraction
-    const distribution: FractionOwnership[] = [{ owner: '0x0', fraction: BigNumber.from(futureRewardsFraction) }]
+    let distribution: FractionOwnership[] = []
 
     owners.push(...contributorsList)
     if (owners.length > 0) {
+      let futureRewaardAdded = false
       const fraction = ownersDistributionUnits / owners.length
       distribution.push(
         ...owners.map((owner) => {
           const fractionRounded = Math.round(fraction)
+          if (owner === address) {
+            futureRewaardAdded = true
+            return { owner, fraction: BigNumber.from(fractionRounded + futureRewardsFraction) }
+          }
           return { owner, fraction: BigNumber.from(fractionRounded) }
         })
       )
+      if (!futureRewaardAdded) {
+        distribution.push({ owner: address!, fraction: BigNumber.from(futureRewardsFraction) })
+      }
+    } else {
+      distribution = [{ owner: address!, fraction: BigNumber.from(numberOfUnits) }]
     }
     setOwnersToFraction(distribution)
     setUnits(numberOfUnits)
@@ -167,6 +188,9 @@ export default function Claim() {
     console.log('Fractions are', JSON.stringify(ownersToFraction))
     await claimHyperdrop({ metadata, units, ownersToFraction, allowlistPercentage: 100 })
   }
+
+  if (!isConnected) return <div>Connect your wallet please...</div>
+  if (!claim) return <div>Claim not found</div>
 
   return (
     <div className="flex flex-col lg:flex-row justify-center lg:justify-evenly items-center">

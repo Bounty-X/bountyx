@@ -32,7 +32,7 @@ const RangeSliderNumber = ({ updateValue, defaultValue = 30, maxValue = 70 }: Ra
   return (
     <>
       <label className="label mb-4">
-        <span className="label-text">Percentage for Future Rewards</span>
+        <span className="label-text">Future Rewards</span>
         <span className="label-text-alt">Default: {defaultValue}%</span>
       </label>
       <div className="relative">
