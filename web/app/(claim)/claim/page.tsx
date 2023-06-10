@@ -34,6 +34,7 @@ export interface LocalCertData {
   description: string
   external_url: string
   contributors: AddressOrEns[]
+  additional_owners: AddressOrEns[]
 }
 
 // Receives a list of bounties for the same group
@@ -53,12 +54,14 @@ export default function Claim() {
   //   description: '',
   //   external_url: '',
   //   contributors: [],
+  //   additional_owners: [],
   // })
   const [localCertData, setLocalCertData] = useState<LocalCertData>({
     name: '',
     description: '',
     external_url: '',
     contributors: [address!],
+    additional_owners: bounties.map((b) => (b.issuer.issuerAddress || `${b.issuer.issuerName}.bountyx.eth`) as AddressOrEns),
   })
   const debouncedLocalCertData = useDebounce(localCertData, 500)
 
@@ -100,29 +103,31 @@ export default function Claim() {
     })
 
     const workScopeStr = formatScopeList(workScopeList)
+    // TODO: fitgure out what to do with formatting
     // const contributorsList = formatContributorsList(debouncedLocalCertData.contributors, { lowercase: 'addresses', deduplicate: true })
     const contributorsList = debouncedLocalCertData.contributors
+    const additionalOwnersList = debouncedLocalCertData.additional_owners
     const contributorsStr = formatContributors(contributorsList)
 
     const futureRewardsFraction = (numberOfUnits * futureRewardsPercent) / 100
     const ownersDistributionUnits = numberOfUnits - futureRewardsFraction
     let distribution: FractionOwnership[] = []
 
-    owners.push(...contributorsList)
+    owners.push(...contributorsList, ...additionalOwnersList)
     if (owners.length > 0) {
-      let futureRewaardAdded = false
+      let futureRewardAdded = false
       const fraction = ownersDistributionUnits / owners.length
       distribution.push(
         ...owners.map((owner) => {
           const fractionRounded = Math.round(fraction)
           if (owner === address) {
-            futureRewaardAdded = true
+            futureRewardAdded = true
             return { owner, fraction: BigNumber.from(fractionRounded + futureRewardsFraction) }
           }
           return { owner, fraction: BigNumber.from(fractionRounded) }
         })
       )
-      if (!futureRewaardAdded) {
+      if (!futureRewardAdded) {
         distribution.push({ owner: address!, fraction: BigNumber.from(futureRewardsFraction) })
       }
     } else {
@@ -234,8 +239,16 @@ export default function Claim() {
               />
             </div>
             <AddressTagInput
+              label="Project Contributors"
+              secondLabel="Required"
               addresses={localCertData.contributors}
               onAddressesChange={(newAddresses: string[]) => handleChange('contributors', newAddresses)}
+            />
+            <AddressTagInput
+              label="Additional Owners"
+              secondLabel="Optional"
+              addresses={localCertData.additional_owners}
+              onAddressesChange={(newAddresses: string[]) => handleChange('additional_owners', newAddresses)}
             />
             <div className="form-control w-full max-w-xs py-4">
               <label className="label">
@@ -259,7 +272,7 @@ export default function Claim() {
       <div className="lg:flex-1">
         <PieChart
           data={ownersToFraction.map(({ owner, fraction }) => ({
-            id: owner.length > 12 ? formatAddress(owner) : owner,
+            id: owner.endsWith('.eth') ? owner : formatAddress(owner),
             label: owner,
             value: fraction.toNumber(),
           }))}

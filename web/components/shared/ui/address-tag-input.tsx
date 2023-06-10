@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react'
 import TagsInput, { RenderTagProps } from 'react-tagsinput'
 
 interface TagInputProps {
+  label: string
+  secondLabel?: string
   addresses: string[]
   onAddressesChange: (addresses: string[]) => void
 }
@@ -39,7 +41,7 @@ function randomColor300() {
   return randomColorClass
 }
 
-const AddressTagInput: React.FC<TagInputProps> = ({ addresses, onAddressesChange }) => {
+const AddressTagInput: React.FC<TagInputProps> = ({ label, secondLabel: alternativeLabel, addresses, onAddressesChange }) => {
   const [tags, setTags] = useState<string[]>([])
   const [tagColorMap, setTagColorMap] = useState<TagColorMap>({})
 
@@ -85,8 +87,8 @@ const AddressTagInput: React.FC<TagInputProps> = ({ addresses, onAddressesChange
   return (
     <div className="flex flex-col">
       <label className="label">
-        <span className="label-text">Project Contributors</span>
-        <span className="label-text-alt">Required</span>
+        <span className="label-text">{label}</span>
+        {alternativeLabel && <span className="label-text-alt">{alternativeLabel}</span>}
       </label>
       <TagsInput
         value={tags}
