@@ -72,7 +72,6 @@ const AddressTagInput: React.FC<TagInputProps> = ({ addresses, onAddressesChange
 
     return (
       <span key={key} className={`inline-block ${tagColor} bg-sl text-gray-700 px-2 py-1 mr-2 mb-2 border border-gray-400 rounded ${tagClassName}`}>
-        {' '}
         {tag}
         {!disabled && (
           <span className="tag-remove ml-1 cursor-pointer" onClick={() => onRemove(key)}>

@@ -1,5 +1,9 @@
 import { BigNumber } from 'ethers'
+import { isAddress } from 'ethers/lib/utils.js'
+import { assertNever } from './common'
 import _ from 'lodash'
+
+export type AddressOrEns = `0x${string}` | `${string}.eth`
 
 export const formatScope = (scopeLabel: string) => scopeLabel.toLowerCase().replaceAll(/\s+/g, '-').trim()
 
@@ -31,6 +35,36 @@ export const formatContributors = (contributors: string[]) => {
   const last = _.last(contributors)
 
   return `${initial.join(', ')} & ${last}`
+}
+
+export const formatContributorsList = (
+  contributorsList: AddressOrEns[],
+  opts?: {
+    lowercase?: 'all' | 'addresses'
+    deduplicate?: boolean
+  }
+): AddressOrEns[] => {
+  let list = contributorsList
+    // Cleanup
+    .map((i) => i.trim())
+    // Filter out non-truthy values
+    .filter((i) => !!i)
+  if (opts?.lowercase) {
+    switch (opts.lowercase) {
+      case 'all':
+        list = list.map((x) => x.toLowerCase())
+        break
+      case 'addresses':
+        list = list.map((x) => (isAddress(x) ? x.toLowerCase() : x))
+        break
+      default:
+        assertNever(opts.lowercase)
+    }
+  }
+  if (opts?.deduplicate) {
+    list = _.uniq(list)
+  }
+  return list as AddressOrEns[]
 }
 
 export const formatFractionPercentage = (fractionUnits: string, totalUnits: string) => {

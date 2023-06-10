@@ -13,7 +13,6 @@ const convertToBountyxMetadata = (): BountyxMetadata[] => {
         name: bounty.name,
         description: bounty.description,
         issuer: {
-          issuerAddress: '0x0000000000000000000000000000000000000000',
           issuerName: bounty.submittedByOrgName,
           issuerLogoUrl: bounty.submittedByOrgLogo,
         },
@@ -22,9 +21,6 @@ const convertToBountyxMetadata = (): BountyxMetadata[] => {
       if (bounty.rewardPool) {
         bountiesMetadata.push({
           ...partialBountyXMetadata,
-          // receiver: {
-          //   receiverAddress: '0x0000000000000000000000000000000000000000',
-          // },
           reward: {
             rewardAmount: parseInt(bounty.rewardPool),
             rewardToken: bounty.rewardToken,
@@ -36,9 +32,6 @@ const convertToBountyxMetadata = (): BountyxMetadata[] => {
       for (const reward of bounty.rewards) {
         bountiesMetadata.push({
           ...partialBountyXMetadata,
-          // receiver: {
-          //   receiverAddress: '0x0000000000000000000000000000000000000000',
-          // },
           reward: {
             rewardAmount: parseInt(reward.rewardAmountUsd),
             rewardToken: bounty.rewardToken,
@@ -50,14 +43,6 @@ const convertToBountyxMetadata = (): BountyxMetadata[] => {
   }
 
   return bountiesMetadata
-}
-
-export const getBountiesForReceiver = (receiver: string): BountyxMetadata[] => {
-  return convertToBountyxMetadata()
-}
-
-export const getAllBounties = (): BountyxMetadata[] => {
-  return convertToBountyxMetadata()
 }
 
 export const getAllGroups = (): string[] => {

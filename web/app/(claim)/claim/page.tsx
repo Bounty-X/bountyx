@@ -9,20 +9,22 @@ import { BountyxMetadata } from '@/bountyxlib/types/bountyxdata'
 import { HypercertMetadata, HypercertClaimdata } from '@hypercerts-org/hypercerts-sdk'
 import CertificateImageHtml from '@/components/certificate/certificate-image-html'
 import useLocalStorage from '@/hooks/utils/use-local-storage'
-import { formatContributors, formatScope, formatScopeList } from '@/lib/hypercert/formatting'
+import { AddressOrEns, formatContributors, formatContributorsList, formatScope, formatScopeList } from '@/lib/hypercert/formatting'
 import { parseListFromString } from '@/lib/hypercert/parsing'
 import { useClaimSingleHyperdrop } from '@/hooks/hyperdrop/claim-single-hyperdrop'
 import { EligibleClaimContext } from '@/providers/eligible-claim-provider'
 import AddressTagInput from '@/components/shared/ui/address-tag-input'
 import RangeSliderNumber from '@/components/shared/ui/range-slider-number'
 import PieChart from '@/components/shared/diagrams/pie-chart'
+import { formatAddress } from '@/lib/hypercert/formatting'
+import { useDebounce } from 'usehooks-ts'
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
 }
 
 export interface FractionOwnership {
-  owner: string
+  owner: AddressOrEns
   fraction: BigNumber
 }
 
@@ -30,7 +32,7 @@ export interface LocalCertData {
   name: string
   description: string
   external_url: string
-  contributors: string[]
+  contributors: AddressOrEns[]
 }
 
 // Receives a list of bounties for the same group
@@ -38,7 +40,7 @@ export default function Claim() {
   const eligibleClaimContext = useContext(EligibleClaimContext)
   const claim = eligibleClaimContext?.claim
   const bounties = claim ? claim.bounties : []
-  console.log('Claim is', claim)
+  // console.log('Claim is', claim)
 
   const certificateElementRef = useRef(null)
 
@@ -48,6 +50,7 @@ export default function Claim() {
     external_url: '',
     contributors: [],
   })
+  const debouncedLocalCertData = useDebounce(localCertData, 500)
 
   const [metadata, setMetadata] = useState<HypercertMetadata & BountyxMetadataCollection>({
     ...localCertData,
@@ -62,42 +65,50 @@ export default function Claim() {
   const [futureRewardsPercent, setFutureRewardsPercent] = useState<number>(30)
 
   useEffect(() => {
-    generateCertImageAndUpdateMetadata()
-  }, [localCertData, futureRewardsPercent])
+    const updateData = async () => {
+      const imageBase64 = await generateCertImage()
+      if (imageBase64) {
+        updateMetadata(imageBase64)
+      }
+    }
+    updateData()
+  }, [debouncedLocalCertData, futureRewardsPercent])
 
   const updateMetadata = (base64Image?: string) => {
     let numberOfUnits = 0
     const workScopeList: string[] = []
-    const owners: `0x${string}`[] = []
+    const owners: AddressOrEns[] = []
 
     bounties.forEach((bounty) => {
       numberOfUnits += bounty.reward.rewardAmount
       if (!workScopeList.includes(bounty.issuer?.issuerName!)) {
         workScopeList.push(bounty.issuer?.issuerName!)
       }
-      owners.push(bounty.issuer?.issuerAddress! as `0x${string}`)
+      if (bounty.issuer?.issuerAddress) {
+        owners.push(bounty.issuer.issuerAddress as `0x${string}`)
+      }
     })
 
     const workScopeStr = formatScopeList(workScopeList)
-    // const contributorsList = parseListFromString(localCertData.contributors, { lowercase: 'addresses', deduplicate: true })
-    const contributorsList = localCertData.contributors
+    const contributorsList = formatContributorsList(debouncedLocalCertData.contributors, { lowercase: 'addresses', deduplicate: true })
     const contributorsStr = formatContributors(contributorsList)
 
     const futureRewardsFraction = (numberOfUnits * futureRewardsPercent) / 100
     const ownersDistributionUnits = numberOfUnits - futureRewardsFraction
+    const distribution: FractionOwnership[] = [{ owner: '0x0', fraction: BigNumber.from(futureRewardsFraction) }]
 
-    owners.push(...(contributorsList as [`0x${string}`]))
+    owners.push(...contributorsList)
     if (owners.length > 0) {
       const fraction = ownersDistributionUnits / owners.length
-      const distribution: FractionOwnership[] = owners.map((owner) => {
-        const fractionRounded = Math.round(fraction)
-        return { owner, fraction: BigNumber.from(fractionRounded) }
-      })
-      // update to be assigned to minter
-      distribution.push({ owner: '0xfuture', fraction: BigNumber.from(futureRewardsFraction) })
-      setOwnersToFraction(distribution)
-      setUnits(numberOfUnits)
+      distribution.push(
+        ...owners.map((owner) => {
+          const fractionRounded = Math.round(fraction)
+          return { owner, fraction: BigNumber.from(fractionRounded) }
+        })
+      )
     }
+    setOwnersToFraction(distribution)
+    setUnits(numberOfUnits)
 
     const hypercert: HypercertClaimdata = {
       work_scope: { name: 'Work', value: workScopeList, display_value: workScopeStr },
@@ -108,9 +119,9 @@ export default function Claim() {
     }
 
     const newMetadata: HypercertMetadata & BountyxMetadataCollection = {
-      name: localCertData.name,
-      description: localCertData.description,
-      external_url: localCertData.external_url,
+      name: debouncedLocalCertData.name,
+      description: debouncedLocalCertData.description,
+      external_url: debouncedLocalCertData.external_url,
       image: base64Image ?? '',
       version: '0.0.1',
       properties: [
@@ -123,11 +134,10 @@ export default function Claim() {
       bounties,
     }
     setMetadata(newMetadata)
-    console.log('New metadata', metadata)
   }
 
   const handleChange = async (field: string, value: string | string[]) => {
-    setLocalCertData({ ...localCertData, [field]: value })
+    setLocalCertData({ ...debouncedLocalCertData, [field]: value })
   }
 
   const { write: claimHyperdrop } = useClaimSingleHyperdrop({
@@ -139,15 +149,14 @@ export default function Claim() {
     },
   })
 
-  const generateCertImageAndUpdateMetadata = async () => {
+  const generateCertImage = async () => {
     window.scrollTo(0, 0)
     const certificateElement = certificateElementRef.current
     if (certificateElement) {
       const canvas = await html2canvas(certificateElement, {
         backgroundColor: null,
       })
-      const imageString = canvas.toDataURL('image/base64', 1)
-      updateMetadata(imageString)
+      return canvas.toDataURL('image/base64', 1)
     }
   }
 
@@ -226,7 +235,7 @@ export default function Claim() {
       <div className="lg:flex-1">
         <PieChart
           data={ownersToFraction.map(({ owner, fraction }) => ({
-            id: owner.length > 12 ? `${owner.slice(0, 6)}...${owner.slice(-4)}` : owner,
+            id: owner.length > 12 ? formatAddress(owner) : owner,
             label: owner,
             value: fraction.toNumber(),
           }))}

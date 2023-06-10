@@ -1,4 +1,5 @@
-import { ChangeEvent, useState, useRef } from 'react'
+import { ChangeEvent, useState, useRef, useEffect } from 'react'
+import { useDebounce } from 'usehooks-ts'
 
 interface RangeSliderNumberProps {
   updateValue: (value: number) => void
@@ -8,13 +9,17 @@ interface RangeSliderNumberProps {
 
 const RangeSliderNumber = ({ updateValue, defaultValue = 30, maxValue = 70 }: RangeSliderNumberProps) => {
   const [value, setValue] = useState(defaultValue)
+  const debouncedValue = useDebounce(value, 500)
   const sliderRef = useRef<HTMLInputElement>(null)
   const numberDisplayRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    updateValue(debouncedValue)
+  }, [debouncedValue])
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const parsedValue = parseInt(event.target.value)
     setValue(parsedValue)
-    updateValue(parsedValue)
   }
 
   const calculatePosition = (value: number) => {

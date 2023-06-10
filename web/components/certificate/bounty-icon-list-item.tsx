@@ -8,7 +8,6 @@ export const BountyIconListItem = ({ bountyMetadata }: BountyIconListProps) => {
   if (!bountyMetadata) {
     return null
   }
-  console.log('bg log0', bountyMetadata.issuer.issuerName + '-logo.png')
 
   return (
     <div
