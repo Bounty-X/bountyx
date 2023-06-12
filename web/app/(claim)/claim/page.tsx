@@ -13,7 +13,7 @@ import { AddressOrEns, formatContributors, formatContributorsList, formatScope, 
 import { parseListFromString } from '@/lib/hypercert/parsing'
 import { useClaimSingleHyperdrop } from '@/hooks/hyperdrop/claim-single-hyperdrop'
 import { EligibleClaimContext } from '@/providers/eligible-claim-provider'
-import AddressTagInput from '@/components/shared/ui/address-tag-input'
+import AddressTagInput, { TagColorMap } from '@/components/shared/ui/address-tag-input'
 import RangeSliderNumber from '@/components/shared/ui/range-slider-number'
 import PieChart from '@/components/shared/diagrams/pie-chart'
 import { formatAddress } from '@/lib/hypercert/formatting'
@@ -76,6 +76,7 @@ export default function Claim() {
   const [ownersToFraction, setOwnersToFraction] = useState<FractionOwnership[]>([])
   const [hypercertMinted, setHypercertMinted] = useState<boolean>(false)
   const [futureRewardsPercent, setFutureRewardsPercent] = useState<number>(30)
+  const [tagColors, setTagColors] = useState<TagColorMap>({})
 
   useEffect(() => {
     const updateData = async () => {
@@ -166,6 +167,13 @@ export default function Claim() {
     setLocalCertData({ ...debouncedLocalCertData, [field]: value })
   }
 
+  const handleTagColorChange = (tag: string, color: string) => {
+    setTagColors((prevColors) => ({
+      ...prevColors,
+      [tag]: color,
+    }))
+  }
+
   const { write: claimHyperdrop } = useClaimSingleHyperdrop({
     // Be mindful that claim can be undefined and the hook will crash
     claim: claim!,
@@ -243,12 +251,14 @@ export default function Claim() {
               secondLabel="Required"
               addresses={localCertData.contributors}
               onAddressesChange={(newAddresses: string[]) => handleChange('contributors', newAddresses)}
+              onTagColorChange={handleTagColorChange}
             />
             <AddressTagInput
               label="Additional Owners"
               secondLabel="Optional"
               addresses={localCertData.additional_owners}
               onAddressesChange={(newAddresses: string[]) => handleChange('additional_owners', newAddresses)}
+              onTagColorChange={handleTagColorChange}
             />
             <div className="form-control w-full max-w-xs py-4">
               <label className="label">
@@ -275,6 +285,7 @@ export default function Claim() {
             id: owner.endsWith('.eth') ? owner : formatAddress(owner),
             label: owner,
             value: fraction.toNumber(),
+            color: tagColors[owner] ?? '#000000',
           }))}
         />
       </div>

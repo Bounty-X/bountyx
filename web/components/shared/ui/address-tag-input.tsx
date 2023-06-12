@@ -1,57 +1,42 @@
-import { c } from '@wagmi/cli/dist/config-c09a23a5'
-import { add, set } from 'lodash'
 import React, { useEffect, useState } from 'react'
 import TagsInput, { RenderTagProps } from 'react-tagsinput'
+import { schemePastel1, schemePastel2 } from 'd3-scale-chromatic'
 
 interface TagInputProps {
   label: string
   secondLabel?: string
   addresses: string[]
   onAddressesChange: (addresses: string[]) => void
+  onTagColorChange: (tag: string, color: string) => void
 }
 
-interface TagColorMap {
+export interface TagColorMap {
   [tag: string]: string // Map tag to color
 }
 
-function randomColor300() {
-  const colors = [
-    'bg-slate-300',
-    'bg-gray-300',
-    'bg-red-300',
-    'bg-orange-300',
-    'bg-yellow-300',
-    'bg-green-300',
-    'bg-teal-300',
-    'bg-blue-300',
-    'bg-indigo-300',
-    'bg-purple-300',
-    'bg-pink-300',
-    'bg-lime-300',
-    'bg-emerald-300',
-    'bg-cyan-300',
-    'bg-lightBlue-300',
-    'bg-violet-300',
-    'bg-fuchsia-300',
-    'bg-rose-300',
-    'bg-amber-300',
-    'bg-sky-300',
-  ]
-  const randomColorClass = colors[Math.floor(Math.random() * colors.length)]
-  return randomColorClass
+function getRandomColor() {
+  const colors = [...schemePastel1, ...schemePastel2]
+  const randomIndex = Math.floor(Math.random() * colors.length)
+  return colors[randomIndex]
 }
 
-const AddressTagInput: React.FC<TagInputProps> = ({ label, secondLabel: alternativeLabel, addresses, onAddressesChange }) => {
+const AddressTagInput: React.FC<TagInputProps> = ({ label, secondLabel, addresses, onAddressesChange, onTagColorChange }) => {
   const [tags, setTags] = useState<string[]>([])
   const [tagColorMap, setTagColorMap] = useState<TagColorMap>({})
+
+  function updateTagColorMap(tag: string) {
+    if (!tagColorMap[tag]) {
+      const tagColor = getRandomColor()
+      // Set a default color for the newly added tag
+      setTagColorMap((prevMap) => ({ ...prevMap, [tag]: tagColor }))
+      onTagColorChange(tag, tagColor)
+    }
+  }
 
   useEffect(() => {
     setTags(addresses) // addresses don't initialize tags, so we need to do it here
     addresses.forEach((addr) => {
-      if (!tagColorMap[addr]) {
-        // Set a default color for the existing tag
-        setTagColorMap((prevMap) => ({ ...prevMap, [addr]: randomColor300() }))
-      }
+      updateTagColorMap(addr)
     })
   }, [addresses])
 
@@ -60,10 +45,7 @@ const AddressTagInput: React.FC<TagInputProps> = ({ label, secondLabel: alternat
     onAddressesChange(tags)
 
     changed.forEach((tag) => {
-      if (!tagColorMap[tag]) {
-        // Set a default color for the newly added tag
-        setTagColorMap((prevMap) => ({ ...prevMap, [tag]: randomColor300() }))
-      }
+      updateTagColorMap(tag)
     })
   }
 
@@ -73,7 +55,10 @@ const AddressTagInput: React.FC<TagInputProps> = ({ label, secondLabel: alternat
     const tagColor = tagColorMap[tag]
 
     return (
-      <span key={key} className={`inline-block ${tagColor} bg-sl text-gray-700 px-2 py-1 mr-2 mb-2 border border-gray-400 rounded ${tagClassName}`}>
+      <span
+        key={key}
+        style={{ backgroundColor: tagColor }} // Set the background color inline
+        className={`inline-block text-gray-700 px-2 py-1 mr-2 mb-2 border border-gray-400 rounded ${tagClassName}`}>
         {tag}
         {!disabled && (
           <span className="tag-remove ml-1 cursor-pointer" onClick={() => onRemove(key)}>
@@ -88,7 +73,7 @@ const AddressTagInput: React.FC<TagInputProps> = ({ label, secondLabel: alternat
     <div className="flex flex-col">
       <label className="label">
         <span className="label-text">{label}</span>
-        {alternativeLabel && <span className="label-text-alt">{alternativeLabel}</span>}
+        {secondLabel && <span className="label-text-alt">{secondLabel}</span>}
       </label>
       <TagsInput
         value={tags}

@@ -163,6 +163,9 @@ dependencies:
   clsx:
     specifier: ^1.2.1
     version: 1.2.1
+  d3-scale-chromatic:
+    specifier: ^3.0.0
+    version: 3.0.0
   downloadjs:
     specifier: ^1.4.7
     version: 1.4.7
@@ -318,6 +321,9 @@ devDependencies:
   '@tsconfig/next':
     specifier: ^1.0.4
     version: 1.0.5
+  '@types/d3-scale-chromatic':
+    specifier: ^3.0.0
+    version: 3.0.0
   '@types/lodash':
     specifier: ^4.14.191
     version: 4.14.191
@@ -9143,6 +9149,10 @@ packages:
       '@types/node': 17.0.45
     dev: false
 
+  /@types/d3-scale-chromatic@3.0.0:
+    resolution: {integrity: sha512-dsoJGEIShosKVRBZB0Vo3C8nqSDqVGujJU6tPznsBJxNJNwMF8utmS83nvCBKQYPpjCzaaHcrf66iTRpZosLPw==}
+    dev: true
+
   /@types/debug@4.1.7:
     resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
     dependencies:
@@ -12380,6 +12390,14 @@ packages:
 
   /d3-scale-chromatic@2.0.0:
     resolution: {integrity: sha512-LLqy7dJSL8yDy7NRmf6xSlsFZ6zYvJ4BcWFE4zBrOPnQERv9zj24ohnXKRbyi9YHnYV+HN1oEO3iFK971/gkzA==}
+    dependencies:
+      d3-color: 2.0.0
+      d3-interpolate: 2.0.1
+    dev: false
+
+  /d3-scale-chromatic@3.0.0:
+    resolution: {integrity: sha512-Lx9thtxAKrO2Pq6OO2Ua474opeziKr279P/TKZsMAhYyNDD3EnCffdbgeSYN5O7m2ByQsxtuP2CSDczNUIZ22g==}
+    engines: {node: '>=12'}
     dependencies:
       d3-color: 2.0.0
       d3-interpolate: 2.0.1

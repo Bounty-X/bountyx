@@ -4,7 +4,7 @@ interface DataItem {
   id: string
   label: string
   value: number
-  // color: string
+  color: string
 }
 
 interface Props {
@@ -26,7 +26,7 @@ const PieChart: React.FC<Props> = ({ data }: Props) => {
         padAngle={1}
         cornerRadius={5}
         activeOuterRadiusOffset={8}
-        colors={{ scheme: 'nivo' }}
+        colors={{ datum: 'data.color' }}
         borderWidth={1}
         borderColor={{
           from: 'color',
