@@ -247,6 +247,9 @@ dependencies:
   react:
     specifier: '>=17'
     version: 18.2.0
+  react-confetti:
+    specifier: ^6.1.0
+    version: 6.1.0(react@18.2.0)
   react-dom:
     specifier: '>=17'
     version: 18.2.0(react@18.2.0)
@@ -20700,6 +20703,16 @@ packages:
     resolution: {integrity: sha512-dgH4T44TzKVO9CLArNto62hJOwlWJMLUjVVr/ii0uUzZXEXthDNr7/yefW5z/1vvHAfycc1tnuiYyNJ8CTRB3g==}
     dev: false
 
+  /react-confetti@6.1.0(react@18.2.0):
+    resolution: {integrity: sha512-7Ypx4vz0+g8ECVxr88W9zhcQpbeujJAVqL14ZnXJ3I23mOI9/oBVTQ3dkJhUmB0D6XOtCZEM6N0Gm9PMngkORw==}
+    engines: {node: '>=10.18'}
+    peerDependencies:
+      react: ^16.3.0 || ^17.0.1 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+      tween-functions: 1.2.0
+    dev: false
+
   /react-devtools-core@4.27.1:
     resolution: {integrity: sha512-qXhcxxDWiFmFAOq48jts9YQYe1+wVoUXzJTlY4jbaATzyio6dd6CUGu3dXBhREeVgpZ+y4kg6vFJzIOZh6vY2w==}
     dependencies:
@@ -22861,6 +22874,10 @@ packages:
       tslib: 1.14.1
       typescript: 4.9.4
     dev: true
+
+  /tween-functions@1.2.0:
+    resolution: {integrity: sha512-PZBtLYcCLtEcjL14Fzb1gSxPBeL7nWvGhO5ZFPGqziCcr8uvHp0NDmdjBchp6KHL+tExcg0m3NISmKxhU394dA==}
+    dev: false
 
   /type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}

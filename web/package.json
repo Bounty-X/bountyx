@@ -112,6 +112,7 @@
     "pkg-config": "^1.1.1",
     "query-string": "^8.1.0",
     "react": ">=17",
+    "react-confetti": "^6.1.0",
     "react-dom": ">=17",
     "react-icons": "^4.7.1",
     "react-markdown": "^8.0.4",

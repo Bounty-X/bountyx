@@ -146,6 +146,7 @@ export const useClaimSingleHyperdrop = ({ claim, onComplete }: { claim: Eligible
       })
       setStep('storingEligibility')
       setStep('complete')
+      hideModal()
       onComplete?.()
     },
     onError: async () => {

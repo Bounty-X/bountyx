@@ -19,6 +19,7 @@ import PieChart from '@/components/shared/diagrams/pie-chart'
 import { formatAddress } from '@/lib/hypercert/formatting'
 import { useDebounce } from 'usehooks-ts'
 import { useAccount } from 'wagmi'
+import Confetti from 'react-confetti'
 
 export interface CreateProjectFormProps {
   bounties: BountyxMetadata[]
@@ -77,6 +78,7 @@ export default function Claim() {
   const [hypercertMinted, setHypercertMinted] = useState<boolean>(false)
   const [futureRewardsPercent, setFutureRewardsPercent] = useState<number>(30)
   const [tagColors, setTagColors] = useState<TagColorMap>({})
+  const [showConfetti, setShowConfetti] = useState(false)
 
   useEffect(() => {
     const updateData = async () => {
@@ -180,6 +182,10 @@ export default function Claim() {
     onComplete: () => {
       console.log('Claiming is over')
       setHypercertMinted(true)
+      setShowConfetti(true)
+      setTimeout(() => {
+        setShowConfetti(false)
+      }, 5000) // 5000 milliseconds = 5 seconds
     },
   })
 
@@ -294,6 +300,15 @@ export default function Claim() {
           <CertificateImageHtml localCertData={localCertData} bounties={bounties} backgroundUrl={''} />
         </div>
       </div>
+      {showConfetti && (
+        <Confetti
+          width={window.innerWidth}
+          height={window.innerHeight}
+          numberOfPieces={500}
+          recycle={false} // Disable recycling
+          run={showConfetti} // Control animation using the showConfetti state
+        />
+      )}
     </div>
   )
 }
